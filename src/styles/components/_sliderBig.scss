@@ -1,0 +1,91 @@
+
+.container__sliderbig {
+    margin: 60px 0px;
+    .sliderbig__card {
+      .slick-slider {
+        height: 300px;
+        .slick-prev {
+          left: 1%;
+          width: 50px;
+          height: 50px;
+          background-color: black;
+          z-index: 25;
+          color:white;
+          &:before {
+            content: '<';
+            color: white!important;
+            font-family: 'MMTextProWebTT-Regular';
+            font-size: 25px;
+          }
+        }
+        .slick-next {
+          right: 1%;
+          width: 50px;
+          height: 50px;
+          background-color: black;
+          z-index: 25;
+          color:white;
+          &:before {
+            content: '>';
+            color: white!important;
+            font-family: 'MMTextProWebTT-Regular';
+            font-size: 25px;
+          }
+        }
+      }
+      .slick-track {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 330px;
+        .slick-slide {
+              height: 300px;
+              padding: 0 0.8vw;
+        }
+        .slick-list {
+          padding: 50px;
+        }
+
+      }
+    }
+
+}
+
+
+  
+  
+  // GENERAL
+  
+  .slick-dots li.slick-active button:before {
+    color: $mediamarkt!important;
+    // font-size: 30px!important;
+  }
+  
+  .slick-dots li button:before {
+    font-size: 20px!important;
+  }
+  .slick-dots {
+    bottom: -50px!important;
+  }
+  .slick-dots li {
+    width: 16px!important;
+    transition: width 0.3s ease-in-out!important;
+  }
+
+  .slick-dots .slick-active {
+    transition: width 0.3s ease-in-out!important;
+    margin-right: 8px!important;
+  }
+
+  .slick-dots .slick-active .ft-slick__dots--custom {
+    height: 16px!important;
+    width: 16px!important;
+    opacity: 1!important;
+    top: 0px!important;
+    overflow: hidden!important;
+    background-color: $mediamarkt!important;
+    font-size: 16px!important;
+  }

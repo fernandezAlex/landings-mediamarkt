@@ -1,0 +1,59 @@
+{
+  "cards": [
+    {
+      "id": "este es el id",
+      "title": "este es el titulo del card",
+      "subtitle": "este es el subtitulo del card",
+      "slug": "este-es-un-slug",
+      "imgThumbnail": "https://picsum.photos/200",
+      "imgContent": "https://picsum.photos/200",
+      "p_content": "este es el contentido de la card una vez abierto"
+    },
+    {
+      "id": "este es el id2",
+      "title": "este es el titulo del card2",
+      "subtitle": "este es el subtitulo del card2",
+      "slug": "este-es-un-slug",
+      "imgThumbnail": "https://picsum.photos/200",
+      "imgContent": "https://picsum.photos/200",
+      "p_content": "este es el contentido de la card una vez abierto"
+    },
+    {
+      "id": "este es el id3",
+      "title": "este es el titulo del card3",
+      "subtitle": "este es el subtitulo del card3",
+      "slug": "este-es-un-slug",
+      "imgThumbnail": "https://picsum.photos/200",
+      "imgContent": "https://picsum.photos/200",
+      "p_content": "este es el contentido de la card una vez abierto"
+    },
+    {
+      "id": "este es el id4",
+      "title": "este es el titulo del card4",
+      "subtitle": "este es el subtitulo del card4",
+      "slug": "este-es-un-slug",
+      "imgThumbnail": "https://picsum.photos/200",
+      "imgContent": "https://picsum.photos/200",
+      "p_content": "este es el contentido de la card una vez abierto"
+    },
+    {
+      "id": "este es el id5",
+      "title": "este es el titulo del card5",
+      "subtitle": "este es el subtitulo del card5",
+      "slug": "este-es-un-slug",
+      "imgThumbnail": "https://picsum.photos/200",
+      "imgContent": "https://picsum.photos/200",
+      "p_content": "este es el contentido de la card una vez abierto"
+    },
+    {
+      "id": "este es el id6",
+      "title": "este es el titulo del card6",
+      "subtitle": "este es el subtitulo del card6",
+      "slug": "este-es-un-slug",
+      "imgThumbnail": "https://picsum.photos/200",
+      "imgContent": "https://picsum.photos/200",
+      "p_content": "este es el contentido de la card una vez abierto"
+    }
+  ]
+}
+

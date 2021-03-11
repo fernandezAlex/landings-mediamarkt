@@ -1,0 +1,93 @@
+
+
+
+.card__section__wrapper {
+    padding: 1% 5%;
+    display: flex;
+    justify-content: center;
+    .cardsection__container {
+        width: 100%;
+        display: flex;
+        min-height: 0;
+        color: rgb(0, 0, 0);
+        border: 1px solid rgb(207, 203, 202);
+        border-radius: 8px;
+        height: 300px;
+        flex-direction: row;
+        justify-content: center;
+        max-width: 1144px;
+
+        .__left {
+            display: flex;
+            justify-content: center;
+            width: 50%;
+            height: 100%;
+            padding: 24px 16px;
+            flex-direction: column;
+            .--title{
+                display: flex;
+                padding-bottom: 20px;
+                .--title__card {
+                    color: $mediamarkt;
+                    white-space: normal;
+                    overflow: hidden;
+                    -webkit-line-clamp: 2;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    margin: 0;
+                    font-weight: bold;
+                    letter-spacing: normal;
+                    padding-top: 0px;
+                    text-transform: none;
+                    line-height: 28px;
+                    font-size: 24px!important;
+                    max-height: calc(56px);
+                }
+                .--subtitle__card {
+                    font-size: 0.8rem;
+                }
+    
+            }
+            .--button {
+                cursor: pointer;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                a.link__card {
+                    text-decoration: none;
+                       align-items: center;
+                        display: flex;
+                        color: black;
+                }
+            }
+        }
+    
+        .__right {
+            width: 55%;
+            height: 100%;
+            border-radius: 8px 8px 0px 0px;
+            .--imgWide {
+                width: 100%;
+                height: 298px;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                border-radius: 0 8px 8px 0;
+            }
+        }
+    
+        &:hover{ 
+            box-shadow: 1px 4px 10px grey;
+            transition:  box-shadow .4s ease-in;
+         }
+    
+    }
+}
+
+a,
+a:visited,
+a:active,
+a:focus,
+a:hover {
+  color: black;
+}

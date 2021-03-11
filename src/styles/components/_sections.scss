@@ -1,0 +1,93 @@
+.section__intro {
+    // margin: -70px auto 0px; // nueva
+    margin: auto;
+    max-width: 1477px;
+    flex-flow: wrap;
+    display: flex;
+    align-items: center;
+   }
+
+.section {
+    overflow: hidden;
+}
+
+.container__intro__text, .container__links__header, .container__logo__header {
+    padding: 0 80px;
+    max-width: 1477px;
+    @media screen and (max-width: 1477px) {
+        padding: 0 40px;
+    }
+    @media only screen and (max-width: 768px) {
+        padding: 0 30px;
+    }
+    .text__intro {
+        padding: 100px 0 10px 0;
+        @media screen and (max-width: 893px) {
+            padding: 40px 0px;
+    }
+    }  
+}
+.container__logo__header {
+    width: 45%;
+    margin: 0 auto;
+    .--img {
+        background-image: url('https://specials.mediamarkt.es/assets-react/b2b-educacion/Business-EDUCACION2.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 120px;
+        width: 370px;
+    }
+    @media screen and (max-width: 893px) {
+            display: flex;
+            justify-content: center;
+            width: 100vw;
+    }
+}
+.container__intro__text {
+    padding: 0 80px 0 0;
+    width: 55%;
+    margin: 0 auto;
+    @media screen and (max-width: 1477px) {
+        padding: 0 40px 0 0px;
+    }
+    @media screen and (max-width: 1043px) {
+        padding: 0 40px 0 40px;
+    }
+    @media only screen and (max-width: 768px) {
+        padding: 0 30px 0 30px;
+    }
+    @media screen and (max-width: 893px) {
+        width: 100vw;
+}
+}
+.container__links__header {
+    width: 100%;
+    margin-top: -50px;
+    @media screen and (max-width: 893px) {
+        width: 100vw;
+        margin-top: 0px;
+}
+}
+
+
+
+.container__links__header {
+    
+    > div {
+        padding: 10px 0;
+    }
+    a.link__contact .link__text, div.link__video .link__text {
+        padding: 10px 0;
+        cursor: pointer;
+        text-decoration: none;
+        color: black;
+        background-image: linear-gradient($mediamarkt, $mediamarkt);
+        background-position: 0% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 1px;
+        transition: background-size .3s;
+        &:hover , &:focus {
+            background-size: 100% 1px;
+        }
+    }
+}

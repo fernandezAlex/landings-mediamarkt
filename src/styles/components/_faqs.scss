@@ -1,0 +1,85 @@
+.wrapper__faqs {
+  background: rgb(244, 244, 244);
+
+  .container {
+    // padding: 40px;
+    left: 0px;
+    right: 0px;
+    max-width: 1477px;
+    margin: auto;
+  }
+  .faqs--title {
+    padding: 5% 80px 0px;
+    @media screen and (max-width: 1477px) {
+      padding: 5% 40px 0px;
+  }
+  @media only screen and (max-width: 768px) {
+      padding: 5% 30px 0px;
+  }
+  }
+  h2 {
+    font-weight: 700!important;
+    line-height: 25px!important;
+  }
+}
+
+.container__faqs {
+  padding: 40px 80px;
+  @media screen and (max-width: 1477px) {
+    padding: 40px 40px;
+}
+@media only screen and (max-width: 768px) {
+    padding: 40px 30px;
+}
+  margin: 0px auto;
+  border-top: 1px solid rgb(207, 203, 202);
+  .accordion-title {
+    cursor: pointer;
+    .title-content {
+      display: flex;
+      .arrow__dropdown {
+        margin-right: 5px;
+        margin-top: 22px;
+        &.open {
+          transform: rotate(180deg);
+          transition: transform 0.5s linear;
+        }
+        &.close {
+          transform: rotate(360deg);
+          transition: transform 0.5s linear;
+        }
+      }
+
+    }
+
+    .accordion-button {
+      display: block;
+      width: 100%;
+    }
+  }
+  .accordion-item.collapsed {
+    display: none !important;
+  }
+  a,
+  a:visited,
+  a:active,
+  a:focus,
+  a:hover {
+    color: $mediamarkt;
+  }
+
+  .accordion-content {
+    padding-left: 20px;
+  }
+}
+
+h2 {
+  font-size: 24px!important;
+  @media only screen and (max-width: 600px) {
+     font-size: 18px!important
+  }
+}
+
+.wrapper__faqs .container .container__faqs .accordion-title .title-content svg path {
+  fill: black!important;
+}
