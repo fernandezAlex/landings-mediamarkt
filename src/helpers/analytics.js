@@ -1,4 +1,6 @@
 export default function analytics(name, name2, name3, name4) {
-    window.dataLayer.push(`{'event': '${name}','eventCategory': '${name2}', 'eventAction': '${name3}', 'eventLabel': '${name4}'}`);
+  // var dataLayer = [];  
+  // window.dataLayer.push(name, name2, name3, name4, {'event': '{name}','eventCategory': 'name', 'eventAction': 'name3', 'eventLabel': 'name4'});
+  window.dataLayer.push(`{'event': '${name}','eventCategory': '${name2}', 'eventAction': '${name3}', 'eventLabel': '${name4}'}`);
     // alert(`{'event': '${name}','eventCategory': '${name2}', 'eventAction': '${name3}', 'eventLabel': '${name4}'}`)
   }

@@ -1,6 +1,6 @@
 import React from 'react'
 import Card from './Card'
-import cards from '../../data/cardsSection';
+import cards from '../../data/cardsSection2';
 
 const CardGrid = () => {
 

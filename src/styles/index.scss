@@ -11,9 +11,9 @@ License url: https://www.mediamarkt.es
 
 
 
-
         @import './base/base';
         @import './base/settings';
+
         
         
         // Components
@@ -21,7 +21,6 @@ License url: https://www.mediamarkt.es
         @import './components/cardGrid';
         @import './components/cardItem';
         @import './components/cardWide';
-        @import './components/cardText';
         @import './components/destacados';
         @import './components/faqs';
         @import './components/form';
@@ -36,4 +35,3 @@ License url: https://www.mediamarkt.es
         @import './components/asyncButton';
         @import './components/sections';
         @import './components/breadcrumb';
-        @import './components/cardTextGrid';

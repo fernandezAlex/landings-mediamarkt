@@ -6,15 +6,16 @@ const Section3 = (width) => {
   return (
     <div className="section">
       {
-        width.width < 843 
+        width.width < 824
+        
         ? (
             <div>
-            <h1 className="title">Soluciones a medida para escuelas, centros de formación y universidades</h1>
+            <h1 className="title">Nuestras soluciones adaptadas</h1>
             <SliderSmall />
             </div>
         ) : (
             <div>
-            <h1 className="title">Soluciones a medida para escuelas, centros de formación y universidades</h1>
+            <h1 className="title">Nuestras soluciones adaptadas a cada sector</h1>
             <CardGrid />
             </div>
         )
