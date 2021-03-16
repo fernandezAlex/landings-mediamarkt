@@ -8,27 +8,42 @@ import {
 } from "../validations/ValidateFunctions";
 import Input from "./Input";
 import TextArea from "./TextArea";
-import analytics from '../../helpers/analytics';
-// import Recaptcha from 'react-recaptcha';
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faSpinner, faEnvelope, faCheck} from "@fortawesome/free-solid-svg-icons";
+import analytics from "../../helpers/analytics";
+import ReCaptcha from "react-google-recaptcha";
+
+/* Data Form */
+
+const idCampaign = "200";
+const dataAnalyticsForm = {
+  event: "gaEvent",
+  eventCategory: "Home_B2B",
+  eventAction: "Click",
+  eventLabel: "Home_B2B_enviar_formulario",
+};
+const urlActionForm =
+  "https://pre-specials.mediamarkt.es/empresas/confirmacion";
+
+
 
 const Form = () => {
   const [name, setName] = useState("");
+  const [isNameError, setIsNameError] = useState(false);
   const [nif, setNif] = useState("");
+  const [isNifError, setIsNifError] = useState(false);
   const [contact, setContact] = useState("");
+  const [isContactError, setIsContactError] = useState(false);
   const [position, setPosition] = useState("");
+  const [isPositionError, setIsPositionError] = useState(false);
   const [email, setEmail] = useState("");
+  const [isEmailError, setIsEmailError] = useState(false);
   const [phone, setPhone] = useState("");
+  const [isPhoneError, setIsPhoneError] = useState(false);
   const [message, setMessage] = useState("");
   const [terms, setTerms] = useState("");
-  const [isNameError, setIsNameError] = useState(false);
-  const [isCifError, setIsCifError] = useState(false);
-  const [isContactError, setIsContactError] = useState(false);
-  const [isPositionError, setIsPositionError] = useState(false);
-  const [isEmailError, setIsEmailError] = useState(false);
-  const [isPhoneError, setIsPhoneError] = useState(false);
-
+  const [recaptcha, setRecaptcha] = useState(false);
+  const [isSubmited, setIsSubmited] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [actionState, setActionState] = useState(null);
 
   const handleNameChange = (value) => {
     setName(value);
@@ -39,7 +54,7 @@ const Form = () => {
   const handleNifChange = (value) => {
     setNif(value);
     const isOk = validateNif(value);
-    setIsCifError(!isOk);
+    setIsNifError(!isOk);
   };
 
   const handleContactChange = (value) => {
@@ -68,88 +83,51 @@ const Form = () => {
 
   const handleMessageChange = (value) => {
     setMessage(value);
-
   };
-  
+
   const handleTermsChange = (checked) => {
     setTerms(checked);
   };
 
-  
-  // const [recaptcha, setRecaptcha] = useState("")
-  const verifyCallbackCaptcha = (response) => {
-    // setRecaptcha(response);
-    console.log(response)
-  };
-  const [isAnimated, setIsAnimated] = useState(false)
-  const [isSubmited, setIsSubmited] = useState(false)
-  const [isLoading, setIsLoading] = useState(false)
-
-  // console.log(recaptcha)
-
-  // const isValidated =
-  //   (name.length > 0 ||
-  //     nif.length > 0 ||
-  //     contact.length > 0 ||
-  //     position.length > 0 ||
-  //     email.length > 0) && 
-  //   validateName(name) &&
-  //   validateNif(nif) &&
-  //   validateName(contact) &&
-  //   validatePosition(position) &&
-  //   validateEmail(email) &&
-  //   validatePhone(phone) &&
-  //   terms;
-
-      const isValidated = true;
-
-
-  // const enabledSubmit = enabledFields && recaptcha
-
-    const callbackCaptcha = () => {
-      console.log("captcha renderizado");
+  const onChangeCaptcha = (value) => {
+    if (value.length > 0) {
+      setRecaptcha(true);
     }
+  };
 
-    // const dispatchForm = () => {
-        // setIsLoading(true)
-        // setAnimatedState(true)
-        // setTimeout(() => {
-        //   setAnimatedState(false)
-        //   setIsLoading(false)
-        // }, 2000)
-    // } 
-    const [actionState, setActionState] = useState(null)
+  const isValidated =
+    (name.length > 0 ||
+      nif.length > 0 ||
+      contact.length > 0 ||
+      position.length > 0 ||
+      email.length > 0) &&
+    validateName(name) &&
+    validateNif(nif) &&
+    validateName(contact) &&
+    validatePosition(position) &&
+    validateEmail(email) &&
+    validatePhone(phone) &&
+    terms;
 
-    const dispatchForm = () => {
-      if (isValidated) {
-        setIsLoading(true)
-        setIsAnimated(true)
-        setTimeout(() => {
-          setIsAnimated(false)
-          setIsLoading(false)
-          setIsSubmited(true)
-        }, 10000)
-        // () => analytics("gaEvent","Home_B2B","Click","Home_B2B_enviar_formulario")}
-        setActionState("https://specials.mediamarkt.es/empresas/confirmacion")
-        }
-      }
+  const isAllValidated =
+    isValidated === true && recaptcha === true ? true : false;
 
-      const handleSubmit = (e) => {
-        e.preventDefault()
-        if (isValidated) {
-          setIsLoading(true)
-          setIsAnimated(true)
-          setTimeout(() => {
-            setIsAnimated(false)
-            setIsLoading(false)
-            setIsSubmited(true)
-          }, 1000)
-          // setActionState("https://specials.mediamarkt.es/empresas/confirmacion")
-          // setActionState(null)
-          }
-        setIsSubmited(false)
-      }
- 
+  const dispatchForm = () => {
+    if (isAllValidated) {
+      setIsLoading(true);
+      setTimeout(() => {
+        setIsLoading(false);
+        setIsSubmited(true);
+      }, 1000);
+      analytics(
+        dataAnalyticsForm.event,
+        dataAnalyticsForm.eventCategory,
+        dataAnalyticsForm.eventAction,
+        dataAnalyticsForm.eventLabel
+      );
+      setActionState(urlActionForm);
+    }
+  };
 
   return (
     <React.Fragment>
@@ -176,11 +154,15 @@ const Form = () => {
           id="campaign-form"
           class="--form campaign-form required"
           method="POST"
-          // action={enabled ? "https://specials.mediamarkt.es/empresas/confirmacion" : null}
           action={actionState}
-          onSubmit={handleSubmit}
+          onSubmit={dispatchForm}
         >
-          <input type="hidden" name="campaign" id="campaign" value="200" />
+          <input
+            type="hidden"
+            name="campaign"
+            id="campaign"
+            value={idCampaign}
+          />
           <div className="inputs__container">
             <Input
               type="name"
@@ -197,9 +179,9 @@ const Form = () => {
               type="nif"
               placeholder="NIF Empresa"
               value={nif}
-              onChange={(e) => handleNifChange((e.target.value).toUpperCase())}
+              onChange={(e) => handleNifChange(e.target.value.toUpperCase())}
               name="nif"
-              error={isCifError}
+              error={isNifError}
               errorText="Introduzca un NIF válido"
               className="input"
               id="cif"
@@ -230,7 +212,7 @@ const Form = () => {
               type="e-mail"
               placeholder="Dirección de email"
               value={email}
-              onChange={(e) => handleEmailChange((e.target.value).toLowerCase())}
+              onChange={(e) => handleEmailChange(e.target.value.toLowerCase())}
               name="email"
               error={isEmailError}
               errorText="Introduzca una email válido"
@@ -300,35 +282,31 @@ const Form = () => {
               Es necesario que acepte la política de privacidad y las
               condiciones de uso de la web
             </div>
-              {/* <div className={`recaptcha ${isValidated ? "enabled" : 'disabled'}`}> */}
-              {/* <div className="recaptcha enabled"> */}
-              {/* <Recaptcha
-                  sitekey="6LcutBEUAAAAAPRBOQzLhvFb8uInxqfthrm8RDHQ"
-                  render="onload"
-                  verifyCallback={verifyCallbackCaptcha}
-                  onloadCallback={callbackCaptcha}
-                  hl='es'
-                />
-              </div> */}
+            <ReCaptcha
+              size="normal"
+              render="explicit"
+              sitekey="6LdI4SUaAAAAAEPC4phCYBzZVLZg6tAz5nEbLO59"
+              className={`recaptcha ${isValidated ? "enabled" : "disabled"}`}
+              onChange={onChangeCaptcha}
+            />
+            <div></div>
             <button
               type="submit"
-              className={`${isValidated ? `enabled ${isSubmited ? "submited" : `${isLoading && "animated"}`}` : "disabled"}`}
-              disabled={!isValidated}              
-              // onClick={() =>
-              //   analytics(
-              //     "gaEvent",
-              //     "Home_B2B",
-              //     "Click",
-              //     "Home_B2B_enviar_formulario"
-              //   )
-              // }
-              // onClick={dispatchForm}
+              className={`${
+                isAllValidated
+                  ? `enabled ${
+                      isSubmited ? "submited" : `${isLoading && "animated"}`
+                    }`
+                  : "disabled"
+              }`}
+              disabled={!isAllValidated}
             >
               <span>
-                {`${isSubmited ? "Enviado" : (`${isLoading ? 'Enviando...' : 'Enviar'}`)}`}
-                {/* {!isLoading ? `Enviar` : `Enviando...`} */}
-                {/* {!isLoading ? null : <FontAwesomeIcon style={{marginLeft:"10px"}} icon={faSpinner} />} */}
-                {/* {`${isSubmited ? (<FontAwesomeIcon style={{marginLeft:"10px"}} icon={faCheck}/>) : (`${isLoading ? <FontAwesomeIcon style={{marginLeft:"10px"}} icon={faSpinner}/> : <FontAwesomeIcon style={{marginLeft:"10px"}} icon={faEnvelope}/>}`)}`} */}
+                {`${
+                  isSubmited
+                    ? "Enviado"
+                    : `${isLoading ? "Enviando..." : "Enviar"}`
+                }`}
               </span>
             </button>
           </div>
