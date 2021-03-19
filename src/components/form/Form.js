@@ -1,4 +1,9 @@
 import React, { useState } from "react";
+import Input from "./Input";
+import TextArea from "./TextArea";
+import PrivacyPolicy from "./PrivacyPolicy";
+import AsyncButton from "./AsyncButton";
+import analytics from "../../helpers/analytics";
 import {
   validateName,
   validateNif,
@@ -6,9 +11,6 @@ import {
   validateEmail,
   validatePhone,
 } from "../validations/ValidateFunctions";
-import Input from "./Input";
-import TextArea from "./TextArea";
-import analytics from "../../helpers/analytics";
 import ReCaptcha from "react-google-recaptcha";
 
 /* Data Form */
@@ -21,7 +23,7 @@ const dataAnalyticsForm = {
   eventLabel: "Home_B2B_enviar_formulario",
 };
 const urlActionForm =
-  "https://pre-specials.mediamarkt.es/empresas/confirmacion";
+  "https://specials.mediamarkt.es/empresas/confirmacion";
 
 
 
@@ -215,7 +217,7 @@ const Form = () => {
               onChange={(e) => handleEmailChange(e.target.value.toLowerCase())}
               name="email"
               error={isEmailError}
-              errorText="Introduzca una email válido"
+              errorText="Introduzca un email válido"
               className="input"
               id="email"
             />
@@ -231,7 +233,6 @@ const Form = () => {
               id="phone"
             />
           </div>
-
           <TextArea
             type="mytext"
             placeholder="Consulta"
@@ -243,45 +244,10 @@ const Form = () => {
             id="consulta"
           />
           <div className="footer__form">
-            <div className="--container">
-              <div class="privacypolicy__container">
-                <input
-                  className="check"
-                  type="checkbox"
-                  name="tlegal-terms"
-                  id="tlegal-terms"
-                  onChange={(e) => handleTermsChange(e.target.checked)}
-                />
-                <label className="label--policy" id="tlegal-terms1">
-                  <span></span>
-                  He leído y acepto la&nbsp;
-                  <a
-                    className="--link privacy-modal"
-                    href="https://www.mediamarkt.es/es/legal/politica-de-privacidad"
-                    rel="nofollow"
-                    title="Política de privacidad"
-                    style={{ color: "#df0000" }}
-                  >
-                    Política de Privacidad
-                  </a>
-                  &nbsp; y las&nbsp;
-                  <a
-                    className="--link privacy-modal"
-                    href="https://www.mediamarkt.es/es/legal/condiciones-de-uso-de-la-web"
-                    rel="nofollow"
-                    title="Condiciones de uso"
-                    style={{ color: "#df0000" }}
-                  >
-                    condiciones de uso
-                  </a>
-                  .
-                </label>
-              </div>
-            </div>
-            <div className={`error__terms ${!terms ? "" : "disabled"}`}>
-              Es necesario que acepte la política de privacidad y las
-              condiciones de uso de la web
-            </div>
+            <PrivacyPolicy
+              onChange={(e) => handleTermsChange(e.target.checked)}
+              terms={terms}
+            />
             <ReCaptcha
               size="normal"
               render="explicit"
@@ -289,26 +255,13 @@ const Form = () => {
               className={`recaptcha ${isValidated ? "enabled" : "disabled"}`}
               onChange={onChangeCaptcha}
             />
-            <div></div>
-            <button
+            <AsyncButton 
               type="submit"
-              className={`${
-                isAllValidated
-                  ? `enabled ${
-                      isSubmited ? "submited" : `${isLoading && "animated"}`
-                    }`
-                  : "disabled"
-              }`}
               disabled={!isAllValidated}
-            >
-              <span>
-                {`${
-                  isSubmited
-                    ? "Enviado"
-                    : `${isLoading ? "Enviando..." : "Enviar"}`
-                }`}
-              </span>
-            </button>
+              isAllValidated={isAllValidated}
+              isSubmited={isSubmited}
+              isLoading={isLoading}
+            />
           </div>
         </form>
       </div>

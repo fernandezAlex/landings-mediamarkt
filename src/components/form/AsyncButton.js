@@ -1,57 +1,38 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faSpinner} from "@fortawesome/free-solid-svg-icons";
-
 
 const AsyncButton = ({
-	type,
-	text,
-	loadingText,
-	isLoading,
-	disabled,
-	icon,
-	iconPosition,
-	textStyles,
-	iconStyles,
-	animated
+  type,
+  disabled,
+  isAllValidated,
+  isSubmited,
+  isLoading,
 }) => {
-
-	return (
-		<button
-			type={type}
-			disabled={disabled}
-			className={`asyncbutton ${animated ? "animated" : "disabled"}`}
-		>
-			{iconPosition === "left" && (isLoading ? (
-				<FontAwesomeIcon icon={faSpinner} style={{...iconStyles}} />) : icon ? ( 
-				<FontAwesomeIcon icon={icon} style={{...iconStyles}} />) : null)}
-			<span style={{...textStyles}}>{isLoading ? loadingText : text}</span>
-            {iconPosition === "right" && 
-			
-			(
-				isLoading ? (
-				<FontAwesomeIcon icon={faSpinner} style={{...iconStyles}} />)
-				: icon ? (
-				<FontAwesomeIcon icon={icon} style={{...iconStyles}} />) : null)
-				
-				}
-		</button>
-	);
+  return (
+    <button
+      type={type}
+      className={`${
+        isAllValidated
+          ? `enabled ${isSubmited ? "submited" : `${isLoading && "animated"}`}`
+          : "disabled"
+      }`}
+      disabled={disabled}
+    >
+      <span>
+        {`${
+          isSubmited ? "Enviado" : `${isLoading ? "Enviando..." : "Enviar"}`
+        }`}
+      </span>
+    </button>
+  );
 };
 
 AsyncButton.propTypes = {
-	type: PropTypes.string.isRequired,
-	text: PropTypes.string,
-	loadingText: PropTypes.string,
-	isLoading: PropTypes.bool,
-	iconPosition: PropTypes.string,
-	className: PropTypes.string,
-	buttonStyles: PropTypes.string,
-	textStyles: PropTypes.object,
-	iconStyles: PropTypes.string,
-	animated: PropTypes.bool,
-	disabled: PropTypes.bool
+  type: PropTypes.string.isRequired,
+  disabled: PropTypes.bool,
+  isAllValidated: PropTypes.bool,
+  isSubmited: PropTypes.bool,
+  isLoading: PropTypes.bool,
 };
 
 export default AsyncButton;

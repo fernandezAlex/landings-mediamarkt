@@ -7,12 +7,11 @@
   <body>
     <noscript>Es necesario activar JavaScript.</noscript>
     <div id="root"></div>
-    <!-- userAgent Checker (launch alert only IE) -->
-    <script>
-      ((navigator.userAgent.toLocaleLowerCase()).indexOf("msie") > -1 ||
-      (navigator.userAgent.toLocaleLowerCase()).indexOf(".net") > -1) &&
-        (document.getElementById("root").innerHTML =
-          '<div style="margin:155px 0px;display:flex;align-items:center;flex-flow:column;"><img style="max-width: 380px" src="https://www.mediamarkt.es/public/images/404_Media.svg" alt="error-page-image-not-found">      <h1 style="color:red;font-family:MMHeadlineWebTT-Regular,MMHeadline-regular,Helvetica,Arial,sans-serif!important;font-weight:700!important;">¡Ups! ¡Algo ha ido mal!</h1><p style="max-width 600px;text-align:center;font-size:16px;line-height: 24px;">Se ha detectado una versión de navegador obsoleta.<br>Por favor descarga <a href="https://www.microsoft.com/es-es/edge" style="text-decoration:underline; color: black;">Microsoft Edge</a> o cambia a otro navegador.</p></div>');
-    </script>
   </body>
+  <script>
+    ((navigator.userAgent.toLocaleLowerCase()).indexOf("msie") > -1 ||
+    (navigator.userAgent.toLocaleLowerCase()).indexOf(".net") > -1) &&
+      (document.getElementById("root").innerHTML =
+        '<div style="margin:155px 0px;display:flex;align-items:center;flex-flow:column;"><img style="max-width: 380px" src="https://www.mediamarkt.es/public/images/404_Media.svg" alt="error-page-image-not-found">      <h1 style="color:red;font-family:MMHeadlineWebTT-Regular,MMHeadline-regular,Helvetica,Arial,sans-serif!important;font-weight:700!important;">¡Ups! ¡Algo ha ido mal!</h1><p style="max-width 600px;text-align:center;font-size:16px;line-height: 24px;">Se ha detectado una versión de navegador obsoleta.<br>Por favor descarga <a href="https://www.microsoft.com/es-es/edge" style="text-decoration:underline; color: black;">Microsoft Edge</a> o cambia a otro navegador.</p></div>');
+  </script>
 </html>

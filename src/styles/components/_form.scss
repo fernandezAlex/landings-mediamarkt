@@ -36,18 +36,12 @@
       gap: 20px 20%;
       grid-template-columns: repeat(2, 40%);
       grid-template-rows: repeat(3, 50px);
-      > input {
+      > input .input {
         padding-left: 20px;
         border: none;
         border-bottom: 1px solid black;
-
         &:focus {
           outline: none;
-        }
-        &.success {
-          border: 1px solid #28a745;
-          color: #28a745;
-          border-radius: 4px;
         }
         &.error {
           border: 1px solid $mediamarkt;
@@ -55,6 +49,9 @@
           border-radius: 4px;
         }
       }
+      // .input.invalid_field {
+      //   color: $mediamarkt;
+      // }
       @media only screen and (max-width: 650px) {
         display: grid;
         justify-content: center;
@@ -114,8 +111,8 @@
         justify-content: center;
         margin: auto;
         border: 1px solid darkgray;
-        color: darkgray;
-        background-color: black;
+        color: rgb(0, 0, 0);
+        background-color: #f7f7f7;
         border-radius: 1px;
         border: none;
         padding: 7px 30px;
@@ -156,35 +153,29 @@
             }
           }
           &.submited {
-            // cursor: not-allowed;
-            // border: 1px $mediamarkt solid;
             background-color: gray;
-
-            // svg {
-            //   animation: rotation 0.8s ease-in-out infinite;
-            // }
+            cursor: not-allowed;
           }
         }
       }
     }
   }
+  .g-recaptcha {
+    display: none;
+    &.active {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+      @media screen and (max-width: 1217px) {
+        margin-top: 70px;
+      }
+      @media screen and (max-width: 450px) {
+        margin-top: 90px;
+      }
+      @media screen and (max-width: 380px) {
+        margin-top: 130px;
+      }
+    }
+    
+  }
 }
-
-
-
-// const handleSubmit = (e) => {
-//   e.preventDefault()
-//   if (isValidated) {
-//     setIsLoading(true)
-//     setIsAnimated(true)
-//     setTimeout(() => {
-//       setIsAnimated(false)
-//       setIsLoading(false)
-//       setIsSubmited(true)
-//     }, 100000)
-//     // setActionState("https://specials.mediamarkt.es/empresas/confirmacion")
-//     // setActionState(null)
-//     }
-  
-// }
-

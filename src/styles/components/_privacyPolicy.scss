@@ -5,12 +5,10 @@
     display: flex;
     justify-content: center;
     position: absolute;
-
-    & > input {
-        margin: 0 0.7rem 0 0
+    &>input {
+        margin: 0 0.7rem 0 0;
     }
     .container__input {
-        
         .span__required {
             display: none;
         }
@@ -26,12 +24,11 @@
             text-decoration: none;
             padding: 2px 5px;
             &:hover {
-                color: blue
+                color: blue;
             }
         }
     }
 }
-
 
 .error__1 {
     color: $mediamarkt;
@@ -43,8 +40,14 @@
     border-top: 1px solid black;
     padding-top: 7px;
     padding-left: 10px;
-    color: $mediamarkt;
+    .text_error {
+        color: $mediamarkt;
+        font-size: 15px;
+        // -webkit-animation: error linear 3s infinite;
+        // animation: error linear 3s infinite;
+    }
 }
+
 span.span__required {
     color: $mediamarkt;
     float: right;
@@ -55,7 +58,7 @@ span.span__required {
     padding-left: 10px;
     width: 95%;
     &:focus {
-        outline: none!important;
+        outline: none !important;
     }
 }
 
@@ -68,9 +71,22 @@ span.span__required {
     display: flex;
     color: $mediamarkt;
     position: absolute;
+    // -webkit-animation: error linear 3s infinite;
+    // animation: error linear 3s infinite;
     &.disabled {
         display: none;
     }
     left: 50%;
     transform: translateX(-50%);
 }
+
+// @-webkit-keyframes error {
+//     50% {
+//         opacity: 0;
+//     }
+// }
+// @keyframes error {
+//     50% {
+//         opacity: 0;
+//     }
+// }

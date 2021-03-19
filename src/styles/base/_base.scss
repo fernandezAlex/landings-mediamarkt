@@ -71,22 +71,7 @@ h1.title {
   }
 }
 
-.container-fluid {
-  padding: 0px !important;
-}
 
-.mobile-version .wrapper .page-container {
-  margin-top: 0% !important;
-}
-
-
-
-.container-fluid {
-  padding-right: 0px !important;
-  padding-left: 0px !important;
-  margin-right: 0px !important;
-  margin-left: 0px !important;
-}
 
 .--subtitle {
   padding: 5px 0 20px 0px;
@@ -99,10 +84,7 @@ h1.title {
   height: 140px;
 }
 
-/* visibility for checkbox terms and conditions */
-.mobile-version input#tlegal-terms {
-  -webkit-appearance: checkbox !important;
-}
+
 
 
 .container__slidersmall .slick-dots li.slick-active button:before {
@@ -116,7 +98,4 @@ h1.title {
 }
 .container__sliderbig .slick-dots li button:before {
   font-size: 38px!important;
-}
-#wrp_widgets, #widget_news {
-  display: none!important;
 }

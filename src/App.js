@@ -37,7 +37,7 @@ function App() {
       <Section2 width={width}/>
       <Section3 width={width}/>
       <Section4 width={width}/>
-      <Form />
+      <Form/>
       <Accordion />
     </>
   );

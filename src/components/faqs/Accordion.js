@@ -8,20 +8,20 @@ const Accordion = () => {
   return (
     <div className="wrapper__faqs">
       <div className="container">
-      <div className="faqs--title">
-        <h2>Preguntas frecuentes</h2>
+        <div className="faqs--title">
+          <h2>Preguntas frecuentes</h2>
+        </div>
+        {
+          faqs.map((faq, i) => {
+            return (
+              <AccordionItem title={<div dangerouslySetInnerHTML={{ __html: faq.question }} onClick={() => analytics(faq.eventGa, faq.eventCategory, faq.eventAction, faq.eventLabel)} />} key={i}>
+                {<div dangerouslySetInnerHTML={{ __html: faq.reply }} />}
+              </AccordionItem>
+            )
+          })
+        }
       </div>
-      {
-        faqs.map((faq, i) => {
-        return (
-          <AccordionItem title={<div dangerouslySetInnerHTML={{ __html: faq.question }} onClick={() => analytics(faq.eventGa, faq.eventCategory, faq.eventAction, faq.eventLabel)} />} key={i}>
-          {<div dangerouslySetInnerHTML={{ __html: faq.reply }} />}
-          </AccordionItem>
-          )
-        } )
-    }
     </div>
-      </div>
   )
 }
 

@@ -1,9 +1,7 @@
 import React from "react";
-import Slider from "react-slick";
-import data from "../../data/data.json";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import CardWide from "../cards/CardWide";
+import data from "../../data/data.json";
+import Slider from "react-slick";
 
 
 
@@ -21,7 +19,6 @@ const SliderBig = () => {
     slidesToScroll: 1,
     variableWidth: true,
   };
-
 
   return (
     <div className="container__sliderbig">

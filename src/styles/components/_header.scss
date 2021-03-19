@@ -4,19 +4,12 @@
   background-image: url("https://specials.mediamarkt.es/assets-react/b2b/062007_Header_2994X800_AAFF.png");
   background-size: cover;
   background-position: center;
-  @media only screen and (min-width: 792px) and (max-width: 983px) {
-    margin-top: 127px;
-  }
-  @media only screen and (min-width: 983px) and (max-width: 4000px) {
+  // @media only screen and (min-width: 792px) and (max-width: 983px) {
+  //   margin-top: 127px;
+  // }
+  @media only screen and (min-width: 990px) and (max-width: 4000px) {
     margin-top: 110px;
   }
-}
-
-/* specials */
-#rise-header {
-  .ms-header2-sticky-spacer {
-    display: none; 
-    }
 }
 
 
@@ -134,6 +127,5 @@
 @media only screen and (min-width: 1008px) and (max-width: 1800px) {
   .header__container {
     background-image: url("https://specials.mediamarkt.es/assets-react/b2b/062007_Header_1800X600_AAFF.png");
-    // background-position-y: 60%;
   } 
 }

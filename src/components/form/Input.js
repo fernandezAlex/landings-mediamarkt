@@ -4,13 +4,12 @@ import PropTypes from "prop-types";
 const Input = ({
 	type,
 	placeholder,
-	name,
 	value,
     onChange,
-	className,
-	errorText,
+	name,
 	error,
-	disabled,
+	errorText,
+	className,
 	id,
 
 }) => {
@@ -22,28 +21,30 @@ const Input = ({
 				name={name}
 				value={value}
                 onChange={onChange}
-                className={`${className} ${error ? "error" : ""}`}
+                className={`${!error ? className : `${className} invalid_field`}`}
 				errorText={errorText}
 				error={error}
-				disabled={disabled}
 				id={id}
 			/><span className="span__required">*</span>
-			<div className="input__error" dangerouslySetInnerHTML={{__html: error ? errorText : null}} />
+			<div className="input__error">
+			<span className="text_error" dangerouslySetInnerHTML={{__html: error ? errorText : null}} />
+			</div>
+			 
 		</div>
 	);
 };
 
-// Input.propTypes = {
-// 	type: PropTypes.string.isRequired,
-// 	placeholder: PropTypes.string,
-// 	name: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-// 	value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-// 	onChange: PropTypes.func.isRequired,
-// 	required: PropTypes.string,
-// 	errorText: PropTypes.string,
-// 	error: PropTypes.bool,
-// 	disabled: PropTypes.bool,
-// 	id: PropTypes.string,
-// };
+Input.propTypes = {
+	type: PropTypes.string.isRequired,
+	placeholder: PropTypes.string,
+	name: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+	value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+	onChange: PropTypes.func.isRequired,
+	required: PropTypes.string,
+	errorText: PropTypes.string,
+	error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+	disabled: PropTypes.bool,
+	id: PropTypes.string,
+};
 
 export default Input;
