@@ -19,8 +19,9 @@
     // grid-template-rows: repeat(3, 400px);
     display: flex;
     flex-flow: wrap;
-    justify-content: space-between;
+    justify-content: start;
+    margin-right: -90px;
     @media screen and (max-width: 1238px) {
-        justify-content: start;
+        margin-right: 0px;
     }
 }
