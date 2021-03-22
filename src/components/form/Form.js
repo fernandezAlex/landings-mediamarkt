@@ -1,4 +1,9 @@
 import React, { useState } from "react";
+import Input from "./Input";
+import TextArea from "./TextArea";
+import PrivacyPolicy from "./PrivacyPolicy";
+import AsyncButton from "./AsyncButton";
+import analytics from "../../helpers/analytics";
 import {
   validateName,
   validateNif,
@@ -6,26 +11,41 @@ import {
   validateEmail,
   validatePhone,
 } from "../validations/ValidateFunctions";
-import Input from "./Input";
-import TextArea from "./TextArea";
-import analytics from '../../helpers/analytics';
+import ReCaptcha from "react-google-recaptcha";
+
+/* Data Form */
+
+const idCampaign = "194";
+const dataAnalyticsForm = {
+  event: "gaEvent",
+  eventCategory: "Home_B2B_ED",
+  eventAction: "Click",
+  eventLabel: "Home_B2B_EDUCACION_contactanos",
+};
+const urlActionForm =
+  "https://specials.mediamarkt.es/empresas/confirmacion";
+
+
 
 const Form = () => {
   const [name, setName] = useState("");
+  const [isNameError, setIsNameError] = useState(false);
   const [nif, setNif] = useState("");
+  const [isNifError, setIsNifError] = useState(false);
   const [contact, setContact] = useState("");
+  const [isContactError, setIsContactError] = useState(false);
   const [position, setPosition] = useState("");
+  const [isPositionError, setIsPositionError] = useState(false);
   const [email, setEmail] = useState("");
+  const [isEmailError, setIsEmailError] = useState(false);
   const [phone, setPhone] = useState("");
+  const [isPhoneError, setIsPhoneError] = useState(false);
   const [message, setMessage] = useState("");
   const [terms, setTerms] = useState("");
-  const [isNameError, setIsNameError] = useState(false);
-  const [isNifError, setIsNifError] = useState(false);
-  const [isContactError, setIsContactError] = useState(false);
-  const [isPositionError, setIsPositionError] = useState(false);
-  const [isEmailError, setIsEmailError] = useState(false);
-  const [isPhoneError, setIsPhoneError] = useState(false);
-
+  const [recaptcha, setRecaptcha] = useState(false);
+  const [isSubmited, setIsSubmited] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [actionState, setActionState] = useState(null);
 
   const handleNameChange = (value) => {
     setName(value);
@@ -65,16 +85,19 @@ const Form = () => {
 
   const handleMessageChange = (value) => {
     setMessage(value);
-
   };
-  
+
   const handleTermsChange = (checked) => {
-
     setTerms(checked);
-
   };
 
-  const enabled =
+  const onChangeCaptcha = (value) => {
+    if (value.length > 0) {
+      setRecaptcha(true);
+    }
+  };
+
+  const isValidated =
     (name.length > 0 ||
       nif.length > 0 ||
       contact.length > 0 ||
@@ -86,10 +109,30 @@ const Form = () => {
     validatePosition(position) &&
     validateEmail(email) &&
     validatePhone(phone) &&
-    terms === true;
+    terms;
+
+  const isAllValidated =
+    isValidated === true && recaptcha === true ? true : false;
+
+  const dispatchForm = () => {
+    if (isAllValidated) {
+      setIsLoading(true);
+      setTimeout(() => {
+        setIsLoading(false);
+        setIsSubmited(true);
+      }, 1000);
+      analytics(
+        dataAnalyticsForm.event,
+        dataAnalyticsForm.eventCategory,
+        dataAnalyticsForm.eventAction,
+        dataAnalyticsForm.eventLabel
+      );
+      setActionState(urlActionForm);
+    }
+  };
 
   return (
-    <React.Fragment>
+    <>
       <div className="form__wrapper" id="contacto">
         <div className="__header__title">
           <h2 className="--title">¿En qué podemos ayudarte?</h2>
@@ -113,9 +156,15 @@ const Form = () => {
           id="campaign-form"
           class="--form campaign-form required"
           method="POST"
-          action={enabled ? "https://specials.mediamarkt.es/empresas/confirmacion" : null}
+          action={actionState}
+          onSubmit={dispatchForm}
         >
-          <input type="hidden" name="campaign" id="campaign" value="194" />
+          <input
+            type="hidden"
+            name="campaign"
+            id="campaign"
+            value={idCampaign}
+          />
           <div className="inputs__container">
             <Input
               type="name"
@@ -130,9 +179,9 @@ const Form = () => {
             />
             <Input
               type="nif"
-              placeholder="NIF centro educativo"
+              placeholder="NIF Centro educativo"
               value={nif}
-              onChange={(e) => handleNifChange(e.target.value)}
+              onChange={(e) => handleNifChange(e.target.value.toUpperCase())}
               name="nif"
               error={isNifError}
               errorText="Introduzca un NIF válido"
@@ -165,10 +214,10 @@ const Form = () => {
               type="e-mail"
               placeholder="Dirección de email"
               value={email}
-              onChange={(e) => handleEmailChange(e.target.value)}
+              onChange={(e) => handleEmailChange(e.target.value.toLowerCase())}
               name="email"
               error={isEmailError}
-              errorText="Introduzca una email válido"
+              errorText="Introduzca un email válido"
               className="input"
               id="email"
             />
@@ -184,7 +233,6 @@ const Form = () => {
               id="phone"
             />
           </div>
-
           <TextArea
             type="mytext"
             placeholder="Consulta"
@@ -196,59 +244,28 @@ const Form = () => {
             id="consulta"
           />
           <div className="footer__form">
-            <div className="--container">
-              <div class="privacypolicy__container">
-                <input
-                  className="check"
-                  type="checkbox"
-                  name="tlegal-terms"
-                  id="tlegal-terms"
-                  onChange={(e) => handleTermsChange(e.target.checked)}
-                />
-                <label
-                  className="label--policy"
-                  id="tlegal-terms1"
-                >
-                  <span></span>
-                  He leído y acepto la&nbsp;
-                  <a
-                    className="--link privacy-modal"
-                    href="https://www.mediamarkt.es/es/legal/politica-de-privacidad"
-                    rel="nofollow"
-                    title="Política de privacidad"
-                    style={{ color: "#df0000" }}
-                  >
-                    Política de Privacidad
-                  </a>&nbsp;
-                  y las&nbsp;
-                  <a
-                    className="--link privacy-modal"
-                    href="https://www.mediamarkt.es/es/legal/condiciones-de-uso-de-la-web"
-                    rel="nofollow"
-                    title="Condiciones de uso"
-                    style={{ color: "#df0000" }}
-                  >
-                    condiciones de uso
-                  </a>
-                  .
-                </label>
-              </div>
-            </div>
-            <div className={`error__terms ${!terms ? "" : "disabled"}`}>
-                  Es necesario que acepte la política de privacidad y las condiciones de uso de la web
-                </div>
-            <button
+            <PrivacyPolicy
+              onChange={(e) => handleTermsChange(e.target.checked)}
+              terms={terms}
+            />
+            <ReCaptcha
+              size="normal"
+              render="explicit"
+              sitekey="6LdI4SUaAAAAAEPC4phCYBzZVLZg6tAz5nEbLO59"
+              className={`recaptcha ${isValidated ? "enabled" : "disabled"}`}
+              onChange={onChangeCaptcha}
+            />
+            <AsyncButton 
               type="submit"
-              className={`${enabled ? "enabled" : "disabled"}`}
-              disabled={!enabled}
-              onClick={() => analytics('gaEvent', 'Home_B2B', 'Click', 'Home_B2B_enviar_formulario')}
-            >
-              Enviar
-            </button>
+              disabled={!isAllValidated}
+              isAllValidated={isAllValidated}
+              isSubmited={isSubmited}
+              isLoading={isLoading}
+            />
           </div>
         </form>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

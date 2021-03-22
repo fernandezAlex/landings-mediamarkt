@@ -1,7 +1,4 @@
-
-
 .carousel__container {
-
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -9,11 +6,10 @@
   ::-webkit-scrollbar {
     display: none;
   }
-
 }
 
 .scroll__indicator__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

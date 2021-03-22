@@ -2,11 +2,11 @@ import React from "react";
 import CardGrid from "../cards/CardGrid";
 import SliderSmall from "../carousel/SliderSmall";
 
-const Section3 = (width) => {
+const Section3 = ({width}) => {
   return (
     <div className="section">
       {
-        width.width < 843 
+        width < 843 
         ? (
             <div>
             <h1 className="title">Soluciones a medida para escuelas, centros de formación y universidades</h1>

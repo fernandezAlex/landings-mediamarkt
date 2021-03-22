@@ -7,33 +7,30 @@ Author E-mail:
 Marc Boreu: boreu@mediamarkt.es
 License: MediaMarkt Spain
 License url: https://www.mediamarkt.es
-  **/ 
+  **/
 
+@import "./base/cleanspecials";
+@import "./base/slick";
+@import "./base/base";
+@import "./base/settings";
 
-
-
-        @import './base/base';
-        @import './base/settings';
-        
-        
-        // Components
-        @import './components/cardCarousel';
-        @import './components/cardGrid';
-        @import './components/cardItem';
-        @import './components/cardWide';
-        @import './components/cardText';
-        @import './components/destacados';
-        @import './components/faqs';
-        @import './components/form';
-        @import './components/loader';
-        @import './components/header';
-        @import './components/sliderBig';
-        @import './components/sliderSmall';
-        @import './components/carouselWide';
-        @import './components/cardSection';
-        @import './components/modal';
-        @import './components/privacyPolicy';
-        @import './components/asyncButton';
-        @import './components/sections';
-        @import './components/breadcrumb';
-        @import './components/cardTextGrid';
+// Components
+@import "./components/cardCarousel";
+@import "./components/cardGrid";
+@import "./components/cardItem";
+@import "./components/cardWide";
+@import "./components/destacados";
+@import "./components/faqs";
+@import "./components/form";
+@import "./components/loader";
+@import "./components/header";
+@import "./components/sliderBig";
+@import "./components/sliderSmall";
+@import "./components/cardSection";
+@import "./components/modal";
+@import "./components/privacyPolicy";
+@import "./components/asyncButton";
+@import "./components/sections";
+@import "./components/breadcrumb";
+@import "./components/cardTextGrid";
+@import "./components/cardText";

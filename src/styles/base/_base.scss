@@ -58,6 +58,7 @@ h1.title {
     }
   }
 }
+
 .title {
   padding: 40px 80px;
   margin: auto;
@@ -68,68 +69,6 @@ h1.title {
   @media only screen and (max-width: 768px) {
     padding: 30px;
   }
-}
-
-.container-fluid {
-  padding: 0px !important;
-}
-
-.mobile-version .wrapper .page-container {
-  margin-top: 0% !important;
-}
-
-.mobile-version {
-  button,
-  input,
-  optgroup,
-  select,
-  textarea {
-    font-family: inherit; /* 1 */
-    font-size: 100%; /* 1 */
-    // line-height: 1.15!important; /* 1 */
-    line-height: 1!important; /* 1 */
-    margin: 0; /* 2 */
-  }
-
-  /**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
- */
-
-  button,
-  input {
-    /* 1 */
-    overflow: visible;
-  }
-
-  /**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
- */
-
-  button,
-  select {
-    /* 1 */
-    text-transform: none;
-  }
-
-  /**
- * Correct the inability to style clickable types in iOS and Safari.
- */
-
-  button,
-  [type="button"],
-  [type="reset"],
-  [type="submit"] {
-    -webkit-appearance: button!important;
-  }
-}
-
-.container-fluid {
-  padding-right: 0px !important;
-  padding-left: 0px !important;
-  margin-right: 0px !important;
-  margin-left: 0px !important;
 }
 
 .--subtitle {
@@ -143,24 +82,15 @@ h1.title {
   height: 140px;
 }
 
-/* visibility for checkbox terms and conditions */
-.mobile-version input#tlegal-terms {
-  -webkit-appearance: checkbox !important;
-}
-
-
 .container__slidersmall .slick-dots li.slick-active button:before {
-  font-size: 70px!important;
+  font-size: 70px !important;
 }
 .container__slidersmall .slick-dots li button:before {
-  font-size: 38px!important;
+  font-size: 38px !important;
 }
 .container__sliderbig .slick-dots li.slick-active button:before {
-  font-size: 70px!important;
+  font-size: 70px !important;
 }
 .container__sliderbig .slick-dots li button:before {
-  font-size: 38px!important;
-}
-#wrp_widgets, #widget_news {
-  display: none!important;
+  font-size: 38px !important;
 }

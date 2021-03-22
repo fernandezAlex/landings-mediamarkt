@@ -3,7 +3,7 @@
     justify-content: center;
     margin: auto;
     max-width: 1477px;
-    padding: 0 0px 0 80px;
+    padding: 0 80px;
     @media screen and (max-width: 1477px) {
         padding: 0 40px;
     }
@@ -19,9 +19,8 @@
     // grid-template-rows: repeat(3, 400px);
     display: flex;
     flex-flow: wrap;
-    // justify-content: space-between;
+    justify-content: space-between;
     @media screen and (max-width: 1238px) {
         justify-content: start;
     }
-
 }

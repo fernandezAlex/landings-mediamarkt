@@ -5,14 +5,6 @@ import Section1 from "./components/sections/Section1";
 import Section2 from "./components/sections/Section2";
 import Section3 from "./components/sections/Section3";
 import Form from "./components/form/Form";
-// import Accordion from "./components/faqs/Accordion";
-// import FormMe from "./components/form/FormMe";
-
-
-
-
-
-
 
 
 function App() {
@@ -37,8 +29,6 @@ function App() {
       <Section2 width={width}/>
       <Section3 width={width}/>
       <Form />
-      {/* <FormMe/> */}
-      {/* <Accordion /> */}
     </>
   );
 }

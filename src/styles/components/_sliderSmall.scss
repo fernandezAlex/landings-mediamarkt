@@ -1,61 +1,34 @@
-// @import "~slick-carousel/slick/slick.css";
-// @import "~slick-carousel/slick/slick-theme.css";
-
-
-
 .container__slidersmall {
-    // margin-top: 100px!important;
-    // width: 100%!important;
-    // height: 600px!important;
-    .slidersmall__card {
-        height: 600px!important;
-    }
-    .slick-slide.slick-active.slick-center.slick-current {
-      max-width: 360px!important;
-    }
-    
-    .slick-slide.slick-cloned {
-      max-width: 360px!important;
-    }
-    .slick-track .slick-slide {
-      min-width: 360px!important;
-      width: 360px!important;
-    }
-    
-    .slick-slide {
-      width: inherit!important;
-    }
-    
+  .slidersmall__card {
+    height: 600px !important;
+  }
+  .slick-slide.slick-active.slick-center.slick-current {
+    max-width: 360px !important;
+  }
+
+  .slick-slide.slick-cloned {
+    max-width: 360px !important;
+  }
+  .slick-track .slick-slide {
+    min-width: 360px !important;
+    width: 360px !important;
+  }
+
+  .slick-slide {
+    width: inherit !important;
+  }
+
+  .slick-list {
+    padding: 0px 50px !important;
+  }
+
+  .slick-dots li.slick-active button:before {
+    color: $mediamarkt !important;
+  }
+
+  @media only screen and (max-width: 480px) {
     .slick-list {
-      padding: 0px 50px!important;
-      // width: 430px;
+      width: 480px;
     }
-    
-    .slick-dots li.slick-active button:before {
-      color: $mediamarkt!important;
-      // font-size: 30px!important;
-    }
-    
-    // .slick-dots li button:before {
-    //   font-size: 20px!important;
-    // }
-    
-    // @media only screen and (max-width: 450px) {
-    //   .slick-list {
-    //     width: 450px!important;
-    //   }
-    // }
-    
-    
-    @media only screen and (max-width: 480px) {
-      .slick-list {
-        width: 480px;
-      }
-    }
-    
-    // @media only screen and (max-width: 650px) {
-    //   .slick-list {
-    //     width: 650px!important;
-    //   }
-    // }
+  }
 }
