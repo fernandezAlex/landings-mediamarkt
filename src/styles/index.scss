@@ -1,5 +1,5 @@
 /**
-Build version: 1.0.0 - Wednesday, March 11th, 2021, 17:02:30 AM 
+Build version: 1.2.0 - Wednesday, March 4th, 2021, 10:17:30 AM 
 Mediamarkt.es MMES
 Url: https://www.mediamarkt.es
 Author Web: Front-end Development Spain 
@@ -7,6 +7,30 @@ Author E-mail:
 Marc Boreu: boreu@mediamarkt.es
 License: MediaMarkt Spain
 License url: https://www.mediamarkt.es
-  **/ 
+  **/
 
+@import "./base/cleanspecials";
+@import "./base/slick";
+@import "./base/base";
+@import "./base/settings";
 
+// Components
+@import "./components/cardCarousel";
+@import "./components/cardGrid";
+@import "./components/cardItem";
+@import "./components/cardWide";
+@import "./components/destacados";
+@import "./components/faqs";
+@import "./components/form";
+@import "./components/loader";
+@import "./components/header";
+@import "./components/sliderBig";
+@import "./components/sliderSmall";
+@import "./components/cardSection";
+@import "./components/modal";
+@import "./components/privacyPolicy";
+@import "./components/asyncButton";
+@import "./components/sections";
+@import "./components/breadcrumb";
+@import "./components/cardTextGrid";
+@import "./components/cardText";

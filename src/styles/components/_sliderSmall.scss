@@ -1,0 +1,34 @@
+.container__slidersmall {
+  .slidersmall__card {
+    height: 600px !important;
+  }
+  .slick-slide.slick-active.slick-center.slick-current {
+    max-width: 360px !important;
+  }
+
+  .slick-slide.slick-cloned {
+    max-width: 360px !important;
+  }
+  .slick-track .slick-slide {
+    min-width: 360px !important;
+    width: 360px !important;
+  }
+
+  .slick-slide {
+    width: inherit !important;
+  }
+
+  .slick-list {
+    padding: 0px 50px !important;
+  }
+
+  .slick-dots li.slick-active button:before {
+    color: $mediamarkt !important;
+  }
+
+  @media only screen and (max-width: 480px) {
+    .slick-list {
+      width: 480px;
+    }
+  }
+}
