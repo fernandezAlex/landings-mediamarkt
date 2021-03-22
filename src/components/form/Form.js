@@ -132,7 +132,7 @@ const Form = () => {
   };
 
   return (
-    <React.Fragment>
+    <>
       <div className="form__wrapper" id="contacto">
         <div className="__header__title">
           <h2 className="--title">¿En qué podemos ayudarte?</h2>
@@ -265,7 +265,7 @@ const Form = () => {
           </div>
         </form>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

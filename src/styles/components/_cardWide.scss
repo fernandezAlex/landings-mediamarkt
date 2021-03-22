@@ -1,5 +1,3 @@
-
-
 .cardwide__container {
     display: flex;
     min-height: 0;
@@ -11,8 +9,6 @@
     flex-direction: row;
     justify-content: center;
 
-
-
     .__left {
         display: flex;
         justify-content: center;
@@ -20,7 +16,7 @@
         height: 100%;
         padding: 24px 16px;
         flex-direction: column;
-        .--title{
+        .--title {
             display: flex;
             padding-bottom: 20px;
             .--title__card {
@@ -36,14 +32,12 @@
                 padding-top: 0px;
                 text-transform: none;
                 line-height: 28px;
-                font-size: 24px!important;
-                max-height: calc(56px)
+                font-size: 24px !important;
+                max-height: calc(56px);
             }
             .--subtitle__card {
                 font-size: 0.8rem;
             }
-
-
         }
         .--button {
             cursor: pointer;
@@ -53,8 +47,8 @@
             text-decoration: none;
             a.link__card {
                 text-decoration: none;
-                   align-items: center;
-                    display: flex;
+                align-items: center;
+                display: flex;
                 .link_text {
                     color: rgb(39, 36, 34);
                     font-size: 16px;
@@ -80,18 +74,16 @@
         }
     }
 
-    &:hover{ 
+    &:hover {
         box-shadow: 1px 4px 10px grey;
-        transition:  box-shadow .4s ease-in;
-     }
+        transition: box-shadow 0.4s ease-in;
+    }
 }
-
-
 
 a,
 a:visited,
 a:active,
 a:focus,
 a:hover {
-  color: black;
+    color: black;
 }

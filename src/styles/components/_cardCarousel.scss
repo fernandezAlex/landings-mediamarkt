@@ -1,15 +1,11 @@
-
-
 .carousel__container {
-
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  overflow-x: auto;
-  ::-webkit-scrollbar {
-    display: none;
-  }
-
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow-x: auto;
+    ::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 .scroll__indicator__container {

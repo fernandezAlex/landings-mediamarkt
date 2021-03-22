@@ -15,7 +15,7 @@
 
 .title__container {
   font-size: 0.9em;
-  margin: -70px auto 3% auto;
+  margin: -70px auto 1% auto;
   border-radius: 6px;
   z-index: 1;
   padding: 0 0 0 0;
@@ -72,13 +72,13 @@
     background-image: url("https://specials.mediamarkt.es/assets-react/b2b/062007_Header_449x272_AAFF.png");
   }
   .title__container{
-    margin: -60px 0% 5% 0%;
+    margin: -60px 0% 60px 0%;
   }
 }
 @media only screen and (min-width: 450px) and (max-width: 510px) {
   .title__container{
     height: 304px;
-    margin: -150px 0% -14% 0%;
+    margin: -150px 0% -70px 0%;
   }
 }
 @media only screen and (min-width: 450px) and (max-width: 768px) {

@@ -5,7 +5,7 @@ import cards from '../../data/cardsSection2';
 const CardGrid = () => {
 
     return (
-        <React.Fragment>
+        <>
             <div className="grid__wrapper">
                 <div className="grid__container">
                     {
@@ -28,7 +28,7 @@ const CardGrid = () => {
                     }
                 </div>
             </div>
-        </React.Fragment>
+        </>
     )
 }
 

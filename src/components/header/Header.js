@@ -5,7 +5,7 @@ import { Breadcrumb } from "../breadcrumb/Breadcrumb";
 const Header = () => {
 
   return (
-    <React.Fragment>
+    <>
       <div 
         className="header__container">
         <div className="--content"></div>
@@ -18,7 +18,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </React.Fragment>
+    </>
   );
 };
 
