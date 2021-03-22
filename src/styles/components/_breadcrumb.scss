@@ -1,0 +1,17 @@
+.breadcrumb__container {
+  display: flex;
+  align-items: center;
+  a {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+  }
+  a .icon__home {
+    color: $mediamarkt;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  .icon__arrow {
+    margin: 0 5px;
+  }
+}
