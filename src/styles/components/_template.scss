@@ -1,0 +1,8 @@
+
+@mixin styles_template {
+    .header__container {
+        background-size: auto;
+        background-repeat: no-repeat;
+        // background-image: url($placeholder-background);
+    }
+}

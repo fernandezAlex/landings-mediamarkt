@@ -6,6 +6,8 @@ import Section2 from "./components/sections/Section2";
 import Section3 from "./components/sections/Section3";
 import Form from "./components/form/Form";
 import {cardsSection1, cardsSection2} from './data/cards'
+import {headerData} from './data/header'
+
 
 
 function App() {
@@ -25,8 +27,7 @@ function App() {
   
   return (
     <>
-      <Header />
-      <Section1/>
+      <Header data={headerData} />
       <Section2 data={cardsSection1} width={width}/>
       <Section3 data={cardsSection2} width={width}/>
       <Form />
