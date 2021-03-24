@@ -1,29 +1,17 @@
-import React from 'react'
-import CardText from './CardText';
-import { cardsTexts } from '../../data/cardsText';
+import React from "react";
+import CardText from "./CardText";
 
+const CardTextGrid = ({ data }) => {
+  const cardsTexts = data;
+  return (
+    <div className="cardTextGrid__wrapper">
+      <div className="cardTextGrid__container">
+        {cardsTexts.map(({ title, subtitle }, i) => {
+          return <CardText key={i} title={title} subtitle={subtitle} />;
+        })}
+      </div>
+    </div>
+  );
+};
 
-const CardTextGrid = () => {
-
-    return (
-        <>
-            <div className="cardTextGrid__wrapper">
-                <div className="cardTextGrid__container">
-                    {
-                        cardsTexts.map((card, i) => {
-                            return (
-                                <CardText
-                                    key={i}
-                                    title={card.title}
-                                    subtitle={card.subtitle}
-                                />
-                            )
-                        })
-                    }
-                </div>
-            </div>
-        </>
-    )
-}
-
-export default CardTextGrid
+export default CardTextGrid;
