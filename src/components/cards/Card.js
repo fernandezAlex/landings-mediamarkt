@@ -17,7 +17,6 @@ const Card = ({
 }) => {
     
     return (
-        <>
             <div key={title} className="card__container">
                 <div className="__header">
                     <div className="--img" style={{ backgroundImage: `url('${imgThumbnail}')` }}></div>
@@ -43,7 +42,6 @@ const Card = ({
                     </div>
                 </div>
             </div>
-        </>
     )
 }
 
