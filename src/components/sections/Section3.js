@@ -2,7 +2,7 @@ import React from "react";
 import CardGrid from "../cards/CardGrid";
 import SliderSmall from "../carousel/SliderSmall";
 
-const Section3 = ({width}) => {
+const Section3 = ({width, data}) => {
   return (
     <div className="section">
       {
@@ -10,12 +10,12 @@ const Section3 = ({width}) => {
         ? (
             <div>
             <h1 className="title">Soluciones a medida para escuelas, centros de formación y universidades</h1>
-            <SliderSmall />
+            <SliderSmall data={data}/>
             </div>
         ) : (
             <div>
             <h1 className="title">Soluciones a medida para escuelas, centros de formación y universidades</h1>
-            <CardGrid />
+            <CardGrid data={data} />
             </div>
         )
     }

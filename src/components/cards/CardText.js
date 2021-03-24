@@ -3,7 +3,6 @@ import React from "react";
 const CardText = ({ title, subtitle }) => {
 
   return (
-    <>
       <div key={title} className="cardText__container">
         <div className="--title">
           <p className="--title__card">
@@ -16,7 +15,6 @@ const CardText = ({ title, subtitle }) => {
           </p>
         </div>
       </div>
-    </>
   );
 };
 
