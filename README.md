@@ -1,5 +1,4 @@
-<p align="center"><h1 align="center">MMES REACT PROJECTS</h1></p>
-<br />
+<p align="center"><h1 align="center">mmes react projects</h1></p>
 
 <p align="center"><img src="https://csscdn.redblue.de/msp/patternlibrary/deployable/static/resources/images/red/mm-logo--small.svg" width="450"></p>
 <p align="center"><img src="https://thevineet.com/wp-content/uploads/2017/10/drupal-adopt-react-js-framework-administrative-uis.png" width="450"></p>
@@ -58,22 +57,3 @@ npm install slick-carousel --save
 
 ### `node-sass`
 npm install --save node-sass
-
-
-### `react-google-recaptcha`
-npm install --save react-google-recaptcha
-
-
-
-
-
-<p align="center">
-  <h3 align="center">MMES REACT PROJECTS</h3>
-  <p align="center">
-    Marc Boreu
-    <br />
-    <a href="https://www.linkedin.com/in/marcboreu/"><strong>LinkedIn</strong></a>
-    <br />
-    <br />
-  </p>
-</p>
