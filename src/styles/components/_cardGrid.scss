@@ -1,6 +1,4 @@
 .grid__wrapper {
-    display: flex;
-    justify-content: center;
     margin: auto;
     max-width: 1477px;
     padding: 0 80px;
@@ -12,15 +10,36 @@
     }
 }
 
+
 .grid__container {
-    // display: grid;
-    gap: 45px;
-    // grid-template-columns: repeat(3, 300px);
-    // grid-template-rows: repeat(3, 400px);
     display: flex;
-    flex-flow: wrap;
-    justify-content: space-between;
-    @media screen and (max-width: 1238px) {
-        justify-content: start;
+    flex-direction: row;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    margin-right: -10%;
+    @media screen and (max-width: 1380px) {
+        margin-right: -6%;
+    }
+    @media screen and (max-width: 1266px) {
+        margin-right: -4%;
+    }
+    @media screen and (max-width: 1260px) {
+        margin-right: 0;
+    }
+    @media screen and (max-width: 1000px) {
+        margin-right: -50px;
+    }
+}
+
+.grid__container > * {
+    padding: 20px 0px 0px 0px;
+    flex: 0 1 33.3%;
+    @media screen and (max-width: 1260px) {
+        padding: 20px 60px 0 0;
+        margin-right: 0;
+    }
+    @media screen and (max-width: 1000px) {
+        padding: 20px 40px 0 0;
+        margin-right: 0;
     }
 }

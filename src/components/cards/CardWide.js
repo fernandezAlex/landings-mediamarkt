@@ -17,7 +17,6 @@ const CardWide = ({
 }) => {
 
     return (
-        <>
             <div key={title} className="cardwide__container">
                 <div className="__left">
                     <div className="container__text">
@@ -41,7 +40,6 @@ const CardWide = ({
                     <div className="--imgWide" style={{ backgroundImage: `url('${imgThumbnail}')` }}></div>
                 </div>
             </div>
-        </>
     )
 }
 

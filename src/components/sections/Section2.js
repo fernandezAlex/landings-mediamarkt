@@ -1,16 +1,20 @@
 import React from 'react'
-import SliderBigSection1 from '../carousel/SliderBigSection1'
-import SliderSmallSection1 from '../carousel/SliderSmallSection1'
+import SliderBig from '../carousel/SliderBig'
+import SliderSmall from '../carousel/SliderSmall'
 
-const Section2 = ({ width }) => {
-  return (
-    <div className="section">
-      <div>
-        <h1 className="title">Destacados</h1>
-      </div>
-      {width < 824 ? <SliderSmallSection1 /> : <SliderBigSection1 />}
-    </div>
-  )
+const Section2 = ({ width, data }) => {
+    return (
+        <div className="section">
+            <div>
+                <h1 className="title">Destacados</h1>
+            </div>
+            {width < 824 ? (
+                <SliderSmall data={data} />
+            ) : (
+                <SliderBig data={data} />
+            )}
+        </div>
+    )
 }
 
 export default Section2

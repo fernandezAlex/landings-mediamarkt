@@ -1,9 +1,9 @@
 import React from 'react'
-import Slider from 'react-slick'
 import Card from '../cards/Card'
-import cards from '../../data/cardsSection2'
+import Slider from 'react-slick'
 
-const SliderSmall = () => {
+const SliderSmall = ({ data }) => {
+    const cards = data
     let settings = {
         dots: true,
         infinite: true,
@@ -20,22 +20,37 @@ const SliderSmall = () => {
         <div className="container__slidersmall">
             <div className="slidersmall__card">
                 <Slider {...settings}>
-                    {cards.map((card, i) => {
-                        return (
-                            <Card
-                                key={i}
-                                imgThumbnail={card.imgThumbnail}
-                                title={card.title}
-                                subtitle={card.subtitle}
-                                slug={card.slug}
-                                button={card.button}
-                                event={card.event}
-                                eventCategory={card.eventCategory}
-                                eventAction={card.eventAction}
-                                eventLabel={card.eventLabel}
-                            />
-                        )
-                    })}
+                    {cards.map(
+                        (
+                            {
+                                imgThumbnail,
+                                title,
+                                subtitle,
+                                slug,
+                                button,
+                                event,
+                                eventCategory,
+                                eventAction,
+                                eventLabel,
+                            },
+                            i
+                        ) => {
+                            return (
+                                <Card
+                                    key={i}
+                                    imgThumbnail={imgThumbnail}
+                                    title={title}
+                                    subtitle={subtitle}
+                                    slug={slug}
+                                    button={button}
+                                    event={event}
+                                    eventCategory={eventCategory}
+                                    eventAction={eventAction}
+                                    eventLabel={eventLabel}
+                                />
+                            )
+                        }
+                    )}
                 </Slider>
             </div>
         </div>

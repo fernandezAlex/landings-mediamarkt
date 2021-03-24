@@ -1,5 +1,5 @@
 
-export const cardsSection1 = [
+export const cardsSection2 = [
     {
         title: "Apúntate a nuestros  próximos webinars de educación",
         subtitle: "",
@@ -57,7 +57,7 @@ export const cardsSection1 = [
     },
 ]
 
-export const cardsSection2 = [
+export const cardsSection3 = [
     {
         title: "Empresa y oficina",
         subtitle: "Soluciones tecnológicas para empresas y oficinas",
@@ -138,16 +138,60 @@ export const cardsSection2 = [
 
 ]
 
-export const cardsSection3 = [
+export const cardsSection4 = [
     {
         title: "Soluciones financieras",
-        subtitle: "Todas la soluciones financieras a medida adaptadas a tus necesidades",
-        link: "https://specials.mediamarkt.es/empresas/soluciones-financieras",
-        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/062007_450x360_Teaser_1_AAFF.png",
+        subtitle: "Adaptadas a cada necesidad",
+        slug: "https://specials.mediamarkt.es/empresas/soluciones-financieras",
+        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Financiacion.jpg",
         button: "Ver más",
         eventGa: "gaEvent",
         eventCategory: "Home_B2B",
         eventAction: "Click",
         eventLabel: "Home_B2B_soluciones_B2B"
+    },
+    {
+        title: "Recompra de dispositivos",
+        subtitle: "Tu parque tecnológico siempre renovado",
+        slug: "#contacto",
+        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Dispositivos.jpg",
+        button: "Pregúntanos",
+        eventGa: "gaEvent",
+        eventCategory: "Home_B2B",
+        eventAction: "Click",
+        eventLabel: "Home_B2B_recompra"
+    },
+    {
+        title: "Reparaciones",
+        subtitle: "Nos ocupamos que tu actividad no cese",
+        slug: "#contacto",
+        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Reparaciones.jpg",
+        button: "Pregúntanos",
+        eventGa: "gaEvent",
+        eventCategory: "Home_B2B",
+        eventAction: "Click",
+        eventLabel: "Home_B2B_reparaciones"
+    },
+    {
+        title: "Instalaciones",
+        subtitle: "Contamos con diferentes soluciones",
+        slug: "#contacto",
+        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Instalaciones.jpg",
+        button: "Pregúntanos",
+        eventGa: "gaEvent",
+        eventCategory: "Home_B2B",
+        eventAction: "Click",
+        eventLabel: "Home_B2B_instalaciones"
+    },
+    {
+        title: "Garantías profesionales",
+        subtitle: "Coberturas multiriesgo y extenciones de garantía",
+        slug: "#contacto",
+        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Garantias.jpg",
+        button: "Pregúntanos",
+        eventGa: "gaEvent",
+        eventCategory: "Home_B2B",
+        eventAction: "Click",
+        eventLabel: "Home_B2B_garantias"
     }
 ]
