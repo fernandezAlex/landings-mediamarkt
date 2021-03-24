@@ -64,6 +64,8 @@ export const Section1 = () => {
                   }
                   className="link__contact"
                   href="https://specials.mediamarkt.es/folleto-empresas/educacion"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   <span className="arrow">
                     <Arrow />
