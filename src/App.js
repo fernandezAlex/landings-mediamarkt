@@ -7,6 +7,8 @@ import Section3 from "./components/sections/Section3";
 import Form from "./components/form/Form";
 import {cardsSection1, cardsSection2} from './data/cards'
 import {headerData} from './data/header'
+import {breadcrumbData} from './data/breadcrumb';
+
 
 
 

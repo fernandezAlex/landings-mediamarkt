@@ -2,7 +2,8 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
-export const Breadcrumb = () => {
+
+export const Breadcrumb = ({data}) => {
   return (
     <div className="breadcrumb__container">
       <a href="https://www.mediamarkt.es" target="_self">
@@ -14,14 +15,14 @@ export const Breadcrumb = () => {
         size="xs"
       />
       <a href="https://www.mediamarkt.es/empresas" target="_self">
-        <h5>MediaMarkt Business</h5>
+        <h5>{data.firstLabel}</h5>
       </a>
-      <FontAwesomeIcon
+      {/* <FontAwesomeIcon
         icon={faChevronRight}
         className="icon__arrow"
         size="xs"
       />
-      <h5>Educación</h5>
+      <h5>{data.secondLabel}</h5> */}
     </div>
   );
 };
