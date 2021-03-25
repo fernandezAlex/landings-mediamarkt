@@ -12,6 +12,7 @@ import {
   validatePhone,
 } from "../validations/ValidateFunctions";
 import ReCaptcha from "react-google-recaptcha";
+import Example from "./Datepicker";
 
 /* Data Form */
 
@@ -232,6 +233,7 @@ const Form = () => {
               className="input"
               id="phone"
             />
+            <Example/>
           </div>
           <TextArea
             type="mytext"

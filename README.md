@@ -64,6 +64,9 @@ npm install --save node-sass
 npm install --save react-google-recaptcha
 
 
+### `react-datepicker`
+npm install react-datepicker
+
 
 
 
