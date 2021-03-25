@@ -4,6 +4,7 @@ import { faHome, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 
 export const Breadcrumb = ({data}) => {
+  console.log(data);
   return (
     <div className="breadcrumb__container">
       <a href="https://www.mediamarkt.es" target="_self">

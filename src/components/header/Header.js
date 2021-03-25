@@ -2,7 +2,7 @@ import React from "react";
 import { Breadcrumb } from "../breadcrumb/Breadcrumb";
 
 
-const Header = ({data}, {breadcrumbData}) => {
+const Header = ({data, dataBreadcrumb}) => {
 
   return (
     <>
@@ -14,7 +14,7 @@ const Header = ({data}, {breadcrumbData}) => {
         <div className="content">
           <h1 className="--title">{data.title}</h1>
           <div className="--breadcrumb">
-              <Breadcrumb data=""/>  
+              <Breadcrumb data={dataBreadcrumb}/>  
           </div>
         </div>
       </div>

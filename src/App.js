@@ -8,7 +8,7 @@ import Form from "./components/form/Form";
 import {cardsSection1, cardsSection2} from './data/cards'
 import {headerData} from './data/header'
 import {breadcrumbData} from './data/breadcrumb';
-
+import SliderSmall from './components/carousel/SliderSmall';
 
 
 
@@ -25,12 +25,12 @@ function App() {
       window.removeEventListener("resize", debouncedHandleResize);
     };
   });
-
   
   return (
     <>
-      <Header data={headerData} />
-      <Section2 data={cardsSection1} width={width}/>
+      <Header data={headerData} dataBreadcrumb={breadcrumbData} />
+      {/* <SliderSmall data={cardsSection1} /> */}
+      {/* <Section1 data={cardsSection1} width={width}/> */}
       <Section3 data={cardsSection2} width={width}/>
       <Form />
     </>
