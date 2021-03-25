@@ -7,11 +7,11 @@ registerLocale("es", es);
 const Example = ({ error, errorText }) => {
   const [date, setDate] = useState(null);
 
-  const CustomButtonDate = forwardRef(({ value, onClick }, ref) => (
-    <button className="example-custom-input" onClick={onClick} ref={ref}>
-      {value}
-    </button>
-  ));
+//   const CustomButtonDate = forwardRef(({ value, onClick }, ref) => (
+//     <button className="example-custom-input" onClick={onClick} ref={ref}>
+//       {value}
+//     </button>
+//   ));
   console.log(date);
   return (
     <div className="container__input">
