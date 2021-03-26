@@ -12,8 +12,12 @@ import {
   validatePhone,
 } from "../validations/ValidateFunctions";
 import ReCaptcha from "react-google-recaptcha";
-
+import { DataApi } from "../../data/DataApi";
+// import Select from "react-select/src/Select";
+import Select from './Select';
 /* Data Form */
+import datashops from '../../data/datashops.json'
+const {stores} = datashops
 
 const idCampaign = "194";
 const dataAnalyticsForm = {
@@ -40,6 +44,9 @@ const Form = () => {
   const [isEmailError, setIsEmailError] = useState(false);
   const [phone, setPhone] = useState("");
   const [isPhoneError, setIsPhoneError] = useState(false);
+  const [storeSelected, setStoreSelected] = useState(false);
+  // const [isStoreError, setIsStoreError] = useState(false);
+
   const [message, setMessage] = useState("");
   const [terms, setTerms] = useState("");
   const [recaptcha, setRecaptcha] = useState(false);
@@ -91,11 +98,29 @@ const Form = () => {
     setTerms(checked);
   };
 
+  const handleStoresChange = (value) => {
+    setStoreSelected(value);
+  };
+
+
+  // const handleSelectDefault = (event) => {
+  //   // setIsStoreError(checked)
+  //   console.log(event)
+  // }
+
   const onChangeCaptcha = (value) => {
     if (value.length > 0) {
       setRecaptcha(true);
     }
   };
+
+  // if (storeSelected === "") {
+  //   setIsStoreError(true)
+  // }
+
+  // storeSelected === "" ? setIsStoreError(true) : setIsStoreError(false);
+
+
 
   const isValidated =
     (name.length > 0 ||
@@ -232,6 +257,20 @@ const Form = () => {
               className="input"
               id="phone"
             />
+            <Select
+            type="select"
+            data={stores}
+            propertiesData={["IDSAP", "Name"]}
+            className="shop__select"
+            error={!storeSelected ? true : false}
+            errorText="Es necesario que seleccione una tienda"
+            value={storeSelected}
+            onChange={(e) => handleStoresChange(e.target.value)}
+            labelDefault="Escoja una tienda"
+            // onDefault={(event) => handleSelectDefault(event.target)}
+
+            />
+            {console.log(storeSelected)}
           </div>
           <TextArea
             type="mytext"

@@ -180,3 +180,12 @@
     }
   }
   
+
+  .shop__select {
+    width: 95%;
+    padding-left: 5px;
+    border: none;
+  }
+  select.shop__select:focus {
+    outline: none;
+  }
