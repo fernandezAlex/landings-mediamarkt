@@ -36,7 +36,7 @@ const Card = ({
                     </div>
                     <div className="--button">
                         <a className="link__card" href={slug} onClick={() => analytics(eventGa, eventCategory, eventAction, eventLabel)}>
-                            <span className="arrow"><Arrow /></span>
+                            {/* <span className="arrow"><Arrow /></span> */}
                             <font className="link__text"> {button}</font>
                         </a>
                     </div>

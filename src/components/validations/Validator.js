@@ -1,7 +1,7 @@
 
-var validarCompania = function () {
-    var compania_input = $("#company"),
-        compania_value = $("#company").val();
+var validarName = function () {
+    var compania_input = $("#firstname"),
+        compania_value = $("#firstname").val();
     // if ( compania_value == null || compania_value == "" ) {
     if ( compania_value == null || compania_value == "" || /^[a-zA-Z Ã¡Ã Ã©Ã¨Ã­Ã²Ã³ÃºÃ±Ã¼Ã¯Ã§ÃÃ€Ã‰ÃˆÃÃ’Ã“ÃšÃ‘ÃœÃÃ‡.-]*$/.test(compania_value) == false ) {
         $("<div class='form-error'>Introduce un nombre vÃ¡lido</div>").insertAfter( compania_input );
@@ -14,11 +14,11 @@ var validarCompania = function () {
     };
 };
  
-var validarContacto = function() {
+var validarLastname = function() {
     var contacto_input = $( "#contact" ),
         contacto_value = $( "#contact" ).val();
     if ( contacto_value == null || contacto_value == "" || /^[a-zA-Z Ã¡Ã Ã©Ã¨Ã­Ã²Ã³ÃºÃ±Ã¼Ã¯Ã§ÃÃ€Ã‰ÃˆÃÃ’Ã“ÃšÃ‘ÃœÃÃ‡ .-]*$/.test(contacto_value) == false ) {
-        $( "<div class='form-error'>Introduce un nombre vÃ¡lido</div>" ).insertAfter( contacto_input );
+        $( "<div class='form-error'>Introduce un apellido vÃ¡lido</div>" ).insertAfter( contacto_input );
         contacto_input.addClass( "input-error" );
         return false;
     }
@@ -115,6 +115,27 @@ var validarNewsletter = function (news) {
     }
     return true;
 }
+
+var validateGender = (radio, error){
+    var radio_value = document.getElementById(radio).checked;
+    var radio_input = document.getElementById(radio);
+    if ($(radio_input).siblings('.form-error')) {
+        $(radio_input).siblings('.form-error').remove();
+    }
+ 
+    if (radio_value == false) {
+        var message = document.createElement('div');
+        message.className = 'form-error';
+        message.innerHTML = error;
+        suscripcion_input.parentNode.appendChild(message);
+        suscripcion_input.classList.add("input-error");
+ 
+        return false;
+    }
+    else {
+        return true;
+    }
+}
  
 var validarLegal = function (terms, error) {
  
@@ -136,10 +157,7 @@ var validarLegal = function (terms, error) {
     else {
         return true;
     }
-};
- 
- 
- 
+}; 
    
 // Captcha
  
@@ -165,13 +183,12 @@ function validarCaptcha(form)
 var validarFormulario = function() {
     $( ".form-error" ).remove();
     return (
-        validarCompania() &
-        validarNIF() &
-        validarContacto() &
-        validarCargo() &
+        validarName() &
+        validarLastname() &
         validarTelefono() &
         validarEmail() &
-        validarLegal('tlegal-terms', 'Debes aceptar la polÃ­tica de privacidad')&
+        validarLegal('gender', 'Debes aceptar la polÃ­tica de privacidad')&
+        validateGender('','Debes escoger una de las opciones') &
         validarCaptcha());
         // validarNewsletter('subscription') &
 };

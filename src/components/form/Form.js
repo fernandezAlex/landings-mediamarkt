@@ -6,12 +6,15 @@ import AsyncButton from "./AsyncButton";
 import analytics from "../../helpers/analytics";
 import {
   validateName,
+  validateLastName,
   validateNif,
   validatePosition,
   validateEmail,
   validatePhone,
+  validateGender,
 } from "../validations/ValidateFunctions";
 import ReCaptcha from "react-google-recaptcha";
+import InputRadio from "./InputRadio"
 
 /* Data Form */
 
@@ -29,13 +32,17 @@ const urlActionForm =
 
 const Form = () => {
   const [name, setName] = useState("");
+  const [lastname, setLastName] = useState("");
   const [isNameError, setIsNameError] = useState(false);
+  const [isLastNameError, setIsLastNameError] = useState(false);
   const [nif, setNif] = useState("");
   const [isNifError, setIsNifError] = useState(false);
   const [contact, setContact] = useState("");
   const [isContactError, setIsContactError] = useState(false);
   const [position, setPosition] = useState("");
   const [isPositionError, setIsPositionError] = useState(false);
+  const [radio, setRadio] = useState("");
+  const [isRadioError, setIsRadioError] = useState(false);
   const [email, setEmail] = useState("");
   const [isEmailError, setIsEmailError] = useState(false);
   const [phone, setPhone] = useState("");
@@ -53,10 +60,20 @@ const Form = () => {
     setIsNameError(!isOk);
   };
 
+  const handleLastNameChange = (value) => {
+    setLastName(value);
+    const isOk = validateName(value);
+    setIsLastNameError(!isOk);
+  };
+
   const handleNifChange = (value) => {
     setNif(value);
     const isOk = validateNif(value);
     setIsNifError(!isOk);
+  };
+
+  const handleRadio = (checked) => {
+    setRadio(checked);
   };
 
   const handleContactChange = (value) => {
@@ -104,11 +121,10 @@ const Form = () => {
       position.length > 0 ||
       email.length > 0) &&
     validateName(name) &&
-    validateNif(nif) &&
-    validateName(contact) &&
-    validatePosition(position) &&
+    validateLastName(lastname) &&
     validateEmail(email) &&
     validatePhone(phone) &&
+    radio &&
     terms;
 
   const isAllValidated =
@@ -134,14 +150,6 @@ const Form = () => {
   return (
     <>
       <div className="form__wrapper" id="contacto">
-        <div className="__header__title">
-          <h2 className="--title">¿En qué podemos ayudarte?</h2>
-          <p className="--text">
-            Envíanos tu consulta y nuestro equipo de asesores contactarán
-            contigo o llámanos al 900 205111 (Horario de atención de lunes a
-            viernes de 9h a 17h)
-          </p>
-        </div>
         <div className="__header__subtitle">
           <h2 className="--subtitle">Tus datos personales</h2>
           <p className="--text">
@@ -165,50 +173,41 @@ const Form = () => {
             id="campaign"
             value={idCampaign}
           />
+          <InputRadio
+            type="radio"
+            value={radio}
+            onChange={(e) => handleRadio(e.target.checked)}
+            name="gender"
+            error={isRadioError}
+            errorText="Seleccione un Genero"
+            className="input"
+            id="gender"
+            radio={radio}
+            arraysValues={["Hombre", "Mujer", "Sin especificar"]}
+            label={["Sr.","Sra.","Sin Especificar"]}
+          />
           <div className="inputs__container">
             <Input
               type="name"
-              placeholder="Nombre del centro educativo"
+              placeholder="Nombre"
               value={name}
               onChange={(e) => handleNameChange(e.target.value)}
-              name="company"
+              name="firstname"
               error={isNameError}
               errorText="Introduzca un nombre válido"
               className="input"
-              id="company"
+              id="firstname"
             />
             <Input
-              type="nif"
-              placeholder="NIF Centro educativo"
-              value={nif}
-              onChange={(e) => handleNifChange(e.target.value.toUpperCase())}
-              name="nif"
-              error={isNifError}
-              errorText="Introduzca un NIF válido"
+              type="lastname"
+              placeholder="Apellidos"
+              value={lastname}
+              onChange={(e) => handleLastNameChange(e.target.value)}
+              name="lastname"
+              error={isLastNameError}
+              errorText="Introduzca un Apellido válido"
               className="input"
-              id="cif"
-            />
-            <Input
-              type="contact"
-              placeholder="Persona de contacto"
-              value={contact}
-              onChange={(e) => handleContactChange(e.target.value)}
-              name="contact"
-              error={isContactError}
-              errorText="Introduzca un nombre válido"
-              className="input"
-              id="contact"
-            />
-            <Input
-              type="position"
-              placeholder="Cargo"
-              value={position}
-              onChange={(e) => handlePositionChange(e.target.value)}
-              name="position"
-              error={isPositionError}
-              errorText="Introduzca un cargo válido"
-              className="input"
-              id="position"
+              id="lastname"
             />
             <Input
               type="e-mail"
@@ -233,16 +232,6 @@ const Form = () => {
               id="phone"
             />
           </div>
-          <TextArea
-            type="mytext"
-            placeholder="Consulta"
-            rows={4}
-            name="consulta"
-            className="message"
-            value={message}
-            onChange={(e) => handleMessageChange(e.target.value)}
-            id="consulta"
-          />
           <div className="footer__form">
             <PrivacyPolicy
               onChange={(e) => handleTermsChange(e.target.checked)}

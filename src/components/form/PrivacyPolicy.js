@@ -15,27 +15,8 @@ const PrivacyPolicy = ({ onChange, terms }) => {
                     />
                     <label className="label--policy" id="tlegal-terms1">
                         <span></span>
-                        He leído y acepto la&nbsp;
-                        <a
-                            className="--link privacy-modal"
-                            href="https://www.mediamarkt.es/es/legal/politica-de-privacidad"
-                            rel="nofollow"
-                            title="Política de privacidad"
-                            style={{ color: '#df0000' }}
-                        >
-                            Política de Privacidad
-                        </a>
-                        &nbsp; y las&nbsp;
-                        <a
-                            className="--link privacy-modal"
-                            href="https://www.mediamarkt.es/es/legal/condiciones-de-uso-de-la-web"
-                            rel="nofollow"
-                            title="Condiciones de uso"
-                            style={{ color: '#df0000' }}
-                        >
-                            condiciones de uso
-                        </a>
-                        .
+                        Mediante la cumplimentación del presente formulario y haciendo click en el botón enviar, consiento recibir comunicaciones comerciales de productos y servicios ofrecidos por MediaMarkt y/o conjuntamente por MediaMarkt y terceros con los que colaboramos. Todo ello, de conformidad con os términos y condiciones de la Política de Privacidad de MediaMarkt.
+                        Promoción válida únicamente para nuevos usuarios registrados.
                     </label>
                 </div>
             </div>

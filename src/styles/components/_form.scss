@@ -16,11 +16,29 @@
       font-weight: bold !important;
     }
   }
-  
+  .input{
+    font-size: 16px;
+  }
+  .container__input__radio{
+    display: flex;
+    margin-bottom: 28px;
+
+    .input__error {
+    border-top: none;
+    margin-bottom: 28px;
+    }
+  }
+  span.label {
+    padding-right: 20px;
+  }
+  input[type="radio"].input{
+    display: inline;
+    width: auto;
+  }
   .form__container {
-    padding: 80px;
+    padding: 40px 80px;
     @media screen and (max-width: 1477px) {
-      padding: 40px;
+      padding: 20px 40px;
     }
     @media only screen and (max-width: 768px) {
       padding: 30px;
@@ -31,11 +49,12 @@
     .--form {
       justify-content: center;
       .inputs__container {
+        font-size: 18px;
         display: grid;
         justify-content: center;
         gap: 20px 20%;
         grid-template-columns: repeat(2, 40%);
-        grid-template-rows: repeat(3, 50px);
+        // grid-template-rows: repeat(3, 50px);
         > input .input {
           padding-left: 20px;
           border: none;
@@ -77,7 +96,7 @@
       .footer__form {
         .--container {
           display: flex;
-          padding: 20px 0 40px 0;
+          padding: 20px 0 10px 0;
           align-items: center;
           justify-content: center;
           @media screen and (max-width: 770px) {

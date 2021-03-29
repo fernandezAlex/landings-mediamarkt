@@ -4,6 +4,10 @@ export function validateName (name) {
     const NAME_REGEX = /^[a-z-A-Z\D]+$/;
     return NAME_REGEX.test(name)
 }
+export function validateLastName (lastname) {
+    const NAME_REGEX = /^[a-z-A-Z\D]+$/;
+    return NAME_REGEX.test(lastname)
+}
 export function validateNif (nif) {
     const NIF_REGEX = /^([ABCDEFGHJKLMNPQRSUVW])(\d{7})([0-9A-J])$/;
     return NIF_REGEX.test(nif)
