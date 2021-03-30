@@ -49,13 +49,14 @@ const Form = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [actionState, setActionState] = useState(null);
   
-  const [dateSelector, setDateSelect] = useState("");
+  const [dateSelect, setDateSelect] = useState("");
   const [isDateSelectError, setIsDateSelectError] = useState(false);
 
 
-  const handleDateSelectChange = (value) => {
-    setDateSelect(value);
-    const isOk = checkAdultAge(value)
+  const handleDateSelectChange = (date) => {
+    setDateSelect(date);
+    const isOk = checkAdultAge(date) >= 18 ? true : false;
+    console.log(isOk)
     setIsDateSelectError(!isOk);
   }
 
@@ -247,8 +248,8 @@ const Form = () => {
             <DateSelector
               error={isDateSelectError}
               errorText="Es necesario ser mayor de edad"
-              value={dateSelector}
-              onChange={(e) => handleDateSelectChange(e.target.value)}
+              value={dateSelect}
+              onChange={(date) => handleDateSelectChange(date)}
             />
           </div>
           <TextArea
