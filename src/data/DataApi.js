@@ -2,45 +2,55 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import datashops from './datashops.json'
 
+const URL = "https://jsonplaceholder.typicode.com/todos/";
 
 
 
-export const DataApi = () => {
-    const [shops, setShops] = useState([])
+export const dataApi = () => {
+    
+    const [dataApi, setDataApi] = useState()
+    useEffect(async () => {
+        const {data} = await axios.get(URL)   
+        setDataApi(data)
+    }, []);
+    console.log(dataApi);
 
-    useEffect(() => {
-        axios.get('../data/datashops.json')
-            .then(res => {
-                console.log(res)
-                setShops(res)
-            })
-            .catch(err => {
-                console.log(err)
-            })
-    })
-
+    // console.log(shops);    
     // useEffect(() => {
-    //     fetch('https://www.mediamarkt.es/static/json/stores.es.json')
+    //     fetch('https://jsonplaceholder.typicode.com/todos/')
     //     .then(res => res.json())
     //     .then(res => setShops(res))
     // })
 
+    // use
+
+    // const test = axios.get('https://jsonplaceholder.typicode.com/todos')
+    //         .then(res => {
+    //             // console.log(res)
+    //             setShops(res)
+    //         })
+
+    // const {data} = shops;
+    // console.log(arrayShops)
     
-    const {stores} = datashops
-    const {IDSAP, MC_STORE_ID, Name} = stores
+    // const {stores} = datashops
+    // console.log('primer shop: '+shops);
+    // const {stores} = shops;
+    // console.log('primer stores: '+stores);
+    // const {IDSAP, MC_STORE_ID, Name} = stores
 
     // let datashop = JSON.stringify(datashops)
 
-    console.log(typeof(stores))
-    console.log(stores)
+    // console.log(typeof(stores))
+    // console.log(stores)
 
-    return (
-        <div>
-            <ul>
-                {
-                    stores.map(({IDSAP, MC_STORE_ID, Name}) => <li key={IDSAP}>{IDSAP}{Name}</li>)
-                }
-            </ul>
-        </div>
-    )
+    return ( dataApi )
+        // stores
+    //     <ul>
+    //         {
+    //             // shops.map((shop, i) => <li key={i}>{shop}</li>)  
+    //             console.log(dataApi)
+    //         }
+    //     </ul>
+    // )
 }

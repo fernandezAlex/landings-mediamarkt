@@ -16,6 +16,9 @@
 .mobile-version input#tlegal-terms {
   -webkit-appearance: checkbox !important;
 }
+.mobile-version input[type=radio]{
+  -webkit-appearance: radio!important;
+}
 
 #wrp_widgets,
 #widget_news {

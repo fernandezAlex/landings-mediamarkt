@@ -14,14 +14,12 @@ import {
   validateGender,
 } from "../validations/ValidateFunctions";
 import ReCaptcha from "react-google-recaptcha";
-<<<<<<< HEAD
 import InputRadio from "./InputRadio"
+import {dataApi} from "../../data/dataApi"
 
-=======
-import { DataApi } from "../../data/DataApi";
+// import { DataApi } from "../../data/DataApi";
 // import Select from "react-select/src/Select";
 import Select from './Select';
->>>>>>> addFeature/select-json-shops
 /* Data Form */
 import datashops from '../../data/datashops.json'
 const {stores} = datashops
@@ -273,6 +271,8 @@ const Form = () => {
             // onDefault={(event) => handleSelectDefault(event.target)}
 
             />
+            {/* <DataApi /> */}
+            {console.log(dataApi)}
             {console.log(storeSelected)}
           </div>
           <div className="footer__form">
