@@ -30,10 +30,13 @@
   }
   span.label {
     padding-right: 20px;
+    color: #000;
+    font-size: 16px;
   }
   input[type="radio"].input{
     display: inline;
     width: auto;
+    margin-top: 0px;
   }
   .form__container {
     padding: 40px 80px;

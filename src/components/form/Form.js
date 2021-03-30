@@ -32,8 +32,7 @@ const dataAnalyticsForm = {
   eventAction: "Click",
   eventLabel: "Home_B2B_EDUCACION_contactanos",
 };
-const urlActionForm =
-  "https://specials.mediamarkt.es/empresas/confirmacion";
+const urlActionForm = "https://specials.mediamarkt.es/landings/welcomeVoucher/inc/validation";
 
 const urlApiJsonShops = "https://www.mediamarkt.es/static/json/stores.es.json"
 
