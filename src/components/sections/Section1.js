@@ -23,7 +23,7 @@ export const Section1 = () => {
           <br />
           <br />
           Te ofrecemos soluciones tecnológicas 360 que se adaptan a las
-          necesidades actuales del aprendizaje y de la enseñanza. Una desarrollo
+          necesidades actuales del aprendizaje y de la enseñanza. Un desarrollo
           personalizado a partir de la evaluación previa del centro en
           competencias digitales. Integrando modelos donde se tiene en cuenta la
           pedagogía, la tecnología y los espacios tanto virtuales como
