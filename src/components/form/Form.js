@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Input from "./Input";
 import TextArea from "./TextArea";
 import PrivacyPolicy from "./PrivacyPolicy";
@@ -15,14 +15,15 @@ import {
 } from "../validations/ValidateFunctions";
 import ReCaptcha from "react-google-recaptcha";
 import InputRadio from "./InputRadio"
-import {dataApi} from "../../data/dataApi"
+import DateSelector from "./DateSelector";
+import "react-datepicker/dist/react-datepicker.css";
 
-// import { DataApi } from "../../data/DataApi";
-// import Select from "react-select/src/Select";
 import Select from './Select';
+import axios from 'axios';
 /* Data Form */
-import datashops from '../../data/datashops.json'
-const {stores} = datashops
+
+// import datashops from '../../data/datashops.json'
+// const {stores} = datashops
 
 const idCampaign = "194";
 const dataAnalyticsForm = {
@@ -33,6 +34,8 @@ const dataAnalyticsForm = {
 };
 const urlActionForm =
   "https://specials.mediamarkt.es/empresas/confirmacion";
+
+const urlApiJsonShops = "https://www.mediamarkt.es/static/json/stores.es.json"
 
 
 
@@ -54,14 +57,27 @@ const Form = () => {
   const [phone, setPhone] = useState("");
   const [isPhoneError, setIsPhoneError] = useState(false);
   const [storeSelected, setStoreSelected] = useState(false);
-  // const [isStoreError, setIsStoreError] = useState(false);
-
   const [message, setMessage] = useState("");
   const [terms, setTerms] = useState("");
   const [recaptcha, setRecaptcha] = useState(false);
   const [isSubmited, setIsSubmited] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [actionState, setActionState] = useState(null);
+
+
+  const [shops, setShops] = useState([])
+
+  useEffect(() => {
+      axios.get(urlApiJsonShops)
+          .then(({data}) => {
+              setShops(data.stores)
+          })
+          .catch(err => {
+              console.log(err)
+          })
+  }, [setShops])
+
+
 
   const handleNameChange = (value) => {
     setName(value);
@@ -122,10 +138,6 @@ const Form = () => {
   };
 
 
-  // const handleSelectDefault = (event) => {
-  //   // setIsStoreError(checked)
-  //   console.log(event)
-  // }
 
   const onChangeCaptcha = (value) => {
     if (value.length > 0) {
@@ -133,11 +145,6 @@ const Form = () => {
     }
   };
 
-  // if (storeSelected === "") {
-  //   setIsStoreError(true)
-  // }
-
-  // storeSelected === "" ? setIsStoreError(true) : setIsStoreError(false);
 
 
 
@@ -260,7 +267,7 @@ const Form = () => {
             />
             <Select
             type="select"
-            data={stores}
+            data={shops}
             propertiesData={["IDSAP", "Name"]}
             className="shop__select"
             error={!storeSelected ? true : false}
@@ -271,9 +278,7 @@ const Form = () => {
             // onDefault={(event) => handleSelectDefault(event.target)}
 
             />
-            {/* <DataApi /> */}
-            {console.log(dataApi)}
-            {console.log(storeSelected)}
+            <DateSelector />
           </div>
           <div className="footer__form">
             <PrivacyPolicy
