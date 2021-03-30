@@ -10,9 +10,10 @@ import {
   validatePosition,
   validateEmail,
   validatePhone,
+  checkAdultAge,
 } from "../validations/ValidateFunctions";
 import ReCaptcha from "react-google-recaptcha";
-import Example from "./Datepicker";
+import DateSelector from "./DateSelector";
 
 /* Data Form */
 
@@ -47,6 +48,16 @@ const Form = () => {
   const [isSubmited, setIsSubmited] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [actionState, setActionState] = useState(null);
+  
+  const [dateSelector, setDateSelect] = useState("");
+  const [isDateSelectError, setIsDateSelectError] = useState(false);
+
+
+  const handleDateSelectChange = (value) => {
+    setDateSelect(value);
+    const isOk = checkAdultAge(value)
+    setIsDateSelectError(!isOk);
+  }
 
   const handleNameChange = (value) => {
     setName(value);
@@ -233,7 +244,12 @@ const Form = () => {
               className="input"
               id="phone"
             />
-            <Example/>
+            <DateSelector
+              error={isDateSelectError}
+              errorText="Es necesario ser mayor de edad"
+              value={dateSelector}
+              onChange={(e) => handleDateSelectChange(e.target.value)}
+            />
           </div>
           <TextArea
             type="mytext"

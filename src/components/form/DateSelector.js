@@ -1,35 +1,28 @@
-import React, { useState, forwardRef } from "react";
+import React, { useState } from "react";
 import DatePicker, { registerLocale } from "react-datepicker";
 import es from "date-fns/locale/es";
 registerLocale("es", es);
 
 
-const Example = ({ error, errorText }) => {
-  const [date, setDate] = useState(null);
-
-//   const CustomButtonDate = forwardRef(({ value, onClick }, ref) => (
-//     <button className="example-custom-input" onClick={onClick} ref={ref}>
-//       {value}
-//     </button>
-//   ));
-  console.log(date);
+const DateSelector = ({ error, errorText, value, onChange }) => {
+  const [date, setDate] = useState();
+console.log(date)
   return (
     <div className="container__input">
     <div className="container__datepicker">
         <DatePicker
-          // isClearable
           locale="es"
           placeholderText="Fecha de nacimiento"
           selected={date}
-          dateFormat="dd - MMMM - yyyy"
+          value={value}
+          dateFormat="dd/MM/yyyy"
           onChange={(date) => setDate(date)}
+          onChangeRaw={onChange}
           peekNextMonth
           showMonthDropdown
           showYearDropdown
-        //   yearDropdownItemNumber={50}
-          dropdownMode="scroll"
+          dropdownMode="select"
           className="input"
-          // customInput={<CustomButtonDate />}
         />
       </div>
           <div className="container__datepicker__span">
@@ -46,4 +39,16 @@ const Example = ({ error, errorText }) => {
   );
 };
 
-export default Example;
+export default DateSelector;
+
+
+// const checkAdultAge = (birthdayDate) => {
+//   let today = new Date();
+//   let birthday = new Date(birthdayDate);
+//   let age = today.getFullYear() - birthday.getFullYear();
+//   let m = today.getMonth() - birthday.getMonth();
+//   if (m < 0 || (m === 0 && today.getDate() < birthday.getDate())) {
+//     age--;
+//   }
+//   return age;
+// }
