@@ -78,6 +78,14 @@ span.span__required {
   }
   left: 50%;
   transform: translateX(-50%);
+  @media screen and (max-width: 1030px) {
+    left: 35%;
+    transform: translateX(-25%);
+  }
+  @media screen and (max-width: 715px) {
+    left: 18%;
+    transform: translateX(-10%);
+  }
 }
 
 // @-webkit-keyframes error {
