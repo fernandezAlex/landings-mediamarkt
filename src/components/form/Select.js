@@ -28,7 +28,7 @@ const Select = ({
 			>
                 <option selected value="">{labelDefault}</option>
                   {
-        data.map(({IDSAP, Name}, i) => <option key={i} value={IDSAP}>{Name}</option>)
+        data.map(({IDwws, Name}, i) => <option key={i} value={IDwws}>{Name}</option>)
                 }    
             </select><span className="span__required">*</span>
 			<div className="input__error">

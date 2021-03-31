@@ -6,12 +6,9 @@ import AsyncButton from "./AsyncButton";
 import analytics from "../../helpers/analytics";
 import {
   validateName,
-  validateLastName,
-  validateNif,
-  validatePosition,
   validateEmail,
   validatePhone,
-  validateGender,
+  checkAdultAge
 } from "../validations/ValidateFunctions";
 import ReCaptcha from "react-google-recaptcha";
 import InputRadio from "./InputRadio"
@@ -22,17 +19,17 @@ import Select from './Select';
 import axios from 'axios';
 /* Data Form */
 
-// import datashops from '../../data/datashops.json'
-// const {stores} = datashops
+import datashops from '../../data/datashops.json'
+const {stores} = datashops
 
-const idCampaign = "194";
-const dataAnalyticsForm = {
-  event: "gaEvent",
-  eventCategory: "Home_B2B_ED",
-  eventAction: "Click",
-  eventLabel: "Home_B2B_EDUCACION_contactanos",
-};
-const urlActionForm = "https://specials.mediamarkt.es/landings/welcomeVoucher/inc/validation";
+const idCampaign = "306";
+// const dataAnalyticsForm = {
+//   event: "gaEvent",
+//   eventCategory: "Home_B2B_ED",
+//   eventAction: "Click",
+//   eventLabel: "Home_B2B_EDUCACION_contactanos",
+// };
+const urlActionForm = "https://specials.mediamarkt.es/10-euros-de-bienvenida/confirmacion";
 
 const urlApiJsonShops = "https://www.mediamarkt.es/static/json/stores.es.json"
 
@@ -40,43 +37,29 @@ const urlApiJsonShops = "https://www.mediamarkt.es/static/json/stores.es.json"
 
 const Form = () => {
   const [name, setName] = useState("");
-  const [lastname, setLastName] = useState("");
   const [isNameError, setIsNameError] = useState(false);
+  const [lastname, setLastName] = useState("");
   const [isLastNameError, setIsLastNameError] = useState(false);
-  const [nif, setNif] = useState("");
-  const [isNifError, setIsNifError] = useState(false);
-  const [contact, setContact] = useState("");
-  const [isContactError, setIsContactError] = useState(false);
-  const [position, setPosition] = useState("");
-  const [isPositionError, setIsPositionError] = useState(false);
   const [radio, setRadio] = useState("");
   const [isRadioError, setIsRadioError] = useState(false);
   const [email, setEmail] = useState("");
   const [isEmailError, setIsEmailError] = useState(false);
   const [phone, setPhone] = useState("");
   const [isPhoneError, setIsPhoneError] = useState(false);
-  const [storeSelected, setStoreSelected] = useState(false);
-  const [message, setMessage] = useState("");
+  const [store, setStore] = useState([]);
+  const [storeSelected, setStoreSelected] = useState("");
+  const [isStoreError, setIsStoreError] = useState(false);
+  const [dateSelect, setDateSelect] = useState("");
+  const [isDateSelectError, setIsDateSelectError] = useState(false);
   const [terms, setTerms] = useState("");
   const [recaptcha, setRecaptcha] = useState(false);
   const [isSubmited, setIsSubmited] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [actionState, setActionState] = useState(null);
-
-
-  const [shops, setShops] = useState([])
-
-  useEffect(() => {
-      axios.get(urlApiJsonShops)
-          .then(({data}) => {
-              setShops(data.stores)
-          })
-          .catch(err => {
-              console.log(err)
-          })
-  }, [setShops])
-
-
+  
+  const handleRadio = (checked) => {
+    setRadio(checked);
+  };
 
   const handleNameChange = (value) => {
     setName(value);
@@ -88,28 +71,6 @@ const Form = () => {
     setLastName(value);
     const isOk = validateName(value);
     setIsLastNameError(!isOk);
-  };
-
-  const handleNifChange = (value) => {
-    setNif(value);
-    const isOk = validateNif(value);
-    setIsNifError(!isOk);
-  };
-
-  const handleRadio = (checked) => {
-    setRadio(checked);
-  };
-
-  const handleContactChange = (value) => {
-    setContact(value);
-    const isOk = validateName(value);
-    setIsContactError(!isOk);
-  };
-
-  const handlePositionChange = (value) => {
-    setPosition(value);
-    const isOk = validatePosition(value);
-    setIsPositionError(!isOk);
   };
 
   const handleEmailChange = (value) => {
@@ -124,19 +85,31 @@ const Form = () => {
     setIsPhoneError(!isOk);
   };
 
-  const handleMessageChange = (value) => {
-    setMessage(value);
+  useEffect(() => {
+      axios.get(urlApiJsonShops)
+          .then(({data}) => {
+              setStore(data.stores)
+          })
+          .catch(err => {
+              console.log(err)
+          })
+  }, [setStore])
+
+  const handleStoresChange = (value) => {
+    setStoreSelected(value);
+    const isOk = value.length>0 ? true : false;
+    setIsStoreError(isOk);
   };
+  
+  const handleDateSelectChange = (date) => {
+    setDateSelect(date);
+    const isOk = checkAdultAge(date) >= 18 ? true : false;
+    setIsDateSelectError(isOk);
+  }
 
   const handleTermsChange = (checked) => {
     setTerms(checked);
   };
-
-  const handleStoresChange = (value) => {
-    setStoreSelected(value);
-  };
-
-
 
   const onChangeCaptcha = (value) => {
     if (value.length > 0) {
@@ -145,21 +118,19 @@ const Form = () => {
   };
 
 
-
-
   const isValidated =
     (name.length > 0 ||
-      nif.length > 0 ||
-      contact.length > 0 ||
-      position.length > 0 ||
       email.length > 0) &&
     validateName(name) &&
-    validateLastName(lastname) &&
+    validateName(lastname) &&
     validateEmail(email) &&
     validatePhone(phone) &&
+    isDateSelectError &&
+    isStoreError &&
     radio &&
     terms;
 
+    
   const isAllValidated =
     isValidated === true && recaptcha === true ? true : false;
 
@@ -170,12 +141,12 @@ const Form = () => {
         setIsLoading(false);
         setIsSubmited(true);
       }, 1000);
-      analytics(
-        dataAnalyticsForm.event,
-        dataAnalyticsForm.eventCategory,
-        dataAnalyticsForm.eventAction,
-        dataAnalyticsForm.eventLabel
-      );
+      // analytics(
+      //   dataAnalyticsForm.event,
+      //   dataAnalyticsForm.eventCategory,
+      //   dataAnalyticsForm.eventAction,
+      //   dataAnalyticsForm.eventLabel
+      // );
       setActionState(urlActionForm);
     }
   };
@@ -210,7 +181,7 @@ const Form = () => {
             type="radio"
             value={radio}
             onChange={(e) => handleRadio(e.target.checked)}
-            name="gender"
+            name="treatment"
             error={isRadioError}
             errorText="Seleccione un Genero"
             className="input"
@@ -265,19 +236,27 @@ const Form = () => {
               id="phone"
             />
             <Select
+            name="preferedStoreId"
             type="select"
-            data={shops}
-            propertiesData={["IDSAP", "Name"]}
+            data={stores}
             className="shop__select"
-            error={!storeSelected ? true : false}
+            error={!isStoreError ? true : false}
             errorText="Es necesario que seleccione una tienda"
             value={storeSelected}
             onChange={(e) => handleStoresChange(e.target.value)}
             labelDefault="Escoja una tienda"
             // onDefault={(event) => handleSelectDefault(event.target)}
-
             />
-            <DateSelector />
+            <DateSelector
+              error={!isDateSelectError}
+              errorText="Es necesario ser mayor de edad"
+              value={dateSelect}
+              onChange={(date) => handleDateSelectChange(date)}
+              name={name}
+            />
+
+{console.log(storeSelected)}
+
           </div>
           <div className="footer__form">
             <PrivacyPolicy
