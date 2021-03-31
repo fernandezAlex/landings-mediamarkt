@@ -1,6 +1,6 @@
 export const cardsSection2 = [
     {
-      title: "Te regalamos un códigodedescuento de 10€",
+      title: "Te regalamos un código de descuento de 10€",
       subtitle: "Suscríbete a nuestra newsletter y 10€ en tu primera compra",
       imgThumbnail: "https://specials.mediamarkt.es/assets-react/welcome-bonus/0221233-Welcome-Bonus_Fotos_500x500.png",
       slug: "https://specials.mediamarkt.es/assets-react/welcome-bonus/0221233-Welcome-Bonus_Fotos_500x500.png",
