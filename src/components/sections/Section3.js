@@ -6,7 +6,7 @@ const Section3 = ({width, data}) => {
   return (
     <div className="section">
       {
-        width < 1450 
+        width < 1180 
         ? (
             <div>
             {/* <h1 className="title">Soluciones a medida para escuelas, centros de formación y universidades</h1> */}
