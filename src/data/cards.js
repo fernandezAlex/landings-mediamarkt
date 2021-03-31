@@ -1,10 +1,9 @@
 export const cardsSection2 = [
     {
-      title: "Te regalamosun códigodedescuento de 10€",
-      subtitle: "Suscríbete a nuestra newsletter y consigue un cupón de 10€ en tu primera compra",
-      imgThumbnail:
-        "https://specials.mediamarkt.es/assets-react/b2b-educacion/062007_B2B_Cards_500x500_Activa_V1_6.png",
-      slug: "https://specials.mediamarkt.es/empresas/educacion/aula-extendida",
+      title: "Te regalamos un códigodedescuento de 10€",
+      subtitle: "Suscríbete a nuestra newsletter y 10€ en tu primera compra",
+      imgThumbnail: "https://specials.mediamarkt.es/assets-react/welcome-bonus/0221233-Welcome-Bonus_Fotos_500x500.png",
+      slug: "https://specials.mediamarkt.es/assets-react/welcome-bonus/0221233-Welcome-Bonus_Fotos_500x500.png",
       // button: "Ver más",
       // event: "gaEvent",
       // eventCategory: "Home_B2B_ED",
@@ -14,10 +13,8 @@ export const cardsSection2 = [
     {
       title: "Compra mínima de 100€",
       subtitle: "Recuerda que este código es de un único uso en web y no es acumulable a otras promociones.",
-      imgThumbnail:
-        "https://specials.mediamarkt.es/assets-react/b2b-educacion/062007_B2B_Cards_500x500_Activa_V1_5.png",
-      slug:
-        "https://specials.mediamarkt.es/empresas/educacion/transformacion-aula",
+      imgThumbnail:"https://specials.mediamarkt.es/assets-react/welcome-bonus/0221233-Welcome-Bonus_Fotos_500x5002.png",
+      slug:"https://specials.mediamarkt.es/assets-react/welcome-bonus/0221233-Welcome-Bonus_Fotos_500x5002.png",
       // button: "Ver más",
       // event: "gaEvent",
       // eventCategory: "Home_B2B_ED",
@@ -26,10 +23,9 @@ export const cardsSection2 = [
     },
     {
       title: "¡Date prisa!",
-      subtitle: "Solo tienes 10 días para utilizarlo",
-      imgThumbnail:
-        "https://specials.mediamarkt.es/assets-react/b2b-educacion/062007_B2B_Cards_500x500_Activa_V1_.png",
-      slug: "https://specials.mediamarkt.es/empresas/educacion/educacion-digital",
+      subtitle: "Solo tienes 30 días para utilizarlo (condicionado a una compra mínima de 100€)",
+      imgThumbnail:"https://specials.mediamarkt.es/assets-react/welcome-bonus/0221233-Welcome-Bonus_Fotos_500x5003.png",
+      slug: "https://specials.mediamarkt.es/assets-react/welcome-bonus/0221233-Welcome-Bonus_Fotos_500x5003.png",
       // button: "Ver más",
       // event: "gaEvent",
       // eventCategory: "Home_B2B_ED",

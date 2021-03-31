@@ -1,4 +1,4 @@
 export const headerData = 
     {
-      title: "Welcome Bonus"
+      title: "10€ de bienvenida"
     }

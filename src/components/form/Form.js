@@ -187,7 +187,7 @@ const Form = () => {
             className="input"
             id="gender"
             radio={radio}
-            arraysValues={["Hombre", "Mujer", "Sin especificar"]}
+            arraysValues={["1", "2", "3"]}
             label={["Sr.","Sra.","Sin Especificar"]}
           />
           <div className="inputs__container">
@@ -254,9 +254,6 @@ const Form = () => {
               onChange={(date) => handleDateSelectChange(date)}
               name={name}
             />
-
-{console.log(storeSelected)}
-
           </div>
           <div className="footer__form">
             <PrivacyPolicy
