@@ -384,13 +384,13 @@
 }
 
 .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box ul.react-datepicker__time-list li.react-datepicker__time-list-item--selected {
-  background-color: #216ba5;
+  background-color: $mediamarkt;
   color: white;
   font-weight: bold;
 }
 
 .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box ul.react-datepicker__time-list li.react-datepicker__time-list-item--selected:hover {
-  background-color: #216ba5;
+  background-color: $mediamarkt;
 }
 
 .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box ul.react-datepicker__time-list li.react-datepicker__time-list-item--disabled {
@@ -441,7 +441,7 @@
 .react-datepicker__quarter--in-selecting-range,
 .react-datepicker__quarter--in-range {
   border-radius: 0.3rem;
-  background-color: #216ba5;
+  background-color: $mediamarkt;
   color: #fff;
 }
 
@@ -527,7 +527,7 @@
 .react-datepicker__year-text--in-selecting-range,
 .react-datepicker__year-text--in-range {
   border-radius: 0.3rem;
-  background-color: #216ba5;
+  background-color: $mediamarkt;
   color: #fff;
 }
 
@@ -549,7 +549,7 @@
 .react-datepicker__quarter-text--keyboard-selected,
 .react-datepicker__year-text--keyboard-selected {
   border-radius: 0.3rem;
-  background-color: #2a87d0;
+  background-color: $mediamarkt;
   color: #fff;
 }
 
@@ -595,7 +595,7 @@
 .react-datepicker__quarter-text.react-datepicker__month--in-range:hover,
 .react-datepicker__quarter-text.react-datepicker__quarter--selected:hover,
 .react-datepicker__quarter-text.react-datepicker__quarter--in-range:hover {
-  background-color: #216ba5;
+  background-color: $mediamarkt;
 }
 
 .react-datepicker__month-text:hover,
@@ -738,7 +738,7 @@
 
 .react-datepicker__close-icon::after {
   cursor: pointer;
-  background-color: #216ba5;
+  background-color: $mediamarkt;
   color: #fff;
   border-radius: 50%;
   height: 16px;
@@ -824,4 +824,34 @@
 .react-datepicker__portal .react-datepicker__navigation--next--disabled, .react-datepicker__portal .react-datepicker__navigation--next--disabled:hover {
   border-left-color: #e6e6e6;
   cursor: default;
+}
+
+.react-datepicker__month-select, .react-datepicker__year-select {
+  height: 30px;
+  width: 100%;
+  padding-left: 30px;
+  font-family: "MMTextProWeb-Regular";
+}
+.react-datepicker__year-dropdown-container--select, .react-datepicker__month-dropdown-container--select, .react-datepicker__month-year-dropdown-container--select, .react-datepicker__year-dropdown-container--scroll, .react-datepicker__month-dropdown-container--scroll, .react-datepicker__month-year-dropdown-container--scroll {
+  display: inline-block;
+  margin: 0 2px;
+  width: 48%;
+}
+.react-datepicker__header__dropdown .react-datepicker__header__dropdown--select {
+  margin: 20px 0 10px;
+}
+
+.react-datepicker__current-month, .react-datepicker-time__header, .react-datepicker-year-header {
+  padding: 10px;
+  font-family: "MMTextProWeb-Regular";
+}
+select:focus {
+  outline: none;
+  // border: none;
+}
+button:focus {
+  outline: none;
+}
+.react-datepicker__day-names, .react-datepicker__week {
+  font-family: "MMTextProWeb-Regular";
 }

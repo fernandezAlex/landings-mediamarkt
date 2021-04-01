@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from "react";
 import debounce from "./helpers/debounce";
 import Header from "./components/header/Header";
-import Section1 from "./components/sections/Section1";
-import Section2 from "./components/sections/Section2";
 import Section3 from "./components/sections/Section3";
 import Form from "./components/form/Form";
-import {cardsSection1, cardsSection2} from './data/cards'
+import {cardsSection2} from './data/cards'
 import {headerData} from './data/header'
 import {breadcrumbData} from './data/breadcrumb';
-import SliderSmall from './components/carousel/SliderSmall';
 
 
 
@@ -29,8 +26,6 @@ function App() {
   return (
     <>
       <Header data={headerData} dataBreadcrumb={breadcrumbData} />
-      {/* <SliderSmall data={cardsSection1} /> */}
-      {/* <Section1 data={cardsSection1} width={width}/> */}
       <Section3 data={cardsSection2} width={width}/>
       <Form />
     </>
