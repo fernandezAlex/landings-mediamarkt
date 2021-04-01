@@ -1,4 +1,4 @@
 export const breadcrumbData = 
     {
-      firstLabel: "Welcome Bonus"
+      firstLabel: "10€ de bienvenida"
     }

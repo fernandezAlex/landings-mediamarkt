@@ -70,6 +70,7 @@ span.span__required {
   display: inline-flex;
   color: $mediamarkt;
   margin-bottom: 20px;
+  font-size: 15px;
   &.disabled {
     display: none;
   }
@@ -80,6 +81,7 @@ span.span__required {
   position: absolute;
   // -webkit-animation: error linear 3s infinite;
   // animation: error linear 3s infinite;
+  font-size: 15px;
   &.disabled {
     display: none;
   }

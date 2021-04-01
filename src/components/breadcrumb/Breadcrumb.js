@@ -14,9 +14,9 @@ export const Breadcrumb = ({data}) => {
         className="icon__arrow"
         size="xs"
       />
-      <a href="https://www.mediamarkt.es/empresas" target="_self">
+      <div>
         <h5>{data.firstLabel}</h5>
-      </a>
+      </div>
       {/* <FontAwesomeIcon
         icon={faChevronRight}
         className="icon__arrow"

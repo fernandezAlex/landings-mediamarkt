@@ -183,7 +183,7 @@ const Form = () => {
             onChange={(e) => handleRadio(e.target.checked)}
             name="treatment"
             error={isRadioError}
-            errorText="Seleccione un Genero"
+            errorText="Debes escoger una de las opciones"
             className="input"
             id="gender"
             radio={radio}
@@ -198,7 +198,7 @@ const Form = () => {
               onChange={(e) => handleNameChange(e.target.value)}
               name="firstname"
               error={isNameError}
-              errorText="Introduzca un nombre válido"
+              errorText="Introduce un nombre válido"
               className="input"
               id="firstname"
             />
@@ -209,7 +209,7 @@ const Form = () => {
               onChange={(e) => handleLastNameChange(e.target.value)}
               name="lastname"
               error={isLastNameError}
-              errorText="Introduzca un Apellido válido"
+              errorText="Introduce unos apellidos válidos"
               className="input"
               id="lastname"
             />
@@ -231,7 +231,7 @@ const Form = () => {
               onChange={(e) => handlePhoneChange(e.target.value)}
               name="phone"
               error={isPhoneError}
-              errorText="Introduzca un teléfono válido"
+              errorText="Introduce un teléfono válido"
               className="input"
               id="phone"
             />
@@ -241,7 +241,7 @@ const Form = () => {
             data={stores}
             className="shop__select"
             error={!isStoreError ? true : false}
-            errorText="Es necesario que seleccione una tienda"
+            errorText="Es necesario que selecciones una tienda"
             value={storeSelected}
             onChange={(e) => handleStoresChange(e.target.value)}
             labelDefault="Escoja una tienda"
