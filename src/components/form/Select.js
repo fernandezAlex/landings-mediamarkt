@@ -1,9 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Input = ({
+const Select = ({
 	type,
-	placeholder,
 	value,
     onChange,
 	name,
@@ -11,15 +10,16 @@ const Input = ({
 	errorText,
 	className,
 	id,
-	maxlength,
-	required,
-	dataTag,
+    data,
+    labelDefault,
+	dataName,
+	dataValue,
+
 }) => {
 	return (
 		<div className="container__input">
-			<input
+			<select
 				type={type}
-				placeholder={placeholder}
 				name={name}
 				value={value}
                 onChange={onChange}
@@ -27,10 +27,14 @@ const Input = ({
 				errorText={errorText}
 				error={error}
 				id={id}
-				required={required}
-				maxLength={maxlength}
-				dataTag={dataTag}
-			/><span className="span__required">*</span>
+				dataName={dataName}
+				dataValue={dataValue}
+			>
+                <option selected value="">{labelDefault}</option>
+                  {
+        data.map(({IDwws, Name}, i) => <option key={i} value={IDwws}>{Name}</option>)
+}    
+            </select><span className="span__required">*</span>
 			<div className="input__error">
 			<span className="text_error" dangerouslySetInnerHTML={{__html: error ? errorText : null}} />
 			</div>
@@ -39,9 +43,8 @@ const Input = ({
 	);
 };
 
-Input.propTypes = {
+Select.propTypes = {
 	type: PropTypes.string.isRequired,
-	placeholder: PropTypes.string,
 	name: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 	value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 	onChange: PropTypes.func.isRequired,
@@ -50,6 +53,7 @@ Input.propTypes = {
 	error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
 	disabled: PropTypes.bool,
 	id: PropTypes.string,
+    data: PropTypes.string,
 };
 
-export default Input;
+export default Select;

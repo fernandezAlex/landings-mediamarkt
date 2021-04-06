@@ -3,6 +3,8 @@ import Input from "./Input";
 import TextArea from "./TextArea";
 import PrivacyPolicy from "./PrivacyPolicy";
 import AsyncButton from "./AsyncButton";
+import SelectShops from "./SelectShops";
+import HiddenFields from "./HiddenFields";
 import analytics from "../../helpers/analytics";
 import {
   validateName,
@@ -12,9 +14,16 @@ import {
   validatePhone,
 } from "../validations/ValidateFunctions";
 import ReCaptcha from "react-google-recaptcha";
+import datashops from '../../data/datashops.json'
 
 /* Data Form */
 
+
+const {stores} = datashops
+
+const {IDSAP, Name} = stores
+
+console.log(IDSAP)
 const idCampaign = "200";
 const dataAnalyticsForm = {
   event: "gaEvent",
@@ -24,6 +33,9 @@ const dataAnalyticsForm = {
 };
 const urlActionForm =
   "https://specials.mediamarkt.es/empresas/confirmacion";
+
+const actionFormPro = "https://prod-105.westeurope.logic.azure.com/workflows/4e28df4964ce4e088935dd3a4471bf29/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=gAQhBy1fGZaO4dnVdEz4unZ7PfvseiynkQzkga5JrBw";
+
 
 
 
@@ -46,6 +58,11 @@ const Form = () => {
   const [isSubmited, setIsSubmited] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [actionState, setActionState] = useState(null);
+  const [store, setStore] = useState([]);
+  const [storeSelected, setStoreSelected] = useState("");
+  const [isStoreError, setIsStoreError] = useState();
+
+
 
   const handleNameChange = (value) => {
     setName(value);
@@ -85,6 +102,12 @@ const Form = () => {
 
   const handleMessageChange = (value) => {
     setMessage(value);
+  };
+
+  const handleStoresChange = (value) => {
+    setStoreSelected(value);
+    const isOk = value.length>0 ? true : false;
+    setIsStoreError(isOk);
   };
 
   const handleTermsChange = (checked) => {
@@ -166,6 +189,21 @@ const Form = () => {
             value={idCampaign}
           />
           <div className="inputs__container">
+            <SelectShops
+              // className="input"
+              id="preferred_store"
+              name="preferred_store"
+              type="select"
+              data={stores}
+              className="input"
+              error={!isStoreError ? true : false}
+              errorText="Es necesario que selecciones una tienda"
+              value={storeSelected}
+              dataValue={"MC_STORE_ID"}
+              dataName={"Name"}
+              onChange={(e) => handleStoresChange(e.target.value)}
+              labelDefault="Escoja una tienda"
+            />
             <Input
               type="name"
               placeholder="Nombre de la empresa"
@@ -177,6 +215,16 @@ const Form = () => {
               className="input"
               id="company"
             />
+            {/* <Select
+              type="select"
+              className="input"
+              // data={"Sr" "Sra"}
+              id="company_type"
+              name="company_type"
+              error={isNameError}
+              errorText="Selecciona el tipo de compañía"
+              labelDefault="Tratamiento"
+            /> */}
             <Input
               type="nif"
               placeholder="NIF Empresa"
@@ -255,6 +303,7 @@ const Form = () => {
               className={`recaptcha ${isValidated ? "enabled" : "disabled"}`}
               onChange={onChangeCaptcha}
             />
+            <HiddenFields/>
             <AsyncButton 
               type="submit"
               disabled={!isAllValidated}
