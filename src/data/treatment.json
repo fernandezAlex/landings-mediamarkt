@@ -1,0 +1,11 @@
+{
+    "treatment": [{
+            "name": "Sr",
+            "value": "Value-test"
+        },
+        {
+            "name": "Sra",
+            "value": "Value-test"
+        }
+    ]
+}

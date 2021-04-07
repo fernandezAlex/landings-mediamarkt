@@ -12,8 +12,7 @@ const SelectShops = ({
 	id,
     data,
     labelDefault,
-	dataName,
-	dataValue,
+	required,
 
 }) => {
 	return (
@@ -27,14 +26,15 @@ const SelectShops = ({
 				errorText={errorText}
 				error={error}
 				id={id}
-				dataName={dataName}
-				dataValue={dataValue}
 			>
                 <option selected value="">{labelDefault}</option>
                   {
         data.map(({IDwws, Name}, i) => <option key={i} value={IDwws}>{Name}</option>)
 }    
-            </select><span className="span__required">*</span>
+            </select>
+			{
+				required && <span className="span__required">*</span>
+			}
 			<div className="input__error">
 			<span className="text_error" dangerouslySetInnerHTML={{__html: error ? errorText : null}} />
 			</div>

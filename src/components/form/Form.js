@@ -14,16 +14,19 @@ import {
   validatePhone,
 } from "../validations/ValidateFunctions";
 import ReCaptcha from "react-google-recaptcha";
-import datashops from '../../data/datashops.json'
+import Checkbox from "./Checkbox";
+import Select from "./Select";
 
 /* Data Form */
+import Stores from "../../data/stores.json";
+import Enterprise from "../../data/enterprise.json";
+import Treatment from "../../data/treatment.json";
+
+const { stores } = Stores;
+const { enterprise } = Enterprise
+const { treatment } = Treatment;
 
 
-const {stores} = datashops
-
-const {IDSAP, Name} = stores
-
-console.log(IDSAP)
 const idCampaign = "200";
 const dataAnalyticsForm = {
   event: "gaEvent",
@@ -31,13 +34,10 @@ const dataAnalyticsForm = {
   eventAction: "Click",
   eventLabel: "Home_B2B_enviar_formulario",
 };
-const urlActionForm =
-  "https://specials.mediamarkt.es/empresas/confirmacion";
+const urlActionForm = "https://specials.mediamarkt.es/empresas/confirmacion";
 
-const actionFormPro = "https://prod-105.westeurope.logic.azure.com/workflows/4e28df4964ce4e088935dd3a4471bf29/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=gAQhBy1fGZaO4dnVdEz4unZ7PfvseiynkQzkga5JrBw";
-
-
-
+const actionFormPro =
+  "https://prod-105.westeurope.logic.azure.com/workflows/4e28df4964ce4e088935dd3a4471bf29/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=gAQhBy1fGZaO4dnVdEz4unZ7PfvseiynkQzkga5JrBw";
 
 const Form = () => {
   const [name, setName] = useState("");
@@ -54,15 +54,14 @@ const Form = () => {
   const [isPhoneError, setIsPhoneError] = useState(false);
   const [message, setMessage] = useState("");
   const [terms, setTerms] = useState("");
+  const [newsletter, setNewsletter] = useState("");
   const [recaptcha, setRecaptcha] = useState(false);
   const [isSubmited, setIsSubmited] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [actionState, setActionState] = useState(null);
   const [store, setStore] = useState([]);
   const [storeSelected, setStoreSelected] = useState("");
-  const [isStoreError, setIsStoreError] = useState();
-
-
+  const [isStoreError, setIsStoreError] = useState(null);
 
   const handleNameChange = (value) => {
     setName(value);
@@ -106,12 +105,16 @@ const Form = () => {
 
   const handleStoresChange = (value) => {
     setStoreSelected(value);
-    const isOk = value.length>0 ? true : false;
+    const isOk = value.length > 0 ? true : false;
     setIsStoreError(isOk);
   };
 
   const handleTermsChange = (checked) => {
     setTerms(checked);
+  };
+
+  const handleNewsletterChange = (checked) => {
+    setNewsletter(checked);
   };
 
   const onChangeCaptcha = (value) => {
@@ -148,11 +151,24 @@ const Form = () => {
         dataAnalyticsForm.event,
         dataAnalyticsForm.eventCategory,
         dataAnalyticsForm.eventAction,
-        dataAnalyticsForm.eventLabel
+        dataAnalyticsForm.eventLabel,
       );
       setActionState(urlActionForm);
     }
   };
+
+
+  // const {
+  //   values,
+  //   errors,
+  //   touched,
+  //   handleChange,
+  //   handleBlur,
+  //   handleSubmit
+  // } = useCustomForm({
+  //   initialValues,
+  //   onSubmit: values => console.log({ values })
+  // });
 
   return (
     <>
@@ -188,6 +204,9 @@ const Form = () => {
             id="campaign"
             value={idCampaign}
           />
+          <div className="title__contact__info">
+            <h4>Regístrate como cliente B2B</h4>
+          </div>
           <div className="inputs__container">
             <SelectShops
               // className="input"
@@ -196,37 +215,41 @@ const Form = () => {
               type="select"
               data={stores}
               className="input"
-              error={!isStoreError ? true : false}
+              error={null && (!isStoreError ? true : false)}
               errorText="Es necesario que selecciones una tienda"
               value={storeSelected}
-              dataValue={"MC_STORE_ID"}
-              dataName={"Name"}
               onChange={(e) => handleStoresChange(e.target.value)}
-              labelDefault="Escoja una tienda"
+              labelDefault="Escoge una tienda"
+              required={true}
             />
             <Input
-              type="name"
+              type="text"
               placeholder="Nombre de la empresa"
               value={name}
               onChange={(e) => handleNameChange(e.target.value)}
-              name="company"
+              name="company_name"
               error={isNameError}
               errorText="Introduzca un nombre válido"
               className="input"
-              id="company"
+              id="company_name"
+              required={true}
             />
-            {/* <Select
+            <Select
+              // className="input"
+              // id="preferred_store"
+              // name="preferred_store"
               type="select"
+              data={enterprise}
               className="input"
-              // data={"Sr" "Sra"}
-              id="company_type"
-              name="company_type"
-              error={isNameError}
-              errorText="Selecciona el tipo de compañía"
-              labelDefault="Tratamiento"
-            /> */}
+              error={!isStoreError ? true : false}
+              errorText="Es necesario que selecciones una tienda"
+              value={storeSelected}
+              onChange={(e) => handleStoresChange(e.target.value)}
+              labelDefault="Tipo de empresa"
+              required={true}
+            />
             <Input
-              type="nif"
+              type="text"
               placeholder="NIF Empresa"
               value={nif}
               onChange={(e) => handleNifChange(e.target.value.toUpperCase())}
@@ -234,11 +257,12 @@ const Form = () => {
               error={isNifError}
               errorText="Introduzca un NIF válido"
               className="input"
-              id="cif"
+              id="nif"
+              required={true}
             />
             <Input
-              type="contact"
-              placeholder="Persona de contacto"
+              type="text"
+              placeholder="Sitio Web"
               value={contact}
               onChange={(e) => handleContactChange(e.target.value)}
               name="contact"
@@ -248,15 +272,72 @@ const Form = () => {
               id="contact"
             />
             <Input
+              type="text"
+              placeholder="Número de empleados"
+              value={contact}
+              onChange={(e) => handleContactChange(e.target.value)}
+              name="contact"
+              error={isContactError}
+              errorText="Introduzca un nombre válido"
+              className="input"
+              id="contact"
+            />
+          </div>
+          <div className="title__contact__info">
+            <h4>Información de contacto</h4>
+          </div>
+          <div className="inputs__container">
+            <Select
+              // className="input"
+              id="preferred_store"
+              name="preferred_store"
+              type="select"
+              data={treatment}
+              className="input"
+              error={!isStoreError ? true : false}
+              errorText="Es necesario que selecciones una tienda"
+              value={storeSelected}
+              // dataValue={"MC_STORE_ID"}
+              // dataName={"Name"}
+              onChange={(e) => handleStoresChange(e.target.value)}
+              labelDefault="Tratamiento"
+              required={true}
+            />
+            <Input
+              type="contact"
+              placeholder="Nombre"
+              value={contact}
+              onChange={(e) => handleContactChange(e.target.value)}
+              name="contact"
+              error={isContactError}
+              errorText="Introduzca un nombre válido"
+              className="input"
+              id="contact"
+              required={true}
+            />
+            <Input
+              type="contact"
+              placeholder="Apellido"
+              value={contact}
+              onChange={(e) => handleContactChange(e.target.value)}
+              name="contact"
+              error={isContactError}
+              errorText="Introduzca un nombre válido"
+              className="input"
+              id="contact"
+              required={true}
+            />
+            <Input
               type="position"
               placeholder="Cargo"
               value={position}
               onChange={(e) => handlePositionChange(e.target.value)}
               name="position"
               error={isPositionError}
-              errorText="Introduzca un cargo válido"
+              errorText="Posición"
               className="input"
-              id="position"
+              id="position"              
+              required={true}
             />
             <Input
               type="e-mail"
@@ -268,6 +349,7 @@ const Form = () => {
               errorText="Introduzca un email válido"
               className="input"
               id="email"
+              required={true}
             />
             <Input
               type="phone"
@@ -279,8 +361,28 @@ const Form = () => {
               errorText="Introduzca un teléfono válido"
               className="input"
               id="phone"
+              required={true}
             />
           </div>
+          <div className="title__contact__info">
+            <h4>Información de contacto</h4>
+          </div>
+          <Select
+            // className="input"
+            id="preferred_store"
+            name="preferred_store"
+            type="select"
+            data={stores}
+            className="input"
+            error={!isStoreError ? true : false}
+            errorText="Es necesario que selecciones una tienda"
+            value={storeSelected}
+            dataValue={"MC_STORE_ID"}
+            dataName={"Name"}
+            onChange={(e) => handleStoresChange(e.target.value)}
+            labelDefault="Tipo de solicitud"
+            required={true}
+          />
           <TextArea
             type="mytext"
             placeholder="Consulta"
@@ -292,9 +394,36 @@ const Form = () => {
             id="consulta"
           />
           <div className="footer__form">
-            <PrivacyPolicy
+            {/* <PrivacyPolicy
               onChange={(e) => handleTermsChange(e.target.checked)}
               terms={terms}
+            /> */}
+            <Checkbox
+              onChange={(e) => handleTermsChange(e.target.checked)}
+              error={!terms}
+              type="checkbox"
+              name="terms"
+              id="terms"
+              value="yes"
+              required=""
+              className="test_class"
+              dataTag="termsAndConditionsAccept"
+              target="_blank"
+              text="Los clientes comerciales aceptan los términos y condiciones"
+              errorText="Debes aceptar los términos y condiciones"
+              href="https://www.mediamarkt.es/es/legal/politica-de-privacidad"
+              rel="nofollow"
+            />
+            <Checkbox
+              onChange={(e) => handleNewsletterChange(e.target.checked)}
+              type="checkbox"
+              name="terms"
+              id="terms"
+              value="yes"
+              required=""
+              className="test_class"
+              dataTag="termsAndConditionsAccept"
+              text="Suscríbete al boletín de noticias B2B de Mediamarkt"
             />
             <ReCaptcha
               size="normal"
@@ -303,8 +432,8 @@ const Form = () => {
               className={`recaptcha ${isValidated ? "enabled" : "disabled"}`}
               onChange={onChangeCaptcha}
             />
-            <HiddenFields/>
-            <AsyncButton 
+            <HiddenFields />
+            <AsyncButton
               type="submit"
               disabled={!isAllValidated}
               isAllValidated={isAllValidated}

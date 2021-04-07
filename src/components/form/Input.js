@@ -30,7 +30,9 @@ const Input = ({
 				required={required}
 				maxLength={maxlength}
 				dataTag={dataTag}
-			/><span className="span__required">*</span>
+			/>{
+				required && <span className="span__required">*</span>
+			}
 			<div className="input__error">
 			<span className="text_error" dangerouslySetInnerHTML={{__html: error ? errorText : null}} />
 			</div>

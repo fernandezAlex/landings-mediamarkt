@@ -179,3 +179,12 @@
     
   }
 }
+
+
+
+option.option__select:hover,
+option.option__select:focus,
+option.option__select:active {
+  background-color: $mediamarkt!important;
+  color: white;
+    }
