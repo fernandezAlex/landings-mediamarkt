@@ -1,7 +1,7 @@
 export const cardsSection2 = [
     {
       title: "Te regalamos un código de descuento de 10€",
-      subtitle: "Suscríbete a nuestra newsletter y 10€ en tu primera compra",
+      subtitle: "Suscríbete a nuestra newsletter y 10€ en tu primera compra en la web",
       imgThumbnail: "https://specials.mediamarkt.es/assets-react/welcome-bonus/0221233-Welcome-Bonus_Fotos_500x500.png",
       slug: "https://specials.mediamarkt.es/assets-react/welcome-bonus/0221233-Welcome-Bonus_Fotos_500x500.png",
       // button: "Ver más",
@@ -23,7 +23,7 @@ export const cardsSection2 = [
     },
     {
       title: "¡Date prisa!",
-      subtitle: "Solo tienes 30 días para utilizarlo (condicionado a una compra mínima de 100€)",
+      subtitle: "Solo tienes 30 días para utilizarlo (condicionado a una compra mínima de 100€ en la web)",
       imgThumbnail:"https://specials.mediamarkt.es/assets-react/welcome-bonus/0221233-Welcome-Bonus_Fotos_500x5003.png",
       slug: "https://specials.mediamarkt.es/assets-react/welcome-bonus/0221233-Welcome-Bonus_Fotos_500x5003.png",
       // button: "Ver más",

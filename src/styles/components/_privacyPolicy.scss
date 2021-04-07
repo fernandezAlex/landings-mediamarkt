@@ -1,4 +1,5 @@
 .privacypolicy__container {
+  font-size: small;
   margin-top: 8px;
   width: 100%;
   padding: 0 5%;
@@ -19,6 +20,7 @@
   .label--policy {
     display: inline-block;
     margin-bottom: 0.5rem;
+    font-weight: unset;
     a .--link {
       color: $mediamarkt;
       text-decoration: none;
@@ -67,7 +69,8 @@ span.span__required {
   color: $mediamarkt;
 }
 .error__radio{
-  display: inline-flex;
+  margin-top: 8px;
+  display: inline-block;
   color: $mediamarkt;
   margin-bottom: 20px;
   font-size: 15px;
