@@ -18,7 +18,7 @@ const Checkbox = ({
 }) => {
   return (
     <>
-      <div>
+      <div className="container__checkbox">
         <input
           type={type}
           name={name}
@@ -28,23 +28,23 @@ const Checkbox = ({
           className={className}
           onChange={onChange}
         />
-        <label for={id} className="untouched error">
-          <a href={href} target={target} dataTag={dataTag} rel={rel}>
-            <font 
+        <label for={id} className="label__checkbox">
+          {/* <a href={href} target={target} dataTag={dataTag} rel={rel}> */}
+            <span  
             // style="vertical-align: inherit;"
             dangerouslySetInnerHTML={{ __html: text }}
             />
             {/* {text}</font> */}
-          </a>
+          {/* </a> */}
         </label>
-      </div>
       <div className="input__error">
         <span
           className="text_error"
           dangerouslySetInnerHTML={{ __html: error ? errorText : null }}
           // className={`error__terms ${!terms ? '' : 'disabled'}`}
-        />
+          />
       </div>
+          </div>
     </>
   );
 };

@@ -17,7 +17,6 @@ const Select = ({
 }) => {
 	return (
 		<div className="container__input">
-			
 			<select
 				type={type}
 				name={name}
@@ -30,7 +29,7 @@ const Select = ({
 				// dataName={dataName}
 				// dataValue={dataValue}
 			>
-                <option selected value="">{labelDefault}</option>
+                <option disabled selected className="option__default" value="">{labelDefault}</option>
                   {
         data.map(({name, value}, i) => <option className="option__select" key={i} value={value}>{name}</option>)
 }    

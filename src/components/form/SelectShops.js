@@ -27,9 +27,9 @@ const SelectShops = ({
 				error={error}
 				id={id}
 			>
-                <option selected value="">{labelDefault}</option>
+                <option disabled selected className="option__default" value="">{labelDefault}</option>
                   {
-        data.map(({IDwws, Name}, i) => <option key={i} value={IDwws}>{Name}</option>)
+        data.map(({Name}, i) => <option key={i} value={Name}>{Name}</option>)
 }    
             </select>
 			{

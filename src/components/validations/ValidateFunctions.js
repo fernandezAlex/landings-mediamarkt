@@ -20,6 +20,10 @@ export function validateDni (dni) {
     const DNI_REGEX = /^(\d{8})([A-Z])$/;
     return DNI_REGEX.test(dni)
 }
+export function validateInteger (number) {
+    const INTEGER_REGEX = /^[1-9][0-9]*$/;
+    return INTEGER_REGEX.test(number)
+}
 export function validateNie (nie) {
     const NIE_REGEX = /^[XYZ]\d{7,8}[A-Z]$/;
     return NIE_REGEX.test(nie)

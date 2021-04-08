@@ -54,4 +54,28 @@
 .mobile-version .wrapper {
     margin: 0px!important;
     max-width: none!important;
+    select {
+        background-color: transparent!important;
+    }
 }
+
+button, input, select, textarea {
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif !important;
+    font-size: 15px!important;
+    // color: black!important;
+    // line-height: inherit;
+}
+select {
+    padding-left: 5px!important;
+    color: black!important;
+
+}
+
+// select > option.option__select {
+//     color: #ff0000;
+// }
+
+// select:disabled {
+//     // color: #4c4c4c;
+//     color: red!important;
+// }

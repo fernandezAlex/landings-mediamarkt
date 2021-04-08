@@ -64,12 +64,17 @@
       margin-top: 60px;
       width: 100%;
       height: 250px;
-      padding: 12px 12px;
+      padding: 12px 14px;
       box-sizing: border-box;
-      border: 2px solid #ccc;
+      border: 1px solid #ccc;
+      // border: 1px solid rgb(0, 0, 0);
       border-radius: 4px;
       background-color: #f8f8f8;
       resize: none;
+      font-family: "Source Sans Pro", Helvetica, Arial, sans-serif !important;
+      // &::placeholder {
+      //   color: black;
+      // }
       &:focus {
         outline: none;
       }
@@ -188,3 +193,71 @@ option.option__select:active {
   background-color: $mediamarkt!important;
   color: white;
     }
+
+
+.container__checkbox .input__error {
+  border-top: none;
+  padding: 7px 0 7px 10px;
+}
+
+a.link__terms {
+  color: $mediamarkt!important;
+  text-decoration: none!important;
+}
+
+.label__checkbox {
+  padding-left: 7px;
+}
+
+select > .option__default {
+    color:#4c4c4c!important;
+    cursor: not-allowed!important;
+  }
+  // &:nth-child(2) {
+  // }
+  // &.option__select {
+  //   color: green!important;
+  // }
+
+// select > option.option__select:hover {
+//   color: $mediamarkt !important;
+// }
+// select > option.option__select:visited {
+//   color: $mediamarkt !important;
+// }
+// select > option.option__select:active {
+//   color: $mediamarkt !important;
+// }
+// select > option.option__select:target {
+//   color: $mediamarkt !important;
+// }
+// select > option.option__select:focus {
+//   color: $mediamarkt !important;
+// }
+// select > option.option__select:focus-visible {
+//   color: $mediamarkt !important;
+// }
+
+
+// #request_type > option:nth-child(3)#request_type > option:nth-child(3)
+h4.subtitle__section__form {
+  font-weight: bold;
+  padding: 20px 0;
+}
+// select {
+//   cursor: pointer;
+//   color: black!important;
+// }
+option.option__select {
+    cursor: pointer!important;
+  }
+option.option__default {
+  cursor: not-allowed!important;
+}
+
+select.input option {
+  color: black;
+}
+input.input::placeholder {
+  color: black;
+}

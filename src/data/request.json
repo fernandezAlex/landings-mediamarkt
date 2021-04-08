@@ -1,0 +1,27 @@
+{
+    "request": [
+        {
+            "name": "Obtener información del departamento B2B",
+            "value": "100000000"
+        },
+        {
+            "name": "Consulta de precios",
+            "value": "100000001"
+        },
+        {
+            "name": "Solicitud administrativa",
+            "value": "100000002"
+        },
+        {
+            "name": "Tarjetas regalos",
+            "value": "100000003"
+        },
+        {
+            "name": "Otra Solicitud",
+            "value": "100000004"
+        }
+    ]
+}
+
+
+

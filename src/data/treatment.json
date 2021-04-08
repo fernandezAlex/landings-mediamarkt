@@ -1,11 +1,11 @@
 {
     "treatment": [{
             "name": "Sr",
-            "value": "Value-test"
+            "value": "Sr"
         },
         {
             "name": "Sra",
-            "value": "Value-test"
+            "value": "Sra"
         }
     ]
 }
