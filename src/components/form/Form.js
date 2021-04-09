@@ -15,7 +15,7 @@ import ReCaptcha from "react-google-recaptcha";
 
 /* Data Form */
 
-const idCampaign = "194";
+const idCampaign = "225";
 const dataAnalyticsForm = {
   event: "gaEvent",
   eventCategory: "Home_B2B_ED",
@@ -168,23 +168,23 @@ const Form = () => {
           <div className="inputs__container">
             <Input
               type="name"
-              placeholder="Nombre del centro educativo"
+              placeholder="Nombre de la empresa"
               value={name}
               onChange={(e) => handleNameChange(e.target.value)}
               name="company"
               error={isNameError}
-              errorText="Introduzca un nombre válido"
+              errorText="Introduce un nombre válido"
               className="input"
               id="company"
             />
             <Input
               type="nif"
-              placeholder="NIF Centro educativo"
+              placeholder="NIF Empresa"
               value={nif}
               onChange={(e) => handleNifChange(e.target.value.toUpperCase())}
               name="nif"
               error={isNifError}
-              errorText="Introduzca un NIF válido"
+              errorText="Introduce un NIF válido"
               className="input"
               id="cif"
             />
@@ -195,7 +195,7 @@ const Form = () => {
               onChange={(e) => handleContactChange(e.target.value)}
               name="contact"
               error={isContactError}
-              errorText="Introduzca un nombre válido"
+              errorText="Introduzce un nombre válido"
               className="input"
               id="contact"
             />
@@ -206,7 +206,7 @@ const Form = () => {
               onChange={(e) => handlePositionChange(e.target.value)}
               name="position"
               error={isPositionError}
-              errorText="Introduzca un cargo válido"
+              errorText="Introduce un cargo válido"
               className="input"
               id="position"
             />
@@ -217,7 +217,7 @@ const Form = () => {
               onChange={(e) => handleEmailChange(e.target.value.toLowerCase())}
               name="email"
               error={isEmailError}
-              errorText="Introduzca un email válido"
+              errorText="Introduce un email válido"
               className="input"
               id="email"
             />
@@ -228,7 +228,7 @@ const Form = () => {
               onChange={(e) => handlePhoneChange(e.target.value)}
               name="phone"
               error={isPhoneError}
-              errorText="Introduzca un teléfono válido"
+              errorText="Introduce un teléfono válido"
               className="input"
               id="phone"
             />

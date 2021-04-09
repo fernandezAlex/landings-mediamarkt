@@ -5,7 +5,7 @@ const Section2 = ({data}) => {
     return (
         <div className="section">
         <div>
-          <h1 className="title">Nuestra propuesta de valor se compone de cuatro ejes principales</h1>
+          <h1 className="title">La transformación digital en los puntos de venta</h1>
         </div>
         <CardTextGrid data={data}/>
         </div>

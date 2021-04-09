@@ -22,11 +22,11 @@ export const cardsSection1 = [
   
   export const cardsSection2 = [
     {
-      title: "Aula extendida",
-      subtitle: "Nuevas necesidades para las clases híbridas",
+      title: "Proceso de venta",
+      subtitle: "Optimización y gestión de procesos",
       imgThumbnail:
-        "https://specials.mediamarkt.es/assets-react/b2b-educacion/062007_B2B_Cards_500x500_Activa_V1_6.png",
-      slug: "https://specials.mediamarkt.es/empresas/educacion/aula-extendida",
+        "https://specials.mediamarkt.es/assets-react/b2b-comercio/Card_procesoventa.jpg",
+      slug: "https://specials.mediamarkt.es/empresas/comercio/proceso-venta",
       button: "Ver más",
       event: "gaEvent",
       eventCategory: "Home_B2B_ED",
@@ -34,12 +34,12 @@ export const cardsSection1 = [
       eventLabel: "Home_B2B_EDUCACION_aula_extendida",
     },
     {
-      title: "Transformación del aula",
-      subtitle: "El aula del futuro que transformará tu centro",
+      title: "Creación de ambientes",
+      subtitle: "El confort de tu establecimiento",
       imgThumbnail:
-        "https://specials.mediamarkt.es/assets-react/b2b-educacion/062007_B2B_Cards_500x500_Activa_V1_5.png",
+        "https://specials.mediamarkt.es/assets-react/b2b-comercio/Card_creacionambiente.jpg",
       slug:
-        "https://specials.mediamarkt.es/empresas/educacion/transformacion-aula",
+        "https://specials.mediamarkt.es/empresas/comercio/creacion-ambientes",
       button: "Ver más",
       event: "gaEvent",
       eventCategory: "Home_B2B_ED",
@@ -47,11 +47,11 @@ export const cardsSection1 = [
       eventLabel: "Home_B2B_EDUCACION_transformacion_aula",
     },
     {
-      title: "Educación digital",
-      subtitle: "¡Todos participan, todos aprenden!",
+      title: "Infraestructura y redes",
+      subtitle: "Siempre conectados y seguros",
       imgThumbnail:
-        "https://specials.mediamarkt.es/assets-react/b2b-educacion/062007_B2B_Cards_500x500_Activa_V1_.png",
-      slug: "https://specials.mediamarkt.es/empresas/educacion/educacion-digital",
+        "https://specials.mediamarkt.es/assets-react/b2b-comercio/Card_infraestructura.jpg",
+      slug: "https://specials.mediamarkt.es/comercio/redes-y-seguridad",
       button: "Ver más",
       event: "gaEvent",
       eventCategory: "Home_B2B_ED",
@@ -59,67 +59,17 @@ export const cardsSection1 = [
       eventLabel: "Home_B2B_EDUCACION_ed_digital",
     },
     {
-      title: "Programación y robótica",
-      subtitle: "La mejor manera de aprender es construyendo por uno mismo",
+      title: "Comunicación experiencial",
+      subtitle: "Marketing sensorial",
       imgThumbnail:
-        "https://specials.mediamarkt.es/assets-react/b2b-educacion/062007_B2B_Cards_500x500_Activa_V1_2.png",
+        "https://specials.mediamarkt.es/assets-react/b2b-comercio/Card_comunicacion_experiencial.jpg",
       slug:
-        "https://specials.mediamarkt.es/empresas/educacion/programacion-y-robotica",
+        "https://specials.mediamarkt.es/empresas/comercio/comunicacion-sensorial",
       button: "Ver más",
       event: "gaEvent",
       eventCategory: "Home_B2B_ED",
       eventAction: "Click",
       eventLabel: "Home_B2B_EDUCACION_robotica",
-    },
-    {
-      title: "Realidad virtual",
-      subtitle: "La entrada a un mundo infinito",
-      imgThumbnail:
-        "https://specials.mediamarkt.es/assets-react/b2b-educacion/062007_B2B_Cards_500x500_Activa_V1_7.png",
-      slug: "https://specials.mediamarkt.es/empresas/educacion/realidad-virtual",
-      button: "Ver más",
-      event: "gaEvent",
-      eventCategory: "Home_B2B_ED",
-      eventAction: "Click",
-      eventLabel: "Home_B2B_EDUCACION_rv",
-    },
-    {
-      title: "Redes y conectividad",
-      subtitle: "El primer paso es una excelente conectividad",
-      imgThumbnail:
-        "https://specials.mediamarkt.es/assets-react/b2b-educacion/062007_B2B_Cards_500x500_Activa_V1_4.png",
-      slug:
-        "https://specials.mediamarkt.es/empresas/educacion/redes-y-conectividad",
-      button: "Ver más",
-      event: "gaEvent",
-      eventCategory: "Home_B2B_ED",
-      eventAction: "Click",
-      eventLabel: "Home_B2B_EDUCACION_redes_conectividad",
-    },
-    {
-      title: "Formación y desarrollo",
-      subtitle: "Competencia digital docente",
-      imgThumbnail:
-        "https://specials.mediamarkt.es/assets-react/b2b-educacion/062007_B2B_Cards_500x500_Activa_V1_8.png",
-      slug:
-        "https://specials.mediamarkt.es/empresas/educacion/formacion-y-desarrollo",
-      button: "Ver más",
-      event: "gaEvent",
-      eventCategory: "Home_B2B_ED",
-      eventAction: "Click",
-      eventLabel: "Home_B2B_EDUCACION_formacion_desarrollo",
-    },
-    {
-      title: "Material escolar",
-      subtitle: "Nuestra propuesta de valor se compone de 4 ejes principales ",
-      imgThumbnail:
-        "https://specials.mediamarkt.es/assets-react/b2b-educacion/062007_B2B_Cards_500x500_Activa_V1_3.png",
-      slug: "https://specials.mediamarkt.es/empresas/educacion/catalogo",
-      button: "Ver más",
-      event: "gaEvent",
-      eventCategory: "Home_B2B_ED",
-      eventAction: "Click",
-      eventLabel: "Home_B2B_EDUCACION_material_escolar",
     },
   ];
   

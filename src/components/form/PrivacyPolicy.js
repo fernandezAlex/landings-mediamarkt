@@ -23,7 +23,7 @@ const PrivacyPolicy = ({ onChange, terms }) => {
                             title="Política de privacidad"
                             style={{ color: '#df0000' }}
                         >
-                            Política de Privacidad
+                            política de privacidad
                         </a>
                         &nbsp; y las&nbsp;
                         <a
@@ -40,7 +40,7 @@ const PrivacyPolicy = ({ onChange, terms }) => {
                 </div>
             </div>
             <div className={`error__terms ${!terms ? '' : 'disabled'}`}>
-                Es necesario que acepte la política de privacidad y las
+                Es necesario que aceptes la política de privacidad y las
                 condiciones de uso de la web
             </div>
         </>
