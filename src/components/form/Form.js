@@ -246,11 +246,11 @@ const handleSubmit = (e) => {
     data: body,
     // config: { headers: {'Content-Type': 'multipart/form-data' }}
     })
-    .then(function (response) {
+    .then( (response) => {
         //handle success
-        console.log(response);
+        console.log("Formulario enviado", response);
     })
-    .catch(function (response) {
+    .catch( (response) => {
         //handle error
         console.log(response);
     });
