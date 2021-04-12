@@ -1,13 +1,14 @@
 import React from 'react'
-import CardTextGrid from '../cards/CardTextGrid'
+import { SectionImg } from '../sectionimg/SectionImg'
 
 const Section2 = ({data}) => {
+  const {title} = data
     return (
         <div className="section">
         <div>
-          <h1 className="title">La transformación digital en los puntos de venta</h1>
+          <h1 className="title">{title}</h1>
         </div>
-        <CardTextGrid data={data}/>
+        <SectionImg data={data}/>
         </div>
     )
 }
