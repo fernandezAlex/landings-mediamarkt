@@ -13,7 +13,7 @@ import {
 import ReCaptcha from "react-google-recaptcha";
 import InputRadio from "./InputRadio"
 import DateSelector from "./DateSelector";
-import "react-datepicker/dist/react-datepicker.css";
+// import "react-datepicker/dist/react-datepicker.css";
 
 import Select from './Select';
 import axios from 'axios';
