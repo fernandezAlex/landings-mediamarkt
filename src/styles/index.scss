@@ -10,9 +10,9 @@ License url: https://www.mediamarkt.es
   **/
 
 @import "./base/cleanspecials";
-@import "./base/slick";
-@import "./base/base";
 @import "./base/settings";
+@import "./base/base";
+@import "./base/slick";
 
 // Components
 @import "./components/cardCarousel";

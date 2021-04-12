@@ -35,47 +35,34 @@ export const Section1 = () => {
                 <a
                   style={{ textDecoration: "none" }}
                   onClick={() =>
-                    analytics("gaEvent", "Home_B2B_ED", "Click", "Home_B2B_EDUCACION_contactanos")
-                  }
-                  className="link__contact"
-                  href="#contacto"
-                >
-                  <span className="arrow">
-                    <Arrow />
-                  </span>
-                  <font className="link__text"> Contacta con nosotros</font>
-                </a>
-              </div>
-              <div className="container__link__video">
-                <div className="link__video" onClick={toggle}>
-                  <div className="_link_video">
-                    <span className="arrow">
-                      <Arrow />
-                    </span>
-                    <font className="link__text"> Ver vídeo de MediaMarkt Business Educación</font>
-                  </div>
-                </div>
-              </div>
-              <div className="container__link__contact">
-                <a
-                  style={{ textDecoration: "none" }}
-                  onClick={() =>
                     analytics("gaEvent", "Home_B2B_ED", "Click", "Home_B2B_EDUCACION_ver_folleto")
                   }
                   className="link__contact"
-                  href="https://specials.mediamarkt.es/folleto-empresas/educacion"
+                  href="https://assets.ctfassets.net/osyynfyvlyjc/7ntLWpC7tOJTKTeP5AVJmL/c5aca0515187aa0d9ffe3f46e6487056/MM18_217_Nota_informativa_Agentes_vinculados_MOD.pdf"
                   target="_blank"
                   rel="noreferrer"
                 >
                   <span className="arrow">
                     <Arrow />
                   </span>
-                  <font className="link__text"> Ver folleto de Educación</font>
+                  <font className="link__text"><strong>Nota informativa del mediador</strong></font>
                 </a>
               </div>
+              {/* <button type="button" className="hdqFcm mHerN">¿Te Llamamos</button> */}
+
+                  <div className="button__CTA">
+              <a
+                  style={{ textDecoration: "none" }}
+                  onClick={() =>
+                    analytics("gaEvent", "Home_B2B_ED", "Click", "Home_B2B_EDUCACION_contactanos")
+                  }
+                  className="link__contact"
+                  href="#contacto"
+                  >
+                  <font className="link__text">¿Te llamamos?</font>
+                </a>
+                  </div>
       </div>
-      
-      <Modal isShowing={isShowing} hide={toggle} />
     </div>
   );
 };
