@@ -135,15 +135,7 @@ const Form = () => {
     <>
       <div className="form__wrapper" id="contacto">
         <div className="__header__title">
-          <h2 className="--title">¿En qué podemos ayudarte?</h2>
-          <p className="--text">
-            Envíanos tu consulta y nuestro equipo de asesores contactarán
-            contigo o llámanos al 900 205111 (Horario de atención de lunes a
-            viernes de 9h a 17h)
-          </p>
-        </div>
-        <div className="__header__subtitle">
-          <h2 className="--subtitle">Tus datos personales</h2>
+          <h2 className="--title">¿Quieres conocer más? Envíanos tus datos y nos pondremos en contacto contigo</h2>
           <p className="--text">
             Los campos marcados con un asterisco (
             <span style={{ color: `#df0000` }}>*</span>) son obligatorios
@@ -167,48 +159,48 @@ const Form = () => {
           />
           <div className="inputs__container">
             <Input
-              type="name"
-              placeholder="Nombre del centro educativo"
+              type="text"
+              placeholder="Nombre"
               value={name}
               onChange={(e) => handleNameChange(e.target.value)}
               name="company"
               error={isNameError}
-              errorText="Introduzca un nombre válido"
+              errorText="Introduce un nombre válido"
               className="input"
-              id="company"
+              id="name"
             />
             <Input
-              type="nif"
-              placeholder="NIF Centro educativo"
+              type="text"
+              placeholder="Apellidos"
               value={nif}
               onChange={(e) => handleNifChange(e.target.value.toUpperCase())}
-              name="nif"
+              name="surname"
               error={isNifError}
-              errorText="Introduzca un NIF válido"
+              errorText="Introduce un/os apellido/s válido/s"
               className="input"
-              id="cif"
+              id="surname"
             />
             <Input
-              type="contact"
-              placeholder="Persona de contacto"
-              value={contact}
-              onChange={(e) => handleContactChange(e.target.value)}
-              name="contact"
-              error={isContactError}
-              errorText="Introduzca un nombre válido"
+              type="text"
+              placeholder="Prefijo"
+              value={phone}
+              onChange={(e) => handlePhoneChange(e.target.value)}
+              name="prefix"
+              error={isPhoneError}
+              errorText="Inválido"
               className="input"
-              id="contact"
+              id="prefix"
             />
             <Input
-              type="position"
-              placeholder="Cargo"
-              value={position}
-              onChange={(e) => handlePositionChange(e.target.value)}
-              name="position"
-              error={isPositionError}
-              errorText="Introduzca un cargo válido"
+              type="text"
+              placeholder="Teléfono"
+              value={phone}
+              onChange={(e) => handlePhoneChange(e.target.value)}
+              name="phone"
+              error={isPhoneError}
+              errorText="Introduce un teléfono válido"
               className="input"
-              id="position"
+              id="phone"
             />
             <Input
               type="e-mail"
@@ -217,32 +209,11 @@ const Form = () => {
               onChange={(e) => handleEmailChange(e.target.value.toLowerCase())}
               name="email"
               error={isEmailError}
-              errorText="Introduzca un email válido"
+              errorText="Introduce un email válido"
               className="input"
               id="email"
             />
-            <Input
-              type="phone"
-              placeholder="Teléfono"
-              value={phone}
-              onChange={(e) => handlePhoneChange(e.target.value)}
-              name="phone"
-              error={isPhoneError}
-              errorText="Introduzca un teléfono válido"
-              className="input"
-              id="phone"
-            />
           </div>
-          <TextArea
-            type="mytext"
-            placeholder="Consulta"
-            rows={4}
-            name="consulta"
-            className="message"
-            value={message}
-            onChange={(e) => handleMessageChange(e.target.value)}
-            id="consulta"
-          />
           <div className="footer__form">
             <PrivacyPolicy
               onChange={(e) => handleTermsChange(e.target.checked)}

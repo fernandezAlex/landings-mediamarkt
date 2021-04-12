@@ -14,7 +14,7 @@ const Input = ({
 
 }) => {
 	return (
-		<div className="container__input">
+		<div className={`container__input ${name}`}>
 			<input
 				type={type}
 				placeholder={placeholder}

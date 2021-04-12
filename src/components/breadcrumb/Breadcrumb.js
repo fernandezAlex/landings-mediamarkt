@@ -13,15 +13,15 @@ export const Breadcrumb = () => {
         className="icon__arrow"
         size="xs"
       />
-      <a href="https://www.mediamarkt.es/empresas" target="_self">
-        <h5>MediaMarkt Business</h5>
-      </a>
+      {/* <a href="https://www.mediamarkt.es/empresas" target="_self"> */}
+        <h5>Seguros</h5>
+      {/* </a> */}
       <FontAwesomeIcon
         icon={faChevronRight}
         className="icon__arrow"
         size="xs"
       />
-      <h5>Educación</h5>
+      <h5>Seguro responsabilidad civil</h5>
     </div>
   );
 };

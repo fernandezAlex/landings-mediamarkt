@@ -14,7 +14,13 @@ const Accordion = () => {
       {
         faqs.map((faq, i) => {
         return (
-          <AccordionItem title={<div dangerouslySetInnerHTML={{ __html: faq.question }} onClick={() => analytics(faq.eventGa, faq.eventCategory, faq.eventAction, faq.eventLabel)} />} key={i}>
+          <AccordionItem 
+            title={<div dangerouslySetInnerHTML={{ __html: faq.question }}
+            // onClick={() => analytics(faq.eventGa, faq.eventCategory, faq.eventAction, faq.eventLabel)}
+            
+          />}
+            key={i}
+          >
           {<div dangerouslySetInnerHTML={{ __html: faq.reply }} />}
           </AccordionItem>
           )
