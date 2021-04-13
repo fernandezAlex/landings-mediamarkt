@@ -238,7 +238,7 @@ const Form = () => {
             <Select
             name="preferedStoreId"
             type="select"
-            data={stores}
+            // data={stores}
             className="shop__select"
             error={!isStoreError ? true : false}
             errorText="Es necesario que selecciones una tienda"
