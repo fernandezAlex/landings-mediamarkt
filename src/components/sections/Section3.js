@@ -1,27 +1,39 @@
 import React from "react";
-import CardGrid from "../cards/CardGrid";
-import SliderSmall from "../carousel/SliderSmall";
 import analytics from "../../helpers/analytics";
-import { ReactComponent as Arrow } from "../../img/button-arrow.svg";
 
-const Section3 = ({width, data}) => {
+
+const Section3 = ({width}) => {
+
+  const imgThumbnail =  'https://specials.mediamarkt.es/assets-react/zurich/mm-zurich-combo.png';
+  const imgThumbnail_mobile =  'https://specials.mediamarkt.es/assets-react/zurich/teaser_doble_800.png';
+  const imgThumbnail_desktop =  'https://specials.mediamarkt.es/assets-react/zurich/teaser_doble_1260.png';
+  
+
   return (
-    <div className="section">
+    <div className="section__img">
+                <div className="img__teaser__section" 
+          >
+              <img src={imgThumbnail} alt={imgThumbnail}/>
+            </div>
       {
         width < 843 
         ? (
-            <div>
-            <h1 className="title">Soluciones a medida para escuelas, centros de formación y universidades</h1>
-            <SliderSmall data={data}/>
+            <div className="img__teaser__mobile" 
+            >
+              <img src={imgThumbnail_mobile} alt={imgThumbnail_mobile}/>
             </div>
         ) : (
-            <div>
-            <h1 className="title">Soluciones a medida para escuelas, centros de formación y universidades</h1>
-            <CardGrid data={data} />
+          <div className="img__teaser__desktop" 
+          >
+              <img src={imgThumbnail_desktop} alt={imgThumbnail_desktop}/>
             </div>
         )
     }
-    <div className="container__link__contact">
+          <div className="container__links__header">
+            <p>
+            Seguro de Responsabilidad Civil de Zurich Insurance PLC, Sucursal en España, distribuido por MediaMarkt Protect Solutions S.A. Agencia de Seguros Vinculada de Zurich Insurance PLC Sucursal en España, con NIF: A67123117, domicilio social en Edificio Prima Muntadas - C/Solsonés 2, Puerta C 08820 El Prat de Llobregat (Barcelona) y con N de inscripción en la DGSFP: AJ0240.
+            </p>
+              <div className="container__link__contact">
                 <a
                   style={{ textDecoration: "none" }}
                   onClick={() =>
@@ -32,13 +44,11 @@ const Section3 = ({width, data}) => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <span className="arrow">
-                    <Arrow />
-                  </span>
                   <font className="link__text"><strong>Nota informativa del mediador</strong></font>
                 </a>
               </div>
-    </div>
+      </div>
+      </div>
   );
 };
 

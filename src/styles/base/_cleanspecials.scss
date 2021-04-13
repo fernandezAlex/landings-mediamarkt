@@ -13,20 +13,20 @@
   margin-left: 0px !important;
 }
 
-.mobile-version input#tlegal-terms {
+.mobile-version input[type=checkbox] {
   -webkit-appearance: checkbox !important;
 }
 
-#wrp_widgets,
-#widget_news {
-  display: none !important;
-}
+// #wrp_widgets,
+// #widget_news {
+//   display: none !important;
+// }
 
-#rise-header {
-  .ms-header2-sticky-spacer {
-    display: none;
-  }
-}
+// #rise-header {
+//   .ms-header2-sticky-spacer {
+//     display: none;
+//   }
+// }
 
 .header {
   padding: 0px !important;
@@ -55,4 +55,18 @@
 .mobile-version .wrapper {
   margin: 0px !important;
   max-width: none !important;
+}
+
+label {
+  display: initial!important;
+  max-width: none!important;
+  margin-bottom: 0!important;
+  font-weight: inherit!important;
+  padding-left: 10px!important;
+}
+
+input[type=text], input[type=email], input[type=number], input[type=select], input[type=radio], input[type=password] {
+  font-style: 16px!important;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif !important;
+  font-weight: normal!important;
 }

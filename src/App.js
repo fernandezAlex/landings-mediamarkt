@@ -29,7 +29,7 @@ function App() {
       <Header />
       <Section1/>
       <Section2 data={cardsSection1} width={width}/>
-      <Section3 data={cardsSection2} width={width}/>
+      <Section3 width={width}/>
       <Form />
       <Accordion/>
     </>

@@ -16,7 +16,7 @@ const Accordion = () => {
         return (
           <AccordionItem 
             title={<div dangerouslySetInnerHTML={{ __html: faq.question }}
-            // onClick={() => analytics(faq.eventGa, faq.eventCategory, faq.eventAction, faq.eventLabel)}
+            onClick={() => analytics(faq.eventGa, faq.eventCategory, faq.eventAction, faq.eventLabel)}
             
           />}
             key={i}

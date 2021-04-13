@@ -1,17 +1,16 @@
 import React, { useState } from "react";
 import Input from "./Input";
-import TextArea from "./TextArea";
-import PrivacyPolicy from "./PrivacyPolicy";
 import AsyncButton from "./AsyncButton";
+import Checkbox from "./Checkbox"
 import analytics from "../../helpers/analytics";
 import {
   validateName,
-  validateNif,
-  validatePosition,
+  // validatePrefix,
   validateEmail,
   validatePhone,
 } from "../validations/ValidateFunctions";
 import ReCaptcha from "react-google-recaptcha";
+
 
 /* Data Form */
 
@@ -20,28 +19,28 @@ const dataAnalyticsForm = {
   event: "gaEvent",
   eventCategory: "Home_B2B_ED",
   eventAction: "Click",
-  eventLabel: "Home_B2B_EDUCACION_contactanos",
+  eventLabel: "Zurich_enviar_formulario",
 };
 const urlActionForm =
-  "https://specials.mediamarkt.es/empresas/confirmacion";
+  "https://specials.mediamarkt.es/seguros-zurich/confirmacion";
 
 
 
 const Form = () => {
   const [name, setName] = useState("");
   const [isNameError, setIsNameError] = useState(false);
-  const [nif, setNif] = useState("");
-  const [isNifError, setIsNifError] = useState(false);
-  const [contact, setContact] = useState("");
-  const [isContactError, setIsContactError] = useState(false);
-  const [position, setPosition] = useState("");
-  const [isPositionError, setIsPositionError] = useState(false);
-  const [email, setEmail] = useState("");
-  const [isEmailError, setIsEmailError] = useState(false);
+  const [surname, setSurname] = useState("");
+  const [isSurnameError, setIsSurnameError] = useState(false);
+  const [prefix, setPrefix] = useState("");
+  const [isPrefixError, setIsPrefixError] = useState(false);
   const [phone, setPhone] = useState("");
   const [isPhoneError, setIsPhoneError] = useState(false);
-  const [message, setMessage] = useState("");
+  const [email, setEmail] = useState("");
+  const [isEmailError, setIsEmailError] = useState(false);
+
   const [terms, setTerms] = useState("");
+  const [newsletter, setNewsletter] = useState("");
+
   const [recaptcha, setRecaptcha] = useState(false);
   const [isSubmited, setIsSubmited] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -53,28 +52,16 @@ const Form = () => {
     setIsNameError(!isOk);
   };
 
-  const handleNifChange = (value) => {
-    setNif(value);
-    const isOk = validateNif(value);
-    setIsNifError(!isOk);
-  };
-
-  const handleContactChange = (value) => {
-    setContact(value);
+  const handleSurnameChange = (value) => {
+    setSurname(value);
     const isOk = validateName(value);
-    setIsContactError(!isOk);
+    setIsSurnameError(!isOk);
   };
 
-  const handlePositionChange = (value) => {
-    setPosition(value);
-    const isOk = validatePosition(value);
-    setIsPositionError(!isOk);
-  };
-
-  const handleEmailChange = (value) => {
-    setEmail(value);
-    const isOk = validateEmail(value);
-    setIsEmailError(!isOk);
+  const handlePrefixChange = (value) => {
+    setPrefix(value);
+    const isOk = validatePhone(value);
+    setIsPrefixError(!isOk);
   };
 
   const handlePhoneChange = (value) => {
@@ -83,12 +70,18 @@ const Form = () => {
     setIsPhoneError(!isOk);
   };
 
-  const handleMessageChange = (value) => {
-    setMessage(value);
+  const handleEmailChange = (value) => {
+    setEmail(value);
+    const isOk = validateEmail(value);
+    setIsEmailError(!isOk);
   };
 
   const handleTermsChange = (checked) => {
     setTerms(checked);
+  };
+
+  const handleNewsletterChange = (checked) => {
+    setNewsletter(checked);
   };
 
   const onChangeCaptcha = (value) => {
@@ -98,15 +91,8 @@ const Form = () => {
   };
 
   const isValidated =
-    (name.length > 0 ||
-      nif.length > 0 ||
-      contact.length > 0 ||
-      position.length > 0 ||
-      email.length > 0) &&
     validateName(name) &&
-    validateNif(nif) &&
-    validateName(contact) &&
-    validatePosition(position) &&
+    validateName(surname) &&
     validateEmail(email) &&
     validatePhone(phone) &&
     terms;
@@ -172,10 +158,10 @@ const Form = () => {
             <Input
               type="text"
               placeholder="Apellidos"
-              value={nif}
-              onChange={(e) => handleNifChange(e.target.value.toUpperCase())}
+              value={surname}
+              onChange={(e) => handleSurnameChange(e.target.value)}
               name="surname"
-              error={isNifError}
+              error={isSurnameError}
               errorText="Introduce un/os apellido/s válido/s"
               className="input"
               id="surname"
@@ -183,10 +169,10 @@ const Form = () => {
             <Input
               type="text"
               placeholder="Prefijo"
-              value={phone}
-              onChange={(e) => handlePhoneChange(e.target.value)}
+              value={prefix}
+              onChange={(e) => handlePrefixChange(e.target.value)}
               name="prefix"
-              error={isPhoneError}
+              error={isPrefixError}
               errorText="Inválido"
               className="input"
               id="prefix"
@@ -203,7 +189,7 @@ const Form = () => {
               id="phone"
             />
             <Input
-              type="e-mail"
+              type="email"
               placeholder="Dirección de email"
               value={email}
               onChange={(e) => handleEmailChange(e.target.value.toLowerCase())}
@@ -215,9 +201,30 @@ const Form = () => {
             />
           </div>
           <div className="footer__form">
-            <PrivacyPolicy
+
+            <Checkbox
               onChange={(e) => handleTermsChange(e.target.checked)}
-              terms={terms}
+              error={!terms}
+              type="checkbox"
+              name="terms"
+              id="terms"
+              value="yes"
+              required=""
+              className="test_class"
+              dataTag="termsAndConditionsAccept"
+              target="_blank"
+              text='He leído y acepto la <a class="link__terms" href="https://www.mediamarkt.es/es/legal/politica-de-privacidad" rel="noreferrer" target="_blank">Política de Privacidad</a> y las <a class="link__terms" href="https://www.mediamarkt.es/es/legal/condiciones-de-uso-de-la-web" rel="noreferrer" target="_blank">condiciones de uso</a>.'
+              errorText="Debes aceptar los términos y condiciones"
+            />{console.log(terms, newsletter)}
+            <Checkbox
+              onChange={(e) => handleNewsletterChange(e.target.checked)}
+              type="checkbox"
+              name="newsletter"
+              id="newsletter"
+              value="yes"
+              required=""
+              className="test_class"
+              text='Deseo recibir comunicaciones comerciales de MEDIA MARKT y de terceras entidades en los términos previstos en la <a class="link__terms" href="https://www.mediamarkt.es/es/legal/politica-de-privacidad" rel="noreferrer" target="_blank">Política de Privacidad</a>.'
             />
             <ReCaptcha
               size="normal"
