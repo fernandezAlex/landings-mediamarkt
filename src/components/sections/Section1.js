@@ -34,9 +34,9 @@ export const Section1 = () => {
             onClick={() =>
               analytics(
                 "gaEvent",
-                "Home_B2B_ED",
+                "Home_B2B_COMERCIO",
                 "Click",
-                "Home_B2B_EDUCACION_contactanos",
+                "Home_B2B_COMERCIO_contactanos",
               )
             }
             className="link__contact"
@@ -67,9 +67,9 @@ export const Section1 = () => {
             onClick={() =>
               analytics(
                 "gaEvent",
-                "Home_B2B_ED",
+                "Home_B2B_COMERCIO",
                 "Click",
-                "Home_B2B_EDUCACION_ver_folleto",
+                "Home_B2B_COMERCIO_ver_folleto",
               )
             }
             className="link__contact"

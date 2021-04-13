@@ -18,9 +18,9 @@ import ReCaptcha from "react-google-recaptcha";
 const idCampaign = "225";
 const dataAnalyticsForm = {
   event: "gaEvent",
-  eventCategory: "Home_B2B_ED",
+  eventCategory: "Home_B2B_COMERCIO",
   eventAction: "Click",
-  eventLabel: "Home_B2B_EDUCACION_contactanos",
+  eventLabel: "Home_B2B_Comercio_enviar_formulario",
 };
 const urlActionForm =
   "https://specials.mediamarkt.es/empresas/confirmacion";
@@ -143,7 +143,7 @@ const Form = () => {
           </p>
         </div>
         <div className="__header__subtitle">
-          <h2 className="--subtitle">Tus datos personales</h2>
+          <h2 className="--subtitle"> </h2>
           <p className="--text">
             Los campos marcados con un asterisco (
             <span style={{ color: `#df0000` }}>*</span>) son obligatorios

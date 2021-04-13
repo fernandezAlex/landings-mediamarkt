@@ -17,9 +17,9 @@ export const cardsSection1 =
       slug: "https://specials.mediamarkt.es/empresas/comercio/proceso-venta",
       button: "Ver más",
       event: "gaEvent",
-      eventCategory: "Home_B2B_ED",
+      eventCategory: "Home_B2B_COMERCIO",
       eventAction: "Click",
-      eventLabel: "Home_B2B_EDUCACION_aula_extendida",
+      eventLabel: "Home_B2B_COMERCIO_proceso_venta",
     },
     {
       title: "Creación de ambientes",
@@ -30,9 +30,9 @@ export const cardsSection1 =
         "https://specials.mediamarkt.es/empresas/comercio/creacion-ambientes",
       button: "Ver más",
       event: "gaEvent",
-      eventCategory: "Home_B2B_ED",
+      eventCategory: "Home_B2B_COMERCIO",
       eventAction: "Click",
-      eventLabel: "Home_B2B_EDUCACION_transformacion_aula",
+      eventLabel: "Home_B2B_COMERCIO_creacion_ambientes",
     },
     {
       title: "Infraestructura y redes",
@@ -42,9 +42,9 @@ export const cardsSection1 =
       slug: "https://specials.mediamarkt.es/comercio/redes-y-seguridad",
       button: "Ver más",
       event: "gaEvent",
-      eventCategory: "Home_B2B_ED",
+      eventCategory: "Home_B2B_COMERCIO",
       eventAction: "Click",
-      eventLabel: "Home_B2B_EDUCACION_ed_digital",
+      eventLabel: "Home_B2B_COMERCIO_infraestructura",
     },
     {
       title: "Comunicación experiencial",
@@ -55,9 +55,9 @@ export const cardsSection1 =
         "https://specials.mediamarkt.es/empresas/comercio/comunicacion-sensorial",
       button: "Ver más",
       event: "gaEvent",
-      eventCategory: "Home_B2B_ED",
+      eventCategory: "Home_B2B_COMERCIO",
       eventAction: "Click",
-      eventLabel: "Home_B2B_EDUCACION_robotica",
+      eventLabel: "Home_B2B_COMERCIO_comunicacion_experiencial",
     },
   ];
   
