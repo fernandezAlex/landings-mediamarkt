@@ -1,0 +1,68 @@
+{
+    "291": {
+        "sapCode": "E277",
+        "storeId": 291,
+        "salesTaxId": "A63905772",
+        "companyName": null,
+        "displayName": "Las Palmas - Telde",
+        "city": "Jinamar, Telde (Gran Canaria)",
+        "street": "MediaMarkt - C.C. Las Terrazas - Autovía G.C 1,",
+        "streetNumber": "Km.5,5 Salida Cortijo",
+        "zipCode": "35220",
+        "phoneNumber": "928578000",
+        "email": "mm.telde.atencioncliente@mediamarkt.es",
+        "fax": null,
+        "managerFirstName": "Sr. Carlos Miguel Báez Carmona",
+        "status": "1",
+        "state": null,
+        "url_seo": "https://mediamarkt.es/mcs/marketinfo/_MediaMarkt-Las-Palmas-Telde,28392,-5.html",
+        "googleMaps": {
+            "latitude": 28.0275,
+            "longitude": -15.394
+        }
+    },
+    "962": {
+        "sapCode": "E233",
+        "storeId": 962,
+        "salesTaxId": "A62581988",
+        "companyName": null,
+        "displayName": "Las Palmas - Alisios",
+        "city": "Tamaraceite (Las Palmas de Gran Canaria)",
+        "street": "MediaMarkt - C/ Hermanos Dominguez Santana  Tamaraceite",
+        "streetNumber": "S/N",
+        "zipCode": "35018",
+        "phoneNumber": "928423400",
+        "email": "mm.laspalmas.atencioncliente@mediamarkt.es",
+        "fax": null,
+        "managerFirstName": null,
+        "status": "1",
+        "state": null,
+        "url_seo": "https://mediamarkt.es/mcs/marketinfo/_MediaMarkt-Las-Palmas-Alisios,28361,-5.html",
+        "googleMaps": {
+            "latitude": 28.097472,
+            "longitude": -15.455702
+        }
+    },
+    "294": {
+        "sapCode": "E508",
+        "storeId": 294,
+        "salesTaxId": "A63907356",
+        "companyName": null,
+        "displayName": "Las Palmas - Las Arenas",
+        "city": "Las Palmas de Gran Canaria",
+        "street": "MediaMarkt - C. C. Las Arenas -Carretera El Rincón",
+        "streetNumber": "S/N",
+        "zipCode": "35010",
+        "phoneNumber": "928495400",
+        "email": "grancanaria.lasarenas@mediamarkt.es",
+        "fax": null,
+        "managerFirstName": null,
+        "status": "1",
+        "state": null,
+        "url_seo": "https://mediamarkt.es/mcs/marketinfo/_MediaMarkt-Las-Palmas-Las-Arenas,121954,-5.html",
+        "googleMaps": {
+            "latitude": 28.129307,
+            "longitude": -15.448977
+        }
+    }
+}

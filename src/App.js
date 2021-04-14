@@ -7,9 +7,8 @@ import {cardsSection2} from './data/cards'
 import {headerData} from './data/header'
 import {breadcrumbData} from './data/breadcrumb';
 
-
-
 function App() {
+
   const [width, setWidth] = useState(document.body.clientWidth);
 
   useEffect(() => {

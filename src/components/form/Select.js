@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { conditionalExpression } from "@babel/types";
 
 const Select = ({
 	type,
@@ -14,6 +15,12 @@ const Select = ({
     labelDefault,
 
 }) => {
+	var stores = Object.values(data);
+	stores.map(({displayName}, i)=> {
+		var filters=['Próxima','Pinto'];
+		if(filters.some(el => displayName.includes(el))) delete stores[i]
+	})
+	
 	return (
 		<div className="container__input">
 			<select
@@ -26,10 +33,10 @@ const Select = ({
 				error={error}
 				id={id}
 			>
-                <option selected value="">{labelDefault}</option>
-                  {
-        data.map(({IDwws, Name}, i) => <option key={i} value={IDwws}>{Name}</option>)
-                }    
+				<option selected value="">{labelDefault}</option>
+				{
+					stores.map(({storeId, displayName}, i) => <option key={i} value={storeId}>{displayName}</option>)
+				}    
             </select><span className="span__required">*</span>
 			<div className="input__error">
 			<span className="text_error" dangerouslySetInnerHTML={{__html: error ? errorText : null}} />
