@@ -7,6 +7,7 @@ import Section3 from "./components/sections/Section3";
 import Form from "./components/form/Form";
 import {cardsSection1, cardsSection2} from './data/cards'
 import Accordion from "./components/faqs/Accordion";
+import TimeLine from "./components/timeline/TimeLine";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
       <Section1/>
       <Section2 data={cardsSection1} width={width}/>
       <Section3 width={width}/>
+      <TimeLine/>
       <Form />
       <Accordion/>
     </>

@@ -1,0 +1,27 @@
+{
+    "optionsButton": [{
+            "name": "Fibra + Móvil",
+            "value": "fibra+movil"
+        },
+        {
+            "name": "Fibra + Móvil + TV",
+            "value": "fibra+movil+tv"
+        },
+        {
+            "name": "Solo Fibra / ADSL",
+            "value": "fibra-adsl"
+        },
+        {
+            "name": "Movistar Prosegur Alarmas",
+            "value": "movistar-prosegur-alarmas"
+        },
+        {
+            "name": "Segunda linea",
+            "value": "segunda-linea"
+        },
+        {
+            "name": "Solo móvil",
+            "value": "solo-movil"
+        }
+    ]
+}

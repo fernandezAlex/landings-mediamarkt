@@ -10,6 +10,12 @@ import {
   validatePhone,
 } from "../validations/ValidateFunctions";
 import ReCaptcha from "react-google-recaptcha";
+import InfoForm from "./InfoForm";
+import Select from './Select';
+import datashops from '../../data/datashops.json'
+import Option from "./Option";
+
+const {stores} = datashops
 
 
 /* Data Form */
@@ -37,6 +43,10 @@ const Form = () => {
   const [isPhoneError, setIsPhoneError] = useState(false);
   const [email, setEmail] = useState("");
   const [isEmailError, setIsEmailError] = useState(false);
+
+  const [store, setStore] = useState([]);
+  const [storeSelected, setStoreSelected] = useState("");
+  const [isStoreError, setIsStoreError] = useState(false);
 
   const [terms, setTerms] = useState("");
   const [newsletter, setNewsletter] = useState("");
@@ -70,6 +80,12 @@ const Form = () => {
     setIsPhoneError(!isOk);
   };
 
+  const handleStoresChange = (value) => {
+    setStoreSelected(value);
+    const isOk = value.length>0 ? true : false;
+    setIsStoreError(isOk);
+  };
+
   const handleEmailChange = (value) => {
     setEmail(value);
     const isOk = validateEmail(value);
@@ -89,6 +105,22 @@ const Form = () => {
       setRecaptcha(true);
     }
   };
+
+  const [option1, setOption1] = useState()
+  const handleOption1Change = (checked) => {
+    setOption1(checked);
+  }
+
+  const [option2, setOption2] = useState()
+  const handleOption2Change = (checked) => {
+    setOption2(checked);
+  }
+
+  const [option3, setOption3] = useState()
+  const handleOption3Change = (checked) => {
+    setOption3(checked);
+  }
+
 
   const isValidated =
     validateName(name) &&
@@ -116,6 +148,29 @@ const Form = () => {
       setActionState(urlActionForm);
     }
   };
+  
+  // // const [button, setButton] = useState(false)
+  // const [options, setOptions] = useState({
+  //   videos: [{id: 1, title: 'Video 1'}],
+  //   texts: [{id: 1, title: 'Texto 1'}],
+  //   audios: [{id: 1, title: 'Audio 1'}]
+  // })
+  
+  // // const handleClickButton = (e) => {
+  // const handleClickButton = ({target}) => {
+  //     // e.preventDefault();
+  //     // const {target} = e
+  //     // setButton(!button)
+  //     setOptions({
+  //       ...options,
+  //       [target.name]: target.value,
+  //       button: target.checked,
+  //     })
+ 
+
+  //   }
+
+
 
   return (
     <>
@@ -143,10 +198,53 @@ const Form = () => {
             id="campaign"
             value={idCampaign}
           />
+                <div className="container__section__form">
+
+                <Option
+                onChange={(e) => handleOption1Change(e.target.checked)}
+                name="nombre1"
+                type="checkbox"
+                value={option1}
+                />
+                <Option
+                onChange={(e) => handleOption2Change(e.target.checked)}
+                name="nombre2"
+                type="checkbox"
+                value={option2}
+                />
+                <Option
+                onChange={(e) => handleOption3Change(e.target.checked)}
+                name="nombre3"
+                type="checkbox"
+                value={option3}
+                />
+                </div>
+                {console.log(option1)}
+        
+        
+        <div className="container__section__form">
+
+        <Select
+            name="budget"
+            type="select"
+            data={stores}
+            className="budget__select"
+            error={!isStoreError ? true : false}
+            errorText="Es necesario que selecciones una opción"
+            value={storeSelected}
+            onChange={(e) => handleStoresChange(e.target.value)}
+            labelDefault="Elige presupuesto"
+            // onDefault={(event) => handleSelectDefault(event.target)}
+            />
+        </div>
+
+
+        
+        <div className="container__section__form">
           <div className="inputs__container">
             <Input
               type="text"
-              placeholder="Nombre"
+              placeholder="Introduce tu nombre"
               value={name}
               onChange={(e) => handleNameChange(e.target.value)}
               name="company"
@@ -156,26 +254,49 @@ const Form = () => {
               id="name"
             />
             <Input
-              type="text"
-              placeholder="Apellidos"
-              value={surname}
-              onChange={(e) => handleSurnameChange(e.target.value)}
-              name="surname"
-              error={isSurnameError}
-              errorText="Introduce un/os apellido/s válido/s"
+              type="email"
+              placeholder="Indicanos tu email"
+              value={email}
+              onChange={(e) => handleEmailChange(e.target.value.toLowerCase())}
+              name="email"
+              error={isEmailError}
+              errorText="Introduce un email válido"
               className="input"
-              id="surname"
+              id="email"
             />
             <Input
               type="text"
-              placeholder="Prefijo"
-              value={prefix}
-              onChange={(e) => handlePrefixChange(e.target.value)}
-              name="prefix"
-              error={isPrefixError}
-              errorText="Inválido"
+              placeholder="Dirección: calle, número, piso, puerta"
+              value={name}
+              onChange={(e) => handleNameChange(e.target.value)}
+              name="adress"
+              error={isNameError}
+              errorText="Introduce un nombre válido"
               className="input"
-              id="prefix"
+              id="adress"
+            />
+            <Input
+              type="text"
+              placeholder="Código postal"
+              value={phone}
+              onChange={(e) => handlePhoneChange(e.target.value)}
+              name="zipCode"
+              error={isPhoneError}
+              errorText="Introduce un codigo postal válido"
+              className="input"
+              id="zipCode"
+            />
+            <Select
+            name="preferedStoreId"
+            type="select"
+            data={stores}
+            className="shop__select"
+            error={!isStoreError ? true : false}
+            errorText="Es necesario que selecciones una tienda"
+            value={storeSelected}
+            onChange={(e) => handleStoresChange(e.target.value)}
+            labelDefault="Elige tu tienda favorita"
+            // onDefault={(event) => handleSelectDefault(event.target)}
             />
             <Input
               type="text"
@@ -188,20 +309,8 @@ const Form = () => {
               className="input"
               id="phone"
             />
-            <Input
-              type="email"
-              placeholder="Dirección de email"
-              value={email}
-              onChange={(e) => handleEmailChange(e.target.value.toLowerCase())}
-              name="email"
-              error={isEmailError}
-              errorText="Introduce un email válido"
-              className="input"
-              id="email"
-            />
           </div>
           <div className="footer__form">
-
             <Checkbox
               onChange={(e) => handleTermsChange(e.target.checked)}
               error={!terms}
@@ -224,8 +333,9 @@ const Form = () => {
               value="yes"
               required=""
               className="test_class"
-              text='Deseo recibir comunicaciones comerciales de MEDIA MARKT y de terceras entidades en los términos previstos en la <a class="link__terms" href="https://www.mediamarkt.es/es/legal/politica-de-privacidad" rel="noreferrer" target="_blank">Política de Privacidad</a>.'
+              text='Quiero suscribirme a la newsletter de MediaMarkt'
             />
+            <InfoForm/>
             <ReCaptcha
               size="normal"
               render="explicit"
@@ -240,6 +350,7 @@ const Form = () => {
               isSubmited={isSubmited}
               isLoading={isLoading}
             />
+          </div>
           </div>
         </form>
       </div>
