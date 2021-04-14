@@ -1,16 +1,16 @@
 
 export const cardsSection2 = [
-    {
-        title: "Apúntate a nuestros  próximos webinars de educación",
-        subtitle: "",
-        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Teaser.png",
-        button: "Regístrate",
-        slug: "https://specials.mediamarkt.es/empresas/educacion/formulario-webinars",
-        eventGa: "gaEvent",
-        eventCategory: "Home_B2B",
-        eventAction: "Click",
-        eventLabel: "Home_B2B_destacado1"
-    },
+    // {
+    //     title: "Apúntate a nuestros  próximos webinars de educación",
+    //     subtitle: "",
+    //     imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Teaser.png",
+    //     button: "Regístrate",
+    //     slug: "https://specials.mediamarkt.es/empresas/educacion/formulario-webinars",
+    //     eventGa: "gaEvent",
+    //     eventCategory: "Home_B2B",
+    //     eventAction: "Click",
+    //     eventLabel: "Home_B2B_destacado1"
+    // },
     {
         title: "Somos el aliado de confianza para tu centro educativo",
         subtitle: "Descubre todas las soluciones que podemos ofrecerte",

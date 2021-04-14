@@ -143,7 +143,7 @@ const Form = () => {
           </p>
         </div>
         <div className="__header__subtitle">
-          <h2 className="--subtitle">Tus datos personales</h2>
+          <h2 className="--subtitle"> </h2>
           <p className="--text">
             Los campos marcados con un asterisco (
             <span style={{ color: `#df0000` }}>*</span>) son obligatorios
