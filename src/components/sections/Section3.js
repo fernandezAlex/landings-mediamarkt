@@ -37,7 +37,7 @@ const Section3 = ({width}) => {
                 <a
                   style={{ textDecoration: "none" }}
                   onClick={() =>
-                    analytics("gaEvent", "Home_B2B_ED", "Click", "Home_B2B_EDUCACION_ver_folleto")
+                    analytics("gaEvent", "Nota_mediador", "Click", "Nota_informativa_Mediador")
                   }
                   className="link__contact"
                   href="https://assets.ctfassets.net/osyynfyvlyjc/7ntLWpC7tOJTKTeP5AVJmL/c5aca0515187aa0d9ffe3f46e6487056/MM18_217_Nota_informativa_Agentes_vinculados_MOD.pdf"

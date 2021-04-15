@@ -10,14 +10,15 @@ import {
   validatePhone,
 } from "../validations/ValidateFunctions";
 import ReCaptcha from "react-google-recaptcha";
-
+import Select from "./Select";
+import {optionsTime} from '../../data/data'
 
 /* Data Form */
 
 const idCampaign = "194";
 const dataAnalyticsForm = {
   event: "gaEvent",
-  eventCategory: "Home_B2B_ED",
+  eventCategory: "Zurich_Formulario",
   eventAction: "Click",
   eventLabel: "Zurich_enviar_formulario",
 };
@@ -31,15 +32,15 @@ const Form = () => {
   const [isNameError, setIsNameError] = useState(false);
   const [surname, setSurname] = useState("");
   const [isSurnameError, setIsSurnameError] = useState(false);
-  const [prefix, setPrefix] = useState("");
-  const [isPrefixError, setIsPrefixError] = useState(false);
   const [phone, setPhone] = useState("");
   const [isPhoneError, setIsPhoneError] = useState(false);
   const [email, setEmail] = useState("");
   const [isEmailError, setIsEmailError] = useState(false);
+  const [hour, setHour] = useState("");
+  const [isHourError, setIsHourError] = useState(false);
 
-  const [terms, setTerms] = useState("");
-  const [newsletter, setNewsletter] = useState("");
+  const [terms, setTerms] = useState(false);
+  const [newsletter, setNewsletter] = useState(false);
 
   const [recaptcha, setRecaptcha] = useState(false);
   const [isSubmited, setIsSubmited] = useState(false);
@@ -58,22 +59,23 @@ const Form = () => {
     setIsSurnameError(!isOk);
   };
 
-  const handlePrefixChange = (value) => {
-    setPrefix(value);
-    const isOk = validatePhone(value);
-    setIsPrefixError(!isOk);
-  };
-
+  
   const handlePhoneChange = (value) => {
     setPhone(value);
     const isOk = validatePhone(value);
     setIsPhoneError(!isOk);
   };
-
+  
   const handleEmailChange = (value) => {
     setEmail(value);
     const isOk = validateEmail(value);
     setIsEmailError(!isOk);
+  };
+  
+  const handleHourChange = (value) => {
+    setHour(value);
+    const isOk = value.length > 0 ? true : false;
+    setIsHourError(isOk);
   };
 
   const handleTermsChange = (checked) => {
@@ -93,9 +95,11 @@ const Form = () => {
   const isValidated =
     validateName(name) &&
     validateName(surname) &&
-    validateEmail(email) &&
     validatePhone(phone) &&
+    validateEmail(email) &&
+    isHourError &&
     terms;
+
 
   const isAllValidated =
     isValidated === true && recaptcha === true ? true : false;
@@ -168,17 +172,6 @@ const Form = () => {
             />
             <Input
               type="text"
-              placeholder="Prefijo"
-              value={prefix}
-              onChange={(e) => handlePrefixChange(e.target.value)}
-              name="prefix"
-              error={isPrefixError}
-              errorText="Inválido"
-              className="input"
-              id="prefix"
-            />
-            <Input
-              type="text"
               placeholder="Teléfono"
               value={phone}
               onChange={(e) => handlePhoneChange(e.target.value)}
@@ -199,6 +192,18 @@ const Form = () => {
               className="input"
               id="email"
             />
+            <Select
+              type="select"
+              value={hour}
+              onChange={(e) => handleHourChange(e.target.value)}
+              name="hour"
+              error={!isHourError}
+              errorText="Es necesario que selecciones una opción"
+              className="input"
+              data={optionsTime}
+              id="hour"
+              labelDefault="Hora solicitada"
+            />
           </div>
           <div className="footer__form">
 
@@ -215,7 +220,7 @@ const Form = () => {
               target="_blank"
               text='He leído y acepto la <a class="link__terms" href="https://www.mediamarkt.es/es/legal/politica-de-privacidad" rel="noreferrer" target="_blank">Política de Privacidad</a> y las <a class="link__terms" href="https://www.mediamarkt.es/es/legal/condiciones-de-uso-de-la-web" rel="noreferrer" target="_blank">condiciones de uso</a>.'
               errorText="Debes aceptar los términos y condiciones"
-            />{console.log(terms, newsletter)}
+            />{console.log(terms, newsletter, hour)}
             <Checkbox
               onChange={(e) => handleNewsletterChange(e.target.checked)}
               type="checkbox"

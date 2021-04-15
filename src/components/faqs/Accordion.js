@@ -1,7 +1,7 @@
 import React from 'react';
 import AccordionItem from './AccordionItem';
 import analytics from '../../helpers/analytics';
-import faqs from '../../data/faqs';
+import {faqs} from '../../data/data';
 
 const Accordion = () => {
 
