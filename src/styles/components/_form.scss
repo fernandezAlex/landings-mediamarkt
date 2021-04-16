@@ -60,18 +60,28 @@
             // }
           }
 
-         .input {
-          padding-left: 20px;
-          border: none;
-          &:focus {
-            outline: none;
+          input {
+            font-size: 16px;
+            &::placeholder {
+              color:rgb(122, 122, 122);
+              font-size: 16px;
+            }
+            .input {
+             padding-left: 20px;
+             border: none;
+             &:focus {
+               outline: none;
+             }
+             &.error {
+               border: 1px solid $mediamarkt;
+               color: $mediamarkt;
+               border-radius: 4px;
+             }
+           }
+
           }
-          &.error {
-            border: 1px solid $mediamarkt;
-            color: $mediamarkt;
-            border-radius: 4px;
-          }
-        }
+
+
       }
         @media only screen and (max-width: 893px) {
           .container__input {
@@ -293,3 +303,4 @@ span.span__required {
     color: $mediamarkt;
   }
 }
+

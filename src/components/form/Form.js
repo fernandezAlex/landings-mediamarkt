@@ -15,7 +15,7 @@ import {optionsTime} from '../../data/data'
 
 /* Data Form */
 
-const idCampaign = "194";
+const idCampaign = "308";
 const dataAnalyticsForm = {
   event: "gaEvent",
   eventCategory: "Zurich_Formulario",
@@ -102,7 +102,8 @@ const Form = () => {
 
 
   const isAllValidated =
-    isValidated === true && recaptcha === true ? true : false;
+    // isValidated === true && recaptcha === true ? true : false;
+    isValidated;
 
   const dispatchForm = () => {
     if (isAllValidated) {
@@ -153,7 +154,7 @@ const Form = () => {
               placeholder="Nombre"
               value={name}
               onChange={(e) => handleNameChange(e.target.value)}
-              name="company"
+              name="name"
               error={isNameError}
               errorText="Introduce un nombre válido"
               className="input"
@@ -164,7 +165,7 @@ const Form = () => {
               placeholder="Apellidos"
               value={surname}
               onChange={(e) => handleSurnameChange(e.target.value)}
-              name="surname"
+              name="surnames"
               error={isSurnameError}
               errorText="Introduce un/os apellido/s válido/s"
               className="input"
@@ -213,31 +214,30 @@ const Form = () => {
               type="checkbox"
               name="terms"
               id="terms"
-              value="yes"
-              required=""
+              // value="yes"
+              // required=""
               className="test_class"
               dataTag="termsAndConditionsAccept"
-              target="_blank"
               text='He leído y acepto la <a class="link__terms" href="https://www.mediamarkt.es/es/legal/politica-de-privacidad" rel="noreferrer" target="_blank">Política de Privacidad</a> y las <a class="link__terms" href="https://www.mediamarkt.es/es/legal/condiciones-de-uso-de-la-web" rel="noreferrer" target="_blank">condiciones de uso</a>.'
               errorText="Debes aceptar los términos y condiciones"
             />{console.log(terms, newsletter, hour)}
             <Checkbox
               onChange={(e) => handleNewsletterChange(e.target.checked)}
               type="checkbox"
-              name="newsletter"
-              id="newsletter"
-              value="yes"
-              required=""
+              name="newsletter-agree"
+              id="newsletter-agree"
+              value="mailingList"
+              // required=""
               className="test_class"
               text='Deseo recibir comunicaciones comerciales de MEDIA MARKT y de terceras entidades en los términos previstos en la <a class="link__terms" href="https://www.mediamarkt.es/es/legal/politica-de-privacidad" rel="noreferrer" target="_blank">Política de Privacidad</a>.'
             />
-            <ReCaptcha
+            {/* <ReCaptcha
               size="normal"
               render="explicit"
               sitekey="6LdI4SUaAAAAAEPC4phCYBzZVLZg6tAz5nEbLO59"
               className={`recaptcha ${isValidated ? "enabled" : "disabled"}`}
               onChange={onChangeCaptcha}
-            />
+            /> */}
             <AsyncButton 
               type="submit"
               disabled={!isAllValidated}

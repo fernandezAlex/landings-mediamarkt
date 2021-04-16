@@ -11,9 +11,11 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif !important;
+  font-family: SourceSansPro, Arial, sans-serif !important;
+  font-weight: 400;
   p {
-    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif !important;
+    font-family: SourceSansPro, Arial, sans-serif !important;
+    font-weight: 400;
     font-size: 16px !important;
     margin: 0px !important;
     @media only screen and (max-width: 600px) {
@@ -28,7 +30,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif !important;
+  font-family: SourceSansPro, Arial, sans-serif !important;
 }
 
 .--title__card {
@@ -113,7 +115,7 @@ h1.title {
   padding: 0px 24px;
   position: relative;
   text-decoration: none;
-  font-family: SourceSansPro, Arial, sans-serif;
+  font-family: SourceSansPro, Arial, sans-serif !important;
   font-weight: bold;
   font-size: 16px;
   height: 48px;
