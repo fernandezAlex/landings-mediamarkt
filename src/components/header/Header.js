@@ -12,7 +12,7 @@ const Header = () => {
       </div>
       <div className="title__container">
         <div className="content">
-          <h1 className="--title">Disfruta de la movilidad urbana sin preocupaciones</h1>
+          <h1 className="--title">Expertos en seguridad y tecnología</h1>
           <div className="--breadcrumb">
               <Breadcrumb/>  
           </div>

@@ -6,8 +6,8 @@ import Section2 from "./components/sections/Section2";
 import Section3 from "./components/sections/Section3";
 import Form from "./components/form/Form";
 import {cardsSection1, cardsSection2} from './data/cards'
-import Accordion from "./components/faqs/Accordion";
-import TimeLine from "./components/timeline/TimeLine";
+
+import TimeLine from "./components/timeline/TimeLine_";
 
 
 function App() {
@@ -31,9 +31,8 @@ function App() {
       <Section1/>
       <Section2 data={cardsSection1} width={width}/>
       <Section3 width={width}/>
-      <TimeLine/>
+      {/* <TimeLine/> */}
       <Form />
-      <Accordion/>
     </>
   );
 }

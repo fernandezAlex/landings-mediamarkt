@@ -14,9 +14,26 @@ import InfoForm from "./InfoForm";
 import Select from './Select';
 import datashops from '../../data/datashops.json'
 import Option from "./Option";
+import Timeline from "../timeline/Timeline";
 
 const {stores} = datashops
 
+
+
+const steps = [
+	{
+		name: 'Elige el servicio que te gustaría',
+		active: true,
+	},
+	{
+		name: 'Déjanos tus datos',
+		active: true,
+	},
+	{
+		name: 'Nos pondremos en contacto contigo para informarte',
+		active: false,
+	}
+]
 
 /* Data Form */
 
@@ -174,14 +191,12 @@ const Form = () => {
 
   return (
     <>
+    <Timeline
+    steps={steps}
+    
+    />
       <div className="form__wrapper" id="contacto">
-        <div className="__header__title">
-          <h2 className="--title">¿Quieres conocer más? Envíanos tus datos y nos pondremos en contacto contigo</h2>
-          <p className="--text">
-            Los campos marcados con un asterisco (
-            <span style={{ color: `#df0000` }}>*</span>) son obligatorios
-          </p>
-        </div>
+
       </div>
       <div className="form__container">
         <form
@@ -199,6 +214,10 @@ const Form = () => {
             value={idCampaign}
           />
                 <div className="container__section__form">
+                <div className="__header__title">
+          <h2 className="--title">¿Qué servicios te interesan?</h2>
+
+        </div>
 
                 <Option
                 onChange={(e) => handleOption1Change(e.target.checked)}
@@ -223,7 +242,10 @@ const Form = () => {
         
         
         <div className="container__section__form">
+        <div className="__header__title">
+          <h2 className="--title">¿Cúanto pagas en tu factura actualmente?</h2>
 
+        </div>
         <Select
             name="budget"
             type="select"
@@ -241,6 +263,13 @@ const Form = () => {
 
         
         <div className="container__section__form">
+        <div className="__header__title">
+          <h2 className="--title">Dejanos tus datos y te haremos una oferta</h2>
+          <p className="--text">
+            Los campos marcados con un asterisco (
+            <span style={{ color: `#df0000` }}>*</span>) son obligatorios
+          </p>
+        </div>
           <div className="inputs__container">
             <Input
               type="text"

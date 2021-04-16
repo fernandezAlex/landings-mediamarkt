@@ -1,60 +1,33 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react'
 
 
 
-const Range = ({progress}) => {
-    return (
-        // render current the filled range of progress bar along its width
-        <div className="range" style={{width: `${progress}%`}}/>
-    );
-};
+const Timeline = ({steps}) => {
+	
+	const totalItems = steps.length;
+	const numberOfActiveItems = steps.filter(item => item.active).length;
+	const progressBarWidth = totalItems > 1 ? (numberOfActiveItems - 1) / (totalItems - 1) * 100 : 0;
+	
+	return (
+		<div className="section__timeline">
+		<div className="timeline">
+			<div className="timeline-progress" style={{ width: `${progressBarWidth}%`}}></div>
+			<div className="timeline-items">
+				{steps.map((step, i) => (
+					<div key={i} className={"timeline-item" + (step.active ? ' active' : '')}>
+						<div className="timeline-content">
+							<p>
+								{step.name}
+							</p>
+						</div>
+					</div>
+				))}
+			</div>
+		</div>
+		</div>
+	)
+}
 
-const ProgressBar = ({progress}) => {
-  return (
-      <div className="progress-bar">
-          {/*render available progress bar’s limit*/}
-          <Range progress={progress}/>
-      </div>
-  );
-};
-
-
-// function EffectedFn() {
-//     const [loading, setLoading] = useState(true);
-  
-//     useEffect(() => {
-//       setTimeout(() => {
-//         setLoading(false);
-//       }, 1000 * 10);
-//     });
-  
-//     return (
-//       <div>
-//         {loading && <span>Loading...</span>}
-//         {!loading && <span>All Done!</span>}
-//       </div>
-//     );
-//   }
+export default Timeline
 
 
-
-
-const TimeLine = () => {
-  const [progress, setProgress] = useState(0);
-
-  return (
-      <div className="section__timeline">
-
-          
-          <ProgressBar progress={progress}/>
-          <div className="toggle-buttons">
-              {/* <button onClick={() => setProgress(progress > 0 ?
-                  progress - (100/3) : 0)}>Decrease
-              </button>
-              <button onClick={() => setProgress(progress < 100 ? progress + (100/3) : 100)}>Increase</button> */}
-          </div>
-      </div>
-  );
-};
-
-export default TimeLine;
