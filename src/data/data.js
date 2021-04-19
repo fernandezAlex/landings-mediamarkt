@@ -1,15 +1,15 @@
 export const optionsTime = [
   {
     hour: "Ahora",
-    value: 0
+    value: "Ahora"
   },
   {
     hour: "Mañanas (10:00 - 14:00)",
-    value: 1
+    value: "Mañanas (10:00 - 14:00)"
   },
   {
     hour: "Tardes (15:00 - 19:00)",
-    value: 2
+    value: "Tardes (15:00 - 19:00)"
   },
 ]
 

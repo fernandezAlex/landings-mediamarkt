@@ -69,11 +69,17 @@ input[type=text], input[type=email], input[type=number], input[type=select], inp
   font-style: 16px!important;
   font-family: SourceSansPro, Arial, sans-serif !important;
   font-weight: normal!important;
+  &::placeholder {
+    font-style: 16px!important;
+    font-family: SourceSansPro, Arial, sans-serif !important;
+    font-weight: normal!important;
+  }
 }
 
 select {
   font-size: 16px!important;
   color: black!important;
   font-family: SourceSansPro, Arial, sans-serif !important;
+
 
 }

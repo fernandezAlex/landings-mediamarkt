@@ -112,12 +112,14 @@ const Form = () => {
         setIsLoading(false);
         setIsSubmited(true);
       }, 1000);
+      // alert(name + surname + phone + email + hour + terms + newsletter);
       analytics(
         dataAnalyticsForm.event,
         dataAnalyticsForm.eventCategory,
         dataAnalyticsForm.eventAction,
         dataAnalyticsForm.eventLabel
       );
+      // alert(name, surname, phone, email, hour, terms, newsletter);
       setActionState(urlActionForm);
     }
   };
@@ -165,11 +167,11 @@ const Form = () => {
               placeholder="Apellidos"
               value={surname}
               onChange={(e) => handleSurnameChange(e.target.value)}
-              name="surnames"
+              name="lastname"
               error={isSurnameError}
               errorText="Introduce un/os apellido/s válido/s"
               className="input"
-              id="surname"
+              id="lastname"
             />
             <Input
               type="text"
@@ -220,7 +222,7 @@ const Form = () => {
               dataTag="termsAndConditionsAccept"
               text='He leído y acepto la <a class="link__terms" href="https://www.mediamarkt.es/es/legal/politica-de-privacidad" rel="noreferrer" target="_blank">Política de Privacidad</a> y las <a class="link__terms" href="https://www.mediamarkt.es/es/legal/condiciones-de-uso-de-la-web" rel="noreferrer" target="_blank">condiciones de uso</a>.'
               errorText="Debes aceptar los términos y condiciones"
-            />{console.log(terms, newsletter, hour)}
+            />
             <Checkbox
               onChange={(e) => handleNewsletterChange(e.target.checked)}
               type="checkbox"
