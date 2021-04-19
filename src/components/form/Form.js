@@ -15,12 +15,21 @@ import InputRadio from "./InputRadio"
 import DateSelector from "./DateSelector";
 // import "react-datepicker/dist/react-datepicker.css";
 
+
 import Select from './Select';
 import axios from 'axios';
 /* Data Form */
 
 import datashops from '../../data/datashops.json'
-const {stores} = datashops
+import datashopsCa from '../../data/datashops-ca.json'
+
+// const {stores} = datashops
+// console.log(datashops)
+
+var urlBaseName = String(window.location.search);
+const param = "?sr=N5TWML9";
+var setParam = urlBaseName == param ? true : false;
+// var setParam = React.createContext('true');
 
 const idCampaign = "306";
 // const dataAnalyticsForm = {
@@ -29,6 +38,8 @@ const idCampaign = "306";
 //   eventAction: "Click",
 //   eventLabel: "Home_B2B_EDUCACION_contactanos",
 // };
+
+
 const urlActionForm = "https://specials.mediamarkt.es/10-euros-de-bienvenida/confirmacion";
 
 const urlApiJsonShops = "https://www.mediamarkt.es/static/json/stores.es.json"
@@ -36,6 +47,7 @@ const urlApiJsonShops = "https://www.mediamarkt.es/static/json/stores.es.json"
 
 
 const Form = () => {
+  
   const [name, setName] = useState("");
   const [isNameError, setIsNameError] = useState(false);
   const [lastname, setLastName] = useState("");
@@ -151,6 +163,8 @@ const Form = () => {
     }
   };
 
+
+
   return (
     <>
       <div className="form__wrapper" id="contacto">
@@ -238,7 +252,7 @@ const Form = () => {
             <Select
             name="preferedStoreId"
             type="select"
-            data={stores}
+            data= {setParam ? datashopsCa:datashops}
             className="shop__select"
             error={!isStoreError ? true : false}
             errorText="Es necesario que selecciones una tienda"
