@@ -249,6 +249,7 @@ const Form = () => {
             />
           </div>
         </form>
+        {console.log(name, surname, phone, email, hour)}
       </div>
     </>
   );
