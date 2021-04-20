@@ -747,28 +747,6 @@
             "longitude": -6.150413
         }
     },
-    "935": {
-        "sapCode": "E258",
-        "storeId": 935,
-        "salesTaxId": "A63524656",
-        "companyName": null,
-        "displayName": "S.C. Tenerife - Tenerife",
-        "city": "Santa Cruz de Tenerife",
-        "street": "MediaMarkt - C.C. Continental - C/ Bentagay,",
-        "streetNumber": "1-3",
-        "zipCode": "38111",
-        "phoneNumber": "922472200",
-        "email": "mm.tenerife.atencioncliente@mediamarkt.es",
-        "fax": null,
-        "managerFirstName": "Eduardo Astrada Ponce de León",
-        "status": "1",
-        "state": null,
-        "url_seo": "https://mediamarkt.es/mcs/marketinfo/_MediaMarkt-S.C.-Tenerife-Tenerife,28382,-5.html",
-        "googleMaps": {
-            "latitude": 28.4264,
-            "longitude": -16.2998
-        }
-    },
     "936": {
         "sapCode": "E274",
         "storeId": 936,
@@ -855,28 +833,6 @@
         "googleMaps": {
             "latitude": 36.467888,
             "longitude": -6.170988
-        }
-    },
-    "947": {
-        "sapCode": "E509",
-        "storeId": 947,
-        "salesTaxId": "A63907463",
-        "companyName": null,
-        "displayName": "S.C. Tenerife - Tres de Mayo",
-        "city": "Santa Cruz de Tenerife",
-        "street": "MediaMarkt - Nivaria Center - Calle Nivaria Tejera",
-        "streetNumber": "2",
-        "zipCode": "38003",
-        "phoneNumber": "922849300",
-        "email": "mm.3demayotenerife.atencioncliente@mediamarkt.es",
-        "fax": null,
-        "managerFirstName": "Patricia Rodriguez Betancort",
-        "status": "1",
-        "state": null,
-        "url_seo": "https://mediamarkt.es/mcs/marketinfo/_MediaMarkt-S.C.-Tenerife-Tres-de-Mayo,121955,-5.html",
-        "googleMaps": {
-            "latitude": 28.459132,
-            "longitude": -16.255587
         }
     },
     "948": {
