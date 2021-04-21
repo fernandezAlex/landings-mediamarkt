@@ -6,9 +6,7 @@ import { set } from "date-fns";
 
 const canariasShop= "https://www.mediamarkt.es/static/json/datashops-ca.json";
 const peninsulaShops = "https://specials.mediamarkt.es/tools/api-mm/v2/stores";
-	
 var urlAxios = "";
-
 
 const Select = ({
 	type,
