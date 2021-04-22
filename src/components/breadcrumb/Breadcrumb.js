@@ -21,7 +21,8 @@ export const Breadcrumb = () => {
         className="icon__arrow"
         size="xs"
       />
-      <h5>Comercio</h5>
+      <h5>Soluciones Financieras
+      </h5>
     </div>
   );
 };

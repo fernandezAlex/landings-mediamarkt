@@ -1,0 +1,69 @@
+/* Regular - 400
+@font-face {
+  font-family: SourceSansPro;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url(/public/fonts/SourceSansPro-Regular.woff2) format("woff2"),
+    url(/public/fonts/SourceSansPro-Regular.woff) format("woff");
+}
+
+/* Semibold - 600 */
+@font-face {
+  font-family: SourceSansPro;
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url(/public/fonts/SourceSansPro-Semibold.woff2) format("woff2"),
+    url(/public/fonts/SourceSansPro-Semibold.woff) format("woff");
+}
+
+/* Bold - 700 */
+@font-face {
+  font-family: SourceSansPro;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url(/public/fonts/SourceSansPro-Bold.woff2) format("woff2"),
+    url(/public/fonts/SourceSansPro-Bold.woff) format("woff");
+}
+
+/* Regular - 400 */
+@font-face {
+  font-family: MMHeadline;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url(/public/fonts/MMHeadlineProWebTT-Regular_subset.woff2)
+      format("woff2"),
+    url(/public/fonts/MMHeadlineProWebTT-Regular_subset.woff)
+      format("woff");
+}
+
+@font-face {
+  font-family: SEHeadline;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url(/public/fonts/EurostileNextLTPro-Bold.woff2) format("woff2"),
+    url(/public/fonts/EurostileNextLTPro-Bold.woff) format("woff");
+}
+
+/* Regular - 400 */
+@font-face {
+  font-family: MMPrice;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url(/public/fonts/MediaMarktPreise.woff2) format("woff2"),
+    url(/public/fonts/MediaMarktPreise.woff) format("woff");
+}
+
+@font-face {
+  font-family: Calibri;
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+  src: url(/public/fonts/Calibri-Bold-subset.woff2) format("woff2"),
+    url(/public/fonts/Calibri-Bold-subset.woff) format("woff");
+}
