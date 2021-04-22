@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Input from "./Input";
 import AsyncButton from "./AsyncButton";
 import Checkbox from "./Checkbox"
@@ -10,13 +10,15 @@ import {
   validatePhone,
 } from "../validations/ValidateFunctions";
 import ReCaptcha from "react-google-recaptcha";
+import axios from 'axios';
 import InfoForm from "./InfoForm";
 import Select from './Select';
-import datashops from '../../data/datashops.json'
 import Option from "./Option";
 import Timeline from "../timeline/Timeline";
 
-const {stores} = datashops
+import SelectBudget from "./SelectBudget";
+// import datashops from '../../data/datashops.json'
+// const {stores} = datashops
 
 
 
@@ -35,6 +37,25 @@ const steps = [
 	}
 ]
 
+const budget = [
+  {
+    name: "Hasta 20€/ mes",
+    value: 0,
+  },
+  {
+    name: "De 20€ a 40€ / mes",
+    value: 1,
+  },
+  {
+    name: "De 40€ a 60€ / mes",
+    value: 2,
+  },
+  {
+    name: "Más de 80€ / mes",
+    value: 3,
+  },
+]
+
 /* Data Form */
 
 const idCampaign = "194";
@@ -47,6 +68,7 @@ const dataAnalyticsForm = {
 const urlActionForm =
   "https://specials.mediamarkt.es/seguros-zurich/confirmacion";
 
+const urlParams = "https://specials.mediamarkt.es/tools/api-mm/outletID/all";
 
 
 const Form = () => {
@@ -61,7 +83,7 @@ const Form = () => {
   const [email, setEmail] = useState("");
   const [isEmailError, setIsEmailError] = useState(false);
 
-  const [store, setStore] = useState([]);
+  // const [store, setStore] = useState([]);
   const [storeSelected, setStoreSelected] = useState("");
   const [isStoreError, setIsStoreError] = useState(false);
 
@@ -72,6 +94,32 @@ const Form = () => {
   const [isSubmited, setIsSubmited] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [actionState, setActionState] = useState(null);
+
+  const [stores, setStores] = useState([]);
+
+	useEffect(() => {
+		async function fecthData(){
+			const {data} = await axios({
+				method: 'GET',
+				url: urlParams,
+			})
+			setStores(data)
+		}
+		fecthData();
+	},[setStores]);
+
+
+  let store = Object.values(stores)
+	let storesArray = [].concat(store);
+  const storesArraySorted = [...storesArray].sort((a, b) => a['displayName'].localeCompare(b['displayName']));
+	storesArraySorted.map(({displayName}, i) => {
+		let filters=['Pinto','@Tienda'];
+		if(filters.some(el => displayName.includes(el))) delete store[i];
+	})
+
+  console.log(typeof(stores))
+  console.log(stores)
+
 
   const handleNameChange = (value) => {
     setName(value);
@@ -246,10 +294,10 @@ const Form = () => {
           <h2 className="--title">¿Cúanto pagas en tu factura actualmente?</h2>
 
         </div>
-        <Select
+        <SelectBudget
             name="budget"
             type="select"
-            data={stores}
+            data={budget}
             className="budget__select"
             error={!isStoreError ? true : false}
             errorText="Es necesario que selecciones una opción"
@@ -318,7 +366,7 @@ const Form = () => {
             <Select
             name="preferedStoreId"
             type="select"
-            data={stores}
+            data={storesArraySorted}
             className="shop__select"
             error={!isStoreError ? true : false}
             errorText="Es necesario que selecciones una tienda"
