@@ -175,14 +175,15 @@ const Form = () => {
             />
             <Input
               type="text"
-              placeholder="Teléfono"
-              value={phone}
               onChange={(e) => handlePhoneChange(e.target.value)}
-              name="phone"
+              placeholder="Teléfono"
               error={isPhoneError}
               errorText="Introduce un teléfono válido"
+              name="telefono"
               className="input"
-              id="phone"
+              value={phone}
+              id="telefono"
+              data-val-required="Required"
             />
             <Input
               type="email"
