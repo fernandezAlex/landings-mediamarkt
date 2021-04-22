@@ -1,13 +1,15 @@
 export const cardsSection1 = [
     {
-      title: "Responsabilidad civil hasta 300.000€",
-      imgThumbnail:
-        "https://specials.mediamarkt.es/assets-react/zurich/022107-ImagePiedi_Header_1024x544.png",
+      title: "Una alarma más completa.",
+      content: "Asistencia inmediata: ante una incidencia o intrusión,nuestra Central Receptora de Alarmas dará respuesta enmenos de 29 segundos.",
+      img: "https://cms-images.mmst.eu/2rj3gcd43pmw/X1s76hIAACQAcE2X/7b1ca0f17647631b0b498811510433c5/Prismic_LP_Visual_Energielabels_1257x703_Teaser_1.jpg?q=80",
+      imgPosition: true
     },
     {
-      title: "Defensa jurídica ilimitada o hasta 1.500€ para el abogado que tu elijas.",
-      imgThumbnail:
-        "https://specials.mediamarkt.es/assets-react/zurich/022107-ImageRagazza_Header_1024x544.png",
+      title: "Y ahora llévate la mejor",
+      content: "Asistencia inmediata: ante una incidencia o intrusión,nuestra Central Receptora de Alarmas dará respuesta enmenos de 29 segundos.",
+      img: "https://cms-images.mmst.eu/2rj3gcd43pmw/X1s76hIAACQAcE2X/7b1ca0f17647631b0b498811510433c5/Prismic_LP_Visual_Energielabels_1257x703_Teaser_1.jpg?q=80",
+      imgPosition: false
     },
   ];
   

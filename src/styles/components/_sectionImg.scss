@@ -1,0 +1,26 @@
+.section__img{
+    flex-wrap: wrap;
+    display: flex;
+    margin: auto;
+    -webkit-box-align: center;
+    align-items: center;
+    align-content: center;
+    -webkit-box-pack: justify;
+    justify-content: center;
+    max-width: 1472px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    
+    &.imgRight{
+        flex-direction: row-reverse;
+    }
+    img{
+        width:100%;
+        flex:1;
+    }
+    .section__text{
+        flex:1;
+        padding: 0px 32px;
+        font-size: 20px;
+    }
+}

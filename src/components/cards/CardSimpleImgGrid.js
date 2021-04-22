@@ -1,12 +1,12 @@
 import React from "react";
-import CardSimpleImg from "./CardSimpleImg";
+import SectionImg from "../sectionimg/SectionImg";
 
 const CardSimpleImgGrid = ({ data }) => {
   return (
     <div className="cardSimpleImgGrid__wrapper">
       <div className="cardSimpleImgGrid__container">
-        {data.map(({ title, imgThumbnail }, i) => {
-          return <CardSimpleImg key={i} title={title} imgThumbnail={imgThumbnail} />;
+        {data.map(({ title, content, img, imgPosition  }, i) => {
+          return <SectionImg key={i} title={title} img={img} content={content} imgPosition={imgPosition} />;
         })}
       </div>
     </div>
