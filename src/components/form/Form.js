@@ -13,14 +13,15 @@ import ReCaptcha from "react-google-recaptcha";
 import axios from 'axios';
 import InfoForm from "./InfoForm";
 import Select from './Select';
-import Option from "./Option";
+import Button from "./Button";
 import Timeline from "../timeline/Timeline";
 
 import SelectBudget from "./SelectBudget";
 // import datashops from '../../data/datashops.json'
 // const {stores} = datashops
+import options from "../../data/datashops.json";
 
-
+console.log(options)
 
 const steps = [
 	{
@@ -112,11 +113,11 @@ const Form = () => {
   let store = Object.values(stores)
 	let storesArray = [].concat(store);
   const storesArraySorted = [...storesArray].sort((a, b) => a['displayName'].localeCompare(b['displayName']));
-	storesArraySorted.map(({displayName}, i) => {
-		let filters=['Pinto','@Tienda'];
-		if(filters.some(el => displayName.includes(el))) delete store[i];
-	})
-
+	// storesArraySorted.map(({displayName}, i) => {
+	// 	let filters=['Pinto','@Tienda'];
+	// 	if(filters.some(el => displayName.includes(el))) delete store[i];
+	// })
+  console.log(storesArraySorted)
   console.log(typeof(stores))
   console.log(stores)
 
@@ -239,10 +240,10 @@ const Form = () => {
 
   return (
     <>
-    <Timeline
+    {/* <Timeline
     steps={steps}
     
-    />
+    /> */}
       <div className="form__wrapper" id="contacto">
 
       </div>
@@ -266,27 +267,36 @@ const Form = () => {
           <h2 className="--title">¿Qué servicios te interesan?</h2>
 
         </div>
-
-                <Option
+{/* 
+                <Button
                 onChange={(e) => handleOption1Change(e.target.checked)}
                 name="nombre1"
                 type="checkbox"
+                className="option__input__check"
                 value={option1}
                 />
-                <Option
+                <Button
                 onChange={(e) => handleOption2Change(e.target.checked)}
                 name="nombre2"
                 type="checkbox"
+                className="option__input__check"
                 value={option2}
                 />
-                <Option
+                <Button
                 onChange={(e) => handleOption3Change(e.target.checked)}
                 name="nombre3"
                 type="checkbox"
+                className="option__input__check"
                 value={option3}
-                />
+                /> */}
+
+            <input className="checkbox-tools" type="radio" name="tools" id="tool-1" checked/>
+						<label className="for-checkbox-tools" for="tool-1">
+							<i className='uil uil-line-alt'/>
+							line
+						</label>
+
                 </div>
-                {console.log(option1)}
         
         
         <div className="container__section__form">
