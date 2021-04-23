@@ -6,6 +6,10 @@ import Form from "./components/form/Form";
 import {cardsSection2} from './data/cards'
 import {headerData} from './data/header'
 import {breadcrumbData} from './data/breadcrumb';
+import faqs from './data/faqs';
+import Accordion from "./components/faqs/Accordion";
+
+
 
 function App() {
 
@@ -27,6 +31,7 @@ function App() {
       <Header data={headerData} dataBreadcrumb={breadcrumbData} />
       <Section3 data={cardsSection2} width={width}/>
       <Form />
+      <Accordion data={faqs} width={width}/>
     </>
   );
 }
