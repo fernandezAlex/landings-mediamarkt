@@ -1,16 +1,16 @@
 
 export const cardsSection2 = [
-    // {
-    //     title: "Apúntate a nuestros  próximos webinars de educación",
-    //     subtitle: "",
-    //     imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Teaser.png",
-    //     button: "Regístrate",
-    //     slug: "https://specials.mediamarkt.es/empresas/educacion/formulario-webinars",
-    //     eventGa: "gaEvent",
-    //     eventCategory: "Home_B2B",
-    //     eventAction: "Click",
-    //     eventLabel: "Home_B2B_destacado1"
-    // },
+    {
+        title: "Evalúa la competencia digital de tu centro educativo",
+        subtitle: "Consigue tu informe de diagnosis a través de nuestro formulario, solo te llevará 2 minutos",
+        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/062007_NEWS_EDUCACION_.png",
+        button: "Formulario de diagnóstico de digitalización",
+        slug: "https://forms.gle/KpL2S2xqxCDv2g4b8",
+        eventGa: "gaEvent",
+        eventCategory: "Home_B2B",
+        eventAction: "Click",
+        eventLabel: "Home_B2B_destacado1"
+    },
     {
         title: "Somos el aliado de confianza para tu centro educativo",
         subtitle: "Descubre todas las soluciones que podemos ofrecerte",
