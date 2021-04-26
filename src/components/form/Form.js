@@ -5,25 +5,22 @@ import Checkbox from "./Checkbox"
 import analytics from "../../helpers/analytics";
 import {
   validateName,
-  // validatePrefix,
   validateEmail,
   validatePhone,
 } from "../validations/ValidateFunctions";
-import ReCaptcha from "react-google-recaptcha";
+
 import Select from "./Select";
 import {optionsTime} from '../../data/data'
+import Swal from 'sweetalert2'
 
 /* Data Form */
 
-const idCampaign = "308";
 const dataAnalyticsForm = {
   event: "gaEvent",
   eventCategory: "Zurich_Formulario",
   eventAction: "Click",
   eventLabel: "Zurich_enviar_formulario",
 };
-const urlActionForm =
-  "https://specials.mediamarkt.es/seguros-zurich/confirmacion";
 
 
 
@@ -42,10 +39,9 @@ const Form = () => {
   const [terms, setTerms] = useState(false);
   const [newsletter, setNewsletter] = useState(false);
 
-  const [recaptcha, setRecaptcha] = useState(false);
   const [isSubmited, setIsSubmited] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [actionState, setActionState] = useState(null);
+
 
   const handleNameChange = (value) => {
     setName(value);
@@ -61,6 +57,7 @@ const Form = () => {
 
   
   const handlePhoneChange = (value) => {
+    value = (value.replaceAll(/\D/gm, ""));
     setPhone(value);
     const isOk = validatePhone(value);
     setIsPhoneError(!isOk);
@@ -86,13 +83,11 @@ const Form = () => {
     setNewsletter(checked);
   };
 
-  const onChangeCaptcha = (value) => {
-    if (value.length > 0) {
-      setRecaptcha(true);
-    }
-  };
 
-  const isValidated =
+  const reset = () => {
+    setName("");setSurname("");setEmail("");setHour("");setTerms(false);setNewsletter(false);setIsSubmited(false);setIsLoading(false);
+  }
+  const isAllValidated =
     validateName(name) &&
     validateName(surname) &&
     validatePhone(phone) &&
@@ -101,27 +96,36 @@ const Form = () => {
     terms;
 
 
-  const isAllValidated =
-    // isValidated === true && recaptcha === true ? true : false;
-    isValidated;
-
-  const dispatchForm = () => {
+  const dispatchForm = (e) => {
+    e.preventDefault()
     if (isAllValidated) {
+      
       setIsLoading(true);
       setTimeout(() => {
         setIsLoading(false);
         setIsSubmited(true);
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'El mensaje ha sido enviado',
+          timer: 2500
+        })
       }, 1000);
+
       // alert(name + surname + phone + email + hour + terms + newsletter);
-      analytics(
-        dataAnalyticsForm.event,
-        dataAnalyticsForm.eventCategory,
-        dataAnalyticsForm.eventAction,
-        dataAnalyticsForm.eventLabel
-      );
+      // analytics(
+      //   dataAnalyticsForm.event,
+      //   dataAnalyticsForm.eventCategory,
+      //   dataAnalyticsForm.eventAction,
+      //   dataAnalyticsForm.eventLabel
+      // );
+
+
+
       // alert(name, surname, phone, email, hour, terms, newsletter);
-      setActionState(urlActionForm);
     }
+
+    return false;
   };
 
   return (
@@ -141,71 +145,75 @@ const Form = () => {
           id="campaign-form"
           class="--form campaign-form required"
           method="POST"
-          action={actionState}
+          // action={actionState}
           onSubmit={dispatchForm}
+          data-ajax="form-inline-franja-horaria"
+          // onsubmit="validar_form(this);return false; event.preventDefault();"
+          data-action=""
         >
-          <input
-            type="hidden"
-            name="campaign"
-            id="campaign"
-            value={idCampaign}
-          />
+          <div className="container__inputs__hide" style={{visibility: "hidden"}}>
+          <input type="text" placeholder="Tipolead" name="id_sds" id="id_sds" value="YM66yW2ZEZUJYV"/>
+          <input type="text" placeholder="Tipolead" name="type_lead" id="type_lead" value="MM-SQUARETRADE-C2C"/>
+          <input type="text" placeholder="SourceLead" name="source_lead" id="source_lead" value="MM-SQUARETRADE"/>
+          </div>
+
           <div className="inputs__container">
             <Input
               type="text"
+              name="name"
+              id="name"
               placeholder="Nombre"
               value={name}
               onChange={(e) => handleNameChange(e.target.value)}
-              name="name"
               error={isNameError}
               errorText="Introduce un nombre válido"
               className="input"
-              id="name"
             />
             <Input
               type="text"
+              name="apellidos"
+              id="apellidos"
               placeholder="Apellidos"
               value={surname}
               onChange={(e) => handleSurnameChange(e.target.value)}
-              name="lastname"
               error={isSurnameError}
               errorText="Introduce un/os apellido/s válido/s"
               className="input"
-              id="lastname"
             />
             <Input
               type="text"
+              id="telefono"
+              name="telefono"
               onChange={(e) => handlePhoneChange(e.target.value)}
               placeholder="Teléfono"
               error={isPhoneError}
               errorText="Introduce un teléfono válido"
-              name="telefono"
               className="input"
               value={phone}
-              id="telefono"
               data-val-required="Required"
+              maxlength="9"
             />
             <Input
-              type="email"
+              type="text"
+              name="email"
+              id="email"
               placeholder="Dirección de email"
               value={email}
               onChange={(e) => handleEmailChange(e.target.value.toLowerCase())}
-              name="email"
               error={isEmailError}
               errorText="Introduce un email válido"
               className="input"
-              id="email"
             />
             <Select
               type="select"
+              name="franja_horaria"
+              id="franja_horaria"
               value={hour}
               onChange={(e) => handleHourChange(e.target.value)}
-              name="hour"
               error={!isHourError}
               errorText="Es necesario que selecciones una opción"
               className="input"
               data={optionsTime}
-              id="hour"
               labelDefault="Hora solicitada"
             />
           </div>
@@ -215,16 +223,16 @@ const Form = () => {
               onChange={(e) => handleTermsChange(e.target.checked)}
               error={!terms}
               type="checkbox"
-              name="terms"
-              id="terms"
+              name="check1"
+              id="check1"
               // value="yes"
               // required=""
               className="test_class"
-              dataTag="termsAndConditionsAccept"
+              // dataTag="termsAndConditionsAccept"
               text='He leído y acepto la <a class="link__terms" href="https://www.mediamarkt.es/es/legal/politica-de-privacidad" rel="noreferrer" target="_blank">Política de Privacidad</a> y las <a class="link__terms" href="https://www.mediamarkt.es/es/legal/condiciones-de-uso-de-la-web" rel="noreferrer" target="_blank">condiciones de uso</a>.'
               errorText="Debes aceptar los términos y condiciones"
             />
-            <Checkbox
+            {/* <Checkbox
               onChange={(e) => handleNewsletterChange(e.target.checked)}
               type="checkbox"
               name="newsletter-agree"
@@ -233,13 +241,6 @@ const Form = () => {
               // required=""
               className="test_class"
               text='Deseo recibir comunicaciones comerciales de MEDIA MARKT y de terceras entidades en los términos previstos en la <a class="link__terms" href="https://www.mediamarkt.es/es/legal/politica-de-privacidad" rel="noreferrer" target="_blank">Política de Privacidad</a>.'
-            />
-            {/* <ReCaptcha
-              size="normal"
-              render="explicit"
-              sitekey="6LdI4SUaAAAAAEPC4phCYBzZVLZg6tAz5nEbLO59"
-              className={`recaptcha ${isValidated ? "enabled" : "disabled"}`}
-              onChange={onChangeCaptcha}
             /> */}
             <AsyncButton 
               type="submit"
@@ -247,10 +248,13 @@ const Form = () => {
               isAllValidated={isAllValidated}
               isSubmited={isSubmited}
               isLoading={isLoading}
+              dataAnalytics="SUM"
+              dataSumCategory="Interaccion"
+              dataSumAction="Formulario Zurich"
+              dataSumLabel="Enviar lead"
             />
           </div>
         </form>
-        {console.log(name, surname, phone, email, hour)}
       </div>
     </>
   );

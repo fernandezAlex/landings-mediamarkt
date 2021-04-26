@@ -11,6 +11,7 @@ const Input = ({
 	errorText,
 	className,
 	id,
+	maxlength,
 
 }) => {
 	return (
@@ -25,6 +26,7 @@ const Input = ({
 				errorText={errorText}
 				error={error}
 				id={id}
+				maxlength={maxlength}
 			/><span className="span__required">*</span>
 			<div className="input__error">
 			<span className="text_error" dangerouslySetInnerHTML={{__html: error ? errorText : null}} />

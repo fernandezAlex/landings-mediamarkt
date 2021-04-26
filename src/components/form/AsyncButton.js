@@ -7,6 +7,11 @@ const AsyncButton = ({
     isAllValidated,
     isSubmited,
     isLoading,
+    dataAnalytics,
+    dataSumCategory,
+    dataSumAction,
+    dataSumLabel,
+
 }) => {
     return (
         <button
@@ -19,8 +24,15 @@ const AsyncButton = ({
                     : 'disabled'
             }`}
             disabled={disabled}
+            data-analytics={dataAnalytics}
+            data-sum-category={dataSumCategory}
+            data-sum-action={dataSumAction}
+            data-sum-label={dataSumLabel}
+            
+
         >
             <span>
+                {/* Enviar */}
                 {`${
                     isSubmited
                         ? 'Enviado'
