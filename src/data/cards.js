@@ -2,9 +2,9 @@
 export const cardsSection2 = [
     {
         title: "Evalúa la competencia digital de tu centro educativo",
-        subtitle: "Consigue tu informe de diagnosis a través de nuestro formulario, solo te llevará 2 minutos",
+        subtitle: "Consigue tu informe de diagnosis a través de nuestro formulario, son solo 2 minutos",
         imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/062007_NEWS_EDUCACION_.png",
-        button: "Formulario de diagnóstico de digitalización",
+        button: "Rellenar formulario",
         slug: "https://forms.gle/KpL2S2xqxCDv2g4b8",
         eventGa: "gaEvent",
         eventCategory: "Home_B2B",
