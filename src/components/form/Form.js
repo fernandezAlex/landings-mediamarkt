@@ -3,6 +3,8 @@ import Input from "./Input";
 import AsyncButton from "./AsyncButton";
 import Checkbox from "./Checkbox"
 import analytics from "../../helpers/analytics";
+import axios from 'axios';
+
 import {
   validateName,
   validateEmail,
@@ -112,18 +114,31 @@ const Form = () => {
     // isHourError &&
     // terms;
 
-   const news = async () => {
-    await fetch("https://specials.mediamarkt.es/seguros-zurich/php/validacion-servidor2.php", {
-      method: "POST",
-      body: JSON.stringify(datos)
-      })
-      .then( 
-        res => res.json()
-      )
-      .then( data => {
-        console.log(data)
-      })
-  }
+  //  const news = async () => {
+  //   await fetch("https://specials.mediamarkt.es/seguros-zurich/php/validacion-servidor2.php", {
+  //     method: "POST",
+  //     body: JSON.stringify(datos)
+  //     })
+  //     .then( 
+  //       res => res.json()
+  //     )
+  //     .then( data => {
+  //       console.log(data)
+  //     })
+  // }
+
+  const [respon, setRespon] = useState([]);
+
+	useEffect(() => {
+		async function fecthData(){
+			const respuesta = await axios({
+				method: 'GET',
+				url: urlAxios,
+			})
+			setRespon(respuesta.data)
+		}
+		fecthData();
+	},[setRespon]);
 
   const dispatchForm =  (e) => {
 
