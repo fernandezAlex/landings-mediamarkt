@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Input from "./Input";
 import AsyncButton from "./AsyncButton";
 import Checkbox from "./Checkbox"
@@ -127,24 +127,21 @@ const Form = () => {
   //     })
   // }
 
-  const [respon, setRespon] = useState([]);
 
-	useEffect(() => {
-		async function fecthData(){
-			const respuesta = await axios({
-				method: 'GET',
-				url: urlAxios,
-			})
-			setRespon(respuesta.data)
-		}
-		fecthData();
-	},[setRespon]);
+
+// const tt = async function fecthData(){
+// 			const respuesta = await axios({
+// 				method: 'POST',
+//         url: "https://specials.mediamarkt.es/seguros-zurich/php/validacion-servidor2.php",
+//         data: datos.name
+// 			})
+// 			console.log(respuesta.data)
+//     }
+
 
   const dispatchForm =  (e) => {
-
     e.preventDefault()
     if (isAllValidated) {
-      news();
       setIsLoading(true);
       setTimeout(() => {
         setIsLoading(false);
@@ -157,6 +154,17 @@ const Form = () => {
         })
       }, 1000);
       reset();
+
+      axios.post('https://specials.mediamarkt.es/seguros-zurich/php/validacion-servidor2.php', {
+        name: 'Fred'
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+
 
 
       // alert(name + surname + phone + email + hour + terms + newsletter);
