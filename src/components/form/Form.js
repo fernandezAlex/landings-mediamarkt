@@ -12,6 +12,7 @@ import {
 import Select from "./Select";
 import {optionsTime} from '../../data/data'
 import Swal from 'sweetalert2'
+import {getDatosApi} from '../../services/database'
 
 /* Data Form */
 
@@ -25,6 +26,22 @@ const dataAnalyticsForm = {
 
 
 const Form = () => {
+
+  const [datos, setDatos] = useState({
+    nombre: '',
+    apellidos: '',
+    email: "",
+    franja_horaria: "",
+    check1: false
+  });
+
+  const handleInputChange = (e)=>{
+    setDatos({
+      ...datos,
+      [e.target.name] : e.target.value
+    })
+  }
+
   const [name, setName] = useState("");
   const [isNameError, setIsNameError] = useState(false);
   const [surname, setSurname] = useState("");
@@ -85,21 +102,34 @@ const Form = () => {
 
 
   const reset = () => {
-    setName("");setSurname("");setEmail("");setHour("");setTerms(false);setNewsletter(false);setIsSubmited(false);setIsLoading(false);
+    setName("");setSurname("");setEmail("");setPhone("");setHour("");setTerms(false);setNewsletter(false);setIsSubmited(false);setIsLoading(false);
   }
-  const isAllValidated =
-    validateName(name) &&
-    validateName(surname) &&
-    validatePhone(phone) &&
-    validateEmail(email) &&
-    isHourError &&
-    terms;
+  const isAllValidated = true
+    // validateName(name) &&
+    // validateName(surname) &&
+    // validatePhone(phone) &&
+    // validateEmail(email) &&
+    // isHourError &&
+    // terms;
 
+   const news = async () => {
+    await fetch("https://specials.mediamarkt.es/seguros-zurich/php/validacion-servidor2.php", {
+      method: "POST",
+      body: JSON.stringify(datos)
+      })
+      .then( 
+        res => res.json()
+      )
+      .then( data => {
+        console.log(data)
+      })
+  }
 
-  const dispatchForm = (e) => {
+  const dispatchForm =  (e) => {
+
     e.preventDefault()
     if (isAllValidated) {
-      
+      news();
       setIsLoading(true);
       setTimeout(() => {
         setIsLoading(false);
@@ -107,10 +137,12 @@ const Form = () => {
         Swal.fire({
           position: 'center',
           icon: 'success',
-          title: 'El mensaje ha sido enviado',
+          title: `Gracias ${datos.nombre}, tus datos han sido enviados`,
           timer: 2500
         })
       }, 1000);
+      reset();
+
 
       // alert(name + surname + phone + email + hour + terms + newsletter);
       // analytics(
@@ -119,8 +151,26 @@ const Form = () => {
       //   dataAnalyticsForm.eventAction,
       //   dataAnalyticsForm.eventLabel
       // );
+      console.log(datos);
 
+     
+      // const insertDatos = async (datosJson) => {
+      //   const respuestaJson = await getDatosApi(datosJson);
+      //   console.log(respuestaJson);
+      // }
 
+      // const respuesta = await fetch("https://specials.mediamarkt.es/seguros-zurich/php/index.php"
+      // , {
+      //   method: "POST",
+      //   body: datosJson
+      //  })
+
+      //  const exitoso = await respuesta.json();
+      //  if (exitoso){
+      //   console.log('exitoso'+ exitoso)
+      //  }else{
+      //   console.log('error'+ exitoso)
+      //  }
 
       // alert(name, surname, phone, email, hour, terms, newsletter);
     }
@@ -160,11 +210,12 @@ const Form = () => {
           <div className="inputs__container">
             <Input
               type="text"
-              name="name"
-              id="name"
+              name="nombre"
+              id="nombre"
               placeholder="Nombre"
-              value={name}
-              onChange={(e) => handleNameChange(e.target.value)}
+              // value={name}
+              // onChange={(e) => handleNameChange(e.target.value)}
+              onChange={handleInputChange}
               error={isNameError}
               errorText="Introduce un nombre válido"
               className="input"
@@ -174,8 +225,9 @@ const Form = () => {
               name="apellidos"
               id="apellidos"
               placeholder="Apellidos"
-              value={surname}
-              onChange={(e) => handleSurnameChange(e.target.value)}
+              // value={surname}
+              // onChange={(e) => handleSurnameChange(e.target.value)}
+              onChange={handleInputChange}
               error={isSurnameError}
               errorText="Introduce un/os apellido/s válido/s"
               className="input"
@@ -184,12 +236,13 @@ const Form = () => {
               type="text"
               id="telefono"
               name="telefono"
-              onChange={(e) => handlePhoneChange(e.target.value)}
+              // onChange={(e) => handlePhoneChange(e.target.value)}
+              onChange={handleInputChange}
               placeholder="Teléfono"
               error={isPhoneError}
               errorText="Introduce un teléfono válido"
               className="input"
-              value={phone}
+              // value={phone}
               data-val-required="Required"
               maxlength="9"
             />
@@ -198,8 +251,9 @@ const Form = () => {
               name="email"
               id="email"
               placeholder="Dirección de email"
-              value={email}
-              onChange={(e) => handleEmailChange(e.target.value.toLowerCase())}
+              // value={email}
+              // onChange={(e) => handleEmailChange(e.target.value.toLowerCase())}
+              onChange={handleInputChange}
               error={isEmailError}
               errorText="Introduce un email válido"
               className="input"
@@ -209,7 +263,8 @@ const Form = () => {
               name="franja_horaria"
               id="franja_horaria"
               value={hour}
-              onChange={(e) => handleHourChange(e.target.value)}
+              // onChange={(e) => handleHourChange(e.target.value)}
+              onChange={handleInputChange}
               error={!isHourError}
               errorText="Es necesario que selecciones una opción"
               className="input"
@@ -220,7 +275,8 @@ const Form = () => {
           <div className="footer__form">
 
             <Checkbox
-              onChange={(e) => handleTermsChange(e.target.checked)}
+              // onChange={(e) => handleTermsChange(e.target.checked)}
+              onChange={handleInputChange}
               error={!terms}
               type="checkbox"
               name="check1"
