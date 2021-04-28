@@ -28,7 +28,6 @@ const dataAnalyticsForm = {
 
 
 const Form = () => {
-
   const [datos, setDatos] = useState({
     nombre: '',
     apellidos: '',
@@ -40,7 +39,8 @@ const Form = () => {
   const handleInputChange = (e)=>{
     setDatos({
       ...datos,
-      [e.target.name] : e.target.value
+      [e.target.name] : e.target.value, 
+      check1 : e.target.checked
     })
   }
 
@@ -104,7 +104,13 @@ const Form = () => {
 
 
   const reset = () => {
-    setName("");setSurname("");setEmail("");setPhone("");setHour("");setTerms(false);setNewsletter(false);setIsSubmited(false);setIsLoading(false);
+     setDatos({
+      nombre: '',
+      apellidos: '',
+      email: "",
+      franja_horaria: "",
+      check1: false
+    });setNewsletter(false);setIsSubmited(false);setIsLoading(false);
   }
   const isAllValidated = true
     // validateName(name) &&
@@ -114,10 +120,12 @@ const Form = () => {
     // isHourError &&
     // terms;
 
+
+
   //  const news = async () => {
-  //   await fetch("https://specials.mediamarkt.es/seguros-zurich/php/validacion-servidor2.php", {
+  //   await fetch("https://localhost/alex/", {
   //     method: "POST",
-  //     body: JSON.stringify(datos)
+  //     body: JSON.stringify({datos})
   //     })
   //     .then( 
   //       res => res.json()
@@ -141,7 +149,33 @@ const Form = () => {
 
   const dispatchForm =  (e) => {
     e.preventDefault()
+    reset();
+
     if (isAllValidated) {
+      // const data = new FormData(document.getElementById('campaign-form'));
+
+      const data = new FormData();
+      data.append("datosform", JSON.stringify(datos));
+      // const date = event.target.elements;
+      // console.log(date);
+      fetch('https://localhost/alex/', {
+        method: 'POST',
+        body: data,
+      })
+      .then(function(response) {
+          if(response.ok) {
+              return response.text()
+          } else {
+              throw "Error en la llamada Ajax";
+          }
+      })
+      .then(function(texto) {
+          console.log(texto);
+      })
+      .catch(function(err) {
+          console.log(err);
+      });
+
       setIsLoading(true);
       setTimeout(() => {
         setIsLoading(false);
@@ -153,17 +187,19 @@ const Form = () => {
           timer: 2500
         })
       }, 1000);
-      reset();
+      // news();
 
-      axios.post('https://specials.mediamarkt.es/seguros-zurich/php/validacion-servidor2.php', {
-        name: 'Fred'
-      })
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+      // axios.post('https://localhost/alex/', {
+      //   name: 'Fred'
+      // })
+      // .then(function (response) {
+      //   console.log(response);
+      // })
+      // .catch(function (error) {
+      //   console.log(error);
+      // });
+
+    
 
 
 
