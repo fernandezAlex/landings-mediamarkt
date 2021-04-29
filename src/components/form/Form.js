@@ -150,6 +150,8 @@ const Form = () => {
   const dispatchForm =  (e) => {
     e.preventDefault()
     reset();
+    var newsletter = false;
+
 
     if (isAllValidated) {
       // const data = new FormData(document.getElementById('campaign-form'));
@@ -165,26 +167,32 @@ const Form = () => {
       .then(function(response) {
           if(response.ok) {
               return response.text()
-          } else {
-              throw "Error en la llamada Ajax";
-          }
+          } 
       })
       .then(function(texto) {
-          console.log(texto);
+          console.log('news enviada;'+texto);
+          var newsletter = true;
+          console.log(newsletter);
+          return newsletter;
+
       })
       .catch(function(err) {
           console.log(err);
       });
 
       setIsLoading(true);
-      setTimeout(() => {
+      setTimeout((newsletter) => {
         setIsLoading(false);
         setIsSubmited(true);
         Swal.fire({
           position: 'center',
           icon: 'success',
-          title: `Gracias ${datos.nombre}, tus datos han sido enviados`,
-          timer: 2500
+          html: `Gracias <b>${name}</b>. En breve nos pondremos en contacto contigo. ${
+            newsletter
+              ? "Recibirás un correo para confirmar la suscripción."
+              : ""
+          }`,
+          timer: `${newsletter ? 4000 : 2500}`,
         })
       }, 1000);
       // news();
