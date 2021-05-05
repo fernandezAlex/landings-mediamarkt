@@ -1,6 +1,6 @@
 import React from 'react';
 import AccordionItem from './AccordionItem';
-import analytics from '../../helpers/analytics';
+// import analytics from '../../helpers/analytics';
 import faqs from '../../data/faqs';
 
 const Accordion = () => {
@@ -14,7 +14,7 @@ const Accordion = () => {
       {
         faqs.map((faq, i) => {
         return (
-          <AccordionItem title={<div dangerouslySetInnerHTML={{ __html: faq.question }} onClick={() => analytics(faq.eventGa, faq.eventCategory, faq.eventAction, faq.eventLabel)} />} key={i}>
+          <AccordionItem title={<div dangerouslySetInnerHTML={{ __html: faq.question }} />} key={i}>
           {<div dangerouslySetInnerHTML={{ __html: faq.reply }} />}
           </AccordionItem>
           )

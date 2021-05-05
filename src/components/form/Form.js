@@ -14,22 +14,7 @@ import ReCaptcha from "react-google-recaptcha";
 import InputRadio from "./InputRadio"
 import DateSelector from "./DateSelector";
 // import "react-datepicker/dist/react-datepicker.css";
-
-
 import Select from './Select';
-import axios from 'axios';
-/* Data Form */
-
-import datashops from '../../data/datashops.json'
-import datashopsCa from '../../data/datashops-ca.json'
-
-// const {stores} = datashops
-// console.log(datashops)
-
-var urlBaseName = String(window.location.search);
-const param = "?sr=N5TWML9";
-var setParam = urlBaseName == param ? true : false;
-// var setParam = React.createContext('true');
 
 const idCampaign = "306";
 // const dataAnalyticsForm = {
@@ -39,15 +24,15 @@ const idCampaign = "306";
 //   eventLabel: "Home_B2B_EDUCACION_contactanos",
 // };
 
+// Set Param Canarias web
+var urlBaseName = String(window.location.search);
+const param = "?sr=N5TWML9";
+const setParam = urlBaseName == param ? true : false;
 
 const urlActionForm = "https://specials.mediamarkt.es/10-euros-de-bienvenida/confirmacion";
 
-const urlApiJsonShops = "https://www.mediamarkt.es/static/json/stores.es.json"
-
-
-
 const Form = () => {
-  
+
   const [name, setName] = useState("");
   const [isNameError, setIsNameError] = useState(false);
   const [lastname, setLastName] = useState("");
@@ -97,15 +82,15 @@ const Form = () => {
     setIsPhoneError(!isOk);
   };
 
-  useEffect(() => {
-      axios.get(urlApiJsonShops)
-          .then(({data}) => {
-              setStore(data.stores)
-          })
-          .catch(err => {
-              console.log(err)
-          })
-  }, [setStore])
+  // useEffect(() => {
+  //     axios.get(urlApiJsonShops)
+  //         .then(({data}) => {
+  //             setStore(data.stores)
+  //         })
+  //         .catch(err => {
+  //             console.log(err)
+  //         })
+  // }, [setStore])
 
   const handleStoresChange = (value) => {
     setStoreSelected(value);
@@ -252,7 +237,9 @@ const Form = () => {
             <Select
             name="preferedStoreId"
             type="select"
-            data= {setParam ? datashopsCa:datashops}
+            // data={stores}
+            setParam={setParam}
+            // data= {setParam ? datashopsCa:datashops}
             className="shop__select"
             error={!isStoreError ? true : false}
             errorText="Es necesario que selecciones una tienda"

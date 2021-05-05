@@ -15,7 +15,7 @@ const PrivacyPolicy = ({ onChange, terms }) => {
                     />
                     <label className="label--policy" id="tlegal-terms1">
                         <span></span>
-                        Mediante la cumplimentación del presente formulario y haciendo click en el botón enviar, consiento recibir comunicaciones comerciales de productos y servicios ofrecidos por MediaMarkt y/o conjuntamente por MediaMarkt y terceros con los que colaboramos. Todo ello, de conformidad con os términos y condiciones de la Política de Privacidad de MediaMarkt.
+                        Mediante la cumplimentación del presente formulario y haciendo click en el botón enviar, consiento recibir comunicaciones comerciales de productos y servicios ofrecidos por MediaMarkt y/o conjuntamente por MediaMarkt y terceros con los que colaboramos. Todo ello, de conformidad con os términos y condiciones de la  <u><strong><a href="https://www.mediamarkt.es/es/legal/politica-de-privacidad">Política de Privacidad de MediaMarkt.</a></strong></u>
                         Promoción válida únicamente para nuevos usuarios registrados.
                     </label>
                 </div>
