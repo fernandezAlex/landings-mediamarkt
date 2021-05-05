@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import axios from 'axios';
 import { conditionalExpression } from "@babel/types";
-// import { set } from "date-fns";
+import { set } from "date-fns";
 
 const canariasShop= "https://www.mediamarkt.es/static/json/datashops-ca.json";
 const peninsulaShops = "https://specials.mediamarkt.es/tools/api-mm/v2/stores";
@@ -17,7 +17,6 @@ const Select = ({
 	errorText,
 	className,
 	id,
-    // data,
 	labelDefault,
 	setParam
 }) => {
