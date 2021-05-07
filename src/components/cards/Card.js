@@ -4,17 +4,18 @@ import analytics from '../../helpers/analytics';
 import { ReactComponent as Arrow } from '../../img/button-arrow.svg';
 
 
-const Card = ({
-    title,
-    subtitle,
-    imgThumbnail,
-    slug,
-    button,
-    eventGa,
-    eventCategory,
-    eventAction,
-    eventLabel,
-}) => {
+const Card = ({data}) => {
+    const {
+      title,
+      subtitle,
+      imgThumbnail,
+      slug,
+      button,
+      eventGa,
+      eventCategory,
+      eventAction,
+      eventLabel,
+    } = data;
     
     return (
             <div key={title} className="card__container">
@@ -29,17 +30,16 @@ const Card = ({
                             </p>
                         </div>
                         <div className="--subtitle">
-                            <p className={`--subtitle__card ${subtitle.length < 1 ? "empty" : ""}`}>
-                                {subtitle}
-                            </p>
+                            <p className={`--subtitle__card ${subtitle.length < 1 ? "empty" : ""}`}  dangerouslySetInnerHTML={{ __html: subtitle }}/>
                         </div>
-                    </div>
-                    <div className="--button">
+                        <div className="--button">
                         <a className="link__card" href={slug} onClick={() => analytics(eventGa, eventCategory, eventAction, eventLabel)}>
                             <span className="arrow"><Arrow /></span>
                             <font className="link__text"> {button}</font>
                         </a>
                     </div>
+                    </div>
+                   
                 </div>
             </div>
     )

@@ -47,11 +47,18 @@
     @media only screen and (max-width: 768px) {
       padding: 0 30px;
     }
-    .text__intro {
-      padding: 70px 0 10px 40px;
+    .title__text__intro, .text__intro, .footer__text__intro {
+      padding: 20px 0 0px 40px;
       @media screen and (max-width: 893px) {
-        padding: 40px 0px;
+        padding: 20px 0px;
       }
+    }
+    p.title__text__intro {
+      font-weight: bold!important;
+      font-size: 20px!important;
+    }
+    .footer__text__intro {
+      font-weight: bold;
     }
   }
   .container__links__header {

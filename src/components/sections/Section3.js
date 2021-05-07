@@ -5,7 +5,7 @@ import SliderSmall from '../carousel/SliderSmall'
 const Section3 = ({ width, data }) => {
     return (
         <div className="section">
-            {width < 824 ? (
+            {/* {width < 824 ? (
                 <div>
                     <h1 className="title">Nuestras soluciones adaptadas</h1>
                     <SliderSmall data={data} />
@@ -15,9 +15,10 @@ const Section3 = ({ width, data }) => {
                     <h1 className="title">
                         Nuestras soluciones adaptadas a cada sector
                     </h1>
-                    <CardGrid data={data} />
+                    
                 </div>
-            )}
+            )} */}
+            <CardGrid data={data} />
         </div>
     )
 }

@@ -13,7 +13,13 @@ export const Breadcrumb = () => {
         className="icon__arrow"
         size="xs"
       />
-      <h5> Inicio </h5>
+      <h5> Empresas </h5>
+      <FontAwesomeIcon
+        icon={faChevronRight}
+        className="icon__arrow"
+        size="xs"
+      />
+      <h5> Energía renovable para empresas </h5>
     </div>
   );
 };

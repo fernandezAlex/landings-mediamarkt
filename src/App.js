@@ -7,7 +7,7 @@ import Section3 from "./components/sections/Section3";
 import Section4 from "./components/sections/Section4";
 import Form from "./components/form/Form";
 import Accordion from "./components/faqs/Accordion";
-import {cardsSection2, cardsSection3, cardsSection4} from "./data/cards"
+import {cardsSection1, cardsSection2} from "./data/cards"
 
 
 
@@ -30,9 +30,9 @@ const App = () => {
     <>
       <Header />
       <Section1 width={width}/>
-      <Section2 data={cardsSection2} width={width}/>
-      <Section3 data={cardsSection3} width={width}/>
-      <Section4 data={cardsSection4} width={width}/>
+      {/* <Section2 data={cardsSection2} width={width}/> */}
+      <Section3 data={cardsSection1} width={width}/> 
+      <Section4 data={cardsSection2} width={width}/>
       <Form/>
       <Accordion />
     </>

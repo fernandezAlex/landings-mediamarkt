@@ -1,39 +1,25 @@
 import React from 'react'
-import Card from './Card'
+import CardInfo from './CardInfo'
 
 const CardGrid = ({ data }) => {
-    const cards = data
+    
     return (
             <div className="grid__wrapper">
                 <div className="grid__container">
-                    {cards.map(
+                    {data.map(
                         (
                             {
-                                imgThumbnail,
                                 title,
-                                subtitle,
-                                slug,
-                                button,
-                                event,
-                                eventCategory,
-                                eventAction,
-                                eventLabel,
+                                imgThumbnail,
                             },
                             i
                         ) => {
                             return (
                                 <div className="card__wrapper">
-                                <Card
+                                <CardInfo
                                     key={i}
                                     imgThumbnail={imgThumbnail}
                                     title={title}
-                                    subtitle={subtitle}
-                                    slug={slug}
-                                    button={button}
-                                    event={event}
-                                    eventCategory={eventCategory}
-                                    eventAction={eventAction}
-                                    eventLabel={eventLabel}
                                 />
                                 </div>
                             )
