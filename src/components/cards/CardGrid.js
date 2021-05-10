@@ -4,8 +4,8 @@ import CardInfo from './CardInfo'
 const CardGrid = ({ data }) => {
     
     return (
-            <div className="grid__wrapper">
-                <div className="grid__container">
+            <div className="gridCardInfo__wrapper">
+                <div className="gridCardInfo__container">
                     {data.map(
                         (
                             {
@@ -15,13 +15,11 @@ const CardGrid = ({ data }) => {
                             i
                         ) => {
                             return (
-                                <div className="card__wrapper">
                                 <CardInfo
                                     key={i}
                                     imgThumbnail={imgThumbnail}
                                     title={title}
                                 />
-                                </div>
                             )
                         }
                     )}

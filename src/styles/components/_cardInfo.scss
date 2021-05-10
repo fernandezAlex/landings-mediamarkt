@@ -1,21 +1,25 @@
+.card_wrapper {
+    margin: auto
+}
 .cardInfo__container {
     // max-width: 100%;
     display: flex;
     min-height: 0;
-    color: rgb(0, 0, 0);
-    border: 1px solid rgb(207, 203, 202);
-    border-radius: 8px;
-    height: 500px;
+    // color: rgb(0, 0, 0);
+    // border: 1px solid rgb(207, 203, 202);
+    // border-radius: 8px;
+    // height: 500px;
     width: 350px;
     flex-direction: column;
-    margin: 15px 0px;
+    @media screen and (max-width: 893px) {
+        width: 600px;
+    }
 
     .__header {
         width: 100%;
         display: flex;
         justify-content: center;
         vertical-align: top;
-        border-radius: 8px 8px 0px 0px;
         .--img {
             width: 100%;
             height: 300px;
@@ -37,7 +41,7 @@
                 -webkit-line-clamp: 2;
                 display: -webkit-box;
                 -webkit-box-orient: vertical;
-                margin: 0;
+                margin: auto!important;
                 font-weight: bold;
                 letter-spacing: normal;
                 padding-top: 0px;
@@ -73,10 +77,6 @@
                 }
             }
         }
-    }
-    &:hover {
-        box-shadow: 1px 4px 10px grey;
-        transition: box-shadow 0.4s ease-in;
     }
 }
 
