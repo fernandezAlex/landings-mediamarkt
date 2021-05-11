@@ -20,6 +20,12 @@ export const Breadcrumb = () => {
         size="xs"
       />
       <h5> Energía renovable para empresas </h5>
+      <FontAwesomeIcon
+        icon={faChevronRight}
+        className="icon__arrow"
+        size="xs"
+      />
+      <h5> Energía para tu empresa, sin preocupaciones </h5>
     </div>
   );
 };

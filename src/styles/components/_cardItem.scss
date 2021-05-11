@@ -8,7 +8,7 @@
     height: 500px;
     width: 350px;
     flex-direction: column;
-    margin: 15px 0px;
+    margin: 30px auto;
 
     .__header {
         width: 100%;
@@ -22,6 +22,7 @@
             background-size: cover;
             background-repeat: no-repeat;
             border-radius: inherit;
+            background-position: center;
         }
     }
     .__footer {
@@ -51,10 +52,10 @@
             }
         }
         .--button {
-            cursor: pointer;
             display: flex;
             justify-content: start;
             align-items: center;
+            padding: 20px 0;
             .link__card {
                 display: flex;
                 align-items: center;

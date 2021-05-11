@@ -1,31 +1,48 @@
 
 export const cardsSection1 = [ 
 {
-    title: "Calidad asegurada",
-    imgThumbnail: "https://specials.mediamarkt.es/assets-react/soluciones-energeticas/800x600_home_energia_B2B-thumbup.jpg",
+    title: "Descuentos exclusivos",
+    subtitle: "Bajos precios en el consumo de luz, gas y descuentos exclusivos",
 },
 {
-    title: "Consumo rentable",
-    imgThumbnail: "https://specials.mediamarkt.es/assets-react/soluciones-energeticas/800x600_home_energia_B2B-ahorro.jpg",
+    title: "Servicio técnico de eficiencia energética",
+    subtitle: "Optimiza consumo y ahorra en tu factura",
 },
 {
-    title: "Energía renovable",
-    imgThumbnail: "https://specials.mediamarkt.es/assets-react/soluciones-energeticas/800x600_home_energia_B2B-sostenible.jpg",
-}
+    title: "Calidad y Sostenibilidad",
+    subtitle: "La mejor calidad con un suministro eléctrico 100% renovable",
+},
+{
+    title: "Atención personalizada",
+    subtitle: "Ofrecemos asesoramiento y planes a medida",
+},
 ]
 
 
 
-export const cardsSection2 = 
+export const cardsSection2 = [
+
     {
-        title: "Hasta un 17% de descuento en consumo de luz y un 6% en consumo de gas",
-        subtitle: `<b>Empieza a ahorrar en tu negocio con energía eléctrica 100% renovable.</b><br/>Te ofrecemos asesoramiento y un servicio técnico eficiente.`,
-        imgThumbnail: "https://specials.mediamarkt.es/assets-react/soluciones-energeticas/800x600_luzgas.jpg",
+        title: "Plan Compromiso Luz",
+        subtitle: `Hasta un 17% de descuento en el consumo de LUZ`,
+        imgThumbnail: "https://specials.mediamarkt.es/assets-react/soluciones-energeticas/900x356_luzgas_bombilla.jpg",
         button: "Ver más",
-        slug: "https://specials.mediamarkt.es/empresas/soluciones-energeticas/energia-para-tu-empresa",
+        slug: "https://specials.mediamarkt.es/pdf/AF_ESP_Triptico_15x45cm_EDP_NEGOCIOS.pdf",
+        eventGa: "gaEvent",
+        eventCategory: "B2B_soluciones_energeticas",
+        eventAction: "Click",
+        eventLabel: "B2B_soluciones_energeticas_teaser1"
+    },
+    {
+        title: "Plan Fórmula Gas",
+        subtitle: `Hasta un 6% de descuento en el consumo de GAS`,
+        imgThumbnail: "https://specials.mediamarkt.es/assets-react/soluciones-energeticas/900x356_luzgas_fuoco.jpg",
+        button: "Ver más",
+        slug: "https://specials.mediamarkt.es/pdf/AF_ESP_Triptico_15x45cm_EDP_NEGOCIOS.pdf",
         eventGa: "gaEvent",
         eventCategory: "B2B_soluciones_energeticas",
         eventAction: "Click",
         eventLabel: "B2B_soluciones_energeticas_teaser1"
     }
+]
 
