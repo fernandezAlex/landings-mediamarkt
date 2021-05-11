@@ -22,10 +22,10 @@ export const cardsSection2 =
         subtitle: `<b>Empieza a ahorrar en tu negocio con energía eléctrica 100% renovable.</b><br/>Te ofrecemos asesoramiento y un servicio técnico eficiente.`,
         imgThumbnail: "https://specials.mediamarkt.es/assets-react/soluciones-energeticas/800x600_luzgas.jpg",
         button: "Ver más",
-        slug: "https://forms.gle/KpL2S2xqxCDv2g4b8",
+        slug: "https://specials.mediamarkt.es/empresas/soluciones-energeticas/energia-para-tu-empresa",
         eventGa: "gaEvent",
-        eventCategory: "Home_B2B",
+        eventCategory: "B2B_soluciones_energeticas",
         eventAction: "Click",
-        eventLabel: "Home_B2B_destacado1"
+        eventLabel: "B2B_soluciones_energeticas_teaser1"
     }
 

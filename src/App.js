@@ -2,11 +2,9 @@ import React, { useEffect, useState } from "react";
 import debounce from "./helpers/debounce";
 import Header from "./components/header/Header";
 import Section1 from "./components/sections/Section1";
-import Section2 from "./components/sections/Section2";
 import Section3 from "./components/sections/Section3";
 import Section4 from "./components/sections/Section4";
 import Form from "./components/form/Form";
-import Accordion from "./components/faqs/Accordion";
 import {cardsSection1, cardsSection2} from "./data/cards"
 
 
@@ -30,11 +28,9 @@ const App = () => {
     <>
       <Header />
       <Section1 width={width}/>
-      {/* <Section2 data={cardsSection2} width={width}/> */}
       <Section3 data={cardsSection1} width={width}/> 
       <Section4 data={cardsSection2} width={width}/>
       <Form/>
-      <Accordion />
     </>
   );
 }

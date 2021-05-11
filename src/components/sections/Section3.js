@@ -1,26 +1,16 @@
-import React from 'react'
-import CardGrid from '../cards/CardGrid'
-import SliderSmall from '../carousel/SliderSmall'
+import React from "react";
+import CardInfo from "../cards/CardInfo";
 
-const Section3 = ({ width, data }) => {
-    return (
-        <div className="section">
-            {/* {width < 824 ? (
-                <div>
-                    <h1 className="title">Nuestras soluciones adaptadas</h1>
-                    <SliderSmall data={data} />
-                </div>
-            ) : (
-                <div>
-                    <h1 className="title">
-                        Nuestras soluciones adaptadas a cada sector
-                    </h1>
-                    
-                </div>
-            )} */}
-            <CardGrid data={data} />
-        </div>
-    )
-}
+const Section3 = ({ data }) => {
+  return (
+    <div className="section">
+      <div className="gridCardInfo__container">
+        {data.map(({ title, imgThumbnail }, i) => {
+          return <CardInfo key={i} imgThumbnail={imgThumbnail} title={title} />;
+        })}
+      </div>
+    </div>
+  );
+};
 
-export default Section3
+export default Section3;

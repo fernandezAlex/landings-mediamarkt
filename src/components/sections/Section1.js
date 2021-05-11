@@ -30,7 +30,7 @@ export const Section1 = () => {
           <a
             style={{ textDecoration: "none" }}
             onClick={() =>
-              analytics("gaEvent", "Home_B2B", "Click", "Home_B2B_contactanos")
+              analytics("gaEvent", "B2B_soluciones_energeticas", "Click", "B2B_soluciones_energeticas_contactanos")
             }
             className="link__contact"
             href="#contacto"
