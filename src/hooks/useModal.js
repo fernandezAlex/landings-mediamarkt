@@ -6,7 +6,6 @@ const useModal = () => {
 
   function toggle() {
     setIsShowing(!isShowing);
-    analytics("gaEvent", "Home_B2B_COMERCIO", "Click", "Home_B2B_COMERCIO_ver_video" )
   }
 
   return {

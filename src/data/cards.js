@@ -6,7 +6,6 @@ export const cardsSection = [
         "https://specials.mediamarkt.es/assets-react/b2b-comercio/Card_procesoventa.jpg",
       slug: "https://specials.mediamarkt.es/empresas/comercio/proceso-venta",
       button: "",
-      buttonExtra: "Consúltanos",
       event: "gaEvent",
       eventCategory: "Home_B2B_COMERCIO",
       eventAction: "Click",
@@ -33,8 +32,7 @@ export const cardsSection = [
       imgThumbnail:
         "https://specials.mediamarkt.es/assets-react/b2b-comercio/Card_procesoventa.jpg",
       slug: "https://specials.mediamarkt.es/empresas/comercio/proceso-venta",
-      button: "",
-      buttonExtra: "Consúltanos",
+      button: "Consúltanos",
       event: "gaEvent",
       eventCategory: "Home_B2B_COMERCIO",
       eventAction: "Click",
@@ -47,8 +45,7 @@ export const cardsSection = [
       imgThumbnail:
         "https://specials.mediamarkt.es/assets-react/b2b-comercio/Card_procesoventa.jpg",
       slug: "https://specials.mediamarkt.es/empresas/comercio/proceso-venta",
-      button: "",
-      buttonExtra: "Consúltanos",
+      button: "Consúltanos",
       event: "gaEvent",
       eventCategory: "Home_B2B_COMERCIO",
       eventAction: "Click",
