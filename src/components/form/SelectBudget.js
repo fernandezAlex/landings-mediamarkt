@@ -33,7 +33,7 @@ const SelectBudget = ({
 				>
                 <option selected hidden value="" dangerouslySetInnerHTML={{__html: label }} />
                   {
-					  data.map(({value, name}, i) => <option key={i} value={value}>{name}</option>)
+					  data.map(({name}) => <option key={name} value={name}>{name}</option>)
 					}    
             </select>
 					</div>
