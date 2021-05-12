@@ -1,4 +1,5 @@
 import React, {useState, useEffect, useRef} from "react";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 // const useMountEffect = fun => useEffect(fun, [])
 
@@ -36,21 +37,22 @@ export const Nav = ({ data, width }) => {
           <div className="options">
             <div className="container__options">
               {data.map(({ title }, i) => (
-                <div key={i} className="item__option">
-                  <input type="radio" id={`option-${i+1}`} ref={anchorRef} onClick={console.log(anchorRef.current)}/>
-                    {/* <a className="a_option" id={`option-${i+1}`} href={`#option-${i+1}`}> */}
-                      <label
-                     
-                    className="__label"
-                    for={`option-${i+1}`}
-                    // dangerouslySetInnerHTML={{ __html: title }}
-                    >
-                    {title}
-                  </label>
-                  {/* </a> */}
-                  
-       
-                </div>
+                <nav key={i} className="item__option">
+                      <a className="nav-item"
+                      for={`option-${i+1}`}
+                      >
+                        <Link
+                        activeClass="active"
+                        to={`option-${i+1}`}
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                        >
+                          {title}
+                        </Link>
+                      </a>
+                </nav>
               ))}
             </div>
           </div>

@@ -6,6 +6,8 @@ import Section2 from "./components/sections/Section2";
 import Section3 from "./components/sections/Section3";
 import Form from "./components/form/Form";
 import {cardsSection} from './data/cards'
+import { Nav } from "./components/nav/Nav";
+
 
 
 function App() {
@@ -26,9 +28,8 @@ function App() {
   return (
     <>
       <Header />
+      <Nav data={cardsSection}/>
       <Section1 data={cardsSection} width={width}/>
-      {/* <Section2 data={cardsSection} width={width}/> */}
-      {/* <Section3 data={cardsSection2} width={width}/> */}
       <Form />
     </>
   );

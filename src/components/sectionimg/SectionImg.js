@@ -1,19 +1,14 @@
 import React from "react";
 
-export const SectionImg = ({data}) => {
-    const {img, title, body} = data
+ export const SectionImg = ({data}) => {
+    const {title, img, content, imgPosition} = data;
     return (
-        <div className="container__section__img">
-
+        <div class={`section__img ${imgPosition ? "" : "imgRight" }`}>
+                <img src={img} alt="MM"/>
             <div class="section__text">
-                <p>{body}</p>
+                <h2 dangerouslySetInnerHTML={{ __html: title }} />
+                <p dangerouslySetInnerHTML={{ __html: content }} />
             </div>
-            <div className="section__img">
-                <img src={img} alt={title}/>
-            </div>
-
         </div>
     );
 };
-
-

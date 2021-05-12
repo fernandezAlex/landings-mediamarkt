@@ -1,19 +1,7 @@
-import { ReactComponent as Arrow } from "../img/button-arrow.svg";
-
-// export const cardsSection1 = 
-//     {
-//       title: "La transformación digital en los puntos de venta",
-//       body:
-//         "El avance constante de la tecnología en nuestras vidas nos ha hecho evolucionar hasta convertirnos en un nuevo consumidor, que busca nuevas formas de compra y una experiencia única, ágil y satisfactoria. En MediaMarkt Business trabajamos con el objetivo de acompañarte en esta transformación digital para poder incorporar nuevas soluciones que te ayuden a ofrecer a tus clientes la mejor experiencia.",
-//       img: "https://specials.mediamarkt.es/assets-react/b2b-comercio/tender.png",
-
-//     }
-//   ;
-  
-  export const cardsSection = [
+export const cardsSection = [
     {
       title: "Crédito Comercial",
-      content: `Es una financiación a corto plazo que nuestra entidad financiera concede a las empresas.<br/>${<Arrow/>} Agiliza las operaciones comerciales<br/>${<Arrow/>} Permite comprar sin liquidez inmediata`,
+      content: `Es una financiación a corto plazo que nuestra entidad financiera concede a las empresas. <ul><li>Agiliza las operaciones comerciales.</li><li>Permite comprar sin liquidez inmediata.</li></ul>`,
       imgThumbnail:
         "https://specials.mediamarkt.es/assets-react/b2b-comercio/Card_procesoventa.jpg",
       slug: "https://specials.mediamarkt.es/empresas/comercio/proceso-venta",
@@ -23,10 +11,11 @@ import { ReactComponent as Arrow } from "../img/button-arrow.svg";
       eventCategory: "Home_B2B_COMERCIO",
       eventAction: "Click",
       eventLabel: "Home_B2B_COMERCIO_proceso_venta",
+      imgPosition: true
     },
     {
       title: "Préstamo Bancario",
-      content: `Nuestra entidad financiera ofrecerá una cantidad de dinero que la empresa tendrá que devolver en los plazos y según las condiciones pactadas.<br/>${<Arrow/>} Sin sorpresas: La cuota es fija durante todo el contrato<br/>${<Arrow/>} Importes pequeños: La mejor solución para financiar nuestros productos y soluciones de menor importe<br/>${<Arrow/>} Mejora la imagen externa de tu negocio: Te brinda la oportunidad de renovar la imagen de tu negocio<br/>${<Arrow/>} Es sencillo y cómodo: Te financiamos el 100% de valor del producto y/o solución`,
+      content: `Nuestra entidad financiera ofrecerá una cantidad de dinero que la empresa tendrá que devolver en los plazos y según las condiciones pactadas. <ul><li>Sin sorpresas: La cuota es fija durante todo el contrato</li> <li>Importes pequeños: La mejor solución para financiar nuestros productos y soluciones de menor importe</li><li> Mejora la imagen externa de tu negocio: Te brinda la oportunidad de renovar la imagen de tu negocio</li><li> Es sencillo y cómodo: Te financiamos el 100% de valor del producto y/o solución</li></ul>`,
       imgThumbnail:
         "https://specials.mediamarkt.es/assets-react/b2b-comercio/Card_procesoventa.jpg",
       slug: "https://specials.mediamarkt.es/empresas/comercio/proceso-venta",
@@ -36,10 +25,11 @@ import { ReactComponent as Arrow } from "../img/button-arrow.svg";
       eventCategory: "Home_B2B_COMERCIO",
       eventAction: "Click",
       eventLabel: "Home_B2B_COMERCIO_proceso_venta",
+      imgPosition: true
     },
     {
-      title: "Crédito Comercialytrtr",
-      content: `Es una financiación a corto plazo que nuestra entidad financiera concede a las empresas.<br/>${<Arrow/>} Agiliza las operaciones comerciales<br/>${<Arrow/>} Permite comprar sin liquidez inmediata`,
+      title: "Renting",
+      content: `Es un contrato de alquiler de equipos tecnológicos por un periodo a medio o largo plazo donde la empresa podrá disfrutar de los bienes a cambio de una cuota de alquiler fija.`,
       imgThumbnail:
         "https://specials.mediamarkt.es/assets-react/b2b-comercio/Card_procesoventa.jpg",
       slug: "https://specials.mediamarkt.es/empresas/comercio/proceso-venta",
@@ -49,6 +39,21 @@ import { ReactComponent as Arrow } from "../img/button-arrow.svg";
       eventCategory: "Home_B2B_COMERCIO",
       eventAction: "Click",
       eventLabel: "Home_B2B_COMERCIO_proceso_venta",
+      imgPosition: true
+    },
+    {
+      title: "Leasing",
+      content: `Es un arrendamiento con opción de compra destinado a la adquisición de bienes para uso profesional.`,
+      imgThumbnail:
+        "https://specials.mediamarkt.es/assets-react/b2b-comercio/Card_procesoventa.jpg",
+      slug: "https://specials.mediamarkt.es/empresas/comercio/proceso-venta",
+      button: "",
+      buttonExtra: "Consúltanos",
+      event: "gaEvent",
+      eventCategory: "Home_B2B_COMERCIO",
+      eventAction: "Click",
+      eventLabel: "Home_B2B_COMERCIO_proceso_venta",
+      imgPosition: true
     },
   ];
   

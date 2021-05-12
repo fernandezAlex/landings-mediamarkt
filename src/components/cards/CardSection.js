@@ -28,7 +28,7 @@ const CardSection = ({ data, width }) => {
                               <p className="text">{title}</p>
                             </div>
                             <div className="--content">
-                              <p className="text">{content}</p>
+                              <p className="text" dangerouslySetInnerHTML={{ __html: content }} />
                             </div>
                         </div>
                         <div className="container__links">
