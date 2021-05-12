@@ -48,9 +48,9 @@
       padding: 0 30px;
     }
     .title__text__intro, .text__intro, .footer__text__intro {
-      padding: 20px 0 0px 40px;
+      padding: 20px 0;
       @media screen and (max-width: 893px) {
-        padding: 20px 0px;
+        padding: 20px 0px 30px;
       }
     }
     p.title__text__intro {
@@ -72,7 +72,7 @@
   }
   .container__links__header {
     > div {
-      padding: 10px 0;
+      padding: 10px 0 30px 0;
     }
     a.link__contact .link__text,
     div.link__video .link__text {
