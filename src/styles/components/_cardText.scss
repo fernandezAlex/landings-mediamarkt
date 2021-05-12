@@ -6,13 +6,16 @@
     border: 1px solid rgb(207, 203, 202);
     border-radius: 8px;
     max-height: 200px;
-    width: 48%;
-    min-width: 360px;
+    width: 24%;
+    min-width: 24%;
     flex-direction: column;
     // justify-content: space-around;
-    padding: 25px;
+    padding: 10px;
     margin: 2% 0;
-    @media screen and (max-width: 893px) {
+    @media screen and (max-width: 910px) {
+      width: 48%;
+    }
+    @media screen and (max-width:640px) {
       width: 100%;
     }
   

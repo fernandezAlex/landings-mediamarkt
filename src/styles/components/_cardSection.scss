@@ -1,15 +1,19 @@
 .card__section__wrapper {
     padding: 0 80px 10px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     max-width: 1477px;
     margin: auto;
-    flex-direction: column;
+    
+    flex-direction: row;
     @media screen and (max-width: 1477px) {
         padding: 0 40px 10px;
     }
+    @media only screen and (max-width: 910px) {
+        flex-direction: column;
+    }
     @media only screen and (max-width: 768px) {
-        padding: 0 30px 10px;
+        padding: 0 0px 10px;
     }
     .cardsection__container {
         width: 100%;
@@ -102,4 +106,22 @@ a:active,
 a:focus,
 a:hover {
     color: black;
+}
+
+
+
+.img__section {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    .__img {
+        background-position: center;
+        width: 100%;
+        min-width: 250px;
+        max-width: 40%;
+        height: 150px;
+        
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 }
