@@ -34,9 +34,9 @@ export const cardsSection2 = [
         eventLabel: "Home_B2B_destacado3"
     },
     {
-        title: "Google Nest Wifi para empresas",
-        subtitle: "Crea tu red WiFi estable y segura pregúntanos por tu mejor solución",
-        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Teasergoogle.png",
+        title: "Digitaliza tu empresa",
+        subtitle: "Equipos Apple con renting al 0%",
+        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/062007_Campana_Apple_Mayo_800x600.png",
         button: "Consúltanos",
         slug: "#contacto",
         eventGa: "gaEvent",
