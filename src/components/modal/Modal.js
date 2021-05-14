@@ -7,7 +7,7 @@ import { faTimes } from "@fortawesome/free-solid-svg-icons";
 const Modal = ({
   isShowing,
   hide,
-  data }) => 
+  data }) =>
 
   isShowing ? ReactDOM.createPortal(
     <React.Fragment>
@@ -15,18 +15,20 @@ const Modal = ({
       <div className="mm__modal-wrapper" aria-modal aria-hidden tabIndex={-1} role="dialog">
         <div className="mm__modal">
           <div className="mm__modal-iframe">
-            <button type="button" className="mm__modal-close-button" data-dismiss="modal" aria-label="Close" onClick={hide}>
-              {/* <span aria-hidden="true">&times;</span> */}
-              {/* <FontAwesomeIcon icon={faWindowClose} className="icon__modal" size="lg"/> */}
-              <FontAwesomeIcon icon={faTimes} className="icon__modal" size="xs" />
-            </button>
-            <div className="margin_button">
-            </div>
+            <div className="modal__content">
+              <button type="button" className="mm__modal-close-button" data-dismiss="modal" aria-label="Close" onClick={hide}>
+                {/* <span aria-hidden="true">&times;</span> */}
+                {/* <FontAwesomeIcon icon={faWindowClose} className="icon__modal" size="lg"/> */}
+                <FontAwesomeIcon icon={faTimes} className="icon__modal" size="xs" />
+              </button>
+              <div className="margin_button">
+              </div>
 
-            <div>
-              <p>
-                {data.title}
-              </p>
+              <div>
+                <p>
+                  {data}
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -35,6 +37,7 @@ const Modal = ({
     </React.Fragment>, document.body
   ) : null;
 
+  console.log(<Modal />)
 
 
 export default Modal;

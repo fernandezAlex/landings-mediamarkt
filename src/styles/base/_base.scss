@@ -16,6 +16,7 @@ body {
     font-family: SourceSansPro, Arial, sans-serif !important;
     font-size: 16px !important;
     margin: 0px !important;
+    line-height: 22px;
     @media only screen and (max-width: 600px) {
       p {
         font-size: 14px !important;
@@ -57,6 +58,16 @@ h1.title {
       font-size: 22px !important;
     }
   }
+}
+
+h2{
+  margin: 8px 0px 24px;
+  color: rgb(0, 0, 0);
+  font-size: 20px !important;
+  line-height: 24px;
+  font-family: SourceSansPro, Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: normal;
 }
 
 .title {

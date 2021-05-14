@@ -38,20 +38,18 @@ export const Nav = ({ data, width }) => {
             <div className="container__options">
               {data.map(({ title }, i) => (
                 <nav key={i} className="item__option">
-                      <a className="nav-item"
-                      for={`option-${i+1}`}
-                      >
                         <Link
+                        className="nav-item"
                         activeClass="active"
                         to={`option-${i+1}`}
                         spy={true}
                         smooth={true}
                         offset={-70}
                         duration={500}
+                        for={`option-${i+1}`}
                         >
                           {title}
                         </Link>
-                      </a>
                 </nav>
               ))}
             </div>

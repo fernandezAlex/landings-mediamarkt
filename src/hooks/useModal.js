@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import analytics from '../helpers/analytics';
+import Modal from '../components/modal/Modal';
 
-const useModal = () => {
+const useModal = (data) => {
   const [isShowing, setIsShowing] = useState(false);
 
   function toggle() {
