@@ -41,7 +41,8 @@ export const Nav = ({ data, width }) => {
                         <Link
                         className="nav-item"
                         activeClass="active"
-                        to={`option-${i+1}`}
+                        // to={`option-${i+1}`}
+                        to={title}
                         spy={true}
                         smooth={true}
                         offset={-70}

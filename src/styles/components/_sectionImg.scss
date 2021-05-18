@@ -13,7 +13,7 @@
   // margin-bottom: 80px;
     flex-wrap: wrap;
     display: flex;
-    margin: 36px 0px;
+    margin: 70px 0px;
     -webkit-box-align: center;
     align-items: center;
     -webkit-box-pack: justify;
@@ -39,39 +39,53 @@
     flex-basis: calc(50% - 32px);
     padding: 0px 16px;
     margin-top: 0px;
-      ul li {
-        position: relative;
-        padding-bottom: 10px;
-      }
-      
-      ul {
-        list-style: none;
-      }
-      
-      ul li:before{
-          content: '';
-          position: absolute;
-          border-right:2px solid #df0000;
-          border-bottom:2px solid #df0000;
-          width:10px;
-          height:10px;
-          top: calc(50% - 4px);
-          left: -20px;
-          transform: translateY(-50%) rotate(-45deg);
-      }
+    ul li {
+      position: relative;
+      padding-bottom: 10px;
+    }
+    
+    ul {
+      // list-style: none;
+      padding-left: 34px;
+      padding-top: 22px;
+      margin-top: 16px;
+    }
+    
+    // ul li:before{
+    //     content: '';
+    //     position: absolute;
+    //     border-right:2px solid #df0000;
+    //     border-bottom:2px solid #df0000;
+    //     width:10px;
+    //     height:10px;
+    //     top: calc(50% - 4px);
+    //     left: -20px;
+    //     transform: translateY(-50%) rotate(-45deg);
+    // }
 
-      .button__more{
-        display: block;
-        margin: 30px 20px;
-        font-size: 16px;
-        border-bottom:2px solid #df0000;
-        padding-bottom: 6px;
-        width:80px;
-        cursor: pointer;
-      }
+    .button__more{
+      display: block;
+      margin: 30px 20px;
+      font-size: 16px;
+      border-bottom:2px solid #df0000;
+      padding-bottom: 6px;
+      width:80px;
+      cursor: pointer;
+    }
 
-      @media screen and (max-width: 893px) {
-        width: 100vw;
-      }
+    @media only screen and (max-width: 1093px) {
+      // width: 100vw;
+    }
+
   }
+  @media only screen and (max-width: 1093px) {
+    img {
+      margin: auto;
+      margin-top: 22px;
+      width: 100%;
+    }
+    .section__text {
+      flex-basis: calc(100% - 0px);
+    }
+}
 }

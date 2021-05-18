@@ -33,18 +33,28 @@
     .mm__modal-iframe {
       background: #ffff;
       position: relative;
-      padding-bottom: 56.25%;
       top: 20%;
-      height: 0;
       max-width: 1477px;
       @media screen and (min-width: 1477px) {
         top: 10vw;
         transform: translate(-50%);
         left: 50%;
       }
+      @media screen and (max-width: 1477px) {
+        width: 94%;
+        margin: auto;
+      }
 
       .modal__content{
         padding: 40px;
+        ul li::marker {
+          content: "\2713";
+          color: #df0000;
+          font-weight: bold;
+        }
+        h4{
+          padding-left: 4px;
+        }
       }
 
       .mm__modal-close-button {

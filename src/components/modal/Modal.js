@@ -17,8 +17,6 @@ const Modal = ({
           <div className="mm__modal-iframe">
             <div className="modal__content">
               <button type="button" className="mm__modal-close-button" data-dismiss="modal" aria-label="Close" onClick={hide}>
-                {/* <span aria-hidden="true">&times;</span> */}
-                {/* <FontAwesomeIcon icon={faWindowClose} className="icon__modal" size="lg"/> */}
                 <FontAwesomeIcon icon={faTimes} className="icon__modal" size="xs" />
               </button>
               <div className="margin_button">
@@ -26,7 +24,7 @@ const Modal = ({
 
               <div>
                 <p>
-                  {data}
+                <p dangerouslySetInnerHTML={{ __html: data.contentModal }} />
                 </p>
               </div>
             </div>
