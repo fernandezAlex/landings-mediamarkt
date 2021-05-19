@@ -4,7 +4,6 @@ import { SectionImg } from "../sectionimg/SectionImg";
 
 
 export const Section1 = ({data}) => {
-  // console.log(data[0].title)
   return (
       <div className="section__">
         <p>
