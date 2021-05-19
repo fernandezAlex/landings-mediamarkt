@@ -12,7 +12,22 @@
 .section {
   overflow: hidden;
 }
-
+.container__logo__header {
+  .--img {
+    background-image: url("https://specials.mediamarkt.es/assets-react/b2b-comercio/Business-COMERCIO.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 120px;
+    width: 370px;
+  }
+  width: 45%;
+  margin: 0 auto auto auto;
+  @media screen and (max-width: 893px) {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+  }
+}
 .container__intro__text {
   width: 100%;
   // @media screen and (max-width: 893px) {

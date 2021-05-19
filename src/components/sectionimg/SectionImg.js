@@ -1,15 +1,31 @@
 import React from "react";
+import Modal from '../modal/Modal';
+import useModal from '../../hooks/useModal';
+import analytics from '../../helpers/analytics'
 
- const SectionImg = ({title, img, content, imgPosition}) => {
+ export const SectionImg = ({data},{key}) => {
+    const {title, imgThumbnail, content, imgPosition, button} = data;
+    const { isShowing, toggle } = useModal();
+    // const test = analytics("gaEvent", "Home_B2B_COMERCIO", "Click", "Home_B2B_COMERCIO_ver_video" );
+    console.log(button);
+
     return (
-        <div class={`section__img ${imgPosition ? "" : "imgRight" }`}>
-                <img src={img} alt="MM"/>
-            <div class="section__text">
-                <h2 dangerouslySetInnerHTML={{ __html: title }} />
-                <p dangerouslySetInnerHTML={{ __html: content }} />
+        // data.map(({ title, imgThumbnail, content, imgPosition, button }, i) => {
+             <div id={title} className={`section__img ${imgPosition ? "" : "imgRight" }`}>
+                    <img src={imgThumbnail} alt={title}/>
+                    <div class="section__text">
+                        <h2 dangerouslySetInnerHTML={{ __html: title }} />
+                        <p dangerouslySetInnerHTML={{ __html: content }} />
+                        { button !== "" && undefined ?
+                            <>
+                            <a className="button__more" id={title} onClick={toggle}>{button}</a>
+                                <Modal isShowing={isShowing} data={data} hide={toggle} />
+                            </>
+                            :
+                            null
+                        }
+                    </div>
             </div>
-        </div>
+        // })
     );
 };
-
-export default SectionImg;

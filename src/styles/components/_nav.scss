@@ -1,0 +1,118 @@
+.nav__container {
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+  // margin-top: 20px;
+//   padding-top: 1%;
+  .options__section {
+    display: block;
+    box-sizing: border-box;
+    line-height: 1.43;
+    overflow: hidden;
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.07),
+      0px 3px 3px -2px rgba(0, 0, 0, 0.06), 0px 1px 8px 0px rgba(0, 0, 0, 0.1);
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border-radius: 0px;
+    height: 100%;
+    .options {
+      padding: 0 80px 0px;
+      display: flex;
+      justify-content: center;
+      max-width: 1477px;
+      margin: auto;
+      flex-direction: column;
+      @media screen and (max-width: 1477px) {
+        padding: 0 40px 0px;
+      }
+      @media only screen and (max-width: 768px) {
+        padding: 0 30px 0px;
+      }
+
+      .container__options {
+        display: flex;
+        // margin: auto;
+        .item__option {
+          margin: auto;
+          justify-content: space-between;
+          a {
+            display: flex;
+            flex: 1 1 0%;
+            background-color: rgb(255, 255, 255);
+            // justify-content: space-between;
+          }
+        }
+      }
+    }
+  }
+
+
+.item__option {
+  display: flex;
+  flex: 1 1 0%;
+  background-color: rgb(255, 255, 255);
+  input[type="radio"] {
+    display: none;
+    &:enabled:hover ~ label::after {
+      display: block;
+    }
+  }
+
+  a {
+    color: rgb(73, 71, 69);
+    cursor: pointer;
+    display: inline-flex;
+    line-height: 1;
+    place-items: center;
+    place-content: center;
+    font-family: SourceSansPro, Arial, sans-serif;
+    font-size: 14px;
+    width: 100%;
+    padding: 0px 24px;
+    height: 100%;
+    min-height: 52px;
+    position: relative;
+    text-align: center;
+    -webkit-box-align: center;
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0px;
+      width: 0px;
+      height: 3px;
+      margin: 5px 0 0;
+      transition: cubic-bezier(0.22, 0.23, 0.22, 0.24);
+      transition-duration: 0.25s;
+      opacity: 0;
+      background-color: #df0000;
+    }
+    &.a {
+      &:before {
+        left: 50%;
+      }
+      &:after {
+        right: 50%;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+          &:before,
+          &:after {
+            opacity: 1;
+            width: 50%
+          }
+    }
+  }
+
+  .active{
+     a
+    &:before,
+    &:after {
+      opacity: 1;
+      width: 50%
+    }
+  }
+}
+
+}
