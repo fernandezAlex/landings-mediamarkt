@@ -1,6 +1,17 @@
 
 export const cardsSection2 = [
     {
+      title: "Digitaliza tu empresa con Apple",
+      subtitle: "Renueva tu parque tecnológico sin grandes inversiones. Pregunta por el programa de recompra de dispositivos usados.",
+      imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/062007_Campana_Apple_Mayo_bannersweb_800x600.png",
+      button: "Consúltanos",
+      slug: "#contacto",
+      eventGa: "gaEvent",
+      eventCategory: "Home_B2B",
+      eventAction: "Click",
+      eventLabel: "Home_B2B_destacado4"
+    },
+    {
         title: "Evalúa la competencia digital de tu centro educativo",
         subtitle: "Consigue tu informe de diagnosis a través de nuestro formulario, son solo 2 minutos",
         imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/062007_NEWS_EDUCACION_.png",
@@ -32,17 +43,6 @@ export const cardsSection2 = [
         eventCategory: "Home_B2B",
         eventAction: "Click",
         eventLabel: "Home_B2B_destacado3"
-    },
-    {
-        title: "Digitaliza tu empresa",
-        subtitle: "Equipos Apple con renting al 0%",
-        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/062007_Campana_Apple_Mayo_800x600.png",
-        button: "Consúltanos",
-        slug: "#contacto",
-        eventGa: "gaEvent",
-        eventCategory: "Home_B2B",
-        eventAction: "Click",
-        eventLabel: "Home_B2B_destacado4"
     },
     {
         title: "Soluciones de prevención frente al Covid-19",
