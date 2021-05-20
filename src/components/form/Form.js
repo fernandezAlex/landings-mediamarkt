@@ -14,6 +14,7 @@ import axios from "axios";
 import InfoForm from "./InfoForm";
 import Select from "./Select";
 import Button from "./Button";
+import Service from "./Service";
 import Timeline from "../timeline/TimeLine";
 
 import SelectBudget from "./SelectBudget";
@@ -349,7 +350,15 @@ const Form = () => {
             <div className="__header__title">
               <h2 className="--title">¿Qué servicios te interesan?</h2>
             </div>
+         
+            <div id="servicios" class="servicios basic">
+              { options.map((option, i) => (
+                
+                  <Service id={option.id} name={option.name} value={option.value} />
+              ))}
+            </div>      
 
+           
             {/* <Button
               onChange={() => handleOption1Change(options[0].value)}
               name={options[0].name}
