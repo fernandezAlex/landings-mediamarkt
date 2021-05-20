@@ -24,9 +24,9 @@ const Card = ({
                 <div className="__footer">
                     <div className="container__text">
                         <div className="--title">
-                            <p className="--title__card">
-                                {title}
-                            </p>
+                            <p className="--title__card"
+                            dangerouslySetInnerHTML={{ __html: {title} }} />
+
                         </div>
                         <div className="--subtitle">
                             <p className={`--subtitle__card ${subtitle.length < 1 ? "empty" : ""}`}>

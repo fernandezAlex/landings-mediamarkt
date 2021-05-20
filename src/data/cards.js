@@ -1,7 +1,7 @@
 
 export const cardsSection2 = [
     {
-      title: "Digitaliza tu empresa con Apple",
+      title: "Digitaliza tu empresa <br>con Apple",
       subtitle: "Renueva tu parque tecnológico sin grandes inversiones. Pregunta por el programa de recompra de dispositivos usados.",
       imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/062007_Campana_Apple_Mayo_bannersweb_800x600.png",
       button: "Consúltanos",
