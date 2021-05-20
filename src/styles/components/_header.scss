@@ -1,7 +1,9 @@
+
 .header__container {
   height: 408px;
   width: 100%;
-  background-image: url("https://specials.mediamarkt.es/assets-react/movistar/2944x816_mediamarkt_cabecera.jpg");
+  background-color: $main_color;
+  background-image: url($desktop-background);
   background-size: cover;
   background-position: center;
   // @media only screen and (min-width: 792px) and (max-width: 983px) {
@@ -68,7 +70,7 @@
 @media only screen and (max-width: 449px) {
   .header__container {
     height: 272px;
-    background-image: url("https://specials.mediamarkt.es/assets-react/zurich/022107-ImageRagazza_Header_512x272.png");
+    background-image: url($mobile-background);
   }
   .title__container {
     margin: -60px 0% 60px 0%;
@@ -83,7 +85,7 @@
 @media only screen and (min-width: 450px) and (max-width: 768px) {
   .header__container {
     height: 304px;
-    background-image: url("https://specials.mediamarkt.es/assets-react/zurich/022107-ImagesPatinete_Header_1024x544.png");
+    background-image: url($mobile-background);
   }
 }
 @media only screen and (max-width: 510px) {
@@ -102,7 +104,7 @@
 
 @media only screen and (min-width: 769px) and (max-width: 793px) {
   .header__container {
-    background-image: url("https://specials.mediamarkt.es/assets-react/zurich/022107-ImagesPatinete_Header_1024x544.png");
+    background-image: url($mobile-background);
   }
   .title__container {
     margin: -70px 8% 4% 0%;
@@ -110,7 +112,7 @@
 }
 @media only screen and (min-width: 794px) and (max-width: 1007px) {
   .header__container {
-    background-image: url("https://specials.mediamarkt.es/assets-react/zurich/022107-ImagesPatinete_Header_1472x408.png");
+    background-image: url($tablet-background);
   }
   .title__container {
     margin: -70px 8% 4% 0%;
@@ -124,6 +126,6 @@
 
 @media only screen and (min-width: 1008px) and (max-width: 1800px) {
   .header__container {
-    background-image: url("https://specials.mediamarkt.es/assets-react/zurich/022107-ImagesPatinete_Header_2944x816.png");
+    background-image: url($desktop-background);
   }
 }

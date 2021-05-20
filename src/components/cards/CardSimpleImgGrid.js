@@ -5,8 +5,8 @@ const CardSimpleImgGrid = ({ data }) => {
   return (
     <div className="cardSimpleImgGrid__wrapper">
       <div className="cardSimpleImgGrid__container">
-        {data.map(({ title, content, img, imgPosition  }, i) => {
-          return <SectionImg key={i} title={title} img={img} content={content} imgPosition={imgPosition} />;
+        {data.map((data, i) => {
+          return <SectionImg key={i} data={data} />;
         })}
       </div>
     </div>

@@ -13,6 +13,7 @@ License url: https://www.mediamarkt.es
 @import "./base/settings";
 @import "./base/base";
 @import "./base/slick";
+@import "./vars/variables";
 
 // Components
 @import "./components/cardCarousel";
@@ -39,3 +40,5 @@ License url: https://www.mediamarkt.es
 @import "./components/timeline";
 @import "./components/_sectionImg";
 
+@import './components/sectionImg';
+@import './components/nav';

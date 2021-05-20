@@ -84,10 +84,10 @@ const budget = [
 
 /* Data Form */
 
-const idCampaign = "194";
+const idCampaign = "225";
 const dataAnalyticsForm = {
   event: "gaEvent",
-  eventCategory: "Home_B2B_ED",
+  eventCategory: "Home_B2B_COMERCIO",
   eventAction: "Click",
   eventLabel: "Zurich_enviar_formulario",
 };
@@ -108,7 +108,6 @@ const Form = () => {
   const [email, setEmail] = useState("");
   const [isEmailError, setIsEmailError] = useState(false);
 
-  // const [store, setStore] = useState([]);
   const [storeSelected, setStoreSelected] = useState("");
   const [isStoreError, setIsStoreError] = useState(false);
 
@@ -121,30 +120,6 @@ const Form = () => {
   const [actionState, setActionState] = useState(null);
 
   const [stores, setStores] = useState([]);
-
-  useEffect(() => {
-    async function fecthData() {
-      const { data } = await axios({
-        method: "GET",
-        url: urlParams,
-      });
-      setStores(data);
-    }
-    fecthData();
-  }, [setStores]);
-
-  let store = Object.values(stores);
-  let storesArray = [].concat(store);
-  const storesArraySorted = [...storesArray].sort((a, b) =>
-    a["displayName"].localeCompare(b["displayName"]),
-  );
-  // storesArraySorted.map(({displayName}, i) => {
-  // 	let filters=['Pinto','@Tienda'];
-  // 	if(filters.some(el => displayName.includes(el))) delete store[i];
-  // })
-  console.log(storesArraySorted);
-  console.log(typeof stores);
-  console.log(stores);
 
   const handleNameChange = (value) => {
     setName(value);
@@ -478,16 +453,15 @@ const Form = () => {
                 id="zipCode"
               />
               <Select
-                name="preferedStoreId"
-                type="select"
-                data={storesArraySorted}
-                className="shop__select"
-                error={!isStoreError ? true : false}
-                errorText="Es necesario que selecciones una tienda"
-                value={storeSelected}
-                onChange={(e) => handleStoresChange(e.target.value)}
-                labelDefault="Elige tu tienda favorita"
-                // onDefault={(event) => handleSelectDefault(event.target)}
+                 name="preferedStoreId"
+                 type="select"
+                //  setParam={setParam}
+                 className="shop__select"
+                 error={!isStoreError ? true : false}
+                 errorText="Es necesario que selecciones una tienda"
+                 value={storeSelected}
+                 onChange={(e) => handleStoresChange(e.target.value)}
+                 labelDefault="Escoja una tienda"
               />
               <Input
                 type="text"
