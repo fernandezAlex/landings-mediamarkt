@@ -30,7 +30,6 @@ function App() {
   return (
     <>
       <Header />
-      <Section1/>
       <Section2 data={cardsSection} width={width}/>
       <Section3 width={width}/>
       {/* <TimeLine/> */}
