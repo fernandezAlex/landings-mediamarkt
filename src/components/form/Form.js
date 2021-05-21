@@ -97,6 +97,7 @@ const urlActionForm =
 const urlParams = "https://specials.mediamarkt.es/tools/api-mm/outletID/all";
 
 const Form = () => {
+  const [services, saveServices] = useState([]);
   const [name, setName] = useState("");
   const [isNameError, setIsNameError] = useState(false);
   const [surname, setSurname] = useState("");
@@ -120,6 +121,23 @@ const Form = () => {
   const [actionState, setActionState] = useState(null);
 
   const [stores, setStores] = useState([]);
+
+  const updateService = (service) => {
+
+    if(services.indexOf(service) > -1){
+      // Remove selected service
+      saveServices(
+        services.filter(serv => serv !== service)
+      )
+    } else {
+      // Add selected service
+      saveServices([
+        ...services,
+        service
+      ])
+    }
+    
+  }
 
   const handleNameChange = (value) => {
     setName(value);
@@ -325,14 +343,15 @@ const Form = () => {
             <div className="__header__title">
               <h2 className="--title">¿Qué servicios te interesan?</h2>
             </div>
-         
-            <div id="servicios" class="servicios basic">
-              { options.map((option, i) => (
-                
-                  <Service id={option.id} name={option.name} value={option.value} />
-              ))}
-            </div>      
 
+            <div class="row">
+              <div id="servicios" class="servicios basic">
+                { options.map((option, i) => (
+                  
+                    <Service id={i} name={option.name} value={option.value} services={services} updateService={updateService} />
+                ))}
+              </div>      
+            </div>
            
             {/* <Button
               onChange={() => handleOption1Change(options[0].value)}

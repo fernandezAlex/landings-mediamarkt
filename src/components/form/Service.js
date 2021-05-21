@@ -1,18 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Service = ({
   name,
   id,
-  value
+  value,
+  services, 
+  updateService
 }) => {
 
-  //const serviceId = `servicio_${id}`;
-  // id={serviceId}
+  
+  const handleClick = e => {
+    e.preventDefault();
+    updateService(e.target.id);
+  }
+
+  const isActived = services.indexOf(value) > -1 ? "active" : "";
+
+  const divServiceId = `servicio_${id}`;
+  const iServiceId = `i_${id}`;
+  
+  //<span id={sServiceId}>{name}</span>
   return (
-    <div className="col-xs-6 col-sm-3 col-lg-2 fibra--movil" data-service={name}>
-      <a href="#" className="active">
-          <input type="checkbox" name={value} value={value} className="" />
-          <span>{name}</span>
+    <div id={divServiceId} className="col-xs-6 col-sm-3 col-lg-2" data-service={name}>      
+      <a href="#" id={value} onClick={handleClick} className={isActived}>
+          <input id={iServiceId} type="checkbox" name={value} value={value} className="" />
+          {name}
       </a>
     </div>
   )
