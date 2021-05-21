@@ -2,53 +2,79 @@ import React from "react";
 import analytics from "../../helpers/analytics";
 
 
-const Section3 = ({width}) => {
-
-  const imgThumbnail =  'https://specials.mediamarkt.es/assets-react/zurich/mm-zurich-combo.png';
-  const imgThumbnail_mobile =  'https://specials.mediamarkt.es/assets-react/zurich/teaser_doble_800.png';
-  const imgThumbnail_desktop =  'https://specials.mediamarkt.es/assets-react/zurich/teaser_doble_1260.png';
-  
-
+const Section3 = ({ width }) => {
   return (
-    <div className="section__img">
-                <div className="img__teaser__section" 
-          >
-              <img src={imgThumbnail} alt={imgThumbnail}/>
-            </div>
-      {
-        width < 843 
-        ? (
-            <div className="img__teaser__mobile" 
-            >
-              <img src={imgThumbnail_mobile} alt={imgThumbnail_mobile}/>
-            </div>
-        ) : (
-          <div className="img__teaser__desktop" 
-          >
-              <img src={imgThumbnail_desktop} alt={imgThumbnail_desktop}/>
-            </div>
-        )
-    }
-          <div className="container__links__header">
-            <p>
-            Seguro de Responsabilidad Civil de Zurich Insurance PLC, Sucursal en España, distribuido por MediaMarkt Protect Solutions S.A. Agencia de Seguros Vinculada de Zurich Insurance PLC Sucursal en España, con NIF: A67123117, domicilio social en Edificio Prima Muntadas - C/Solsonés 2, Puerta C 08820 El Prat de Llobregat (Barcelona) y con N de inscripción en la DGSFP: AJ0240.
-            </p>
-              <div className="container__link__contact">
-                <a
-                  style={{ textDecoration: "none" }}
-                  onClick={() =>
-                    analytics("gaEvent", "Home_B2B_ED", "Click", "Home_B2B_EDUCACION_ver_folleto")
-                  }
-                  className="link__contact"
-                  href="https://assets.ctfassets.net/osyynfyvlyjc/7ntLWpC7tOJTKTeP5AVJmL/c5aca0515187aa0d9ffe3f46e6487056/MM18_217_Nota_informativa_Agentes_vinculados_MOD.pdf"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <font className="link__text"><strong>Nota informativa del mediador</strong></font>
-                </a>
+    <section data-test="mms-content-step-by-step-section" class="StepByStepstyled__StyledSection-aps9mk-0 MGgKt">
+        <div class="Grid__StyledGrid-fs0zc2-0 gPApBw">
+          <div class="Row__StyledRow-x4c83j-0 iOCseY">
+            <div class="Cellstyled__StyledCell-sc-1wk5bje-0 bcdKi">
+              <div class="StepByStepstyled__StyledContentBlock-aps9mk-1 kXxEBi">
+                <h2 color="white" font-family="default" spacing="base" font-size="xxl"
+                    aria-label="Así es como funciona" class="Typostyled__StyledInfoTypo-sc-1jga2g7-0 eqGOUK">Así es
+                    como funciona</h2>
+                <p color="white" font-size="sm" class="Typostyled__StyledInfoTypo-sc-1jga2g7-0 FAiMO"></p>
+                <div direction="horizontal" class="Spacer__StyledSpacer-sc-1wx27iz-0 eMgmEz"></div>
+                <div display="flex"
+                    class="FlexBox__StyledBox-sc-1vld6r2-0 cwkxZy StepByStepstyled__StyledFlexBox-aps9mk-2 dHmyUT">
+                    <div data-test="mms-content-step-by-step-element"
+                        class="StepElementstyled__StyledStepContainer-sc-1dvtcji-0 jGFaVO">
+                        <div color="white" data-test="mms-content-step-by-step-element-icon"
+                            class="Icon-sc-1vrq823-0 hHTCXG">
+                            <div color="white" class="IndexIconstyled__StyledIndex-xsog8v-0 eSNWdY"><span
+                                    color="white" font-family="branded" spacing="base" font-size="xl"
+                                    class="Typostyled__StyledInfoTypo-sc-1jga2g7-0 ewGXNU IndexIconstyled__StyledHeading-xsog8v-1 OzmYR">01</span>
+                            </div>
+                        </div>
+                        <div class="StepElementstyled__StyledStepContent-sc-1dvtcji-1 gpRzQM">
+                          <p color="white" font-size="md" class="Typostyled__StyledInfoTypo-sc-1jga2g7-0 bwYeki">
+                            Elige el servicio que te gustaría.
+                          </p>
+                        </div>
+                    </div>
+                    <div class="StepElementstyled__StyledLineContainer-sc-1dvtcji-2 kDRdFH">
+                        <div color="white" class="StepElementstyled__StyledConnectionLine-sc-1dvtcji-3 fbGZDd">
+                        </div>
+                    </div>
+                    <div data-test="mms-content-step-by-step-element"
+                        class="StepElementstyled__StyledStepContainer-sc-1dvtcji-0 jGFaVO">
+                        <div color="white" data-test="mms-content-step-by-step-element-icon"
+                            class="Icon-sc-1vrq823-0 hHTCXG">
+                            <div color="white" class="IndexIconstyled__StyledIndex-xsog8v-0 eSNWdY"><span
+                                    color="white" font-family="branded" spacing="base" font-size="xl"
+                                    class="Typostyled__StyledInfoTypo-sc-1jga2g7-0 ewGXNU IndexIconstyled__StyledHeading-xsog8v-1 OzmYR">02</span>
+                            </div>
+                        </div>
+                        <div class="StepElementstyled__StyledStepContent-sc-1dvtcji-1 gpRzQM">
+                          <p color="white" font-size="md" class="Typostyled__StyledInfoTypo-sc-1jga2g7-0 bwYeki">
+                            Déjanos tus datos.
+                          </p>
+                        </div>
+                    </div>
+                    <div class="StepElementstyled__StyledLineContainer-sc-1dvtcji-2 kDRdFH">
+                        <div color="white" class="StepElementstyled__StyledConnectionLine-sc-1dvtcji-3 fbGZDd">
+                        </div>
+                    </div>
+                    <div data-test="mms-content-step-by-step-element"
+                        class="StepElementstyled__StyledStepContainer-sc-1dvtcji-0 jGFaVO">
+                        <div color="white" data-test="mms-content-step-by-step-element-icon"
+                            class="Icon-sc-1vrq823-0 hHTCXG">
+                            <div color="white" class="IndexIconstyled__StyledIndex-xsog8v-0 eSNWdY"><span
+                                    color="white" font-family="branded" spacing="base" font-size="xl"
+                                    class="Typostyled__StyledInfoTypo-sc-1jga2g7-0 ewGXNU IndexIconstyled__StyledHeading-xsog8v-1 OzmYR">03</span>
+                            </div>
+                        </div>
+                        <div class="StepElementstyled__StyledStepContent-sc-1dvtcji-1 gpRzQM">
+                            <p color="white" font-size="md" class="Typostyled__StyledInfoTypo-sc-1jga2g7-0 bwYeki">
+                              Nos pondremos en contacto contigo para informarte
+                            </p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-      </div>
-      </div>
+          </div>
+        </div>
+      </section>
   );
 };
 

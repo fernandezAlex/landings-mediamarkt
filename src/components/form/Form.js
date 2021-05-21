@@ -91,8 +91,7 @@ const dataAnalyticsForm = {
   eventAction: "Click",
   eventLabel: "Zurich_enviar_formulario",
 };
-const urlActionForm =
-  "https://specials.mediamarkt.es/seguros-zurich/confirmacion";
+const urlActionForm = "https://specials.mediamarkt.es/seguros-zurich/confirmacion";
 
 const urlParams = "https://specials.mediamarkt.es/tools/api-mm/outletID/all";
 
@@ -319,11 +318,6 @@ const Form = () => {
 
   return (
     <>
-      {/* <Timeline
-    steps={steps}
-    
-    /> */}
-      <div className="form__wrapper" id="contacto"></div>
       <div className="form__container">
         <form
           name="campaign-form"
