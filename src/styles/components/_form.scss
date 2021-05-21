@@ -18,17 +18,23 @@
   }
   
   .form__container {
-    padding: 80px;
+   
     @media screen and (max-width: 1477px) {
-      padding: 40px;
+      padding: 0px 40px 40px 40px ;
     }
     @media only screen and (max-width: 768px) {
-      padding: 30px;
+      padding: 0px 30px 30px 30px;
     }
+    padding: 80px;
+    position: relative;
+    padding-top: 0px;
     max-width: 1477px;
     justify-content: center;
     margin: auto;
+    margin-top: -90px;
+
     .container__section__form {
+      background-color: #ffffff;
       border: 1px solid gray;
       border-radius: 4px;
       padding: 2% 5%;
