@@ -7,8 +7,10 @@ import {
   validateMultipleOptions,
   validateName,
   // validatePrefix,
+  validateAddress,
   validateEmail,
   validatePhone,
+  validateZipCode
 } from "../validations/ValidateFunctions";
 import ReCaptcha from "react-google-recaptcha";
 import axios from "axios";
@@ -23,48 +25,7 @@ import SelectBudget from "./SelectBudget";
 // const {stores} = datashops
 
 import multipleOptionsData from '../../data/options.json';
-
-const options = [
-  {
-    name: "Fibra + Móvil",
-    value: "fibra+movil",
-  },
-  {
-    name: "Fibra + Móvil + TV",
-    value: "fibra+movil+tv",
-  },
-  {
-    name: "Solo Fibra / ADSL",
-    value: "fibra-adsl",
-  },
-  {
-    name: "Movistar Prosegur Alarmas",
-    value: "movistar-prosegur-alarmas",
-  },
-  {
-    name: "Segunda linea",
-    value: "segunda-linea",
-  },
-  {
-    name: "Solo móvil",
-    value: "solo-movil",
-  },
-];
-
-const steps = [
-  {
-    name: "Elige el servicio que te gustaría",
-    active: true,
-  },
-  {
-    name: "Déjanos tus datos",
-    active: true,
-  },
-  {
-    name: "Nos pondremos en contacto contigo para informarte",
-    active: false,
-  },
-];
+import dataForm from '../../data/dataForm.json';
 
 const budget = [
   {
@@ -85,32 +46,23 @@ const budget = [
   },
 ];
 
-/* Data Form */
-
-const idCampaign = "225";
-const dataAnalyticsForm = {
-  event: "gaEvent",
-  eventCategory: "Home_B2B_COMERCIO",
-  eventAction: "Click",
-  eventLabel: "Zurich_enviar_formulario",
-};
-const urlActionForm = "https://specials.mediamarkt.es/seguros-zurich/confirmacion";
-
-const urlParams = "https://specials.mediamarkt.es/tools/api-mm/outletID/all";
-
 const Form = () => {
   const [multipleOptions, saveMultipleOptions] = useState([]);
   const [isMultipleOptionsError, setIsMultipleOptionsError] = useState(false);
   const [name, setName] = useState("");
   const [isNameError, setIsNameError] = useState(false);
-  const [surname, setSurname] = useState("");
-  const [isSurnameError, setIsSurnameError] = useState(false);
+  const [address, setAddress] = useState("");
+  const [isAddressError, setIsAddressError] = useState(false);
   const [prefix, setPrefix] = useState("");
   const [isPrefixError, setIsPrefixError] = useState(false);
   const [phone, setPhone] = useState("");
   const [isPhoneError, setIsPhoneError] = useState(false);
   const [email, setEmail] = useState("");
   const [isEmailError, setIsEmailError] = useState(false);
+  const [zipCode, setZipCode] = useState("");
+  const [isZipCodeError, setIsZipCodeError] = useState(false);
+
+
 
   const [storeSelected, setStoreSelected] = useState("");
   const [isStoreError, setIsStoreError] = useState(false);
@@ -138,16 +90,13 @@ const Form = () => {
         ...multipleOptions,
         option
       ])
-    }
-
-    console.log('>>>>>> updateMultipleOption');
-    const isOk = validateMultipleOptions(multipleOptions);
-    console.log('isOk: ' + isOk);
-    const isOk2 = validateMultipleOptions(multipleOptions);
-    console.log('isOk 2: ' + isOk2);
-    setIsMultipleOptionsError('isOk: ' + isOk);
-    
+    } 
   }
+
+  useEffect(() => {
+    const isOk = validateMultipleOptions(multipleOptions);
+    setIsMultipleOptionsError(!isOk);
+  }, [multipleOptions])
 
   const handleNameChange = (value) => {
     setName(value);
@@ -155,10 +104,10 @@ const Form = () => {
     setIsNameError(!isOk);
   };
 
-  const handleSurnameChange = (value) => {
-    setSurname(value);
-    const isOk = validateName(value);
-    setIsSurnameError(!isOk);
+  const handlerAddressChange = (value) => {
+    setAddress(value);
+    const isOk = validateAddress(value);
+    setIsAddressError(!isOk);
   };
 
   const handlePrefixChange = (value) => {
@@ -171,6 +120,12 @@ const Form = () => {
     setPhone(value);
     const isOk = validatePhone(value);
     setIsPhoneError(!isOk);
+  };
+
+  const handleZipCode = (value) => {
+    setZipCode(value);
+    const isOk = validateZipCode(value);
+    setIsZipCodeError(!isOk);
   };
 
   const handleStoresChange = (value) => {
@@ -202,28 +157,31 @@ const Form = () => {
   const isValidated =
     validateMultipleOptions(multipleOptions) &&
     validateName(name) &&
-    validateName(surname) &&
+    validateAddress(address) &&
     validateEmail(email) &&
     validatePhone(phone) &&
     terms;
 
   const isAllValidated =
     isValidated === true && recaptcha === true ? true : false;
+    //true;
 
   const dispatchForm = () => {
     if (isAllValidated) {
+    //if (true) {
       setIsLoading(true);
       setTimeout(() => {
         setIsLoading(false);
         setIsSubmited(true);
       }, 1000);
-      analytics(
-        dataAnalyticsForm.event,
-        dataAnalyticsForm.eventCategory,
-        dataAnalyticsForm.eventAction,
-        dataAnalyticsForm.eventLabel,
-      );
-      setActionState(urlActionForm);
+      /*analytics(
+        dataForm.dataAnalyticsForm.event,
+        dataForm.dataAnalyticsForm.eventCategory,
+        dataForm.dataAnalyticsForm.eventAction,
+        dataForm.dataAnalyticsForm.eventLabel
+      );*/
+      
+      setActionState(dataForm.urlActionForm);
     }
   };
 
@@ -251,7 +209,7 @@ const Form = () => {
             type="hidden"
             name="campaign"
             id="campaign"
-            value={idCampaign}
+            value={dataForm.idCampaign}
           />
 
           <MultipleOptions data={multipleOptionsData} error={isMultipleOptionsError} errorText="Es necesario que selecciones un servicio" multipleOptions={multipleOptions} updateMultipleOption={updateMultipleOption}  />
@@ -314,21 +272,21 @@ const Form = () => {
               <Input
                 type="text"
                 placeholder="Dirección: calle, número, piso, puerta"
-                value={name}
-                onChange={(e) => handleNameChange(e.target.value)}
+                value={address}
+                onChange={(e) => handlerAddressChange(e.target.value)}
                 name="adress"
-                error={isNameError}
-                errorText="Introduce un nombre válido"
+                error={isAddressError}
+                errorText="Introduce una dirección válida"
                 className="input"
                 id="adress"
               />
               <Input
                 type="text"
                 placeholder="Código postal"
-                value={phone}
-                onChange={(e) => handlePhoneChange(e.target.value)}
+                value={zipCode}
+                onChange={(e) => handleZipCode(e.target.value)}
                 name="zipCode"
-                error={isPhoneError}
+                error={isZipCodeError}
                 errorText="Introduce un codigo postal válido"
                 className="input"
                 id="zipCode"
@@ -336,7 +294,6 @@ const Form = () => {
               <Select
                  name="preferedStoreId"
                  type="select"
-                //  setParam={setParam}
                  className="shop__select"
                  error={!isStoreError ? true : false}
                  errorText="Es necesario que selecciones una tienda"
@@ -351,7 +308,7 @@ const Form = () => {
                 onChange={(e) => handlePhoneChange(e.target.value)}
                 name="phone"
                 error={isPhoneError}
-                errorText="Introduce un teléfono válido"
+                errorText="Introduce un número de teléfono válido"
                 className="input"
                 id="phone"
               />

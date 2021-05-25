@@ -33,8 +33,14 @@ export function validateMessage (message) {
     return MESSAGE_REGEX.test(message)
 }
 export function validateMultipleOptions (multipleOptions) {
-    console.log('function validateMultipleOptions');
-    //console.log(typeof(multipleOptions) === "undefined" ? 'no existe' : multipleOptions);
-    typeof(multipleOptions) === "undefined" ? console.log('no existe - false') : multipleOptions.length > 0  ? console.log('length - true') : console.log('length - false');
     return typeof(multipleOptions) === "undefined" ? false : multipleOptions.length > 0  ? true : false;
 }
+export function validateAddress (address) {
+    const MESSAGE_ADDRESS = /^[a-zA-Z0-9\s,'-]+$/;
+    return MESSAGE_ADDRESS.test(address)
+}
+export function validateZipCode (zipCode) {
+    const MESSAGE_ADDRESS = /^(?:0?[1-9]|[1-4]\d|5[0-2])\d{3}$/;
+    return MESSAGE_ADDRESS.test(zipCode)
+}
+

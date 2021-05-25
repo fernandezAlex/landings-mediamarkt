@@ -1,0 +1,10 @@
+{
+    "idCampaign" : "308",
+    "dataAnalyticsForm" : {
+        "event": "gaEvent",
+        "eventCategory": "Home_B2B_COMERCIO",
+        "eventAction": "Click",
+        "eventLabel": "Zurich_enviar_formulario"
+    },
+    "urlActionForm" : "https://specials.mediamarkt.es/seguros-zurich/confirmacion"
+}
