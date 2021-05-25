@@ -25,13 +25,14 @@ const MultipleOptions = ({
             </div>
 
             <div class="row container__input">
+              <input type="hidden" id="serviciosInput" name="serviciosInput" />
               <div id={ data.id } class="multipleOptions basic">
                 { 
                   data.options.map((option, i) => ( 
                     
                     <div id={ `servicio_${option.id}` } className="col-xs-6 col-sm-3 col-lg-2" data-service={option.name}>      
                       <a href="#" id={option.value} onClick={handleClick} className={ multipleOptions.indexOf(option.value) > -1 ? "active" : "" }>
-                          <input id={ `i_${option.id}` } type="checkbox" name={option.value} value={option.value} className="" />
+                          { /*<input id={ `i_${option.id}` } type="checkbox" name={option.value} value={option.value} className="" />*/ }
                           {option.name}
                       </a>
                     </div>

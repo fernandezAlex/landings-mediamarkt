@@ -96,6 +96,7 @@ const Form = () => {
   useEffect(() => {
     const isOk = validateMultipleOptions(multipleOptions);
     setIsMultipleOptionsError(!isOk);
+    document.getElementById('serviciosInput').value= multipleOptions;
   }, [multipleOptions])
 
   const handleNameChange = (value) => {
