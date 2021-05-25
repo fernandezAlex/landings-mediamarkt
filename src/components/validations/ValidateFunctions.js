@@ -32,3 +32,12 @@ export function validateMessage (message) {
     const MESSAGE_REGEX = /^[a-zA-Z0-9]{20,2000}$/;
     return MESSAGE_REGEX.test(message)
 }
+export function validateAddress (address) {
+    const MESSAGE_ADDRESS = /^[a-zA-Z0-9\s,'-]+$/;
+    return MESSAGE_ADDRESS.test(address)
+}
+export function validateZipCode (zipCode) {
+    const MESSAGE_ADDRESS = /^(?:0?[1-9]|[1-4]\d|5[0-2])\d{3}$/;
+    return MESSAGE_ADDRESS.test(zipCode)
+}
+

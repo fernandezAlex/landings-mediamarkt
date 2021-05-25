@@ -6,8 +6,10 @@ import analytics from "../../helpers/analytics";
 import {
   validateName,
   // validatePrefix,
+  validateAddress,
   validateEmail,
   validatePhone,
+  validateZipCode
 } from "../validations/ValidateFunctions";
 import ReCaptcha from "react-google-recaptcha";
 import axios from "axios";
@@ -93,20 +95,22 @@ const dataAnalyticsForm = {
 };
 const urlActionForm = "https://specials.mediamarkt.es/seguros-zurich/confirmacion";
 
-const urlParams = "https://specials.mediamarkt.es/tools/api-mm/outletID/all";
-
 const Form = () => {
   const [services, saveServices] = useState([]);
   const [name, setName] = useState("");
   const [isNameError, setIsNameError] = useState(false);
-  const [surname, setSurname] = useState("");
-  const [isSurnameError, setIsSurnameError] = useState(false);
+  const [address, setAddress] = useState("");
+  const [isAddressError, setIsAddressError] = useState(false);
   const [prefix, setPrefix] = useState("");
   const [isPrefixError, setIsPrefixError] = useState(false);
   const [phone, setPhone] = useState("");
   const [isPhoneError, setIsPhoneError] = useState(false);
   const [email, setEmail] = useState("");
   const [isEmailError, setIsEmailError] = useState(false);
+  const [zipCode, setZipCode] = useState("");
+  const [isZipCodeError, setIsZipCodeError] = useState(false);
+
+
 
   const [storeSelected, setStoreSelected] = useState("");
   const [isStoreError, setIsStoreError] = useState(false);
@@ -144,10 +148,10 @@ const Form = () => {
     setIsNameError(!isOk);
   };
 
-  const handleSurnameChange = (value) => {
-    setSurname(value);
-    const isOk = validateName(value);
-    setIsSurnameError(!isOk);
+  const handlerAddressChange = (value) => {
+    setAddress(value);
+    const isOk = validateAddress(value);
+    setIsAddressError(!isOk);
   };
 
   const handlePrefixChange = (value) => {
@@ -160,6 +164,12 @@ const Form = () => {
     setPhone(value);
     const isOk = validatePhone(value);
     setIsPhoneError(!isOk);
+  };
+
+  const handleZipCode = (value) => {
+    setZipCode(value);
+    const isOk = validateZipCode(value);
+    setIsZipCodeError(!isOk);
   };
 
   const handleStoresChange = (value) => {
@@ -188,33 +198,20 @@ const Form = () => {
     }
   };
 
-  // const [option1, setOption1] = useState()
-  // const handleOption1Change = (checked) => {
-  //   setOption1(checked);
-  // }
-
-  // const [option2, setOption2] = useState()
-  // const handleOption2Change = (checked) => {
-  //   setOption2(checked);
-  // }
-
-  // const [option3, setOption3] = useState()
-  // const handleOption3Change = (checked) => {
-  //   setOption3(checked);
-  // }
-
   const isValidated =
     validateName(name) &&
-    validateName(surname) &&
+    validateAddress(address) &&
     validateEmail(email) &&
     validatePhone(phone) &&
     terms;
 
   const isAllValidated =
     isValidated === true && recaptcha === true ? true : false;
+    // true;
 
   const dispatchForm = () => {
     if (isAllValidated) {
+    // if (true) {
       setIsLoading(true);
       setTimeout(() => {
         setIsLoading(false);
@@ -229,26 +226,6 @@ const Form = () => {
       setActionState(urlActionForm);
     }
   };
-
-  // // const [button, setButton] = useState(false)
-  // const [options, setOptions] = useState({
-  //   videos: [{id: 1, title: 'Video 1'}],
-  //   texts: [{id: 1, title: 'Texto 1'}],
-  //   audios: [{id: 1, title: 'Audio 1'}]
-  // })
-
-  // // const handleClickButton = (e) => {
-  // const handleClickButton = ({target}) => {
-  //     // e.preventDefault();
-  //     // const {target} = e
-  //     // setButton(!button)
-  //     setOptions({
-  //       ...options,
-  //       [target.name]: target.value,
-  //       button: target.checked,
-  //     })
-
-  //   }
 
   const [option1, setOption1] = useState("");
   const [option2, setOption2] = useState("");
@@ -265,48 +242,6 @@ const Form = () => {
       setOption1(p);
     
   };
-
-
-  // const handleOption2Change = (p) => {
-  //   if (option2 === "") {
-  //     setOption2(p);
-  //   } else if (option2 === p) {
-  //     setOption2("");
-  //   }
-  // };
-
-  // const handleOption3Change = (p) => {
-  //   if (option3 === "") {
-  //     setOption3(p);
-  //   } else if (option3 === p) {
-  //     setOption3("");
-  //   }
-  // };
-
-  // const handleOption4Change = (p) => {
-  //   if (option4 === "") {
-  //     setOption4(p);
-  //   } else if (option4 === p) {
-  //     setOption4("");
-  //   }
-  // };
-
-  // const handleOption5Change = (p) => {
-  //   if (option5 === "") {
-  //     setOption5(p);
-  //   } else if (option5 === p) {
-  //     setOption5("");
-  //   }
-  // };
-
-  // const handleOption6Change = (p) => {
-  //   if (option6 === "") {
-  //     setOption6(p);
-  //   } else if (option6 === p) {
-  //     setOption6("");
-  //   }
-  // };
-
   const checkIsChecked = (id) => {
     let isChecked = document.getElementById(id).checked;
     if(isChecked){
@@ -346,46 +281,6 @@ const Form = () => {
                 ))}
               </div>      
             </div>
-           
-            {/* <Button
-              onChange={() => handleOption1Change(options[0].value)}
-              name={options[0].name}
-              id={options[0].name}
-              type="checkbox"
-              className="option__input__check"
-              value={`${checkIsChecked(options[0].name) ? name :  }`}
-            />
-            {console.log(option1)}discos */}
-            {/* <Button
-              onChange={handleOption2Change(options[1].value)}
-              name={options[1].name}
-              type="button"
-              className="option__input__check"
-            />
-            <Button
-              onChange={handleOption3Change(options[2].value)}
-              name={options[2].name}
-              type="button"
-              className="option__input__check"
-            />
-            <Button
-              onChange={handleOption4Change(options[3].value)}
-              name={options[3].name}
-              type="button"
-              className="option__input__check"
-            />
-            <Button
-              onChange={handleOption5Change(options[4].value)}
-              name={options[4].name}
-              type="button"
-              className="option__input__check"
-            />
-            <Button
-              onChange={handleOption6Change(options[5].value)}
-              name={options[5].name}
-              type="button"
-              className="option__input__check"
-            /> */}
           </div>
 
           <div className="container__section__form">
@@ -446,21 +341,21 @@ const Form = () => {
               <Input
                 type="text"
                 placeholder="Dirección: calle, número, piso, puerta"
-                value={name}
-                onChange={(e) => handleNameChange(e.target.value)}
+                value={address}
+                onChange={(e) => handlerAddressChange(e.target.value)}
                 name="adress"
-                error={isNameError}
-                errorText="Introduce un nombre válido"
+                error={isAddressError}
+                errorText="Introduce una dirección válida"
                 className="input"
                 id="adress"
               />
               <Input
                 type="text"
                 placeholder="Código postal"
-                value={phone}
-                onChange={(e) => handlePhoneChange(e.target.value)}
+                value={zipCode}
+                onChange={(e) => handleZipCode(e.target.value)}
                 name="zipCode"
-                error={isPhoneError}
+                error={isZipCodeError}
                 errorText="Introduce un codigo postal válido"
                 className="input"
                 id="zipCode"
@@ -468,7 +363,6 @@ const Form = () => {
               <Select
                  name="preferedStoreId"
                  type="select"
-                //  setParam={setParam}
                  className="shop__select"
                  error={!isStoreError ? true : false}
                  errorText="Es necesario que selecciones una tienda"
@@ -483,7 +377,7 @@ const Form = () => {
                 onChange={(e) => handlePhoneChange(e.target.value)}
                 name="phone"
                 error={isPhoneError}
-                errorText="Introduce un teléfono válido"
+                errorText="Introduce un número de teléfono válido"
                 className="input"
                 id="phone"
               />
