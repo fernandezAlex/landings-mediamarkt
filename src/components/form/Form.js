@@ -4,6 +4,7 @@ import AsyncButton from "./AsyncButton";
 import Checkbox from "./Checkbox";
 import analytics from "../../helpers/analytics";
 import {
+  validateMultipleOptions,
   validateName,
   // validatePrefix,
   validateEmail,
@@ -14,12 +15,14 @@ import axios from "axios";
 import InfoForm from "./InfoForm";
 import Select from "./Select";
 import Button from "./Button";
-import Service from "./Service";
+import MultipleOptions from "./MultipleOptions";
 import Timeline from "../timeline/TimeLine";
 
 import SelectBudget from "./SelectBudget";
 // import datashops from '../../data/datashops.json'
 // const {stores} = datashops
+
+import multipleOptionsData from '../../data/options.json';
 
 const options = [
   {
@@ -96,7 +99,8 @@ const urlActionForm = "https://specials.mediamarkt.es/seguros-zurich/confirmacio
 const urlParams = "https://specials.mediamarkt.es/tools/api-mm/outletID/all";
 
 const Form = () => {
-  const [services, saveServices] = useState([]);
+  const [multipleOptions, saveMultipleOptions] = useState([]);
+  const [isMultipleOptionsError, setIsMultipleOptionsError] = useState(false);
   const [name, setName] = useState("");
   const [isNameError, setIsNameError] = useState(false);
   const [surname, setSurname] = useState("");
@@ -121,20 +125,27 @@ const Form = () => {
 
   const [stores, setStores] = useState([]);
 
-  const updateService = (service) => {
+  const updateMultipleOption = (option) => {
 
-    if(services.indexOf(service) > -1){
-      // Remove selected service
-      saveServices(
-        services.filter(serv => serv !== service)
+    if(multipleOptions.indexOf(option) > -1){
+      // Remove selected option
+      saveMultipleOptions(
+        multipleOptions.filter(opt => opt !== option)
       )
     } else {
-      // Add selected service
-      saveServices([
-        ...services,
-        service
+      // Add selected option
+      saveMultipleOptions([
+        ...multipleOptions,
+        option
       ])
     }
+
+    console.log('>>>>>> updateMultipleOption');
+    const isOk = validateMultipleOptions(multipleOptions);
+    console.log('isOk: ' + isOk);
+    const isOk2 = validateMultipleOptions(multipleOptions);
+    console.log('isOk 2: ' + isOk2);
+    setIsMultipleOptionsError('isOk: ' + isOk);
     
   }
 
@@ -188,22 +199,8 @@ const Form = () => {
     }
   };
 
-  // const [option1, setOption1] = useState()
-  // const handleOption1Change = (checked) => {
-  //   setOption1(checked);
-  // }
-
-  // const [option2, setOption2] = useState()
-  // const handleOption2Change = (checked) => {
-  //   setOption2(checked);
-  // }
-
-  // const [option3, setOption3] = useState()
-  // const handleOption3Change = (checked) => {
-  //   setOption3(checked);
-  // }
-
   const isValidated =
+    validateMultipleOptions(multipleOptions) &&
     validateName(name) &&
     validateName(surname) &&
     validateEmail(email) &&
@@ -229,83 +226,6 @@ const Form = () => {
       setActionState(urlActionForm);
     }
   };
-
-  // // const [button, setButton] = useState(false)
-  // const [options, setOptions] = useState({
-  //   videos: [{id: 1, title: 'Video 1'}],
-  //   texts: [{id: 1, title: 'Texto 1'}],
-  //   audios: [{id: 1, title: 'Audio 1'}]
-  // })
-
-  // // const handleClickButton = (e) => {
-  // const handleClickButton = ({target}) => {
-  //     // e.preventDefault();
-  //     // const {target} = e
-  //     // setButton(!button)
-  //     setOptions({
-  //       ...options,
-  //       [target.name]: target.value,
-  //       button: target.checked,
-  //     })
-
-  //   }
-
-  const [option1, setOption1] = useState("");
-  const [option2, setOption2] = useState("");
-  const [option3, setOption3] = useState("");
-  const [option4, setOption4] = useState("");
-  const [option5, setOption5] = useState("");
-  const [option6, setOption6] = useState("");
-
-  const handleOption1Change = (p) => {
-    // if (option1 === "") {
-    //   setOption1(p);
-    // }
-
-      setOption1(p);
-    
-  };
-
-
-  // const handleOption2Change = (p) => {
-  //   if (option2 === "") {
-  //     setOption2(p);
-  //   } else if (option2 === p) {
-  //     setOption2("");
-  //   }
-  // };
-
-  // const handleOption3Change = (p) => {
-  //   if (option3 === "") {
-  //     setOption3(p);
-  //   } else if (option3 === p) {
-  //     setOption3("");
-  //   }
-  // };
-
-  // const handleOption4Change = (p) => {
-  //   if (option4 === "") {
-  //     setOption4(p);
-  //   } else if (option4 === p) {
-  //     setOption4("");
-  //   }
-  // };
-
-  // const handleOption5Change = (p) => {
-  //   if (option5 === "") {
-  //     setOption5(p);
-  //   } else if (option5 === p) {
-  //     setOption5("");
-  //   }
-  // };
-
-  // const handleOption6Change = (p) => {
-  //   if (option6 === "") {
-  //     setOption6(p);
-  //   } else if (option6 === p) {
-  //     setOption6("");
-  //   }
-  // };
 
   const checkIsChecked = (id) => {
     let isChecked = document.getElementById(id).checked;
@@ -333,60 +253,8 @@ const Form = () => {
             id="campaign"
             value={idCampaign}
           />
-          <div className="container__section__form">
-            <div className="__header__title">
-              <h2 className="--title">¿Qué servicios te interesan?</h2>
-            </div>
 
-            <div class="row">
-              <div id="servicios" class="servicios basic">
-                { options.map((option, i) => (
-                  
-                    <Service id={i} name={option.name} value={option.value} services={services} updateService={updateService} />
-                ))}
-              </div>      
-            </div>
-           
-            {/* <Button
-              onChange={() => handleOption1Change(options[0].value)}
-              name={options[0].name}
-              id={options[0].name}
-              type="checkbox"
-              className="option__input__check"
-              value={`${checkIsChecked(options[0].name) ? name :  }`}
-            />
-            {console.log(option1)}discos */}
-            {/* <Button
-              onChange={handleOption2Change(options[1].value)}
-              name={options[1].name}
-              type="button"
-              className="option__input__check"
-            />
-            <Button
-              onChange={handleOption3Change(options[2].value)}
-              name={options[2].name}
-              type="button"
-              className="option__input__check"
-            />
-            <Button
-              onChange={handleOption4Change(options[3].value)}
-              name={options[3].name}
-              type="button"
-              className="option__input__check"
-            />
-            <Button
-              onChange={handleOption5Change(options[4].value)}
-              name={options[4].name}
-              type="button"
-              className="option__input__check"
-            />
-            <Button
-              onChange={handleOption6Change(options[5].value)}
-              name={options[5].name}
-              type="button"
-              className="option__input__check"
-            /> */}
-          </div>
+          <MultipleOptions data={multipleOptionsData} error={isMultipleOptionsError} errorText="Es necesario que selecciones un servicio" multipleOptions={multipleOptions} updateMultipleOption={updateMultipleOption}  />
 
           <div className="container__section__form">
             <div className="__header__title">
@@ -503,7 +371,6 @@ const Form = () => {
                 text='He leído y acepto la <a class="link__terms" href="https://www.mediamarkt.es/es/legal/politica-de-privacidad" rel="noreferrer" target="_blank">Política de Privacidad</a> y las <a class="link__terms" href="https://www.mediamarkt.es/es/legal/condiciones-de-uso-de-la-web" rel="noreferrer" target="_blank">condiciones de uso</a>.'
                 errorText="Debes aceptar los términos y condiciones"
               />
-              {console.log(terms, newsletter)}
               <Checkbox
                 onChange={(e) => handleNewsletterChange(e.target.checked)}
                 type="checkbox"

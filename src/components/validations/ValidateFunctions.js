@@ -32,3 +32,9 @@ export function validateMessage (message) {
     const MESSAGE_REGEX = /^[a-zA-Z0-9]{20,2000}$/;
     return MESSAGE_REGEX.test(message)
 }
+export function validateMultipleOptions (multipleOptions) {
+    console.log('function validateMultipleOptions');
+    //console.log(typeof(multipleOptions) === "undefined" ? 'no existe' : multipleOptions);
+    typeof(multipleOptions) === "undefined" ? console.log('no existe - false') : multipleOptions.length > 0  ? console.log('length - true') : console.log('length - false');
+    return typeof(multipleOptions) === "undefined" ? false : multipleOptions.length > 0  ? true : false;
+}
