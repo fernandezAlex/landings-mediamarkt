@@ -25,7 +25,7 @@ const Card = ({
                     <div className="container__text">
                         <div className="--title">
                             <p className="--title__card"
-                            dangerouslySetInnerHTML={{ __html: {title} }} />
+                            dangerouslySetInnerHTML={{ __html: title }} />
 
                         </div>
                         <div className="--subtitle">
