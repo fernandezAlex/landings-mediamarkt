@@ -45,9 +45,6 @@ const MultipleOptions = ({
               </div>     
             </div>
           </div>
-
-
-       
   ) 
 };
 

@@ -27,24 +27,6 @@ import SelectBudget from "./SelectBudget";
 import multipleOptionsData from '../../data/options.json';
 import dataForm from '../../data/dataForm.json';
 
-const budget = [
-  {
-    name: "Hasta 20€/ mes",
-    value: 0,
-  },
-  {
-    name: "De 20€ a 40€ / mes",
-    value: 1,
-  },
-  {
-    name: "De 40€ a 60€ / mes",
-    value: 2,
-  },
-  {
-    name: "Más de 80€ / mes",
-    value: 3,
-  },
-];
 
 const Form = () => {
   const [multipleOptions, saveMultipleOptions] = useState([]);
@@ -62,7 +44,8 @@ const Form = () => {
   const [zipCode, setZipCode] = useState("");
   const [isZipCodeError, setIsZipCodeError] = useState(false);
 
-
+  const [budgetSelected, setBudgetSelected] = useState("");
+  const [isBudgetError, setIsBudgetError] = useState(false);
 
   const [storeSelected, setStoreSelected] = useState("");
   const [isStoreError, setIsStoreError] = useState(false);
@@ -133,6 +116,12 @@ const Form = () => {
     setStoreSelected(value);
     const isOk = value.length > 0 ? true : false;
     setIsStoreError(isOk);
+  };
+
+  const handleBudgetChange = (value) => {
+    setBudgetSelected(value);
+    const isOk = value.length > 0 ? true : false;
+    setIsBudgetError(isOk);
   };
 
   const handleEmailChange = (value) => {
@@ -224,12 +213,12 @@ const Form = () => {
             <SelectBudget
               name="budget"
               type="select"
-              data={budget}
+              value={storeSelected}
               className="budget__select"
-              error={!isStoreError ? true : false}
+              error={!isBudgetError ? true : false}
               errorText="Es necesario que selecciones una opción"
               // value={storeSelected}
-              onChange={(e) => handleStoresChange(e.target.value)}
+              onChange={(e) => handleBudgetChange(e.target.value)}
               labelDefault="Elige presupuesto"
               // onDefault={(event) => handleSelectDefault(event.target)}
             />
