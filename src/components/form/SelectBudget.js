@@ -27,18 +27,17 @@ const SelectBudget = ({
 	errorText,
 	className,
 	id,
-    labelDefault,
+	labelDefault,
+	value
 }) => {
-	const {name, value} = budget
-	// const labelDefault = "<span id='span'>*</span>" 
-	const label = `${labelDefault}         <span id='span'>*</span>` 
+	const label = `${labelDefault}  <span id='span'>*</span>` 
+
 	return (
 		<div className="container__input">
 			<div className="container__select">
 				<select
 					type={type}
-					name={name}
-					value={value}
+					name="budget"
 					onChange={onChange}
 					className={`${!error ? className : `${className} invalid_field`}`}
 					errorText={errorText}
@@ -48,7 +47,7 @@ const SelectBudget = ({
 					<option selected hidden value="" dangerouslySetInnerHTML={{__html: label }} />
 					{
 						budget.map(({name}) => <option key={name} value={name}>{name}</option>)
-						}    
+					}    
 				</select>
 			</div>
 			<div className="input__error__select">

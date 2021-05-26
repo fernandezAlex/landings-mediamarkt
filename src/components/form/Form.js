@@ -79,7 +79,7 @@ const Form = () => {
   useEffect(() => {
     const isOk = validateMultipleOptions(multipleOptions);
     setIsMultipleOptionsError(!isOk);
-    document.getElementById('serviciosInput').value= multipleOptions;
+    document.getElementById('serviciosSelect').value= multipleOptions;
   }, [multipleOptions])
 
   const handleNameChange = (value) => {
@@ -202,7 +202,13 @@ const Form = () => {
             value={dataForm.idCampaign}
           />
 
-          <MultipleOptions data={multipleOptionsData} error={isMultipleOptionsError} errorText="Es necesario que selecciones un servicio" multipleOptions={multipleOptions} updateMultipleOption={updateMultipleOption}  />
+          <MultipleOptions 
+            data={multipleOptionsData} 
+            error={isMultipleOptionsError} 
+            errorText="Es necesario que selecciones un servicio" 
+            multipleOptions={multipleOptions} 
+            updateMultipleOption={updateMultipleOption}  
+          />
 
           <div className="container__section__form">
             <div className="__header__title">
@@ -213,11 +219,10 @@ const Form = () => {
             <SelectBudget
               name="budget"
               type="select"
-              value={storeSelected}
+              value={budgetSelected}
               className="budget__select"
               error={!isBudgetError ? true : false}
               errorText="Es necesario que selecciones una opción"
-              // value={storeSelected}
               onChange={(e) => handleBudgetChange(e.target.value)}
               labelDefault="Elige presupuesto"
               // onDefault={(event) => handleSelectDefault(event.target)}
@@ -240,7 +245,7 @@ const Form = () => {
                 placeholder="Introduce tu nombre"
                 value={name}
                 onChange={(e) => handleNameChange(e.target.value)}
-                name="company"
+                name="name"
                 error={isNameError}
                 errorText="Introduce un nombre válido"
                 className="input"
@@ -264,7 +269,7 @@ const Form = () => {
                 placeholder="Dirección: calle, número, piso, puerta"
                 value={address}
                 onChange={(e) => handlerAddressChange(e.target.value)}
-                name="adress"
+                name="address"
                 error={isAddressError}
                 errorText="Introduce una dirección válida"
                 className="input"
@@ -321,7 +326,7 @@ const Form = () => {
               <Checkbox
                 onChange={(e) => handleNewsletterChange(e.target.checked)}
                 type="checkbox"
-                name="newsletter"
+                name="newsletter-agree"
                 id="newsletter"
                 value="yes"
                 required=""

@@ -25,7 +25,7 @@ const MultipleOptions = ({
             </div>
 
             <div class="row container__input">
-              <input type="hidden" id="serviciosInput" name="serviciosInput" />
+              <input type="hidden" id="serviciosSelect" name="serviciosSelect" />
               <div id={ data.id } class="multipleOptions basic">
                 { 
                   data.options.map((option, i) => ( 
