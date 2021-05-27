@@ -5,8 +5,8 @@ import Section1 from "./components/sections/Section1";
 import Section2 from "./components/sections/Section2";
 import Section3 from "./components/sections/Section3";
 import Form from "./components/form/Form";
-import {cardsSection} from './data/cards'
-import { Nav } from "./components/nav/Nav";
+import {cardsSection} from './data/cards';
+import Stepper from "./components/stepper/Stepper";
 
 
 import TimeLine from "./components/timeline/TimeLine_";
@@ -32,8 +32,9 @@ function App() {
       <Header />
       <Section2 data={cardsSection} width={width}/>
       <Section3 width={width}/>
-      {/* <TimeLine/> */}
       <Form />
+      <Stepper />
+
     </>
   );
 }

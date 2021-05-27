@@ -164,12 +164,12 @@ const Form = () => {
         setIsLoading(false);
         setIsSubmited(true);
       }, 1000);
-      /*analytics(
+      analytics(
         dataForm.dataAnalyticsForm.event,
         dataForm.dataAnalyticsForm.eventCategory,
         dataForm.dataAnalyticsForm.eventAction,
         dataForm.dataAnalyticsForm.eventLabel
-      );*/
+      );
       
       setActionState(dataForm.urlActionForm);
     }
