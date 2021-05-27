@@ -286,16 +286,6 @@ const Form = () => {
                 className="input"
                 id="zipCode"
               />
-              <Select
-                 name="preferedStoreId"
-                 type="select"
-                 className="shop__select"
-                 error={!isStoreError ? true : false}
-                 errorText="Es necesario que selecciones una tienda"
-                 value={storeSelected}
-                 onChange={(e) => handleStoresChange(e.target.value)}
-                 labelDefault="Escoja una tienda"
-              />
               <Input
                 type="text"
                 placeholder="Teléfono"
@@ -306,6 +296,16 @@ const Form = () => {
                 errorText="Introduce un número de teléfono válido"
                 className="input"
                 id="phone"
+              />
+              <Select
+                 name="preferedStoreId"
+                 type="select"
+                 className="shop__select"
+                 error={!isStoreError ? true : false}
+                 errorText="Es necesario que selecciones una tienda"
+                 value={storeSelected}
+                 onChange={(e) => handleStoresChange(e.target.value)}
+                 labelDefault="Escoja una tienda"
               />
             </div>
             <div className="footer__form">

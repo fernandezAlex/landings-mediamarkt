@@ -5,7 +5,7 @@ const Section2 = ({data}) => {
     return (
       <div className="section__">
         <p>
-          MediaMarkt Business ayuda a las empresas a desarrollar su actividad ofreciéndoles soluciones financieras a medida. Nuestros expertos te asesoran en la elección de la mejor solución que se adapte a tus necesidades.
+          Sabemos lo importante que es sentirte protegido en todo momento, por eso Movistar Prosegur Alarmas está pensado para ti. Con una alarma más innovadora, este sistema de seguridad 360º esta diseñado para proteger tu hogar y a los que más quieres.
         </p>
         {data.map((data, i) => {
           return <SectionImg key={i} data={data} />;
