@@ -21,11 +21,11 @@ const Modal = ({
               </button>
               <div className="margin_button">
               </div>
-
+                <h2>
+                  {data.title}
+                </h2>
               <div>
-                <p>
                 <p dangerouslySetInnerHTML={{ __html: data.contentModal }} />
-                </p>
               </div>
             </div>
           </div>
