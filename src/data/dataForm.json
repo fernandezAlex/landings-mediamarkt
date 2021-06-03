@@ -2,9 +2,9 @@
     "idCampaign" : "308",
     "dataAnalyticsForm" : {
         "event": "gaEvent",
-        "eventCategory": "Home_B2B_COMERCIO",
+        "eventCategory": "Movistar",
         "eventAction": "Click",
-        "eventLabel": "Zurich_enviar_formulario"
+        "eventLabel": "Movistar_enviar_formulario"
     },
     "urlActionForm" : "https://specials.mediamarkt.es/movistar/confirmacion"
 }
