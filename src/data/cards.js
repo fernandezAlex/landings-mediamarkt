@@ -153,9 +153,9 @@ export const cardsSection4 = [
     {
         title: "Recompra de dispositivos",
         subtitle: "Tu parque tecnológico siempre renovado",
-        slug: "#contacto",
+        slug: "https://specials.mediamarkt.es/assets-react/b2b/triptico_b2b_Service_Pro.pdf",
         imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Dispositivos.jpg",
-        button: "Pregúntanos",
+        button: "Ver más",
         eventGa: "gaEvent",
         eventCategory: "Home_B2B",
         eventAction: "Click",
@@ -164,9 +164,9 @@ export const cardsSection4 = [
     {
         title: "Reparaciones",
         subtitle: "Nos ocupamos que tu actividad no cese",
-        slug: "#contacto",
+        slug: "https://specials.mediamarkt.es/assets-react/b2b/triptico_b2b_Service_Pro.pdf",
         imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Reparaciones.jpg",
-        button: "Pregúntanos",
+        button: "Ver más",
         eventGa: "gaEvent",
         eventCategory: "Home_B2B",
         eventAction: "Click",
