@@ -13,23 +13,9 @@ export const cardsSection = [
       imgPosition: true
     },
     {
-      title: "Préstamo Bancario",
-      content: `Nuestra entidad financiera ofrecerá una cantidad de dinero que la empresa tendrá que devolver en los plazos y según las condiciones pactadas. <ul><li>Sin sorpresas: La cuota es fija durante todo el contrato</li> <li>Importes pequeños: La mejor solución para financiar nuestros productos y soluciones de menor importe</li><li> Mejora la imagen externa de tu negocio: Te brinda la oportunidad de renovar la imagen de tu negocio</li><li> Es sencillo y cómodo: Te financiamos el 100% de valor del producto y/o solución</li></ul>`,
-      imgThumbnail:
-        "https://specials.mediamarkt.es/assets-react/b2b-soluciones-financieras/062007_Imágenes_B2B_soluciones_financieras_2_480x270.png",
-      slug: "https://specials.mediamarkt.es/empresas/comercio/proceso-venta",
-      button: "",
-      buttonExtra: "> Ver más ",
-      event: "gaEvent",
-      eventCategory: "Home_B2B_COMERCIO",
-      eventAction: "Click",
-      eventLabel: "Home_B2B_COMERCIO_proceso_venta",
-      imgPosition: false
-    },
-    {
       title: "Renting tecnológico",
       content: `Es un contrato de alquiler de equipos tecnológicos por un periodo a medio o largo plazo donde la empresa podrá disfrutar de los bienes a cambio de una cuota de alquiler fija.`,
-      contentModal:`<p align="center">Ventajas del renting tecnológico</p><div class="staked_modal"> <span>Contables</span> <span>Económicos fiscales</span> <span>Tecnológicas</span></div><ul><li>No suma CIRBE.</li><li>Gastos fiscalmente deducibles.</li><li>Tesorería y capacidad de endeudamiento, intactas.</li><li>Sin inversión inicial.</li><li>Bienes de equipo siempre actualizados.</li><li>Incluye herramientas de gestión de activos tecnológicos e industriales.</li><li>Solución a medida, evolutiva, flexible y global</li></ul> <br><p> ¿Cómo funciona?</p><div class="stepper_modal"> <span>1.Propuesta</span> <span>2.Viabilidad </span> <span>3.Contrato electrónico</span> <span>4.Contrato evolutivo</span></div><ol><li> Solicitud financiera de renting</li><li> Proceso de aprobación</li><li> Firma del contrato electrónico</li><li> Activación del contrato y renovación evolutiva</li></ol>`,
+      contentModal:`<p align="">Ventajas del renting tecnológico</p><div class="staked_modal"> <span>Contables</span> <span>Económicos fiscales</span> <span>Tecnológicas</span></div><ul><li>No suma CIRBE.</li><li>Gastos fiscalmente deducibles.</li><li>Tesorería y capacidad de endeudamiento, intactas.</li><li>Sin inversión inicial.</li><li>Bienes de equipo siempre actualizados.</li><li>Incluye herramientas de gestión de activos tecnológicos e industriales.</li><li>Solución a medida, evolutiva, flexible y global</li></ul> <br><div class="staked_modal"> <span>Pago por uso, la mejor alternativa a la compra. No lo compras, lo disfrutas.</span></div><p> ¿Cómo funciona?</p><div class="stepper_modal"> <span>1.Propuesta</span> <span>2.Viabilidad </span> <span>3.Contrato electrónico</span> <span>4.Contrato evolutivo</span></div><ol><li> Solicitud financiera de renting</li><li> Proceso de aprobación</li><li> Firma del contrato electrónico</li><li> Activación del contrato y renovación evolutiva</li></ol>`,
       imgThumbnail:
         "https://specials.mediamarkt.es/assets-react/b2b-soluciones-financieras/062007_Imágenes_B2B_soluciones_financieras_3_480x270.png",
       slug: "https://specials.mediamarkt.es/empresas/comercio/proceso-venta",
@@ -38,7 +24,7 @@ export const cardsSection = [
       eventCategory: "Home_B2B_COMERCIO",
       eventAction: "Click",
       eventLabel: "Home_B2B_COMERCIO_proceso_venta",
-      imgPosition: true
+      imgPosition: false
     },
     {
       title: "Leasing",
@@ -52,7 +38,7 @@ export const cardsSection = [
       eventCategory: "Home_B2B_COMERCIO",
       eventAction: "Click",
       eventLabel: "Home_B2B_COMERCIO_proceso_venta",
-      imgPosition: false
+      imgPosition: true
     },
   ];
   

@@ -37,7 +37,7 @@
       top: 2%;
       max-width: 1077px;
       overflow: auto;
-      height: 100%;
+      height: auto;
       @media screen and (min-width: 1477px) {
         top: 10vw;
         transform: translate(-50%);

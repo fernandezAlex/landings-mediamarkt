@@ -15,12 +15,12 @@ import ReCaptcha from "react-google-recaptcha";
 
 /* Data Form */
 
-const idCampaign = "225";
+const idCampaign = "267";
 const dataAnalyticsForm = {
   event: "gaEvent",
-  eventCategory: "Home_B2B_COMERCIO",
+  eventCategory: "Home_B2B_Soluciones_financieras",
   eventAction: "Click",
-  eventLabel: "Home_B2B_Comercio_enviar_formulario",
+  eventLabel: "Home_B2B_Soluciones_financieras",
 };
 const urlActionForm =
   "https://specials.mediamarkt.es/empresas/confirmacion";
