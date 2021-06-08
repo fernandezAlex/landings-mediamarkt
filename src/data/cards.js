@@ -175,9 +175,9 @@ export const cardsSection4 = [
     {
         title: "Instalaciones",
         subtitle: "Contamos con diferentes soluciones",
-        slug: "#contacto",
+        slug: "https://specials.mediamarkt.es/assets-react/b2b/triptico_b2b_Service_Pro.pdf",
         imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Instalaciones.jpg",
-        button: "Pregúntanos",
+        button: "Ver más",
         eventGa: "gaEvent",
         eventCategory: "Home_B2B",
         eventAction: "Click",
