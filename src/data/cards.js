@@ -1,16 +1,16 @@
 
 export const cardsSection2 = [
-    {
-      title: "Digitaliza tu empresa <br>con Apple",
-      subtitle: "Renueva tu parque tecnológico sin grandes inversiones. Pregunta por el programa de recompra de dispositivos usados.",
-      imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/062007_Campana_Apple_Mayo_bannersweb_800x600.png",
-      button: "Consúltanos",
-      slug: "#contacto",
-      eventGa: "gaEvent",
-      eventCategory: "Home_B2B",
-      eventAction: "Click",
-      eventLabel: "Home_B2B_destacado4"
-    },
+    // {
+    //   title: "Digitaliza tu empresa <br>con Apple",
+    //   subtitle: "Renueva tu parque tecnológico sin grandes inversiones. Pregunta por el programa de recompra de dispositivos usados.",
+    //   imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/062007_Campana_Apple_Mayo_bannersweb_800x600.png",
+    //   button: "Consúltanos",
+    //   slug: "#contacto",
+    //   eventGa: "gaEvent",
+    //   eventCategory: "Home_B2B",
+    //   eventAction: "Click",
+    //   eventLabel: "Home_B2B_destacado4"
+    // },
     {
         title: "Evalúa la competencia digital de tu centro educativo",
         subtitle: "Consigue tu informe de diagnosis a través de nuestro formulario, son solo 2 minutos",
@@ -43,6 +43,17 @@ export const cardsSection2 = [
         eventCategory: "Home_B2B",
         eventAction: "Click",
         eventLabel: "Home_B2B_destacado3"
+    },
+    {
+        title: "Google Nest Wifi para empresas",
+        subtitle: "Crea tu red WiFi estable y segura pregúntanos por tu mejor solución",
+        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Teasergoogle.png",
+        button: "Consúltanos",
+        slug: "#contacto",
+        eventGa: "gaEvent",
+        eventCategory: "Home_B2B",
+        eventAction: "Click",
+        eventLabel: "Home_B2B_destacado4"
     },
     {
         title: "Soluciones de prevención frente al Covid-19",
