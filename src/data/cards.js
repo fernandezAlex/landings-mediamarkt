@@ -12,6 +12,17 @@ export const cardsSection2 = [
     //   eventLabel: "Home_B2B_destacado4"
     // },
     {
+        title: "Transformación digital del puesto de trabajo",
+        subtitle: "Diseñamos la solución que mejor se adapta a cada usuario",
+        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b-transformacion-digital/Empresa_Oficina_B2B_900x356_02.png",
+        button: "Más información",
+        slug: "https://forms.gle/KpL2S2xqxCDv2g4b8",
+        eventGa: "gaEvent",
+        eventCategory: "Home_B2B",
+        eventAction: "Click",
+        eventLabel: "Home_B2B_destacado1"
+    },
+    {
         title: "Evalúa la competencia digital de tu centro educativo",
         subtitle: "Consigue tu informe de diagnosis a través de nuestro formulario, son solo 2 minutos",
         imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/062007_NEWS_EDUCACION_.png",
