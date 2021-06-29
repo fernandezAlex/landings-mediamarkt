@@ -14,7 +14,7 @@ export const cardsSection2 = [
     {
         title: "Transformación digital del puesto de trabajo",
         subtitle: "Diseñamos la solución que mejor se adapta a cada usuario",
-        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b-transformacion-digital/Empresa_Oficina_B2B_900x356_02.png",
+        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b-transformacion-digital/062007_Teaser_Empresa_Oficina_B2B_350x298.png",
         button: "Más información",
         slug: "https://forms.gle/KpL2S2xqxCDv2g4b8",
         eventGa: "gaEvent",
