@@ -232,7 +232,7 @@ const Form = () => {
           <div className="container__section__form">
             <div className="__header__title">
               <h2 className="--title">
-                Dejanos tus datos y te haremos una oferta
+                Déjanos tus datos y te haremos una oferta
               </h2>
               <p className="--text">
                 Los campos marcados con un asterisco (
@@ -253,7 +253,7 @@ const Form = () => {
               />
               <Input
                 type="email"
-                placeholder="Indicanos tu email"
+                placeholder="Indícanos tu email"
                 value={email}
                 onChange={(e) =>
                   handleEmailChange(e.target.value.toLowerCase())
@@ -282,9 +282,19 @@ const Form = () => {
                 onChange={(e) => handleZipCode(e.target.value)}
                 name="zipCode"
                 error={isZipCodeError}
-                errorText="Introduce un codigo postal válido"
+                errorText="Introduce un código postal válido"
                 className="input"
                 id="zipCode"
+              />
+              <Select
+                 name="preferedStoreId"
+                 type="select"
+                 className="shop__select"
+                 error={!isStoreError ? true : false}
+                 errorText="Es necesario que selecciones una tienda"
+                 value={storeSelected}
+                 onChange={(e) => handleStoresChange(e.target.value)}
+                 labelDefault="Elige tu tienda favorita"
               />
               <Input
                 type="text"
@@ -296,16 +306,6 @@ const Form = () => {
                 errorText="Introduce un número de teléfono válido"
                 className="input"
                 id="phone"
-              />
-              <Select
-                 name="preferedStoreId"
-                 type="select"
-                 className="shop__select"
-                 error={!isStoreError ? true : false}
-                 errorText="Es necesario que selecciones una tienda"
-                 value={storeSelected}
-                 onChange={(e) => handleStoresChange(e.target.value)}
-                 labelDefault="Escoja una tienda"
               />
             </div>
             <div className="footer__form">

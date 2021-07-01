@@ -13,7 +13,7 @@ import analytics from '../../helpers/analytics'
         // data.map(({ title, imgThumbnail, content, imgPosition, button }, i) => {
              <div id={title} className={`section__img ${imgPosition ? "" : "imgRight" }`}>
                     <img src={imgThumbnail} alt={title}/>
-                    <div class="section__text">
+                    <div className="section__text">
                         <h2 dangerouslySetInnerHTML={{ __html: title }} />
                         <p dangerouslySetInnerHTML={{ __html: content }} />
                         { button !== "" && undefined ?

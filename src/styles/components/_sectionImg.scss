@@ -39,6 +39,11 @@
     flex-basis: calc(50% - 32px);
     padding: 0px 16px;
     margin-top: 0px;
+
+    p {
+      margin: 16px auto !important;
+    }
+
     ul li {
       position: relative;
       padding-bottom: 10px;

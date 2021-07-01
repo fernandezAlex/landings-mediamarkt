@@ -7,6 +7,7 @@ const canariasShop= "https://www.mediamarkt.es/static/json/datashops-ca.json";
 const peninsulaShops = "https://specials.mediamarkt.es/tools/api-mm/v2/stores";
 var urlAxios = "";
 
+
 const Select = ({
 	type,
 	value,
@@ -41,12 +42,15 @@ const Select = ({
 	// // Convert Objects in Array
 	var storesArray = [].concat(stores);
 	// // Order Array
-	const storesArraySorted = [...storesArray].sort((a, b) => a['displayName'].localeCompare(b['displayName']));
+	var storesArraySorted = [...storesArray].sort((a, b) => a['displayName'].localeCompare(b['displayName']));
 	// // filter Arraya
-	storesArraySorted.map(({displayName}, i)=> {
+	/*storesArraySorted.map(({displayName}, i)=> {
 		var filters=['Pinto'];
 		if(filters.some(el => displayName.includes(el))) delete stores[i]
-	})
+	})*/
+
+	var storesDisabled = [1119,99999];
+	storesArraySorted = storesArraySorted.filter(function(store){ return !storesDisabled.includes(store['storeId']); /*console.log(store['storeId'])*/ })
 
 	// With Dynamic Filter to Order (Filter with Select, see down)
 

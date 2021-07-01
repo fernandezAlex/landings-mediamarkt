@@ -1,0 +1,35 @@
+{
+    "id" : "servicios",
+    "title" : "¿Qué servicios te interesan?",
+    "options": [{
+            "id": 1,
+            "name": "Fibra + Móvil",
+            "value": "fibra+movil"
+        },
+        {
+            "id": 2,
+            "name": "Fibra + Móvil + TV",
+            "value": "fibra+movil+tv"
+        },
+        {
+            "id": 3,
+            "name": "Solo Fibra / ADSL",
+            "value": "fibra-adsl"
+        },
+        {
+            "id": 4,
+            "name": "Movistar Prosegur Alarmas",
+            "value": "movistar-prosegur-alarmas"
+        },
+        {
+            "id": 5,
+            "name": "Segunda linea",
+            "value": "segunda-linea"
+        },
+        {
+            "id": 6,
+            "name": "Solo móvil",
+            "value": "solo-movil"
+        }
+    ]
+}

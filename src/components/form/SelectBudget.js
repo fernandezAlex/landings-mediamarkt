@@ -3,20 +3,24 @@ import PropTypes from "prop-types";
 
 const budget = [
 	{
+	  name: "No tengo sistema de alarma actualmente",
+	  value: 0
+	},
+	{
 	  name: "Hasta 20€/ mes",
-	  value: 0,
+	  value: 1
 	},
 	{
 	  name: "De 20€ a 40€ / mes",
-	  value: 1,
+	  value: 2
 	},
 	{
 	  name: "De 40€ a 60€ / mes",
-	  value: 2,
+	  value: 3
 	},
 	{
 	  name: "Más de 80€ / mes",
-	  value: 3,
+	  value: 4
 	},
   ];
 
