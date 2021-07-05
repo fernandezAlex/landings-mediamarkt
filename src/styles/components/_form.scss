@@ -31,7 +31,6 @@
     max-width: 1477px;
     justify-content: center;
     margin: auto;
-    margin-top: -90px;
 
     .container__section__form {
       background-color: #ffffff;
@@ -66,13 +65,19 @@
               width: 90%;
             }
           }
-          // &.phone {
-          //   width: 35%;
-          //   padding: 0 2% 0 1%;
-          //   .input {
-          //     width: 90%;
-          //   }
-          // }
+          &.franja_horaria {
+            select {
+              border: 1px solid black;
+              padding: 10px 10px;
+              border-radius: 4px;
+            }
+            .input__error {
+              border-top: none!important;
+            }
+            .span__required {
+              margin-top: 15px;
+            }
+          }
          .input {
           padding-left: 10px;
           border: none;

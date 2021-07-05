@@ -1,10 +1,26 @@
 {
     "idCampaign" : "308",
+    "numberNode" : "1241",
+    "originTercero" : "Viessmann",
     "dataAnalyticsForm" : {
         "event": "gaEvent",
         "eventCategory": "Movistar",
         "eventAction": "Click",
         "eventLabel": "Movistar_enviar_formulario"
     },
-    "urlActionForm" : "https://specials.mediamarkt.es/movistar/confirmacion"
+    "urlActionForm" : "https://specials.mediamarkt.es/forms/getDatos/getDatos.php",
+    "optionsTime" : [
+      {
+        "hour": "Ahora",
+        "value": "00-24"
+      },
+      {
+        "hour": "Mañanas (10:00 - 14:00)",
+        "value": "10-14"
+      },
+      {
+        "hour": "Tardes (15:00 - 19:00)",
+        "value": "15-19"
+      }
+    ]
 }

@@ -2,7 +2,7 @@ import React from "react";
 import { Breadcrumb } from "../breadcrumb/Breadcrumb";
 
 
-const Header = () => {
+const Header = ({data}) => {
 
   return (
     <>
@@ -12,9 +12,9 @@ const Header = () => {
       </div>
       <div className="title__container">
         <div className="content">
-          <h1 className="--title">Expertos en seguridad y tecnología</h1>
+          <h1 className="--title">{data.title}</h1>
           <div className="--breadcrumb">
-              <Breadcrumb/>  
+              <Breadcrumb data={data}/>  
           </div>
         </div>
       </div>

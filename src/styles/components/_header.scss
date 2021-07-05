@@ -2,8 +2,7 @@
 .header__container {
   height: 408px;
   width: 100%;
-  background-color: $main_color;
-  background-image: url($desktop-background);
+  background-image: url($big-desktop-background);
   background-size: cover;
   background-position: center;
   // @media only screen and (min-width: 792px) and (max-width: 983px) {
@@ -85,7 +84,7 @@
 @media only screen and (min-width: 450px) and (max-width: 768px) {
   .header__container {
     height: 304px;
-    background-image: url($mobile-background);
+    background-image: url($tablet-background);
   }
 }
 @media only screen and (max-width: 510px) {
@@ -93,8 +92,7 @@
     display: none;
   }
 }
-@media only screen and (min-width: 600px) {
-}
+
 @media only screen and (min-width: 511px) and (max-width: 768px) {
   .title__container {
     height: 304px;
@@ -104,7 +102,7 @@
 
 @media only screen and (min-width: 769px) and (max-width: 793px) {
   .header__container {
-    background-image: url($mobile-background);
+    background-image: url($desktop-background);
   }
   .title__container {
     margin: -70px 8% 4% 0%;
@@ -112,7 +110,7 @@
 }
 @media only screen and (min-width: 794px) and (max-width: 1007px) {
   .header__container {
-    background-image: url($tablet-background);
+    background-image: url($desktop-background);
   }
   .title__container {
     margin: -70px 8% 4% 0%;

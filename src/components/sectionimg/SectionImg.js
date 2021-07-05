@@ -7,7 +7,6 @@ import analytics from '../../helpers/analytics'
     const {title, imgThumbnail, content, imgPosition, button} = data;
     const { isShowing, toggle } = useModal();
     // const test = analytics("gaEvent", "Home_B2B_COMERCIO", "Click", "Home_B2B_COMERCIO_ver_video" );
-    console.log(button);
 
     return (
         // data.map(({ title, imgThumbnail, content, imgPosition, button }, i) => {

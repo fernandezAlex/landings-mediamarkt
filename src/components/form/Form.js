@@ -4,51 +4,32 @@ import AsyncButton from "./AsyncButton";
 import Checkbox from "./Checkbox";
 import analytics from "../../helpers/analytics";
 import {
-  validateMultipleOptions,
   validateName,
-  // validatePrefix,
   validateAddress,
   validateEmail,
   validatePhone,
-  validateZipCode
 } from "../validations/ValidateFunctions";
 import ReCaptcha from "react-google-recaptcha";
 import axios from "axios";
+import Swal from 'sweetalert2'
 import InfoForm from "./InfoForm";
 import Select from "./Select";
-import Button from "./Button";
-import MultipleOptions from "./MultipleOptions";
-import Timeline from "../timeline/TimeLine";
-
-import SelectBudget from "./SelectBudget";
-// import datashops from '../../data/datashops.json'
-// const {stores} = datashops
-
-import multipleOptionsData from '../../data/options.json';
+import {optionsTime} from '../../data/dataForm'
 import dataForm from '../../data/dataForm.json';
 
 
 const Form = () => {
-  const [multipleOptions, saveMultipleOptions] = useState([]);
-  const [isMultipleOptionsError, setIsMultipleOptionsError] = useState(false);
   const [name, setName] = useState("");
   const [isNameError, setIsNameError] = useState(false);
-  const [address, setAddress] = useState("");
-  const [isAddressError, setIsAddressError] = useState(false);
-  const [prefix, setPrefix] = useState("");
-  const [isPrefixError, setIsPrefixError] = useState(false);
+  const [surname, setSurname] = useState("");
+  const [isSurnameError, setIsSurnameError] = useState(false);
   const [phone, setPhone] = useState("");
   const [isPhoneError, setIsPhoneError] = useState(false);
   const [email, setEmail] = useState("");
   const [isEmailError, setIsEmailError] = useState(false);
-  const [zipCode, setZipCode] = useState("");
-  const [isZipCodeError, setIsZipCodeError] = useState(false);
-
-  const [budgetSelected, setBudgetSelected] = useState("");
-  const [isBudgetError, setIsBudgetError] = useState(false);
-
-  const [storeSelected, setStoreSelected] = useState("");
-  const [isStoreError, setIsStoreError] = useState(false);
+  const [hour, setHour] = useState("");
+  const [isHourError, setIsHourError] = useState(false);
+  const [respon, setRespon] = useState("");
 
   const [terms, setTerms] = useState("");
   const [newsletter, setNewsletter] = useState("");
@@ -58,29 +39,17 @@ const Form = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [actionState, setActionState] = useState(null);
 
-  const [stores, setStores] = useState([]);
-
-  const updateMultipleOption = (option) => {
-
-    if(multipleOptions.indexOf(option) > -1){
-      // Remove selected option
-      saveMultipleOptions(
-        multipleOptions.filter(opt => opt !== option)
-      )
-    } else {
-      // Add selected option
-      saveMultipleOptions([
-        ...multipleOptions,
-        option
-      ])
-    } 
+  const valuesForm = {
+    nombre: name,
+    apellidos: surname,
+    email: email,
+    telefono: phone,
+    franja_horaria: hour,
+    newsletter_agree: newsletter,
+    origin_tercero: dataForm.originTercero,
+    numberNode: dataForm.numberNode,
+    idCampaign: dataForm.idCampaign
   }
-
-  useEffect(() => {
-    const isOk = validateMultipleOptions(multipleOptions);
-    setIsMultipleOptionsError(!isOk);
-    document.getElementById('serviciosSelect').value= multipleOptions;
-  }, [multipleOptions])
 
   const handleNameChange = (value) => {
     setName(value);
@@ -88,16 +57,10 @@ const Form = () => {
     setIsNameError(!isOk);
   };
 
-  const handlerAddressChange = (value) => {
-    setAddress(value);
-    const isOk = validateAddress(value);
-    setIsAddressError(!isOk);
-  };
-
-  const handlePrefixChange = (value) => {
-    setPrefix(value);
-    const isOk = validatePhone(value);
-    setIsPrefixError(!isOk);
+  const handleSurnameChange = (value) => {
+    setSurname(value);
+    const isOk = validateName(value);
+    setIsSurnameError(!isOk);
   };
 
   const handlePhoneChange = (value) => {
@@ -106,22 +69,10 @@ const Form = () => {
     setIsPhoneError(!isOk);
   };
 
-  const handleZipCode = (value) => {
-    setZipCode(value);
-    const isOk = validateZipCode(value);
-    setIsZipCodeError(!isOk);
-  };
-
-  const handleStoresChange = (value) => {
-    setStoreSelected(value);
+  const handleHourChange = (value) => {
+    setHour(value);
     const isOk = value.length > 0 ? true : false;
-    setIsStoreError(isOk);
-  };
-
-  const handleBudgetChange = (value) => {
-    setBudgetSelected(value);
-    const isOk = value.length > 0 ? true : false;
-    setIsBudgetError(isOk);
+    setIsHourError(isOk);
   };
 
   const handleEmailChange = (value) => {
@@ -144,45 +95,75 @@ const Form = () => {
     }
   };
 
+  const reset = () => {
+    setName("");
+    setSurname("");
+    setPhone("");
+    setEmail("");
+    setHour("");
+    document.getElementById("check1").checked = false;
+    if (newsletter) {document.getElementById("newsletter-agree").checked = false;}
+    setNewsletter(false);
+    setTerms(false);
+    setIsLoading(false);
+    setIsSubmited(false);
+  }
+
   const isValidated =
-    validateMultipleOptions(multipleOptions) &&
     validateName(name) &&
-    validateAddress(address) &&
+    validateName(surname) &&
     validateEmail(email) &&
     validatePhone(phone) &&
+    validateName(name) &&
+    isHourError &&
     terms;
 
   const isAllValidated =
     isValidated === true && recaptcha === true ? true : false;
-    //true;
+    // true;
 
-  const dispatchForm = () => {
+  useEffect(() => {
+    if(respon.registerEmarsys == null){
+      return 
+    }
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: `Gracias <b>${valuesForm.nombre}`,
+      text: `${respon.responPam} ${respon.responEmarsys}`,
+      timer: `${newsletter ? 7000 : 2500}`,
+    })
+  },[respon]);
+
+  async function fecthData(){
+    const respuesta = await axios({
+    method: 'POST',
+    url: dataForm.urlActionForm,
+    data: JSON.stringify(valuesForm)
+    })
+    setRespon(respuesta.data)
+  }
+
+  const dispatchForm = (e, valuesForm) => {
+    e.preventDefault();
     if (isAllValidated) {
-    //if (true) {
+      fecthData();
       setIsLoading(true);
       setTimeout(() => {
         setIsLoading(false);
         setIsSubmited(true);
       }, 1000);
-      analytics(
-        dataForm.dataAnalyticsForm.event,
-        dataForm.dataAnalyticsForm.eventCategory,
-        dataForm.dataAnalyticsForm.eventAction,
-        dataForm.dataAnalyticsForm.eventLabel
-      );
-      
-      setActionState(dataForm.urlActionForm);
+      // analytics(
+      //   valuesForm.dataAnalyticsForm.event,
+      //   valuesForm.dataAnalyticsForm.eventCategory,
+      //   valuesForm.dataAnalyticsForm.eventAction,
+      //   valuesForm.dataAnalyticsForm.eventLabel
+      // );
+      return setTimeout(() => {
+        reset(newsletter);
+      }, `${newsletter ? 2000 : 1000}`);
     }
   };
-
-  const checkIsChecked = (id) => {
-    let isChecked = document.getElementById(id).checked;
-    if(isChecked){
-      return true;
-    } else {
-      return false;
-    }
-  }
 
   return (
     <>
@@ -192,47 +173,19 @@ const Form = () => {
           id="campaign-form"
           class="--form campaign-form required"
           method="POST"
-          action={actionState}
+          // action={actionState}
           onSubmit={dispatchForm}
         >
           <input
             type="hidden"
             name="campaign"
             id="campaign"
-            value={dataForm.idCampaign}
+            value={valuesForm.idCampaign}
           />
-
-          <MultipleOptions 
-            data={multipleOptionsData} 
-            error={isMultipleOptionsError} 
-            errorText="Es necesario que selecciones un servicio" 
-            multipleOptions={multipleOptions} 
-            updateMultipleOption={updateMultipleOption}  
-          />
-
           <div className="container__section__form">
             <div className="__header__title">
               <h2 className="--title">
-                ¿Cúanto pagas en tu factura actualmente?
-              </h2>
-            </div>
-            <SelectBudget
-              name="budget"
-              type="select"
-              value={budgetSelected}
-              className="budget__select"
-              error={!isBudgetError ? true : false}
-              errorText="Es necesario que selecciones una opción"
-              onChange={(e) => handleBudgetChange(e.target.value)}
-              labelDefault="Elige presupuesto"
-              // onDefault={(event) => handleSelectDefault(event.target)}
-            />
-          </div>
-
-          <div className="container__section__form">
-            <div className="__header__title">
-              <h2 className="--title">
-                Dejanos tus datos y te haremos una oferta
+                ¿Quieres conocer más? Envíanos tus datos y nos pondremos en contacto contigo
               </h2>
               <p className="--text">
                 Los campos marcados con un asterisco (
@@ -242,7 +195,7 @@ const Form = () => {
             <div className="inputs__container">
               <Input
                 type="text"
-                placeholder="Introduce tu nombre"
+                placeholder="Nombre"
                 value={name}
                 onChange={(e) => handleNameChange(e.target.value)}
                 name="name"
@@ -252,39 +205,16 @@ const Form = () => {
                 id="name"
               />
               <Input
-                type="email"
-                placeholder="Indicanos tu email"
-                value={email}
-                onChange={(e) =>
-                  handleEmailChange(e.target.value.toLowerCase())
-                }
-                name="email"
-                error={isEmailError}
-                errorText="Introduce un email válido"
-                className="input"
-                id="email"
-              />
-              <Input
                 type="text"
-                placeholder="Dirección: calle, número, piso, puerta"
-                value={address}
-                onChange={(e) => handlerAddressChange(e.target.value)}
-                name="address"
-                error={isAddressError}
-                errorText="Introduce una dirección válida"
+                name="apellidos"
+                id="apellidos"
+                placeholder="Apellidos"
+                value={surname}
+                onChange={(e) => handleSurnameChange(e.target.value)}
+                // onChange={handleInputChange}
+                error={isSurnameError}
+                errorText="Introduce un/os apellido/s válido/s"
                 className="input"
-                id="adress"
-              />
-              <Input
-                type="text"
-                placeholder="Código postal"
-                value={zipCode}
-                onChange={(e) => handleZipCode(e.target.value)}
-                name="zipCode"
-                error={isZipCodeError}
-                errorText="Introduce un codigo postal válido"
-                className="input"
-                id="zipCode"
               />
               <Input
                 type="text"
@@ -297,15 +227,31 @@ const Form = () => {
                 className="input"
                 id="phone"
               />
+              <Input
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) =>
+                  handleEmailChange(e.target.value.toLowerCase())
+                }
+                name="email"
+                error={isEmailError}
+                errorText="Introduce un email válido"
+                className="input"
+                id="email"
+              />
               <Select
-                 name="preferedStoreId"
-                 type="select"
-                 className="shop__select"
-                 error={!isStoreError ? true : false}
-                 errorText="Es necesario que selecciones una tienda"
-                 value={storeSelected}
-                 onChange={(e) => handleStoresChange(e.target.value)}
-                 labelDefault="Escoja una tienda"
+                type="select"
+                name="franja_horaria"
+                id="franja_horaria"
+                value={hour}
+                onChange={(e) => handleHourChange(e.target.value)}
+                // onChange={handleInputChange}
+                error={!isHourError}
+                errorText="Es necesario que selecciones una opción"
+                className="input"
+                data={optionsTime}
+                labelDefault="Hora solicitada"
               />
             </div>
             <div className="footer__form">
@@ -314,7 +260,7 @@ const Form = () => {
                 error={!terms}
                 type="checkbox"
                 name="terms"
-                id="terms"
+                id="check1"
                 value="yes"
                 required=""
                 className="test_class"
@@ -327,7 +273,7 @@ const Form = () => {
                 onChange={(e) => handleNewsletterChange(e.target.checked)}
                 type="checkbox"
                 name="newsletter-agree"
-                id="newsletter"
+                id="newsletter-agree"
                 value="yes"
                 required=""
                 className="test_class"
