@@ -11,27 +11,16 @@ export const cardsSection2 = [
     //   eventAction: "Click",
     //   eventLabel: "Home_B2B_destacado4"
     // },
-    {
-        title: "Evalúa la competencia digital de tu centro educativo",
-        subtitle: "Consigue tu informe de diagnosis a través de nuestro formulario, son solo 2 minutos",
-        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/062007_NEWS_EDUCACION_.png",
-        button: "Rellenar formulario",
-        slug: "https://forms.gle/KpL2S2xqxCDv2g4b8",
-        eventGa: "gaEvent",
-        eventCategory: "Home_B2B",
-        eventAction: "Click",
-        eventLabel: "Home_B2B_destacado1"
-    },
     // {
-    //     title: "Somos el aliado de confianza para tu centro educativo",
-    //     subtitle: "Descubre todas las soluciones que podemos ofrecerte",
-    //     imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Teaser2.png",
-    //     button: "Ver más",
-    //     slug: "https://specials.mediamarkt.es/empresas/educacion",
+    //     title: "Evalúa la competencia digital de tu centro educativo",
+    //     subtitle: "Consigue tu informe de diagnosis a través de nuestro formulario, son solo 2 minutos",
+    //     imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/062007_NEWS_EDUCACION_.png",
+    //     button: "Rellenar formulario",
+    //     slug: "https://forms.gle/KpL2S2xqxCDv2g4b8",
     //     eventGa: "gaEvent",
     //     eventCategory: "Home_B2B",
     //     eventAction: "Click",
-    //     eventLabel: "Home_B2B_destacado2"
+    //     eventLabel: "Home_B2B_destacado1"
     // },
     {
         title: "Transformación digital del puesto de trabajo",
@@ -45,6 +34,17 @@ export const cardsSection2 = [
         eventLabel: "Home_B2B_destacado1"
     },
     {
+        title: "Somos el aliado de confianza para tu centro educativo",
+        subtitle: "Descubre todas las soluciones que podemos ofrecerte",
+        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Teaser2.png",
+        button: "Ver más",
+        slug: "https://specials.mediamarkt.es/empresas/educacion",
+        eventGa: "gaEvent",
+        eventCategory: "Home_B2B",
+        eventAction: "Click",
+        eventLabel: "Home_B2B_destacado2"
+    },
+    {
         title: "Soluciones energéticas para empresas",
         subtitle: "Como combinar la rentabilidad, competitividad y sostenibilidad",
         imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Teaser3.png",
@@ -55,17 +55,17 @@ export const cardsSection2 = [
         eventAction: "Click",
         eventLabel: "Home_B2B_destacado3"
     },
-    {
-        title: "Google Nest Wifi para empresas",
-        subtitle: "Crea tu red WiFi estable y segura pregúntanos por tu mejor solución",
-        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Teasergoogle.png",
-        button: "Consúltanos",
-        slug: "#contacto",
-        eventGa: "gaEvent",
-        eventCategory: "Home_B2B",
-        eventAction: "Click",
-        eventLabel: "Home_B2B_destacado4"
-    },
+    // {
+    //     title: "Google Nest Wifi para empresas",
+    //     subtitle: "Crea tu red WiFi estable y segura pregúntanos por tu mejor solución",
+    //     imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Teasergoogle.png",
+    //     button: "Consúltanos",
+    //     slug: "#contacto",
+    //     eventGa: "gaEvent",
+    //     eventCategory: "Home_B2B",
+    //     eventAction: "Click",
+    //     eventLabel: "Home_B2B_destacado4"
+    // },
     {
         title: "Soluciones de prevención frente al Covid-19",
         subtitle: "Espacios seguros: clientes y empleados protegidos",
