@@ -14,8 +14,7 @@ import axios from "axios";
 import Swal from 'sweetalert2'
 import InfoForm from "./InfoForm";
 import Select from "./Select";
-import {optionsTime} from '../../data/dataForm'
-import dataForm from '../../data/dataForm.json';
+import dataForm, {optionsTime} from '../../data/dataForm.json';
 
 
 const Form = () => {
