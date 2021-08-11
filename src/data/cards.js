@@ -81,7 +81,7 @@ export const cardsSection2 = [
 
 export const cardsSection2Apple = [
     {
-        title: "Todo el poder de Apple, en tu empresa",
+        title: "Todo el poder de Apple<br> en tu empresa",
         subtitle: "Los productos Apple cuentan con potentes prestaciones y apps integradas de productividad, creatividad y colaboración.",
         imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Teaser5.jpg",
         button: "Saber más",
