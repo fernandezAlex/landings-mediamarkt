@@ -42,7 +42,7 @@ export const cardsSection2 = [
         eventGa: "gaEvent",
         eventCategory: "Home_B2B",
         eventAction: "Click",
-        eventLabel: "Home_B2B_destacado2"
+        eventLabel: "Home_B2B_destacado3"
     },
     {
         title: "Soluciones energéticas para empresas",
@@ -53,7 +53,7 @@ export const cardsSection2 = [
         eventGa: "gaEvent",
         eventCategory: "Home_B2B",
         eventAction: "Click",
-        eventLabel: "Home_B2B_destacado3"
+        eventLabel: "Home_B2B_destacado4"
     },
     // {
     //     title: "Google Nest Wifi para empresas",
@@ -78,6 +78,76 @@ export const cardsSection2 = [
         eventLabel: "Home_B2B_destacado5"
     },
 ]
+
+export const cardsSection2Apple = [
+    {
+        title: "Todo el poder de Apple, en tu empresa",
+        subtitle: "Los productos Apple cuentan con potentes prestaciones y apps integradas de productividad, creatividad y colaboración.",
+        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Teaser5.jpg",
+        button: "Saber más",
+        slug: "https://specials.mediamarkt.es/apple-reason-why",
+        eventGa: "gaEvent",
+        eventCategory: "Home_B2B",
+        eventAction: "Click",
+        eventLabel: "Home_B2B_destacado1"
+    },
+    {
+        title: "Transformación digital del puesto de trabajo",
+        subtitle: "Diseñamos la solución que mejor se adapta a cada usuario",
+        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b-transformacion-digital/062007_Teaser_Empresa_Oficina_B2B_350x298.png",
+        button: "Ver más",
+        slug: "https://specials.mediamarkt.es/transformacion-digital-del-puesto-de-trabajo",
+        eventGa: "gaEvent",
+        eventCategory: "Home_B2B",
+        eventAction: "Click",
+        eventLabel: "Home_B2B_destacado1"
+    },
+    {
+        title: "Somos el aliado de confianza para tu centro educativo",
+        subtitle: "Descubre todas las soluciones que podemos ofrecerte",
+        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Teaser2.png",
+        button: "Ver más",
+        slug: "https://specials.mediamarkt.es/empresas/educacion",
+        eventGa: "gaEvent",
+        eventCategory: "Home_B2B",
+        eventAction: "Click",
+        eventLabel: "Home_B2B_destacado3"
+    },
+    {
+        title: "Soluciones energéticas para empresas",
+        subtitle: "Como combinar la rentabilidad, competitividad y sostenibilidad",
+        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Teaser3.png",
+        button: "Ver más",
+        slug: "https://specials.mediamarkt.es/empresas/soluciones-energeticas",
+        eventGa: "gaEvent",
+        eventCategory: "Home_B2B",
+        eventAction: "Click",
+        eventLabel: "Home_B2B_destacado4"
+    },
+    // {
+    //     title: "Google Nest Wifi para empresas",
+    //     subtitle: "Crea tu red WiFi estable y segura pregúntanos por tu mejor solución",
+    //     imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Teasergoogle.png",
+    //     button: "Consúltanos",
+    //     slug: "#contacto",
+    //     eventGa: "gaEvent",
+    //     eventCategory: "Home_B2B",
+    //     eventAction: "Click",
+    //     eventLabel: "Home_B2B_destacado4"
+    // },
+    {
+        title: "Soluciones de prevención frente al Covid-19",
+        subtitle: "Espacios seguros: clientes y empleados protegidos",
+        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Teasercovid.jpg",
+        button: "Ver más",
+        slug: "https://specials.mediamarkt.es/empresas/soluciones-covid",
+        eventGa: "gaEvent",
+        eventCategory: "Home_B2B",
+        eventAction: "Click",
+        eventLabel: "Home_B2B_destacado5"
+    },
+]
+
 
 export const cardsSection3 = [
     {
