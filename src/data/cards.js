@@ -148,7 +148,6 @@ export const cardsSection2Apple = [
     },
 ]
 
-
 export const cardsSection3 = [
     {
         title: "Empresa y oficina",

@@ -7,7 +7,9 @@ import Section3 from "./components/sections/Section3";
 import Section4 from "./components/sections/Section4";
 import Form from "./components/form/Form";
 import Accordion from "./components/faqs/Accordion";
+import Slideshow from './components/carousel/Slideshow';
 import {cardsSection2, cardsSection2Apple, cardsSection3, cardsSection4} from "./data/cards"
+import {dataSlider} from "./data/dataSlider"
 
 const dat = new Date();
 const date = dat.getDate() + "/" + (dat.getMonth() +1) + "/" + dat.getFullYear();
@@ -37,6 +39,15 @@ const App = () => {
       <Section3 data={cardsSection3} width={width}/>
       <Section4 data={cardsSection4} width={width}/>
       <Form/>
+      <Slideshow
+        controls={true}
+        autoplay={false}
+        speed="500"
+        interval="5000"
+        textColor="white"
+        bgTextColor=""
+        data={dataSlider}
+      />
       <Accordion />
     </>
   );
