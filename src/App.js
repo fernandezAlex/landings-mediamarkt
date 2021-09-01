@@ -35,7 +35,8 @@ const App = () => {
     <>
       <Header />
       <Section1 width={width}/>
-      <Section2 data={ date > "23/08/2021" ? cardsSection2Apple : cardsSection2} width={width}/>
+      {/*<Section2 data={ date > "23/08/2021" ? cardsSection2Apple : cardsSection2} width={width}/>*/}
+      <Section2 data={cardsSection2Apple} width={width}/>
       <Section3 data={cardsSection3} width={width}/>
       <Section4 data={cardsSection4} width={width}/>
       <Form/>
