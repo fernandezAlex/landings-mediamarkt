@@ -11,12 +11,13 @@ import Slideshow from './components/carousel/Slideshow';
 import {cardsSection2, cardsSection2Apple, cardsSection3, cardsSection4} from "./data/cards"
 import {dataSlider} from "./data/dataSlider"
 
-const dat = new Date();
-const date = dat.getDate() + "/" + (dat.getMonth() +1) + "/" + dat.getFullYear();
-console.log(date);
-
 const App = () => {
   const [width, setWidth] = useState(document.body.clientWidth);
+
+  const today = new Date();
+
+  const limitDate = new Date('2022,01,01');
+
 
   useEffect(() => {
     const debouncedHandleResize = debounce(function handleResize() {
@@ -29,14 +30,11 @@ const App = () => {
     };
   });
 
-  date > "10/08/2021" ? console.log("fecha pasada") : console.log("fecha sin llegar");
-
   return (
     <>
       <Header />
       <Section1 width={width}/>
-      {/*<Section2 data={ date > "23/08/2021" ? cardsSection2Apple : cardsSection2} width={width}/>*/}
-      <Section2 data={cardsSection2Apple} width={width}/>
+      <Section2 data={ today < limitDate ? cardsSection2Apple : cardsSection2} width={width}/>
       <Section3 data={cardsSection3} width={width}/>
       <Section4 data={cardsSection4} width={width}/>
       <Form/>
