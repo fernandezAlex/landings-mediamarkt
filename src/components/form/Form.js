@@ -4,7 +4,7 @@ import AsyncButton from "./AsyncButton";
 import Checkbox from "./Checkbox";
 import analytics from "../../helpers/analytics";
 import {
-  validateMultipleOptions,
+  //validateMultipleOptions,
   validateName,
   // validatePrefix,
   validateAddress,
@@ -17,20 +17,20 @@ import axios from "axios";
 import InfoForm from "./InfoForm";
 import Select from "./Select";
 import Button from "./Button";
-import MultipleOptions from "./MultipleOptions";
+//import MultipleOptions from "./MultipleOptions";
 import Timeline from "../timeline/TimeLine";
 
 import SelectBudget from "./SelectBudget";
 // import datashops from '../../data/datashops.json'
 // const {stores} = datashops
 
-import multipleOptionsData from '../../data/options.json';
+//import multipleOptionsData from '../../data/options.json';
 import dataForm from '../../data/dataForm.json';
 
 
 const Form = () => {
-  const [multipleOptions, saveMultipleOptions] = useState([]);
-  const [isMultipleOptionsError, setIsMultipleOptionsError] = useState(false);
+  //const [multipleOptions, saveMultipleOptions] = useState([]);
+  //const [isMultipleOptionsError, setIsMultipleOptionsError] = useState(false);
   const [name, setName] = useState("");
   const [isNameError, setIsNameError] = useState(false);
   const [address, setAddress] = useState("");
@@ -60,6 +60,7 @@ const Form = () => {
 
   const [stores, setStores] = useState([]);
 
+  /*
   const updateMultipleOption = (option) => {
 
     if(multipleOptions.indexOf(option) > -1){
@@ -81,6 +82,7 @@ const Form = () => {
     setIsMultipleOptionsError(!isOk);
     document.getElementById('serviciosSelect').value= multipleOptions;
   }, [multipleOptions])
+  */
 
   const handleNameChange = (value) => {
     setName(value);
@@ -145,7 +147,7 @@ const Form = () => {
   };
 
   const isValidated =
-    validateMultipleOptions(multipleOptions) &&
+    //validateMultipleOptions(multipleOptions) &&
     validateName(name) &&
     validateAddress(address) &&
     validateEmail(email) &&
@@ -202,6 +204,7 @@ const Form = () => {
             value={dataForm.idCampaign}
           />
 
+          {/*
           <MultipleOptions 
             data={multipleOptionsData} 
             error={isMultipleOptionsError} 
@@ -209,6 +212,7 @@ const Form = () => {
             multipleOptions={multipleOptions} 
             updateMultipleOption={updateMultipleOption}  
           />
+          */}
 
           <div className="container__section__form">
             <div className="__header__title">
