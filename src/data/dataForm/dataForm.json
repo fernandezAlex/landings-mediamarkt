@@ -1,0 +1,13 @@
+{
+    "idCampaign" : 	"",
+    "numberNode" : "",
+    "originTercero" : "Home_B2B",
+    "dataAnalyticsForm" : {
+        "event": "gaEvent",
+        "eventCategory": "Home_B2B",
+        "eventAction": "Click",
+        "eventLabel": "Home_B2B_enviar_formulario"
+    },
+    "urlActionForm" : "https://specials.mediamarkt.es/forms/getDatos/getDatos.php",
+    "urlSendPartner": "https://prod-105.westeurope.logic.azure.com/workflows/4e28df4964ce4e088935dd3a4471bf29/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=gAQhBy1fGZaO4dnVdEz4unZ7PfvseiynkQzkga5JrBw"
+}

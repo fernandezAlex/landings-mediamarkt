@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Input from "./Input";
 import TextArea from "./TextArea";
-import PrivacyPolicy from "./PrivacyPolicy";
 import AsyncButton from "./AsyncButton";
 import SelectShops from "./SelectShops";
 import HiddenFields from "./HiddenFields";
+import axios from 'axios';
 import analytics from "../../helpers/analytics";
 import {
   validateInteger,
@@ -18,35 +18,21 @@ import {
 import ReCaptcha from "react-google-recaptcha";
 import Checkbox from "./Checkbox";
 import Select from "./Select";
+import Swal from 'sweetalert2'
 
 /* Data Form */
-import Stores from "../../data/stores.json";
-import Enterprise from "../../data/enterprise.json";
-import Treatment from "../../data/treatment.json";
-import Request from "../../data/request.json"
-import termsAndConditions from "../../data/termsAndConditions";
-import axios from 'axios';
+import dataForm from '../../data/dataForm/dataForm.json';
+import Enterprise from "../../data/dataForm/enterprise.json";
+import Treatment from "../../data/dataForm/treatment.json";
+import Request from "../../data/dataForm/request.json"
+import termsAndConditions from "../../data/dataForm/termsAndConditions";
 
-const { stores } = Stores;
 const { enterprise } = Enterprise
 const { treatment } = Treatment;
 const { request } = Request
 
-
-const idCampaign = "200";
-const dataAnalyticsForm = {
-  event: "gaEvent",
-  eventCategory: "Home_B2B",
-  eventAction: "Click",
-  eventLabel: "Home_B2B_enviar_formulario",
-};
-const urlActionForm = "https://specials.mediamarkt.es/empresas/confirmacion";
-
-const EndPointAPI =
-  "https://prod-105.westeurope.logic.azure.com/workflows/4e28df4964ce4e088935dd3a4471bf29/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=gAQhBy1fGZaO4dnVdEz4unZ7PfvseiynkQzkga5JrBw";
-
 const Form = () => {
-  const [store, setStore] = useState("");
+  const [storeSelected, setStoreSelected] = useState("");
   const [isStoreError, setIsStoreError] = useState(null);
   const [nameEnterprise, setNameEnterprise] = useState("");
   const [isNameEnterpriseError, setIsNameEnterpriseError] = useState(false);
@@ -75,18 +61,18 @@ const Form = () => {
   const [typeRequest, setTypeRequest] = useState("");
   const [isTypeRequestError, setIsTypeRequestError] = useState(null);
   const [message, setMessage] = useState("");
+  const [respon, setRespon] = useState("");
 
   const [terms, setTerms] = useState("");
   const [newsletter, setNewsletter] = useState("");
+  const [responEmarsys, setResponEmarsys] = useState("");
 
   // const [recaptcha, setRecaptcha] = useState(false);
   const [isSubmited, setIsSubmited] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [actionState, setActionState] = useState(null);
-  // const [store, setStore] = useState([]);
 
   const handleStoresChange = (value) => {
-    setStore(value);
+    setStoreSelected(value);
     const isOk = value.length > 0 ? true : false;
     setIsStoreError(isOk);
   };
@@ -181,82 +167,115 @@ const Form = () => {
   //   }
   // };
 
-  // const isValidated =
-  //   (name.length > 0 ||
-  //     nif.length > 0 ||
-  //     // contact.length > 0 ||
-  //     position.length > 0 ||
-  //     email.length > 0) &&
-  //   validateName(name) &&
-  //   validateNif(nif) &&
-  //   // validateName(contact) &&
-  //   validatePosition(position) &&
-  //   validateEmail(email) &&
-  //   validatePhone(phone) &&
-  //   terms;
-    
-
-
-    const isValidated =
-      // (name.length > 0 ||
-      //   nif.length > 0 ||
-      //   // contact.length > 0 ||
-      //   position.length > 0 ||
-      //   email.length > 0) &&
-
-      isStoreError && validateName(nameEnterprise) && isTypeEnterpriseError && validateNif(nif) && (web === "" || validateName(web)) && validateInteger(employees) &&
-      isTypeTreatmentError && validateName(name) && validateName(surname) && validatePosition(position) && validateEmail(email) && validatePhone(phone) &&
-      isTypeRequestError && (message === "" || validateMessage(message)) && terms;
-
-
-
-
-  const isAllValidated = isValidated 
+  const isValidated = isStoreError && validateName(nameEnterprise) && isTypeEnterpriseError && validateNif(nif) && (web === "" || validateName(web))&& validateInteger(employees) &&
+  isTypeTreatmentError && validateName(name) && validateName(surname) && validatePosition(position) && validateEmail(email) && validatePhone(phone) &&
+  isTypeRequestError && (message === "" || validateMessage(message)) && terms;
 
   // const isAllValidated =
     // isValidated === true 
     // && recaptcha === true ? true : false;
 
-  const dispatchForm = () => {
+  const isAllValidated = isValidated ;
+
+  const dispatchForm = (e) => {
+    e.preventDefault();
     if (isAllValidated) {
+      sendDataPartner(e);
+      if(newsletter)sendDataEmarsys(e);
       setIsLoading(true);
       setTimeout(() => {
         setIsLoading(false);
         setIsSubmited(true);
       }, 1000);
-      analytics(
-        dataAnalyticsForm.event,
-        dataAnalyticsForm.eventCategory,
-        dataAnalyticsForm.eventAction,
-        dataAnalyticsForm.eventLabel,
-      );
-      setActionState(EndPointAPI);
+      // analytics(
+      //   dataForm.dataAnalyticsForm.event,
+      //   dataForm.dataAnalyticsForm.eventCategory,
+      //   dataForm.dataAnalyticsForm.eventAction,
+      //   dataForm.dataAnalyticsForm.eventLabel
+      // );
+      reset(newsletter);
+      return setTimeout(() => {
+        reset(newsletter);
+      }, `${newsletter ? 2000 : 1000}`);
     }
   };
-const handleSubmit = (e) => {
-  e.preventDefault();
-  const formData = new FormData(e.target)
+
+  // Send data to Emarsys
+  async function sendDataEmarsys(e){ 
+    const formData = new FormData(e.target)
+    // insert origin tercero field of just Emarsys
+    formData.append("origin_tercero", dataForm.originTercero);
+    // insert newsletter_agree field of just Emarsys
+    formData.has("newsletter") ? formData.append("newsletter_agree", true) : formData.append("newsletter_agree", false);
     const body = {}
     formData.forEach((value, property) => body[property] = value)
-    console.log(body)
-    alert(JSON.stringify(body))
-  axios({
-    method: 'post',
-    url: 'https://prod-105.westeurope.logic.azure.com/workflows/4e28df4964ce4e088935dd3a4471bf29/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=gAQhBy1fGZaO4dnVdEz4unZ7PfvseiynkQzkga5JrBw',
-    data: body,
-    // config: { headers: {'Content-Type': 'multipart/form-data' }}
+    body.newsletter_agree = body.newsletter_agree == "true" ? true : false;
+    const respuestaEmarsys = await axios({
+      method: 'POST',
+      url: dataForm.urlActionForm,
+      data: JSON.stringify(body)
+    })
+    setResponEmarsys(respuestaEmarsys.data.responEmarsys)
+  };
+  
+  // Send data to partner
+  async function sendDataPartner(e){
+    const formData = new FormData(e.target)
+    const body = {}
+    formData.forEach((value, property) => body[property] = value)
+    body.newsletter = body.newsletter == "yes" ? true : false;
+    const respuesta = await axios({
+      method: 'POST',
+      url: dataForm.urlSendPartner,
+      data: body,
     })
     .then( (response) => {
         //handle success
-        console.log("Formulario enviado", response);
+        setRespon(response)
     })
     .catch( (response) => {
         //handle error
-        console.log(response);
+        setRespon(response)
     });
-}
+  }
 
+  useEffect(() => {
+    if(respon == ""){
+      return 
+    }
+    Swal.fire({
+      position: 'center',
+      icon: respon.status == 200 ? 'success' : 'error' ,
+      showCloseButton: true,
+      title: respon.status == 200 ? `Gracias` : `Hay un error` ,
+      text: respon.status == 200 ? `Hemos recibido tus datos, pronto nos pondremos en contacto contigo. ${responEmarsys}`: `No hemos podido guardar tus datos, vuelve a intentarlo más tarde.` ,
+      timer: 100000,
+    })    
+  },[respon]);
 
+  const reset = () => {
+    setStoreSelected("");
+    setNameEnterprise("");
+    setTypeEnterprise("");
+    setNif("");
+    setWeb("");
+    setEmployees("");
+    setTypeTreatment("");
+    setName("");
+    setSurname("");
+    setPosition("");
+    setEmail("");
+    setPhone("");
+    setTypeRequest("");
+    setMessage("");
+    document.getElementById("check1").checked = false;
+    if (newsletter) {document.getElementById("newsletter-agree").checked = false;}
+    setNewsletter(false);
+    setTerms(false);
+    setIsLoading(false);
+    setIsSubmited(false);
+    setResponEmarsys("");
+  }
 
   return (
     <>
@@ -270,7 +289,7 @@ const handleSubmit = (e) => {
           </p>
         </div>
         <div className="__header__subtitle">
-          <h2 className="--subtitle">Tus datos personales</h2>
+          <h2 className="--subtitle">Tus datos de contacto</h2>
           <p className="--text">
             Los campos marcados con un asterisco (
             <span style={{ color: `#df0000` }}>*</span>) son obligatorios
@@ -281,35 +300,13 @@ const handleSubmit = (e) => {
         <form
           name="campaign-form"
           id="campaign-form"
-          class="--form campaign-form required"
-          method="POST"
-          // action={actionState}
-          onSubmit={handleSubmit}
-          // action=""
+          className="--form campaign-form required"
+          onSubmit={dispatchForm}
         >
-          {/* <input
-            type="hidden"
-            name="campaign"
-            id="campaign"
-            value={idCampaign}
-          /> */}
           <div className="title__contact__info">
-            <h4 className="subtitle__section__form">Regístrate como cliente B2B</h4>
+            <h4 className="subtitle__section__form">Información de la empresa</h4>
           </div>
           <div className="inputs__container">
-            <SelectShops
-              id="preferred_store"
-              name="preferred_store"
-              type="select"
-              data={stores}
-              className="input"
-              error={null && (!isStoreError ? true : false)}
-              errorText="Es necesario que selecciones una tienda"
-              value={store}
-              onChange={(e) => handleStoresChange(e.target.value)}
-              labelDefault="Escoge una tienda"
-              required={true}
-            />
             <Input
               type="text"
               placeholder="Nombre de la empresa"
@@ -320,6 +317,30 @@ const handleSubmit = (e) => {
               errorText="Introduzca un nombre válido"
               className="input"
               id="company_name"
+              required={true}
+            />
+            <Input
+              type="text"
+              placeholder="NIF Empresa"
+              value={nif}
+              onChange={(e) => handleNifChange(e.target.value.toUpperCase())}
+              name="taxid"
+              error={isNifError}
+              errorText="Introduzca un NIF válido"
+              className="input"
+              id="taxid"
+              required={true}
+            />
+             <Input
+              type="text"
+              placeholder="Número de empleados"
+              value={employees}
+              onChange={(e) => handleEmployeesChange(e.target.value)}
+              name="num_employees"
+              error={isEmployeesError}
+              errorText="Indica el número de empleados"
+              className="input"
+              id="num_employees"
               required={true}
             />
             <Select
@@ -338,18 +359,6 @@ const handleSubmit = (e) => {
             />
             <Input
               type="text"
-              placeholder="NIF Empresa"
-              value={nif}
-              onChange={(e) => handleNifChange(e.target.value.toUpperCase())}
-              name="taxid"
-              error={isNifError}
-              errorText="Introduzca un NIF válido"
-              className="input"
-              id="taxid"
-              required={true}
-            />
-            <Input
-              type="text"
               placeholder="Sitio Web"
               value={web}
               onChange={(e) => handleWebChange(e.target.value)}
@@ -359,16 +368,16 @@ const handleSubmit = (e) => {
               className="input"
               id="website"
             />
-            <Input
-              type="text"
-              placeholder="Número de empleados"
-              value={employees}
-              onChange={(e) => handleEmployeesChange(e.target.value)}
-              name="num_employees"
-              error={isEmployeesError}
-              errorText="Indica el número de empleados"
+            <SelectShops
+              id="preferred_store"
+              name="preferred_store"
+              type="select"
               className="input"
-              id="num_employees"
+              error={null && (!isStoreError ? true : false)}
+              errorText="Es necesario que selecciones una tienda"
+              value={storeSelected}
+              onChange={(e) => handleStoresChange(e.target.value)}
+              labelDefault="Escoge tu equipo de empresa más cercano"
               required={true}
             />
           </div>
@@ -450,7 +459,7 @@ const handleSubmit = (e) => {
             />
           </div>
           <div className="title__contact__info">
-            <h4 className="subtitle__section__form">Información de contacto</h4>
+            <h4 className="subtitle__section__form">Consulta</h4>
           </div>
           <Select
             id="request_type"
@@ -481,7 +490,7 @@ const handleSubmit = (e) => {
               error={!terms}
               type="checkbox"
               name="terms"
-              id="terms"
+              id="check1"
               value="yes"
               required=""
               className="test_class"
@@ -494,11 +503,11 @@ const handleSubmit = (e) => {
               onChange={(e) => handleNewsletterChange(e.target.checked)}
               type="checkbox"
               name="newsletter"
-              id="newsletter"
+              id="newsletter-agree"
               value="yes"
               required=""
               className="test_class"
-              text="Suscríbete al boletín de noticias B2B de Mediamarkt"
+              text="Suscríbete al boletín de noticias B2B de MediaMarkt."
             />
             {/* <ReCaptcha
               size="normal"

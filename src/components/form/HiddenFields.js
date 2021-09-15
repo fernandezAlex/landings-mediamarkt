@@ -1,4 +1,5 @@
 import React from "react";
+const currentURL = window.location;
 
 const HiddenFields = () => {
   return (
@@ -7,7 +8,7 @@ const HiddenFields = () => {
         type="text"
         id="url"
         name="url"
-        value="B2Blanding"
+        value={currentURL}
         hidden=""
         // className="untouched is-positive"
       />

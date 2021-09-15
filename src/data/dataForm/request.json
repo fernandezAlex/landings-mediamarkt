@@ -5,8 +5,12 @@
             "value": "100000000"
         },
         {
-            "name": "Consulta de precios",
+            "name": "Solicitud de presupuesto",
             "value": "100000001"
+        },
+        {
+            "name": "Asesoramiento comercial",
+            "value": "100000005"
         },
         {
             "name": "Solicitud administrativa",
