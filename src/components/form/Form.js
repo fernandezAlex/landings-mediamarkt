@@ -167,15 +167,15 @@ const Form = () => {
   //   }
   // };
 
-  const isValidated = isStoreError && validateName(nameEnterprise) && isTypeEnterpriseError && validateNif(nif) && (web === "" || validateName(web))&& validateInteger(employees) &&
-  isTypeTreatmentError && validateName(name) && validateName(surname) && validatePosition(position) && validateEmail(email) && validatePhone(phone) &&
-  isTypeRequestError && (message === "" || validateMessage(message)) && terms;
+  // const isValidated = isStoreError && validateName(nameEnterprise) && isTypeEnterpriseError && validateNif(nif) && (web === "" || validateName(web))&& validateInteger(employees) &&
+  // isTypeTreatmentError && validateName(name) && validateName(surname) && validatePosition(position) && validateEmail(email) && validatePhone(phone) &&
+  // isTypeRequestError && (message === "" || validateMessage(message)) && terms;
 
-  // const isAllValidated =
-    // isValidated === true 
+  const isAllValidated = true
+    // isValidated === true
     // && recaptcha === true ? true : false;
 
-  const isAllValidated = isValidated ;
+  // const isAllValidated = isValidated ;
 
   const dispatchForm = (e) => {
     e.preventDefault();
