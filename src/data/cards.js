@@ -100,7 +100,7 @@ export const cardsSection2Apple = [
         eventGa: "gaEvent",
         eventCategory: "Home_B2B",
         eventAction: "Click",
-        eventLabel: "Home_B2B_destacado1"
+        eventLabel: "Home_B2B_destacado2"
     },
     {
         title: "Somos el aliado de confianza para tu centro educativo",
@@ -135,12 +135,23 @@ export const cardsSection2Apple = [
     //     eventAction: "Click",
     //     eventLabel: "Home_B2B_destacado4"
     // },
+    // {
+    //     title: "Soluciones de prevención frente al Covid-19",
+    //     subtitle: "Espacios seguros: clientes y empleados protegidos",
+    //     imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Teasercovid.jpg",
+    //     button: "Ver más",
+    //     slug: "https://specials.mediamarkt.es/empresas/soluciones-covid",
+    //     eventGa: "gaEvent",
+    //     eventCategory: "Home_B2B",
+    //     eventAction: "Click",
+    //     eventLabel: "Home_B2B_destacado5"
+    // },
     {
-        title: "Soluciones de prevención frente al Covid-19",
-        subtitle: "Espacios seguros: clientes y empleados protegidos",
-        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Teasercovid.jpg",
-        button: "Ver más",
-        slug: "https://specials.mediamarkt.es/empresas/soluciones-covid",
+        title: "Regalos corporativos",
+        subtitle: "Disponemos de una gran variedad de opciones para tus regalos de empresa. Reconecta con tus clientes y empleados.",
+        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/teaser-regalo.png",
+        button: "Consúltanos",
+        slug: "#contacto",
         eventGa: "gaEvent",
         eventCategory: "Home_B2B",
         eventAction: "Click",
