@@ -4,22 +4,22 @@ import useModal from '../../hooks/useModal';
 import analytics from '../../helpers/analytics'
 
  export const SectionImg = ({data},{key}) => {
-    const {title, imgThumbnail, content, imgPosition, button, buttonVideo, buttonForm, buttonMM, buttonMMSlug } = data;
+    const {title, imgThumbnail, content, imgPosition, button, buttonVideo, buttonForm, buttonMM, buttonMMSlug, slugButton } = data;
     const { isShowing, toggle } = useModal();
     // const test = analytics("gaEvent", "Home_B2B_COMERCIO", "Click", "Home_B2B_COMERCIO_ver_video" );
     return (
         <div id={title}>
-            <h2 dangerouslySetInnerHTML={{ __html: title }} />
             <div  className={`section__img ${imgPosition ? "" : "imgRight" }`}>
                 <img src={imgThumbnail} alt={title}/>
                 <div class="section__text">
+                    <h2 dangerouslySetInnerHTML={{ __html: title }} />
                     <p dangerouslySetInnerHTML={{ __html: content }} />
                     <div className="buttons">
                         { button !== "" ?
                             <>
                             {/* <a className="button__more" id={title} onClick={toggle}>{button}</a> */}
-                            <a className="button__more" id={title} href="#">{button}</a>
-                                <Modal isShowing={isShowing} data={data} hide={toggle} />
+                            <a className="button__more" id={title} href={slugButton}>{button}</a>
+                                {/* <Modal isShowing={isShowing} data={data} hide={toggle} /> */}
                             </>
                             :
                             null
