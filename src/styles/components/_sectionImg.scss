@@ -16,6 +16,7 @@
     border-radius: 8px;
     flex-basis: calc(50% - 32px);
     order: 1;
+    max-width: 50%;
   }
 
   .section__text{
@@ -29,6 +30,12 @@
     ul li {
       position: relative;
       padding-bottom: 10px;
+    }
+    
+    ul li::marker {
+      content: "\2713";
+      color: #df0000;
+      font-weight: bold;
     }
     
     ul {
@@ -56,8 +63,9 @@
       font-size: 16px;
       border-bottom:2px solid #df0000;
       padding-bottom: 6px;
-      width:80px;
+      // width:80px;
       cursor: pointer;
+      text-decoration: none;
     }
 
     @media only screen and (max-width: 1093px) {

@@ -1,25 +1,16 @@
 export const cardsSection = [
     {
-      title: "Crédito Comercial",
-      content: `Es una financiación a corto plazo que nuestra entidad financiera concede a las empresas. <ul><li>Agiliza las operaciones comerciales.</li><li>Permite comprar sin liquidez inmediata.</li></ul>`,
+      title: "Hospitality",
+      content: `Solución de entretenimiento para hoteles basada en Google
+      Chromecast® el huésped podrá disfrutar de sus contenidos
+      favoritos en la TV de la habitación sin complicaciones. 
+      <ul><li>Cumple con la RGPD</li><li>Mejora la experiencia de tu cliente</li><li>Opción de integrar con PMS</li></ul>
+      <strong>Desde 150€ / habitación*</strong>`,
       imgThumbnail:
-        "https://specials.mediamarkt.es/assets-react/b2b-soluciones-financieras/062007_Imágenes_B2B_soluciones_financieras_1_480x270.png",
+        "https://specials.mediamarkt.es/assets-react/b2b-soluciones/Hospitality1_800x600_ccast.jpg",
       slug: "https://specials.mediamarkt.es/empresas/comercio/proceso-venta",
-      button: "",
-      event: "gaEvent",
-      eventCategory: "Home_B2B_COMERCIO",
-      eventAction: "Click",
-      eventLabel: "Home_B2B_COMERCIO_proceso_venta",
-      imgPosition: true
-    },
-    {
-      title: "Renting tecnológico",
-      content: `Es un contrato de alquiler de equipos tecnológicos por un periodo a medio o largo plazo donde la empresa podrá disfrutar de los bienes a cambio de una cuota de alquiler fija.`,
-      contentModal:`<p align="">Ventajas del renting tecnológico</p><div class="staked_modal"> <span>Contables</span> <span>Económicos fiscales</span> <span>Tecnológicas</span></div><ul><li>No suma CIRBE.</li><li>Gastos fiscalmente deducibles.</li><li>Tesorería y capacidad de endeudamiento, intactas.</li><li>Sin inversión inicial.</li><li>Bienes de equipo siempre actualizados.</li><li>Incluye herramientas de gestión de activos tecnológicos e industriales.</li><li>Solución a medida, evolutiva, flexible y global</li></ul> <br><div class="staked_modal"> <span>Pago por uso, la mejor alternativa a la compra. No lo compras, lo disfrutas.</span></div><p> ¿Cómo funciona?</p><div class="stepper_modal"> <span>1.Propuesta</span> <span>2.Viabilidad </span> <span>3.Contrato electrónico</span> <span>4.Contrato evolutivo</span></div><ol><li> Solicitud financiera de renting</li><li> Proceso de aprobación</li><li> Firma del contrato electrónico</li><li> Activación del contrato y renovación evolutiva</li></ol>`,
-      imgThumbnail:
-        "https://specials.mediamarkt.es/assets-react/b2b-soluciones-financieras/062007_Imágenes_B2B_soluciones_financieras_3_480x270.png",
-      slug: "https://specials.mediamarkt.es/empresas/comercio/proceso-venta",
-      button: "> Ver más ",
+      button: "Ver oferta*",
+      buttonForm: "Pregúntanos",
       event: "gaEvent",
       eventCategory: "Home_B2B_COMERCIO",
       eventAction: "Click",
@@ -27,13 +18,109 @@ export const cardsSection = [
       imgPosition: false
     },
     {
-      title: "Leasing",
-      content: `Es un arrendamiento con opción de compra destinado a la adquisición de bienes para uso profesional.`,
-      contentModal:`<ul><li><h4>Recursos dedicados a la actividad principal:</h4>Permite disfrutar de los productos que fácilmente quedan obsoletos con el tiempo en régimen de alquiler con servicio integral incluido.</li><li><h4>Ventajas fiscales:</h4>Genera mayor liquidez.</li><li><h4>Financiación automática del IVA:</h4>Sin la necesidad del desembolso inicial en una compra dispones de nuestros productos y soluciones pagando una cuota mensual.</li><li><h4>Ahorro financiero-fiscal derivado de la autorización acelerada:</h4>Permite amortizar el bien en la mitad del plazo de armonización contable del activo.</li><li><h4>Es sencillo y cómodo:</h4>Te financiamos el 100% de valor del producto/bien.</li><li><h4>Flexibilidad:</h4>Al final del contrato puedes elegir renovar el producto/bien o comprarlo</li><li><h4>Mejora la imagen externa de tu negocio:</h4>Te da la oportunidad de renovar tus equipos y disponer de la última tecnología.</li></ul>`,
+      title: "",
+      content: `Nuestro kiosko tablet te permite incorporar una solución de
+      auto check-in y check-out, autónoma y segura.
+      <ul><li>Agiliza tiempos de espera</li><li>Todo en uno</li><li>Un 90% más competivo que otras soluciones de mercado</li></ul>
+      <strong>Desde xxx€ / habitacion*</strong>`,
+      contentModal:`<iframe class="iframeHome" width="100" height="100" src="https://www.youtube.com/embed/wucWYD_337Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
       imgThumbnail:
-        "https://specials.mediamarkt.es/assets-react/b2b-soluciones-financieras/062007_Imágenes_B2B_soluciones_financieras_4_480x270.png",
+        "https://specials.mediamarkt.es/assets-react/b2b-soluciones/Hospitality2_800x600_checkin.jpg",
       slug: "https://specials.mediamarkt.es/empresas/comercio/proceso-venta",
-      button: "> Ver más ",
+      button: "Ver oferta*",
+      buttonVideo: "Ver video",
+      slugVideo: "https://specials.mediamarkt.es/empresas/comercio/proceso-venta",
+      buttonForm: "Pregúntanos",
+      buttonMM: "Ver más soluciones para el sector hostelero",
+      buttonMMSlug: "https://specials.mediamarkt.es/empresas/hospitality",
+      event: "gaEvent",
+      eventCategory: "Home_B2B_COMERCIO",
+      eventAction: "Click",
+      eventLabel: "Home_B2B_COMERCIO_proceso_venta",
+      imgPosition: true
+    },
+    {
+      title: "Comercio",
+      content: `Almacena, organiza, programa y emite contenidos medibles en
+      cualquier dispositivo digital sin dificultad de uso ni freno tecnológico. 
+      <ul><li>Mejora la comunicación con tus clientes</li><li>Gestiona contenido de forma sencilla</li><li>Programa y automatiza tus campañas</li></ul>
+      <strong>Desde 349€ / pantalla*</strong> `,
+      contentModal:`<iframe class="iframeHome" width="100" height="100" src="https://www.youtube.com/embed/YV5JwvODTyQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
+      imgThumbnail:
+        "https://specials.mediamarkt.es/assets-react/b2b-soluciones/Comercio1_800x600_101962824.png",
+      slug: "https://specials.mediamarkt.es/empresas/comercio/proceso-venta",
+      button: "> Ver oferta*",
+      buttonVideo: "Ver video",
+      buttonForm: "Pregúntanos",
+      event: "gaEvent",
+      eventCategory: "Home_B2B_COMERCIO",
+      eventAction: "Click",
+      eventLabel: "Home_B2B_COMERCIO_proceso_venta",
+      imgPosition: false
+    },
+    {
+      title: "",
+      content: `Te ofrecemos soluciones de conectividad a medida para
+      incrementar el flujo de clientes en tu negocio y mejorar tus
+      procesos de venta de forma sencilla.      
+      <ul><li>Últimos protocolos de seguridad y cifrad</li><li>Experiencias de clientes más comodas y únicas</li><li>UAdaptado para espacio de alta concurrencia</li></ul>`,
+      imgThumbnail:
+        "https://specials.mediamarkt.es/assets-react/b2b-soluciones/Comercio2_800x600_160650985.png",
+      slug: "https://specials.mediamarkt.es/empresas/comercio/proceso-venta",
+      button: "Ver oferta*",
+      buttonForm: "Pregúntanos",
+      event: "gaEvent",
+      eventCategory: "Home_B2B_COMERCIO",
+      eventAction: "Click",
+      eventLabel: "Home_B2B_COMERCIO_proceso_venta",
+      imgPosition: true
+    },
+    {
+      title: "",
+      content: `Simplifica los pagos de tu negocio con nuestra solución de
+      datáfono. Acepta cualquier medio de pago, configúralo en cinco
+      minutos y añade el banco que más te interese.
+      <ul><li>1,5% de comisión por transacción</li><li>Sin permanencia</li><li>Sin costes fijo</li></ul>`,
+      imgThumbnail:
+        "https://specials.mediamarkt.es/assets-react/b2b-soluciones/Comercio3_800x600_351270247.png",
+      slug: "https://specials.mediamarkt.es/empresas/comercio/proceso-venta",
+      button: "Ver oferta*",
+      buttonForm: "Pregúntanos",
+      buttonMM: "Ver más soluciones para el sector Comercio",
+      buttonMMSlug: "https://specials.mediamarkt.es/empresas/comercio",
+      event: "gaEvent",
+      eventCategory: "Home_B2B_COMERCIO",
+      eventAction: "Click",
+      eventLabel: "Home_B2B_COMERCIO_proceso_venta",
+      imgPosition: false
+    },
+    {
+      title: "Hostelería",
+      content: `Agiliza los procesos de gestión, control de stock y pagos con las
+      soluciones de TPV (Terminal punto de venta).
+      <ul><li>Simplifica tu contabilidad</li><li>Realiza inventarios de forma sencilla</li><li>Ahorra tiempo a tus clientes.</li></ul>`,
+      imgThumbnail:
+        "https://specials.mediamarkt.es/assets-react/b2b-soluciones/Hosteleria1_800x600_163131613.png",
+      slug: "https://specials.mediamarkt.es/empresas/comercio/proceso-venta",
+      button: "Ver oferta*",
+      buttonForm: "Pregúntanos",
+      event: "gaEvent",
+      eventCategory: "Home_B2B_COMERCIO",
+      eventAction: "Click",
+      eventLabel: "Home_B2B_COMERCIO_proceso_venta",
+      imgPosition: false
+    },
+    {
+      title: "",
+      content: `Garantiza del confort y bienestar de tus clientes con soluciones
+      de frio, calor y purificadores de aire.<br><br><br>
+      <strong>Descubre las soluciones que mejor se adaptan a
+      tu negocio y clientes</strong>`,
+      imgThumbnail:
+        "https://specials.mediamarkt.es/assets-react/b2b-soluciones/Hosteleria2_800x600_405218776.png",
+      slug: "https://specials.mediamarkt.es/empresas/comercio/proceso-venta",
+      button: "Ver oferta*",
+      buttonForm: "Pregúntanos",
       event: "gaEvent",
       eventCategory: "Home_B2B_COMERCIO",
       eventAction: "Click",
@@ -41,4 +128,37 @@ export const cardsSection = [
       imgPosition: true
     },
   ];
+
+  export const cardLastSection = 
+    {
+        title: "Nos aseguramos que tu negocio siempre funcione",
+        subtitle: `<ul>
+          <li>
+              BOLSA DE HORAS
+          </li>
+          <li>
+            MANTENIMIENTO
+          </li>
+          <li>
+              INSTALACIONES
+          </li>
+          <li>
+              REPARACIONES
+          </li>
+          <li>
+              RECOMPRA
+          </li>
+          <li>
+          PROYECTO LLAVE EN MANO
+          </li>
+        </ul>`,
+        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b-soluciones/Servicios_800x600_b2b_service.jpg",
+        button: "Más info",
+        slug: "#contacto",
+        eventGa: "gaEvent",
+        eventCategory: "B2B_soluciones_energeticas",
+        eventAction: "Click",
+        eventLabel: "B2B_soluciones_energeticas_teaser1"
+  }
+;
   

@@ -94,6 +94,28 @@ h3{
   }
 }
 
+.buttons{
+  display: inline-flex;
+}
+
+.button_mm{
+  display: flex;
+  justify-content: center;
+  color: #000;
+  background-color: #f7f7f7;
+  border-radius: 1px;
+  border: none;
+  padding: 10px 30px;
+  margin: 50px auto;
+  outline: none;
+  background-color: #000;
+  color: #fff !important;
+  cursor: pointer;
+  text-decoration: none;
+  width: auto;
+  max-width: 400px;
+}
+
 .container__text {
   height: 140px;
 }

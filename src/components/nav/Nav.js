@@ -36,23 +36,29 @@ export const Nav = ({ data, width }) => {
         <div className="options__section">
           <div className="options">
             <div className="container__options">
-              {data.map(({ title }, i) => (
-                <nav key={i} className="item__option">
-                        <Link
-                        className="nav-item"
-                        activeClass="active"
-                        // to={`option-${i+1}`}
-                        to={title}
-                        spy={true}
-                        smooth={true}
-                        offset={-70}
-                        duration={500}
-                        for={`option-${i+1}`}
-                        >
-                          {title}
-                        </Link>
-                </nav>
-              ))}
+              
+                {
+                  data.map(({ title }, i) => (
+                    title !== "" ?
+                    <nav key={i} className="item__option">
+                            <Link
+                            className="nav-item"
+                            activeClass="active"
+                            // to={`option-${i+1}`}
+                            to={title}
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
+                            for={`option-${i+1}`}
+                            >
+                              {title}
+                            </Link>
+                    </nav>
+                    : null
+                    
+                  ))
+                } 
             </div>
           </div>
         </div>

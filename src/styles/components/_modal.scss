@@ -34,14 +34,16 @@
       width: 90%;
       background: #ffff;
       position: relative;
-      top: 2%;
       max-width: 1077px;
       overflow: auto;
-      height: auto;
+      height: 80%;
+      margin: auto;
+      top: 10%;
       @media screen and (min-width: 1477px) {
-        top: 10vw;
-        transform: translate(-50%);
-        left: 50%;
+        // top: 10vw;
+        // transform: translate(-50%);
+        // left: 50%;
+        margin: auto;
       }
       @media screen and (max-width: 1477px) {
         width: 94%;
@@ -116,14 +118,14 @@ ol, ul {
   padding-left: 23px;
 }
 
-#iframeHome {
+.iframeHome {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   @media screen and (min-width: 1477px) {
-    width: 1477px;
-    height: 831px;
+    width: 100%;
+    height: 100%;
   }
 }

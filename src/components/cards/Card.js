@@ -17,31 +17,53 @@ const Card = ({
 }) => {
     
     return (
+        <div className="section">
             <div key={title} className="card__container">
                 <div className="__header">
-                    <div className="--img" style={{ backgroundImage: `url('${imgThumbnail}')` }}></div>
+                    <div className="--img" style={{ backgroundImage: `url('https://specials.mediamarkt.es/assets-react/b2b-soluciones/Servicios_800x600_b2b_service.jpg')` }}></div>
                 </div>
                 <div className="__footer">
                     <div className="container__text">
                         <div className="--title">
                             <p className="--title__card">
-                                {title}
+                                Nos aseguramos que tu negocio siempre funcione
                             </p>
                         </div>
                         <div className="--subtitle">
-                            <p className={`--subtitle__card ${subtitle.length < 1 ? "empty" : ""}`}>
+                            {/* <p className={`--subtitle__card ${subtitle.length < 1 ? "empty" : ""}`}>
                                 {subtitle}
-                            </p>
+                            </p> */}
+                            <ul>
+                                <li>
+                                    BOLSA DE HORAS
+                                </li>
+                                <li>
+                                MANTENIMIENT¾
+                                </li>
+                                <li>
+                                    INSTALACIONES
+                                </li>
+                                <li>
+                                    REPARACIONES
+                                </li>
+                                <li>
+                                    RECOMPRA
+                                </li>
+                                <li>
+                                PROYECTO LLAVE EN MANO
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <div className="--button">
                         <a className="link__card" href={slug} onClick={() => analytics(eventGa, eventCategory, eventAction, eventLabel)}>
                             <span className="arrow"><Arrow /></span>
-                            <font className="link__text"> {button}</font>
+                            <font className="link__text"> Más info</font>
                         </a>
                     </div>
                 </div>
             </div>
+        </div>
     )
 }
 

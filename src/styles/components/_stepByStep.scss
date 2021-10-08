@@ -1,0 +1,101 @@
+*{box-sizing:border-box;}
+.gPApBw{box-sizing:border-box;margin:0px auto;max-width:1472px;padding:0px 16px;color:#ffff}
+@media (min-width: 512px){
+.gPApBw{padding:0px 24px;}
+}
+@media (min-width: 752px){
+.gPApBw{padding:0px 32px;}
+}
+@media (min-width: 1008px){
+.gPApBw{padding:0px 48px;}
+}
+@media (min-width: 1232px){
+.gPApBw{padding:0px 64px;}
+}
+.iOCseY{display:flex;flex-flow:row wrap;-webkit-box-align:stretch;align-items:stretch;margin:0px;}
+.eZeBKx{-webkit-box-flex:1;flex-grow:1;box-sizing:border-box;margin:calc(8px);width:calc(100% - 16px);display:none;}
+@media (min-width: 512px){
+.eZeBKx{display:block;margin:calc(8px);width:calc(12.5% - 16px);}
+}
+@media (min-width: 752px){
+.eZeBKx{display:block;margin:calc(12px);width:calc(12.5% - 24px);}
+}
+@media (min-width: 1008px){
+.eZeBKx{display:block;margin:calc(12px);width:calc(8.33333% - 24px);}
+}
+@media (min-width: 1232px){
+.eZeBKx{display:block;margin:calc(12px);width:calc(8.33333% - 24px);}
+}
+.bcdKi{-webkit-box-flex:1;flex-grow:1;box-sizing:border-box;margin:calc(8px);width:calc(100% - 16px);}
+@media (min-width: 512px){
+.bcdKi{display:block;margin:calc(8px);width:calc(75% - 16px);}
+}
+@media (min-width: 752px){
+.bcdKi{display:block;margin:calc(12px);width:calc(75% - 24px);}
+}
+@media (min-width: 1008px){
+.bcdKi{display:block;margin:calc(12px);width:calc(83.3333% - 24px);}
+}
+@media (min-width: 1232px){
+.bcdKi{display:block;margin:calc(12px);width:calc(83.3333% - 24px);}
+}
+.eqGOUK{margin:0px;color:rgb(255, 255, 255);font-size:28px;line-height:28px;font-family:SourceSansPro, Arial, sans-serif;font-weight:700;letter-spacing:0.4px;}
+.FAiMO{color:rgb(255, 255, 255);font-size:16px;line-height:24px;font-family:SourceSansPro, Arial, sans-serif;font-weight:400;letter-spacing:normal;}
+.ewGXNU{margin:0px;color:rgb(255, 255, 255);font-size:24px;line-height:28px;font-family:MMHeadline, Arial, sans-serif;font-weight:400;letter-spacing:0.4px;}
+.bwYeki{color:rgb(255, 255, 255);font-size:18px;line-height:28px;font-family:SourceSansPro, Arial, sans-serif;font-weight:700;letter-spacing:normal;white-space:normal;overflow:hidden;max-height:calc(56px);-webkit-line-clamp:2;display:-webkit-box;-webkit-box-orient:vertical;}
+.eMgmEz{display:block;width:100%;height:32px;}
+@media (min-width: 752px){
+.eMgmEz{height:40px;}
+}
+.hHTCXG{display:flex;}
+.cwkxZy{display:flex;flex-direction:row;}
+.eSNWdY{width:5rem;height:5rem;line-height:5rem;border-radius:50%;border:2px solid white;transform:rotate(45deg);text-align:center;}
+.OzmYR{display:inline-block;transform:rotate(-45deg);vertical-align:-0.1rem;margin-left:0px;}
+.jGFaVO{display:flex;flex-direction:column;-webkit-box-align:center;align-items:center;max-width:350px;flex-basis:30%;}
+@media (max-width: 751.98px){
+.jGFaVO{flex-basis:0%;align-self:center;width:100%;}
+}
+.gpRzQM{display:flex;flex-direction:column;-webkit-box-align:center;align-items:center;text-align:center;width:95%;max-width:25rem;padding-top:10px;padding-bottom:24px;}
+@media (min-width: 752px){
+.gpRzQM{padding-bottom:40px;}
+}
+.gpRzQM p{margin-bottom:0px;width:100%;}
+.kDRdFH{display:flex;max-width:350px;flex-basis:5%;}
+@media (max-width: 751.98px){
+.kDRdFH{align-self:center;}
+}
+@media (min-width: 752px){
+.kDRdFH{display:flex;}
+}
+.fbGZDd{width:4rem;height:4rem;margin:0px auto 24px;transform:translateX(-2rem) rotate(90deg);border-top:1px solid white;}
+@media (min-width: 752px){
+.fbGZDd{width:100%;margin:0px;}
+}
+@media (min-width: 752px){
+.fbGZDd{transform:translateY(2.5rem) scaleX(4);}
+}
+.MGgKt{position:relative;overflow:hidden;background-color:rgb(223, 0, 0);margin:56px 0px;}
+.MGgKt::before,.MGgKt::after{content:"";display:block;position:absolute;width:40rem;height:40rem;top:0px;left:50%;background:rgba(0, 0, 0, 0.1);border-radius:100px;transform:translate(-20rem, -0.5rem) rotate(-45deg);}
+@media (min-width: 752px){
+.MGgKt::before,.MGgKt::after{width:55rem;height:55rem;transform:translate(-43rem, 1rem) rotate(-45deg);}
+}
+@media (min-width: 1008px){
+.MGgKt::before,.MGgKt::after{transform:translate(-47rem, -1rem) rotate(-45deg);}
+}
+@media (min-width: 1232px){
+.MGgKt::before,.MGgKt::after{transform:translate(-55rem, -1rem) rotate(-45deg);}
+}
+.MGgKt::after{top:65rem;}
+@media (min-width: 752px){
+.MGgKt::after{display:none;}
+}
+.kXxEBi{position:relative;padding:56px 0px;z-index:1;}
+.dHmyUT{flex-flow:column wrap;align-content:center;}
+@media (min-width: 752px){
+.dHmyUT{flex-direction:row;-webkit-box-pack:center;justify-content:center;}
+}
+/*! CSS fontfaces */
+@font-face{font-family:SourceSansPro;font-weight:400;font-style:normal;font-display:swap;src:url(https://www.mediamarkt.es/public/fonts/SourceSansPro-Regular.woff2) format('woff2'),       url(https://www.mediamarkt.es/public/fonts/SourceSansPro-Regular.woff) format('woff');}
+@font-face{font-family:SourceSansPro;font-weight:600;font-style:normal;font-display:swap;src:url(https://www.mediamarkt.es/public/fonts/SourceSansPro-Semibold.woff2) format('woff2'),       url(https://www.mediamarkt.es/public/fonts/SourceSansPro-Semibold.woff) format('woff');}
+@font-face{font-family:SourceSansPro;font-weight:700;font-style:normal;font-display:swap;src:url(https://www.mediamarkt.es/public/fonts/SourceSansPro-Bold.woff2) format('woff2'),       url(https://www.mediamarkt.es/public/fonts/SourceSansPro-Bold.woff) format('woff');}
+@font-face{font-family:MMHeadline;font-weight:400;font-style:normal;font-display:swap;src:url(https://www.mediamarkt.es/public/fonts/MMHeadlineProWebTT-Regular_subset.woff2) format('woff2'),       url(https://www.mediamarkt.es/public/fonts/MMHeadlineProWebTT-Regular_subset.woff) format('woff');}
