@@ -36,7 +36,7 @@ export const cardsSection2 = [
     {
         title: "Somos el aliado de confianza para tu centro educativo",
         subtitle: "Descubre todas las soluciones que podemos ofrecerte",
-        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Teaser2.png",
+        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/TeaserEducacion.png",
         button: "Ver más",
         slug: "https://specials.mediamarkt.es/empresas/educacion",
         eventGa: "gaEvent",
@@ -45,16 +45,27 @@ export const cardsSection2 = [
         eventLabel: "Home_B2B_destacado3"
     },
     {
-        title: "Soluciones energéticas para empresas",
-        subtitle: "Como combinar la rentabilidad, competitividad y sostenibilidad",
-        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Teaser3.png",
+        title: "El máximo confort para tus clientes",
+        subtitle: "Consigue un ambiente óptimo para tu negocio con nuestras soluciones de climatización y calidad del aire. Sensación de confort y seguridad asegurado",
+        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/TeaserClima.png",
         button: "Ver más",
-        slug: "https://specials.mediamarkt.es/empresas/soluciones-energeticas",
+        slug: "https://specials.mediamarkt.es/hospitality-comercio-hostelería/climatización",
         eventGa: "gaEvent",
         eventCategory: "Home_B2B",
         eventAction: "Click",
         eventLabel: "Home_B2B_destacado4"
     },
+    // {
+    //     title: "Soluciones energéticas para empresas",
+    //     subtitle: "Como combinar la rentabilidad, competitividad y sostenibilidad",
+    //     imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Teaser3.png",
+    //     button: "Ver más",
+    //     slug: "https://specials.mediamarkt.es/empresas/soluciones-energeticas",
+    //     eventGa: "gaEvent",
+    //     eventCategory: "Home_B2B",
+    //     eventAction: "Click",
+    //     eventLabel: "Home_B2B_destacado4"
+    // },
     // {
     //     title: "Google Nest Wifi para empresas",
     //     subtitle: "Crea tu red WiFi estable y segura pregúntanos por tu mejor solución",
@@ -105,7 +116,7 @@ export const cardsSection2Apple = [
     {
         title: "Somos el aliado de confianza para tu centro educativo",
         subtitle: "Descubre todas las soluciones que podemos ofrecerte",
-        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Teaser2.png",
+        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/TeaserEducacion.png",
         button: "Ver más",
         slug: "https://specials.mediamarkt.es/empresas/educacion",
         eventGa: "gaEvent",
@@ -114,16 +125,27 @@ export const cardsSection2Apple = [
         eventLabel: "Home_B2B_destacado3"
     },
     {
-        title: "Soluciones energéticas para empresas",
-        subtitle: "Como combinar la rentabilidad, competitividad y sostenibilidad",
-        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Teaser3.png",
+        title: "El máximo confort para tus clientes",
+        subtitle: "Consigue un ambiente óptimo para tu negocio con nuestras soluciones de climatización y calidad del aire. Sensación de confort y seguridad asegurado",
+        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/TeaserClima.png",
         button: "Ver más",
-        slug: "https://specials.mediamarkt.es/empresas/soluciones-energeticas",
+        slug: "https://specials.mediamarkt.es/hospitality-comercio-hostelería/climatización",
         eventGa: "gaEvent",
         eventCategory: "Home_B2B",
         eventAction: "Click",
         eventLabel: "Home_B2B_destacado4"
     },
+    // {
+    //     title: "Soluciones energéticas para empresas",
+    //     subtitle: "Como combinar la rentabilidad, competitividad y sostenibilidad",
+    //     imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Teaser3.png",
+    //     button: "Ver más",
+    //     slug: "https://specials.mediamarkt.es/empresas/soluciones-energeticas",
+    //     eventGa: "gaEvent",
+    //     eventCategory: "Home_B2B",
+    //     eventAction: "Click",
+    //     eventLabel: "Home_B2B_destacado4"
+    // },
     // {
     //     title: "Google Nest Wifi para empresas",
     //     subtitle: "Crea tu red WiFi estable y segura pregúntanos por tu mejor solución",
@@ -174,7 +196,7 @@ export const cardsSection3 = [
     {
         title: "Educación",
         subtitle: "Soluciones tecnológicas para escuelas, universidades, centros escolares",
-        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Teaser2.png",
+        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/TeaserEducacion.png",
         slug: "https://specials.mediamarkt.es/empresas/educacion",
         button: "Ver más",
         event: "gaEvent",
