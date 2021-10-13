@@ -107,7 +107,7 @@ export const cardsSection = [
       eventCategory: "Home_B2B_COMERCIO",
       eventAction: "Click",
       eventLabel: "Home_B2B_COMERCIO_proceso_venta",
-      imgPosition: false
+      imgPosition: true
     },
     {
       title: "",
@@ -124,7 +124,7 @@ export const cardsSection = [
       eventCategory: "Home_B2B_COMERCIO",
       eventAction: "Click",
       eventLabel: "Home_B2B_COMERCIO_proceso_venta",
-      imgPosition: true
+      imgPosition: false
     },
   ];
 
