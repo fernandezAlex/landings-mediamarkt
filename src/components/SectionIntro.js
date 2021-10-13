@@ -13,7 +13,7 @@ export const SectionIntro = () => {
       <div className="container__intro__text">
         <p className="text__intro">
           En MediaMarkt Business te acompañamos en la digitalización de tu negocio
-          mejorando la comunicación, procesos de gestion y experiencia de tus clientes,
+          mejorando la comunicación, procesos de gestión y experiencia de tus clientes,
           adaptando soluciones únicas y diferenciadoras para cada sector.
           <br/>
           <br/>

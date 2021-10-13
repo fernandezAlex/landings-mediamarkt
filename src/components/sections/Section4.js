@@ -10,7 +10,7 @@ const Section3 = ({ width }) => {
             <div className="Cellstyled__StyledCell-sc-1wk5bje-0 bcdKi">
               <div className="StepByStepstyled__StyledContentBlock-aps9mk-1 kXxEBi">
                 <h2 color="white" fontFamily="default" spacing="base" fontSize="xxl"
-                    aria-label="Así es como funciona" className="Typostyled__StyledInfoTypo-sc-1jga2g7-0 eqGOUK">Completa tu solución con nuestro servicio de instalación</h2>
+                    aria-label="Así es como funciona" className="Typostyled__StyledInfoTypo-sc-1jga2g7-0 eqGOUK">CSolicita ahora una oferta individual para cantidades superiores a cinco unidades</h2>
                 <p color="white" fontSize="sm" className="Typostyled__StyledInfoTypo-sc-1jga2g7-0 FAiMO"></p>
                 <div direction="horizontal" className="Spacer__StyledSpacer-sc-1wx27iz-0 eMgmEz"></div>
                 <div display="flex"
@@ -26,9 +26,9 @@ const Section3 = ({ width }) => {
                         </div>
                         <div className="StepElementstyled__StyledStepContent-sc-1dvtcji-1 gpRzQM">
                           <p color="white" fontSize="md" className="Typostyled__StyledInfoTypo-sc-1jga2g7-0 bwYeki">
-                            Infórmate
+                            Selecciona
                           </p>
-                          Consulta los productos que necesitas
+                          Elige tus productos
                         </div>
                     </div>
                     <div className="StepElementstyled__StyledLineContainer-sc-1dvtcji-2 kDRdFH">
@@ -48,8 +48,7 @@ const Section3 = ({ width }) => {
                           <p color="white" fontSize="md" className="Typostyled__StyledInfoTypo-sc-1jga2g7-0 bwYeki">
                             Contacta
                           </p>
-                            Solicita a tu asesor comercial una oferta
-                            sin compromiso 
+                            Envianos tu petición a es.businnes@mediamarkt.es
                         </div>
                     </div>
                     <div className="StepElementstyled__StyledLineContainer-sc-1dvtcji-2 kDRdFH">
@@ -69,8 +68,7 @@ const Section3 = ({ width }) => {
                             <p color="white" fontSize="md" className="Typostyled__StyledInfoTypo-sc-1jga2g7-0 bwYeki">
                               Benefíciate
                             </p>
-                            Te haremos una oferta individual para
-                            tu empresa
+                            Te enviaremos la mejor propuesta comercial acorde a tu necesidad
                         </div>
                     </div>
                   </div>
