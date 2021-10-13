@@ -36,7 +36,7 @@ export const cardsSection2 = [
     {
         title: "Somos el aliado de confianza para tu centro educativo",
         subtitle: "Descubre todas las soluciones que podemos ofrecerte",
-        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/TeaserEducacion.png",
+        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Teaser2.png",
         button: "Ver más",
         slug: "https://specials.mediamarkt.es/empresas/educacion",
         eventGa: "gaEvent",
@@ -116,7 +116,7 @@ export const cardsSection2Apple = [
     {
         title: "Somos el aliado de confianza para tu centro educativo",
         subtitle: "Descubre todas las soluciones que podemos ofrecerte",
-        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/TeaserEducacion.png",
+        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Teaser2.png",
         button: "Ver más",
         slug: "https://specials.mediamarkt.es/empresas/educacion",
         eventGa: "gaEvent",
@@ -196,7 +196,7 @@ export const cardsSection3 = [
     {
         title: "Educación",
         subtitle: "Soluciones tecnológicas para escuelas, universidades, centros escolares",
-        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/TeaserEducacion.png",
+        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Teaser2.png",
         slug: "https://specials.mediamarkt.es/empresas/educacion",
         button: "Ver más",
         event: "gaEvent",

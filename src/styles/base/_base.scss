@@ -80,6 +80,17 @@ h1.title {
   }
 }
 
+p.--subtitle__card {
+  @media only screen and (max-width: 823px) {
+    overflow: hidden;
+    height: 44px;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+}
+
 .container__slidersmall .slick-dots li.slick-active button:before {
   font-size: 70px!important;
   display: none!important;
