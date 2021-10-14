@@ -1,17 +1,23 @@
 export const cardsSection = [
     {
-      title: "¡Da un paso al marketing digital con nuestras soluciones!",
-      content: ` <h2>Solución carteleria digital</h2> <h4>Desde 349€*</h4>
-      <span class="red__mm">*Precio sin impuestos incluidos. Incluye:</span> <br><br> Player (dispositivo reproductor de contenidos)
-      Hasta 10 licencias gestionadas por la misma cuenta.
-      Almacenamiento cloud 2GB.
-      Gestor de contenido
+      title: "PLUG AND PLAY, conecta y empieza a trabajar",
+      content: `<h2>Pack hostelería</h2>
+      <h4>Incluye:</h4>
+      <ul><li>Terminal táctil PS3415 con W10 IOT instalado</li><li>Impresora Posiflex PP-8802</li><li>Software de gestión multisectorial No problem gestión</li></ul>
+      <p>Precio 953,95€</p>
+      <br /><br /><br />
+      <h2>Pack comercio</h2>
+      <h4>Incluye:</h4>
+      <ul><li>Terminal táctil PS3415 con W10 IOT instalado</li><li>Impresora Posiflex PP-8802</li><li>Software de gestión multisectorial No problem gestión</li><li>Lector de código de barras Posiflex CD-3200 + Soporte</li></ul>
+      <p>Precio 1.029,51€</p>
       `,
       imgThumbnail:
-        "https://specials.mediamarkt.es/assets-react/b2b-soluciones/Hospitality1_800x600_ccast.jpg",
+        "https://specials.mediamarkt.es/assets-react/b2b-hospitality/tpv/tpv_800x600.jpg",
       slug: "https://specials.mediamarkt.es/empresas/comercio/proceso-venta",
       button: "",
-      buttonForm: "Pregúntanos",
+      buttonForm: "",
+      buttonMM: "Ver más ofertas",
+      buttonMMSlug: "https://www.mediamarkt.es",
       event: "gaEvent",
       eventCategory: "Home_B2B_COMERCIO",
       eventAction: "Click",
@@ -22,13 +28,16 @@ export const cardsSection = [
 
   export const cardLastSection = 
     {
-        title: "Completa tu solución de Digital Signage con los servicios adaptados a tus necesidades: ",
-        subtitle: `<strong>Instalacion TV (no incluida en la promocion)</strong> <ul>
+        title: "Completa tu solución con nuestro servicio de instalación: ",
+        subtitle: `<strong>Bolsa de horas</strong> <ul>
         <li>
-          175€ (menos de 46") 
+          175€ - 4 horas
         </li>
         <li>
-          112,50€ (hasta 70 )
+          340€ - 8 horas
+        </li>
+        <li>
+          491€ - 12 horas
         </li>
       </ul>`,
         imgThumbnail: "",

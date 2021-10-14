@@ -6,9 +6,7 @@ import { ReactComponent as Arrow } from "../img/button-arrow.svg";
 export const SectionIntro = () => { 
   return (
     <div className="section__intro">
-      Mejora la comunicación con tus clientes, aumentando hasta un 30% las ventas y mejorando la percepción de la marca hasta un
-      78%. Además de tener informados a tus clientes en todo momento, ahorrarás en coste de publicidad y materiales y podrás realizar
-      campañas totalmente personalizadas.
+      Cómodo y sencillo, en una sola caja tendrás integrada la TPV, la impresora y el cajón portamonedas (no incluido). El software de gestión viene instalada y configurado, sólo tendrás que escoger tu sector y empezar a usarlo.<br />Aprovecha la oferta de lanzamiento y tendrás 3 meses de mantenimiento gratuito.
     </div>
   );
 };

@@ -28,24 +28,7 @@ const CardSection = ({data}) => {
               dangerouslySetInnerHTML={{ __html: subtitle }}
             />
           </div>
-          <div className="--texto2">
-          {/* <div
-            className="--imgWide"
-            style={{ backgroundImage: `url('${imgThumbnail}')` }}
-          ></div> */}
-          <strong>Bolsa de horas</strong>
-          <ul>
-            <li>
-              175€ - 4 Horas
-            </li>
-            <li>
-              340€ - 8 Horas
-            </li>
-            <li>
-              491€ - 12 Horas
-            </li>
-          </ul>
-        </div>
+          
           <div className="--button">
               <a
                 className="link__card"
