@@ -23,6 +23,14 @@ export const Breadcrumb = () => {
       />
       <h5>Soluciones hoteles-comercios-hostelería
       </h5>
+      <FontAwesomeIcon
+        icon={faChevronRight}
+        className="icon__arrow"
+        size="xs"
+      />
+      <h5>
+        Solución de Digital Signage
+      </h5>
     </div>
   );
 };

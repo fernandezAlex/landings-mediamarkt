@@ -19,43 +19,45 @@ const CardSection = ({data}) => {
   return (
     <div className="card__section__wrapper">
       <div className="cardsection__container">
-
-        <div className="__right">
-        <div className="container__text">
-            <div className="--title">
-              <p className="--title__card">{title}</p>
-            </div>
-            <div className="--subtitle">
-              <p
-                className="--subtitle__card"
-                dangerouslySetInnerHTML={{ __html: subtitle }}
-              />
-            </div>
-            <div className="--button">
-            <a
-              className="link__card"
-              target="_self"
-              href={slug}
-              // onClick={() =>
-              //   analytics(eventGa, eventCategory, eventAction, eventLabel)
-              // }
-            >
-              <span>
-                <Arrow />
-              </span>
-              <font className="link__text"> {button}</font>
-            </a>
+          <div className="--title">
+          <p className="--title__card"><strong>{title}</strong></p>
           </div>
+          <div className="--subtitle">
+            <p
+              className="--subtitle__card"
+              dangerouslySetInnerHTML={{ __html: subtitle }}
+            />
           </div>
-
+          <div className="--texto2">
+          {/* <div
+            className="--imgWide"
+            style={{ backgroundImage: `url('${imgThumbnail}')` }}
+          ></div> */}
+          <strong>Bolsa de horas</strong>
+          <ul>
+            <li>
+              175€ - 4 Horas
+            </li>
+            <li>
+              340€ - 8 Horas
+            </li>
+            <li>
+              491€ - 12 Horas
+            </li>
+          </ul>
         </div>
-        <div className="__left">
-        <div
-          className="--imgWide"
-          style={{ backgroundImage: `url('${imgThumbnail}')` }}
-        ></div>
-
-        </div>
+          <div className="--button">
+              <a
+                className="link__card"
+                target="_self"
+                href={slug}
+                // onClick={() =>
+                //   analytics(eventGa, eventCategory, eventAction, eventLabel)
+                // }
+              >
+                <font className="link__text">{button}</font>
+              </a>
+          </div>
       </div>
     </div>
   );
