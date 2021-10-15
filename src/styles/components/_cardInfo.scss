@@ -1,0 +1,111 @@
+
+
+.section {
+    margin: auto;
+    max-width: 1477px;
+    @media screen and (max-width: 1477px) {
+        padding: 0 40px 10px;
+    }
+    @media only screen and (max-width: 768px) {
+        padding: 0 30px 10px;
+    }
+}
+
+.gridCardInfo__container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+.card_wrapper {
+    margin: auto
+}
+.cardInfo__container {
+    display: flex;
+    min-height: 0;
+    width: 350px;
+    flex-direction: column;
+
+    @media screen and (max-width: 1210px) {
+        width: 28vw;
+    }
+    @media screen and (max-width: 950px) {
+        width: 55%;
+        min-width: 350px;
+    }
+
+    .__header {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        vertical-align: top;
+        border-radius: 8px;
+        .--img {
+            width: 100%;
+            height: 300px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: inherit;
+            background-position: center;
+        }
+    }
+    .__footer {
+        padding: 24px 16px;
+        justify-content: space-between;
+        .--title {
+            display: flex;
+            .--title__card {
+                color: black;
+                // white-space: normal;
+                // overflow: hidden;
+                // -webkit-line-clamp: 2;
+                // display: -webkit-box;
+                // -webkit-box-orient: vertical;
+                // margin: auto!important;
+                // font-weight: bold;
+                // letter-spacing: normal;
+                // padding-top: 0px;
+                // text-transform: none;
+                line-height: 26px;
+                font-size: 20px !important;
+                padding-bottom: 20px;
+                // max-height: calc(56px);
+            }
+            .--subtitle__card {
+                font-size: 0.8rem;
+            }
+        }
+        .--button {
+            cursor: pointer;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            .link__card {
+                display: flex;
+                align-items: center;
+            }
+            a.link__card {
+                text-decoration: none;
+                align-items: center;
+                display: flex;
+                .link_text {
+                    color: rgb(39, 36, 34);
+                    font-size: 16px;
+                    line-height: 24px;
+                    font-family: SourceSansPro, Arial, sans-serif;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                }
+            }
+        }
+    }
+}
+
+a,
+a:visited,
+a:active,
+a:focus,
+a:hover {
+    color: $mediamarkt;
+}

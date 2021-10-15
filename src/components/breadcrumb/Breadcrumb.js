@@ -21,15 +21,17 @@ export const Breadcrumb = () => {
         className="icon__arrow"
         size="xs"
       />
-      <h5>Soluciones hoteles-comercios-hostelería
-      </h5>
-      <FontAwesomeIcon
-        icon={faChevronRight}
-        className="icon__arrow"
-        size="xs"
-      />
-      <h5>
-        Solución de Digital Signage
+      <a href="https://specials.mediamarkt.es/empresas/hospitality-comercio-hostelería" target="_self">
+        <h5>Soluciones hoteles-comercios-hostelería
+        </h5>
+      </a>
+        <FontAwesomeIcon
+          icon={faChevronRight}
+          className="icon__arrow"
+          size="xs"
+        />
+        <h5>
+        Solución Datafono
       </h5>
     </div>
   );

@@ -1,8 +1,9 @@
 .section__intro {
-  margin: 60px auto;
+  margin: 50px auto;
   max-width: 1477px;
   flex-flow: wrap;
   display: flex;
+  line-height: 22px;
   align-items: center;
   @media screen and (min-width: 893px) {
     // margin-top: -80px;

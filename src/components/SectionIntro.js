@@ -6,9 +6,7 @@ import { ReactComponent as Arrow } from "../img/button-arrow.svg";
 export const SectionIntro = () => { 
   return (
     <div className="section__intro">
-      Mejora la comunicación con tus clientes, aumentando hasta un 30% las ventas y mejorando la percepción de la marca hasta un
-      78%. Además de tener informados a tus clientes en todo momento, ahorrarás en coste de publicidad y materiales y podrás realizar
-      campañas totalmente personalizadas.
+      Con nuestra solución de pago inteligente, harás crecer tu negocio gracias a la tecnología TPV móvil con el datáfono portátil.  Pagos seguros, cómodos y sin gastos fijos. Sin contrato ni vinculación, solución asequible a un precio competitivo.
     </div>
   );
 };

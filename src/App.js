@@ -3,10 +3,8 @@ import debounce from "./helpers/debounce";
 import Header from "./components/header/Header";
 import Section1 from "./components/sections/Section1";
 import Section2 from "./components/sections/Section2";
-// import Section4 from "./components/sections/Section4";
 import Form from "./components/form/Form";
-import {cardsSection, cardLastSection} from './data/cards'
-// import { Nav } from "./components/nav/Nav";
+import {cardsSection, cardsInfoSection} from './data/cards'
 import SectionIntro from "./components/SectionIntro";
 import CardSection from './components/cards/CardSection'
 
@@ -31,11 +29,10 @@ function App() {
   return (
     <>
       <Header />
-      {/* <Nav data={cardsSection}/> */}
       <SectionIntro />
       <Section1 data={cardsSection} width={width}/>
-      {/* <Section4 /> */}
-      <CardSection data={cardLastSection}/>
+      <Section2 data={cardsInfoSection} width={width}/>
+      {/* <CardSection data={cardLastSection}/> */}
       <Form />
     </>
   );

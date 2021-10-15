@@ -36,7 +36,7 @@ const CardSection = ({data}) => {
           <strong>Bolsa de horas</strong>
           <ul>
             <li>
-              175€ - 4 Horas
+              81,35€ - 4 Horas
             </li>
             <li>
               340€ - 8 Horas
