@@ -34,16 +34,27 @@ export const cardsSection2 = [
         eventLabel: "Home_B2B_destacado1"
     },
     {
-        title: "Somos el aliado de confianza para tu centro educativo",
-        subtitle: "Descubre todas las soluciones que podemos ofrecerte",
-        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Teaser2.png",
+        title: "Reinicia tu negocio",
+        subtitle: "Descubre las soluciones digitales más destacadas para cada sector. Reconecta con tu cliente.",
+        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/TeaserRestartYourBusiness.png",
         button: "Ver más",
-        slug: "https://specials.mediamarkt.es/empresas/educacion",
+        slug: "https://specials.mediamarkt.es/empresas/hospitality-comercio-hostelería",
         eventGa: "gaEvent",
         eventCategory: "Home_B2B",
         eventAction: "Click",
         eventLabel: "Home_B2B_destacado3"
     },
+    // {
+    //     title: "Somos el aliado de confianza para tu centro educativo",
+    //     subtitle: "Descubre todas las soluciones que podemos ofrecerte",
+    //     imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Teaser2.png",
+    //     button: "Ver más",
+    //     slug: "https://specials.mediamarkt.es/empresas/educacion",
+    //     eventGa: "gaEvent",
+    //     eventCategory: "Home_B2B",
+    //     eventAction: "Click",
+    //     eventLabel: "Home_B2B_destacado3"
+    // },
     {
         title: "El máximo confort para tus clientes",
         subtitle: "Consigue un ambiente óptimo para tu negocio con nuestras soluciones de climatización y calidad del aire. Sensación de confort y seguridad asegurado",
@@ -114,16 +125,27 @@ export const cardsSection2Apple = [
         eventLabel: "Home_B2B_destacado2"
     },
     {
-        title: "Somos el aliado de confianza para tu centro educativo",
-        subtitle: "Descubre todas las soluciones que podemos ofrecerte",
-        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Teaser2.png",
+        title: "Reinicia tu negocio",
+        subtitle: "Descubre las soluciones digitales más destacadas para cada sector. Reconecta con tu cliente.",
+        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/TeaserRestartYourBusiness.png",
         button: "Ver más",
-        slug: "https://specials.mediamarkt.es/empresas/educacion",
+        slug: "https://specials.mediamarkt.es/empresas/hospitality-comercio-hostelería",
         eventGa: "gaEvent",
         eventCategory: "Home_B2B",
         eventAction: "Click",
         eventLabel: "Home_B2B_destacado3"
     },
+    // {
+    //     title: "Somos el aliado de confianza para tu centro educativo",
+    //     subtitle: "Descubre todas las soluciones que podemos ofrecerte",
+    //     imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Teaser2.png",
+    //     button: "Ver más",
+    //     slug: "https://specials.mediamarkt.es/empresas/educacion",
+    //     eventGa: "gaEvent",
+    //     eventCategory: "Home_B2B",
+    //     eventAction: "Click",
+    //     eventLabel: "Home_B2B_destacado3"
+    // },
     {
         title: "El máximo confort para tus clientes",
         subtitle: "Consigue un ambiente óptimo para tu negocio con nuestras soluciones de climatización y calidad del aire. Sensación de confort y seguridad asegurado",
