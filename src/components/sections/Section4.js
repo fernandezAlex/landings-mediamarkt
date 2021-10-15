@@ -10,7 +10,7 @@ const Section3 = ({ width }) => {
             <div className="Cellstyled__StyledCell-sc-1wk5bje-0 bcdKi">
               <div className="StepByStepstyled__StyledContentBlock-aps9mk-1 kXxEBi">
                 <h2 color="white" fontFamily="default" spacing="base" fontSize="xxl"
-                    aria-label="Así es como funciona" className="Typostyled__StyledInfoTypo-sc-1jga2g7-0 eqGOUK">CSolicita ahora una oferta individual para cantidades superiores a cinco unidades</h2>
+                    aria-label="Así es como funciona" className="Typostyled__StyledInfoTypo-sc-1jga2g7-0 eqGOUK">Solicita ahora una oferta individual para cantidades superiores a cinco unidades</h2>
                 <p color="white" fontSize="sm" className="Typostyled__StyledInfoTypo-sc-1jga2g7-0 FAiMO"></p>
                 <div direction="horizontal" className="Spacer__StyledSpacer-sc-1wx27iz-0 eMgmEz"></div>
                 <div display="flex"

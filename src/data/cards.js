@@ -31,5 +31,6 @@ export const cardsSection = [
         subtitle: "Tarjeta SIM integrada y datos móviles gratuitos. Imprime estés donde estés. Pagos portátiles de verdad.",
         imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b-datafono/image_text_480x270_3.jpg",
     }
-    ]
+  ]
+
   

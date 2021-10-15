@@ -6,7 +6,7 @@ import Section2 from "./components/sections/Section2";
 import Form from "./components/form/Form";
 import {cardsSection, cardsInfoSection} from './data/cards'
 import SectionIntro from "./components/SectionIntro";
-import CardSection from './components/cards/CardSection'
+import Section4 from "./components/sections/Section4";
 
 
 
@@ -32,7 +32,7 @@ function App() {
       <SectionIntro />
       <Section1 data={cardsSection} width={width}/>
       <Section2 data={cardsInfoSection} width={width}/>
-      {/* <CardSection data={cardLastSection}/> */}
+      <Section4 />
       <Form />
     </>
   );
