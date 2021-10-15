@@ -25,7 +25,7 @@ export const cardsSection = [
         title: "Completa tu solución de Digital Signage con los servicios adaptados a tus necesidades: ",
         subtitle: `<strong>Instalacion TV (no incluida en la promocion)</strong> <ul>
         <li>
-          175€ (menos de 46") 
+          81,35€ (menos de 46") 
         </li>
         <li>
           112,50€ (hasta 70 )
