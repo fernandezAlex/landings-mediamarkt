@@ -2,7 +2,7 @@ export const cardsSection = [
     {
       title: "¡Da un paso al marketing digital con nuestras soluciones!",
       content: ` <h2>Solución carteleria digital</h2> <h4>Desde 349€*</h4>
-      <span class="red__mm">*Precio sin impuestos incluidos. Incluye:</span> <br><br> Player (dispositivo reproductor de contenidos)
+      <span class="red__mm">*Precio sin impuestos incluidos.</span> <br><br>Incluye:<br> Player (dispositivo reproductor de contenidos)
       Hasta 10 licencias gestionadas por la misma cuenta.
       Almacenamiento cloud 2GB.
       Gestor de contenido
@@ -23,12 +23,12 @@ export const cardsSection = [
   export const cardLastSection = 
     {
         title: "Completa tu solución de Digital Signage con los servicios adaptados a tus necesidades: ",
-        subtitle: `<strong>Instalacion TV (no incluida en la promocion)</strong> <ul>
+        subtitle: `<strong>Instalación TV (no incluida en la promoción)</strong> <ul>
         <li>
           81,35€ (menos de 46") 
         </li>
         <li>
-          112,50€ (hasta 70 )
+          112,50€ (hasta 70")
         </li>
       </ul>`,
         imgThumbnail: "",
