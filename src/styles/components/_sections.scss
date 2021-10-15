@@ -1,5 +1,6 @@
 .section__intro {
   margin: 60px auto;
+  padding: 0px 80px 0px 80px;
   max-width: 1477px;
   flex-flow: wrap;
   display: flex;
@@ -7,7 +8,14 @@
   @media screen and (min-width: 893px) {
     // margin-top: -80px;
   }
+  @media only screen and (max-width: 870px) {
+    padding: 0px 20px 10px;
+  }
 }
+
+
+
+
 .section {
   overflow: hidden;
 }
