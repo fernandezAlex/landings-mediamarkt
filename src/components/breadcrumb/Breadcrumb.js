@@ -31,7 +31,7 @@ export const Breadcrumb = () => {
           size="xs"
         />
         <h5>
-        Solución Datafono
+        Solución Datáfono
       </h5>
     </div>
   );
