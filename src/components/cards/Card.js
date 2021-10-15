@@ -29,9 +29,7 @@ const Card = ({
 
                         </div>
                         <div className="--subtitle">
-                            <p className={`--subtitle__card ${subtitle.length < 1 ? "empty" : ""}`}>
-                                {subtitle}
-                            </p>
+                            <p className={`--subtitle__card ${subtitle.length < 1 ? "empty" : ""}`} dangerouslySetInnerHTML={{ __html: subtitle}} />
                         </div>
                     </div>
                     <div className="--button">

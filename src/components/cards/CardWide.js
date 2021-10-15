@@ -24,9 +24,7 @@ const CardWide = ({
                             <p className="--title__card" dangerouslySetInnerHTML={{ __html: title}} />
                         </div>
                         <div className="--subtitle">
-                            <p className={`--subtitle__card ${subtitle.length < 1 ? "empty" : ""}`}>
-                                {subtitle}
-                            </p>
+                            <p className={`--subtitle__card ${subtitle.length < 1 ? "empty" : ""}`} dangerouslySetInnerHTML={{ __html: subtitle}} />
                         </div>
                     </div>
                     <a className="--button" href={slug} onClick={() => analytics(eventGa, eventCategory, eventAction, eventLabel)}>

@@ -35,7 +35,7 @@ export const cardsSection2 = [
     },
     {
         title: "Reinicia tu negocio",
-        subtitle: "Descubre las soluciones digitales más destacadas para cada sector. Reconecta con tu cliente.",
+        subtitle: "Descubre las soluciones digitales más destacadas para cada sector. <b>¡Reconecta con tu cliente!</b><br /><br />HOSPITALITY  COMERCIO   HOSTELERIA",
         imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/TeaserRestartYourBusiness.png",
         button: "Ver más",
         slug: "https://specials.mediamarkt.es/empresas/hospitality-comercio-hostelería",
@@ -126,7 +126,7 @@ export const cardsSection2Apple = [
     },
     {
         title: "Reinicia tu negocio",
-        subtitle: "Descubre las soluciones digitales más destacadas para cada sector. Reconecta con tu cliente.",
+        subtitle: "Descubre las soluciones digitales más destacadas para cada sector. <b>¡Reconecta con tu cliente!</b><br /><br />HOSPITALITY  COMERCIO   HOSTELERIA",
         imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/TeaserRestartYourBusiness.png",
         button: "Ver más",
         slug: "https://specials.mediamarkt.es/empresas/hospitality-comercio-hostelería",
