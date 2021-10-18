@@ -8,7 +8,7 @@ export const cardsSection = [
       Gestor de contenido
       `,
       imgThumbnail:
-        "https://specials.mediamarkt.es/assets-react/b2b-soluciones/Hospitality1_800x600_ccast.jpg",
+        "https://specials.mediamarkt.es/assets-react/b2b-digital-signage/teaser_image_desktop_800x425.jpg", 
       slug: "https://specials.mediamarkt.es/empresas/comercio/proceso-venta",
       button: "",
       buttonForm: "Pregúntanos",
