@@ -30,9 +30,9 @@ const Select = ({
 				// dataValue={dataValue}
 			>
                 <option disabled selected className="option__default" value="">{labelDefault}</option>
-                  {
-        data.map(({name, value}, i) => <option className="option__select" key={i} value={value}>{name}</option>)
-}    
+				{
+					data.map(({name, value}, i) => <option className="option__select" key={i} value={value}>{name}</option>)
+				}    
             </select>
 			{
 				required && <span className="span__required">*</span>

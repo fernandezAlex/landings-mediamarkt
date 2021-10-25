@@ -67,8 +67,7 @@ const Form = () => {
   const [newsletter, setNewsletter] = useState("");
   const [responEmarsys, setResponEmarsys] = useState("");
 
-  // const [recaptcha, setRecaptcha] = useState(false);
-  const [isSubmited, setIsSubmited] = useState(false);
+  const [recaptcha, setRecaptcha] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   const handleStoresChange = (value) => {
@@ -161,42 +160,42 @@ const Form = () => {
     setNewsletter(checked);
   };
 
-  // const onChangeCaptcha = (value) => {
-  //   if (value.length > 0) {
-  //     setRecaptcha(true);
-  //   }
-  // };
+  const onChangeCaptcha = (value) => {
+    if (value.length > 0) {
+      setRecaptcha(true);
+    }
+  };
 
-  // const isValidated = isStoreError && validateName(nameEnterprise) && isTypeEnterpriseError && validateNif(nif) && (web === "" || validateName(web))&& validateInteger(employees) &&
-  // isTypeTreatmentError && validateName(name) && validateName(surname) && validatePosition(position) && validateEmail(email) && validatePhone(phone) &&
-  // isTypeRequestError && (message === "" || validateMessage(message)) && terms;
+  const isValidated = isStoreError && validateName(nameEnterprise) && isTypeEnterpriseError && validateNif(nif) && (web === "" || validateName(web))&& validateInteger(employees) &&
+  isTypeTreatmentError && validateName(name) && validateName(surname) && validatePosition(position) && validateEmail(email) && validatePhone(phone) &&
+  isTypeRequestError && validateMessage(message) && terms;
 
-  const isAllValidated = true
-    // isValidated === true
-    // && recaptcha === true ? true : false;
 
-  // const isAllValidated = isValidated ;
+
+  const isAllValidated = isValidated
+    && recaptcha === true ? true : false;
+
+  console.log(isAllValidated);
 
   const dispatchForm = (e) => {
     e.preventDefault();
+    setIsLoading(true);
     if (isAllValidated) {
       sendDataPartner(e);
       if(newsletter)sendDataEmarsys(e);
-      setIsLoading(true);
-      setTimeout(() => {
-        setIsLoading(false);
-        setIsSubmited(true);
-      }, 1000);
+      // setTimeout(() => {
+      //   setIsLoading(false);
+      // }, 1000);
       // analytics(
       //   dataForm.dataAnalyticsForm.event,
       //   dataForm.dataAnalyticsForm.eventCategory,
       //   dataForm.dataAnalyticsForm.eventAction,
       //   dataForm.dataAnalyticsForm.eventLabel
       // );
-      reset(newsletter);
-      return setTimeout(() => {
-        reset(newsletter);
-      }, `${newsletter ? 2000 : 1000}`);
+      // reset(newsletter);
+      // return setTimeout(() => {
+      //   reset(newsletter);
+      // }, `${newsletter ? 2000 : 1000}`);
     }
   };
 
@@ -250,7 +249,8 @@ const Form = () => {
       title: respon.status == 200 ? `Gracias` : `Hay un error` ,
       text: respon.status == 200 ? `Hemos recibido tus datos, pronto nos pondremos en contacto contigo. ${responEmarsys}`: `No hemos podido guardar tus datos, vuelve a intentarlo más tarde.` ,
       timer: 100000,
-    })    
+    })
+    reset(newsletter);
   },[respon]);
 
   const reset = () => {
@@ -273,7 +273,6 @@ const Form = () => {
     setNewsletter(false);
     setTerms(false);
     setIsLoading(false);
-    setIsSubmited(false);
     setResponEmarsys("");
   }
 
@@ -474,7 +473,7 @@ const Form = () => {
             labelDefault="Tipo de solicitud"
             required={true}
           />
-          <TextArea
+        <TextArea
             type="mytext"
             placeholder="Consulta"
             rows={5}
@@ -509,19 +508,18 @@ const Form = () => {
               className="test_class"
               text="Suscríbete al boletín de noticias B2B de MediaMarkt."
             />
-            {/* <ReCaptcha
+            <HiddenFields />
+            <ReCaptcha
               size="normal"
               render="explicit"
               sitekey="6LdI4SUaAAAAAEPC4phCYBzZVLZg6tAz5nEbLO59"
               className={`recaptcha ${isValidated ? "enabled" : "disabled"}`}
               onChange={onChangeCaptcha}
-            /> */}
-            <HiddenFields />
+            />
             <AsyncButton
               type="submit"
-              // disabled={!isAllValidated}
+              disabled={!isAllValidated}
               isAllValidated={isAllValidated}
-              isSubmited={isSubmited}
               isLoading={isLoading}
             />
           </div>

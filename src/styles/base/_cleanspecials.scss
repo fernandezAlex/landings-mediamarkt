@@ -13,8 +13,16 @@
     margin-left: 0px !important;
 }
 
-.mobile-version input#tlegal-terms {
-    -webkit-appearance: checkbox !important;
+#root input[type=checkbox], input[type=radio]{
+    -webkit-appearance: auto !important;
+}
+
+#root input[type=text]:not(.ms-textfield):not(.disabled):not(.readonly){
+    box-shadow: none !important;
+    border: 0px !important;
+}
+#root input[type=email], select{
+    border: 0px !important;
 }
 
 #wrp_widgets, #widget_news {

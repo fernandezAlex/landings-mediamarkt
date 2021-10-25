@@ -5,7 +5,7 @@ export function validateName (name) {
     return NAME_REGEX.test(name)
 }
 export function validateNif (nif) {
-    const NIF_REGEX = /^([ABCDEFGHJKLMNPQRSUVW])(\d{7})([0-9A-J])$/;
+    const NIF_REGEX = /([a-z]|[A-Z]|[0-9])[0-9]{7}([a-z]|[A-Z]|[0-9])/;
     return NIF_REGEX.test(nif)
 }
 export function validatePosition (position) {
@@ -33,6 +33,6 @@ export function validatePhone (phone) {
     return PHONE_REGEX.test(phone)
 }
 export function validateMessage (message) {
-    const MESSAGE_REGEX = /^[a-zA-Z0-9]{20,2000}$/;
+    const MESSAGE_REGEX = /^[a-zA-Z0-9_ ]{2,2000}$/;
     return MESSAGE_REGEX.test(message)
 }
