@@ -5,12 +5,15 @@
     color: rgb(0, 0, 0);
     border: 1px solid rgb(207, 203, 202);
     border-radius: 8px;
-    height: 500px;
-    width: 350px;
+    // height: 500px;
+    min-width: 350px;
+    max-width: 26%;
+    JUSTIFY-CONTENT: space-between;
     flex-direction: column;
-    margin: 15px 89px 15px 0;
-    @media screen and (max-width: 1238px) {
-        margin: 15px 0px;
+    margin: 20px 0px;
+    // margin: 30px auto;
+    @media only screen and (max-width: 910px) {
+        width: 100%;
     }
 
     .__header {
@@ -25,14 +28,18 @@
             background-size: cover;
             background-repeat: no-repeat;
             border-radius: inherit;
+            background-position: center;
         }
     }
     .__footer {
+        .container__text{
+            height: auto;
+        }
         padding: 24px 16px;
         justify-content: space-between;
         .--title {
             display: flex;
-            padding-bottom: 20px;
+            // padding-bottom: 20px;
             .--title__card {
                 color: $mediamarkt;
                 white-space: normal;
@@ -54,10 +61,10 @@
             }
         }
         .--button {
-            cursor: pointer;
             display: flex;
             justify-content: start;
             align-items: center;
+            padding: 20px 0;
             .link__card {
                 display: flex;
                 align-items: center;

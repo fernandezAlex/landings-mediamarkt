@@ -29,6 +29,7 @@
     border-radius: 8px;
     flex-basis: calc(50% - 32px);
     order: 1;
+    width: 50%;
   }
 
   .section__text{
@@ -80,11 +81,12 @@
     }
 
   }
-  @media only screen and (max-width: 1250px) {
+  // @media only screen and (max-width: 1250px) {
+    @media only screen and (max-width: 1000px) {
     img {
       margin: auto;
       margin-top: 44px;
-      width: 100%;
+      width: 50%;
     }
     .section__text {
       flex-basis: calc(100% - 0px);

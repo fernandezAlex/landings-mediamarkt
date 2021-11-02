@@ -15,12 +15,24 @@
         "value": "00-24"
       },
       {
-        "hour": "Mañanas (10:00 - 14:00)",
-        "value": "10-14"
+        "hour": "de 7 a 10 horas",
+        "value": "7-10"
       },
       {
-        "hour": "Tardes (15:00 - 19:00)",
-        "value": "15-19"
+        "hour": "de 10 a 13 horas",
+        "value": "10-13"
+      },
+      {
+        "hour": "de 13 a 16 horas",
+        "value": "13-16"
+      },
+      {
+        "hour": "de 16 a 19 horas",
+        "value": "16-19"
+      },
+      {
+        "hour": "de 19 a 22 horas",
+        "value": "19-22"
       }
     ]
 }

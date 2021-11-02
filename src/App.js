@@ -3,10 +3,11 @@ import debounce from "./helpers/debounce";
 import Header from "./components/header/Header";
 import Section1 from "./components/sections/Section1";
 import Section2 from "./components/sections/Section2";
-import Section3 from "./components/sections/Section3";
+import Section4 from "./components/sections/Section4";
 import Form from "./components/form/Form";
-import {cardsSection} from './data/cards';
+import {cardsSection, cardsSection2} from './data/cards';
 import dataHeader from './data/dataHeader';
+import Accordion from './components/faqs/Accordion'
 
 function App() {
   const [width, setWidth] = useState(document.body.clientWidth);
@@ -27,8 +28,10 @@ function App() {
     <>
       <Header data={dataHeader}/>
       <Section1 data={cardsSection} width={width}/>
-      <Section2 data={cardsSection} width={width}/>
       <Form />
+      <Section2 data={cardsSection} width={width}/>
+      <Section4 data={cardsSection2} width={width}/>
+      <Accordion/>
     </>
   );
 }

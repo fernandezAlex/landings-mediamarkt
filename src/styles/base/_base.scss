@@ -95,6 +95,25 @@ h1.title {
   font-size: 38px !important;
 }
 
+.button_mm {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: #000;
+  background-color: #f7f7f7;
+  border-radius: 1px;
+  border: none;
+  padding: 10px 30px;
+  margin: 50px auto;
+  outline: none;
+  background-color: #000;
+  color: #fff!important;
+  cursor: pointer;
+  text-decoration: none;
+  width: auto;
+  max-width: 400px;
+}
 
 .button__CTA {
   padding: 2% 0; 
@@ -133,7 +152,7 @@ h1.title {
 }
 .section__{
   max-width: 1477px;
-  padding: 60px 80px 80px 80px;
+  padding: 12px 80px 80px 80px;
   padding-bottom: 10px;
   margin: auto;
   justify-content: center;
