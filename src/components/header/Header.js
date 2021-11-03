@@ -1,8 +1,11 @@
 import React from "react";
 import { Breadcrumb } from "../breadcrumb/Breadcrumb";
+import {ThemeContext} from '../../context/ThemeProvider';
 
 
 const Header = ({data, dataBreadcrumb}) => {
+
+  const {theme} = React.useContext(ThemeContext)
 
   return (
     <>
