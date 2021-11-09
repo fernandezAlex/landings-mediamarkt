@@ -1,5 +1,5 @@
 import React from 'react'
-import CardWide from '../cards/CardWide'
+import Card from '../cards/Card'
 import Slider from 'react-slick'
 
 const SliderBig = ({ data }) => {
@@ -9,10 +9,10 @@ const SliderBig = ({ data }) => {
         dots: true,
         infinite: true,
         speed: 1000,
-        centerMode: true,
+        centerMode: false,
         draggable: true,
         arrows: true,
-        slidesToShow: 1,
+        slidesToShow: 3,
         slidesToScroll: 1,
         variableWidth: true,
     }
@@ -37,7 +37,7 @@ const SliderBig = ({ data }) => {
                             i
                         ) => {
                             return (
-                                <CardWide
+                                <Card
                                     key={i}
                                     imgThumbnail={imgThumbnail}
                                     title={title}

@@ -4,7 +4,7 @@ import Card from './Card'
 const CardGrid = ({ data }) => {
     const cards = data
     return (
-            <div className="grid__wrapper">
+            <div className="">
                 <div className="grid__container">
                     {cards.map(
                         (
@@ -27,7 +27,7 @@ const CardGrid = ({ data }) => {
                                     key={i}
                                     imgThumbnail={imgThumbnail}
                                     title={title}
-                                    subtitle={subtitle}
+                                    subtitle={<div dangerouslySetInnerHTML={{ __html: subtitle }} />}
                                     slug={slug}
                                     button={button}
                                     event={event}

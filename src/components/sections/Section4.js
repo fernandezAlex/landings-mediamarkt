@@ -3,7 +3,6 @@ import Card from "../cards/Card";
 
 
 const Section4 = ({ width, data }) => {
-  const url  = "https://specials.mediamarkt.es/assets-react/soluciones-energeticas/640x360_edptotal_logo.jpg";
   return (
     <div className="section__">
       <h2>
@@ -22,12 +21,14 @@ const Section4 = ({ width, data }) => {
         </h3>
         <a href="#campaign-form">
           <button  className="button_mm">
-              Regístrate
+            Quiero ahorrar
           </button>
         </a>  
       {/* )} */}
     </div>
   );
 };
+
+
 
 export default Section4;

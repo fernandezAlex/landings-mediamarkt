@@ -1,38 +1,38 @@
 {
-    "idCampaign" : "308",
-    "numberNode" : "1241",
-    "originTercero" : "Viessmann",
+    "idCampaign" : "286",
+    "numberNode" : "1155",
+    "originTercero" : "edp-residencial",
     "dataAnalyticsForm" : {
         "event": "gaEvent",
-        "eventCategory": "Movistar",
+        "eventCategory": "Total Energies",
         "eventAction": "Click",
         "eventLabel": "Movistar_enviar_formulario"
     },
-    "urlActionForm" : "https://specials.mediamarkt.es/forms/getDatos/getDatos.php",
+    "urlActionForm" : "https://specials.mediamarkt.es/energia/TotalEnergies/confirmacion",
     "optionsTime" : [
       {
         "hour": "Ahora",
-        "value": "00-24"
+        "value": "ahora"
       },
       {
         "hour": "de 7 a 10 horas",
-        "value": "7-10"
+        "value": "09:00"
       },
       {
         "hour": "de 10 a 13 horas",
-        "value": "10-13"
+        "value": "12:00"
       },
       {
         "hour": "de 13 a 16 horas",
-        "value": "13-16"
+        "value": "15:00"
       },
       {
         "hour": "de 16 a 19 horas",
-        "value": "16-19"
+        "value": "17:00"
       },
       {
         "hour": "de 19 a 22 horas",
-        "value": "19-22"
+        "value": "21:00"
       }
     ]
 }

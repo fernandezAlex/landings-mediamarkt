@@ -22,6 +22,7 @@ const Form = () => {
   const [isNameError, setIsNameError] = useState(false);
   const [surname, setSurname] = useState("");
   const [isSurnameError, setIsSurnameError] = useState(false);
+  const [PrefixPhone, setPrefixPhone] = useState("+34");
   const [phone, setPhone] = useState("");
   const [isPhoneError, setIsPhoneError] = useState(false);
   const [email, setEmail] = useState("");
@@ -39,15 +40,17 @@ const Form = () => {
   const [actionState, setActionState] = useState(null);
 
   const valuesForm = {
-    nombre: name,
-    apellidos: surname,
+    firstname: name,
+    lastname: surname,
     email: email,
-    telefono: phone,
-    franja_horaria: hour,
-    newsletter_agree: newsletter,
+    telpref: PrefixPhone,
+    mobile: phone,
+    hora: hour,
+    newsletterAgree: newsletter,
+    subscription: terms,
     origin_tercero: dataForm.originTercero,
-    numberNode: dataForm.numberNode,
-    idCampaign: dataForm.idCampaign
+    // numberNode: dataForm.numberNode,
+    // // idCampaign: dataForm.idCampaign
   }
 
   const handleNameChange = (value) => {
@@ -88,6 +91,10 @@ const Form = () => {
     setNewsletter(checked);
   };
 
+  const handlePrefixPhoneChange = (value) => {
+    setPrefixPhone(value);
+  };
+
   const onChangeCaptcha = (value) => {
     if (value.length > 0) {
       setRecaptcha(true);
@@ -100,7 +107,7 @@ const Form = () => {
     setPhone("");
     setEmail("");
     setHour("");
-    document.getElementById("check1").checked = false;
+    document.getElementById("subscription").checked = false;
     if (newsletter) {document.getElementById("newsletter-agree").checked = false;}
     setNewsletter(false);
     setTerms(false);
@@ -143,25 +150,28 @@ const Form = () => {
     setRespon(respuesta.data)
   }
 
-  const dispatchForm = (e, valuesForm) => {
-    e.preventDefault();
+  const dispatchForm = () => {
+    // e.preventDefault();
     if (isAllValidated) {
-      fecthData();
+      // fecthData();
       setIsLoading(true);
-      setTimeout(() => {
-        setIsLoading(false);
-        setIsSubmited(true);
-      }, 1000);
+      setActionState(dataForm.urlActionForm);
+      return true;
+      // setTimeout(() => {
+      //   setIsLoading(false);
+      //   setIsSubmited(true);
+      // }, 1000);
       // analytics(
       //   valuesForm.dataAnalyticsForm.event,
       //   valuesForm.dataAnalyticsForm.eventCategory,
       //   valuesForm.dataAnalyticsForm.eventAction,
       //   valuesForm.dataAnalyticsForm.eventLabel
       // );
-      return setTimeout(() => {
-        reset(newsletter);
-      }, `${newsletter ? 2000 : 1000}`);
+      // return setTimeout(() => {
+      // reset(newsletter);
+      // }, `${newsletter ? 2000 : 1000}`);
     }
+    return false;
   };
 
   return (
@@ -172,7 +182,7 @@ const Form = () => {
           id="campaign-form"
           class="--form campaign-form required"
           method="POST"
-          // action={actionState}
+          action={actionState}
           onSubmit={dispatchForm}
         >
           <input
@@ -184,7 +194,7 @@ const Form = () => {
           <div className="container__section__form">
             <div className="__header__title">
               <h2 className="--title">
-                ¿Quieres conocer más? Envíanos tus datos y nos pondremos en contacto contigo
+                ¿Quieres conocer más? Envíanos tus datos y te informamos sin compromiso
               </h2>
               <p className="--text">
                 Los campos marcados con un asterisco (
@@ -197,16 +207,16 @@ const Form = () => {
                 placeholder="Nombre"
                 value={name}
                 onChange={(e) => handleNameChange(e.target.value)}
-                name="name"
+                name="firstname"
                 error={isNameError}
                 errorText="Introduce un nombre válido"
                 className="input"
-                id="name"
+                id="firstname"
               />
               <Input
                 type="text"
-                name="apellidos"
-                id="apellidos"
+                name="lastname"
+                id="lastname"
                 placeholder="Apellidos"
                 value={surname}
                 onChange={(e) => handleSurnameChange(e.target.value)}
@@ -215,16 +225,27 @@ const Form = () => {
                 errorText="Introduce un/os apellido/s válido/s"
                 className="input"
               />
+               <Input
+                type="text"
+                placeholder="+34"
+                value={PrefixPhone}
+                onChange={(e) => handlePrefixPhoneChange(e.target.value)}
+                name="telpref"
+                // error={isPhoneError}
+                // errorText="Introduce un número de teléfono válido"
+                className="input"
+                id="telpref"
+              />
               <Input
                 type="text"
                 placeholder="Teléfono"
                 value={phone}
                 onChange={(e) => handlePhoneChange(e.target.value)}
-                name="phone"
+                name="mobile"
                 error={isPhoneError}
                 errorText="Introduce un número de teléfono válido"
                 className="input"
-                id="phone"
+                id="mobile"
               />
               <Input
                 type="email"
@@ -241,8 +262,8 @@ const Form = () => {
               />
               <Select
                 type="select"
-                name="franja_horaria"
-                id="franja_horaria"
+                name="hora"
+                id="hora"
                 value={hour}
                 onChange={(e) => handleHourChange(e.target.value)}
                 // onChange={handleInputChange}
@@ -258,8 +279,8 @@ const Form = () => {
                 onChange={(e) => handleTermsChange(e.target.checked)}
                 error={!terms}
                 type="checkbox"
-                name="terms"
-                id="check1"
+                name="subscription"
+                id="subscription"
                 value="yes"
                 required=""
                 className="test_class"
