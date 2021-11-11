@@ -192,10 +192,20 @@ h1.title {
   display: grid;
   grid-template-columns: 1fr 3fr;
   align-items: baseline;
-  @media only screen and (max-width: 1000px) {
+  .grid-form__text{
+    font-size:1.7em;
+    h3 {
+      font-size: 1.8em;
+    }
+  }
+  @media only screen and (max-width: 1200px) {
     grid-template-columns: 1fr;
     .grid-form__text{
       margin-bottom: 30px;
+      font-size:1em;
+      h3 {
+        font-size: 1.3em;
+      }
     }
   }
 }

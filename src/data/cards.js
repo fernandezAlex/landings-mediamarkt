@@ -1,25 +1,25 @@
 export const cardsSection = [
     {
-      title: "Luz + Gas Siempre",
-      content: "Tu consumo al mismo precio todas las horas del día y todos los días del año",
+      title: "Luz Siempre",
+      subtitle: "Disfruta de tu consumo de electricidad todo el día y con el mismo precio. Despreocúpate de los horarios.",
       imgThumbnail: "https://specials.mediamarkt.es/assets-react/total-energies/091021_TOTAL ENERGIES Trade Marketing - Landing_imágenes_604x360_3.png",
       imgPosition: false
     },
     {
-      title: "Luz + Gas Programa tu Ahorro",
-      content: "Tu consumo organizado en 3 horarios: Punta, Llano y Valle de la tarifa oficial. Horario Punta: de lunes a viernes de 10 a 14h y de 18 a 22h. Horario Llano: de lunes a viernes de 8 a 10h, de 14 a 18h y de 22 a 00h. Horario Valle: de lunes a viernes de 00 a 8h, fines de semana y festivos todo el día.",
+      title: "Luz Programa ahorro",
+      subtitle: "Tu consumo organizado en 3 horarios: Horario punta, llano y valle. Traslada tu consumo a la hora de mejor precio.",
       imgThumbnail: "https://specials.mediamarkt.es/assets-react/total-energies/091021_TOTAL ENERGIES Trade Marketing - Landing_imágenes_604x360_2.png",
       imgPosition: true
     },
     {
-      title: "Luz + Gas Día y Noche",
-      content: "Dos horarios para planificar tu consumo, con un precio promocionado para consumos nocturnos elevados. Horario Punta: todos los días de 13h a 23h (12h a 22h en horario de invierno). Horario Valle: todos los días de 23h a 13h (22h a 12h en horario de invierno).",
+      title: "Luz Día y Noche",
+      subtitle: "Dos horarios para planificar tu ahorro. El precio nocturno con un precio promocionado para consumos nocturnos elevados.",
       imgThumbnail: "https://specials.mediamarkt.es/assets-react/total-energies/091021_TOTAL ENERGIES Trade Marketing - Landing_imágenes_604x360_4.png",
       imgPosition: false
     },
     {
-      title: "Luz + Gas Fin de semana",
-      content: "Exprime el fin de semana sin que te cueste más, con un precio promocionado para los consumos en fin de semana/ festivos y todas las noches, y otro precio no promocionado para las horas diurnas en días laborables.",
+      title: "Luz Fin de Semana",
+      subtitle: "Un precio promocionado para los consumos de fin de semana/ festivos y todas las noches. Exprime el finde en tu hogar.",
       imgThumbnail: "https://specials.mediamarkt.es/assets-react/total-energies/091021_TOTAL ENERGIES Trade Marketing - Landing_imágenes_604x360_1.png",
       imgPosition: true
     }
@@ -29,8 +29,7 @@ export const cardsSection = [
 export const cardsSection2 = [
   {
       title: "Seguro",
-      subtitle: `Sin permanencia, sin ataduras y sin ningún tipo de penalización, eres libre.
-      `,
+      subtitle: `¡Sin preocupaciones! Sin permanencia y sin penalizaciones.`,
       imgThumbnail: "https://specials.mediamarkt.es/assets-react/total-energies/091021_TOTAL ENERGIES Trade Marketing - Landing _800x600_icono 1.png",
       button: "",
       slug: "",
@@ -41,7 +40,7 @@ export const cardsSection2 = [
   },
   {
       title: "Renovable",
-      subtitle: `100% renovable. Nuestra energía es de fuentes renovables, eficientes y seguras.`,
+      subtitle: `Energía 100% renovable para nuevos clientes.`,
       imgThumbnail: "https://specials.mediamarkt.es/assets-react/total-energies/091021_TOTAL ENERGIES Trade Marketing - Landing _800x600_icono 3.png",
       button: "",
       slug: "",
@@ -52,7 +51,7 @@ export const cardsSection2 = [
   },
   {
     title: "Fácil",
-    subtitle: `Contratación sencilla. Sin papeleos, sin esperas y sin complicaciones. Atención rápida y ágil.`,
+    subtitle: `Contratación sencilla y sin esperas. Atención rápida y ágil.`,
     imgThumbnail: "https://specials.mediamarkt.es/assets-react/total-energies/091021_TOTAL ENERGIES Trade Marketing - Landing _800x600_icono 2 (1).png",
     button: "",
     slug: "",
@@ -65,52 +64,32 @@ export const cardsSection2 = [
 
 export const cardsSection3 = [
   {
-    title: "Luz + Gas Siempre",
-    subtitle: `Tu consumo al mismo precio todas las horas del día y todos los días del año`,
+    title: "Luz Siempre",
+    subtitle: "Disfruta de tu consumo de electricidad todo el día y con el mismo precio. Despreocúpate de los horarios.",
     imgThumbnail: "https://specials.mediamarkt.es/assets-react/total-energies/091021_TOTAL ENERGIES Trade Marketing - Landing_imágenes_604x360_3.png",
-    slug: "",
-    button: "",
-    event: "",
-    eventCategory: "",
-    eventAction: "",
-    eventLabel: ""
+    imgPosition: false
   },
   {
-      title: "Luz + Gas Programa tu Ahorro",
-      subtitle: "Exprime el fin de semana sin que te cueste más, con un precio promocionado para los consumos en fin de semana/ festivos y todas las noches, y otro precio no promocionado para las horas diurnas en días laborables.",
-      imgThumbnail: "https://specials.mediamarkt.es/assets-react/total-energies/091021_TOTAL ENERGIES Trade Marketing - Landing_imágenes_604x360_2.png",
-      slug: "",
-      button: "",
-      event: "",
-      eventCategory: "",
-      eventAction: "",
-      eventLabel: ""
+    title: "Luz Programa ahorro",
+    subtitle: "Tu consumo organizado en 3 horarios: Horario punta, llano y valle. Traslada tu consumo a la hora de mejor precio.",
+    imgThumbnail: "https://specials.mediamarkt.es/assets-react/total-energies/091021_TOTAL ENERGIES Trade Marketing - Landing_imágenes_604x360_2.png",
+    imgPosition: true
   },
   {
-      title: "Luz + Gas Día y Noche",
-      subtitle: "Dos horarios para planificar tu consumo, con un precio promocionado para consumos nocturnos elevados. Horario Punta: todos los días de 13h a 23h (12h a 22h en horario de invierno). Horario Valle: todos los días de 23h a 13h (22h a 12h en horario de invierno).",
-      imgThumbnail: "https://specials.mediamarkt.es/assets-react/total-energies/091021_TOTAL ENERGIES Trade Marketing - Landing_imágenes_604x360_4.png",
-      slug: "",
-      button: "",
-      event: "",
-      eventCategory: "",
-      eventAction: "",
-      eventLabel: ""
+    title: "Luz Día y Noche",
+    subtitle: "Dos horarios para planificar tu ahorro. El precio nocturno con un precio promocionado para consumos nocturnos elevados.",
+    imgThumbnail: "https://specials.mediamarkt.es/assets-react/total-energies/091021_TOTAL ENERGIES Trade Marketing - Landing_imágenes_604x360_4.png",
+    imgPosition: false
   },
   {
-    title: "Luz + Gas Fin de semana",
-    subtitle: "Exprime el fin de semana sin que te cueste más, con un precio promocionado para los consumos en fin de semana/ festivos y todas las noches, y otro precio no promocionado para las horas diurnas en días laborables.",
+    title: "Luz Fin de Semana",
+    subtitle: "Un precio promocionado para los consumos de fin de semana/ festivos y todas las noches. Exprime el finde en tu hogar.",
     imgThumbnail: "https://specials.mediamarkt.es/assets-react/total-energies/091021_TOTAL ENERGIES Trade Marketing - Landing_imágenes_604x360_1.png",
-    slug: "",
-    button: "",
-    event: "",
-    eventCategory: "",
-    eventAction: "",
-    eventLabel: ""
+    imgPosition: true
   },
   {
     title: "Plan vehículo eléctrico",
-    subtitle: 'La tarifa más económica para cargar tu coche. Con la "Supertarifa Nocturna" podrás recargar tu coche eléctrico al mejor precio durante las noches o a cualquier hora del fin de semana. Si lo prefieres, también te ofrecemos un precio fijo anual, escoge la tarifa que mejor se adapta a ti y paga lo mismo durante todo el año.',
+    subtitle: 'La tarifa más económica para recargar tu coche es la"Supertarifa Nocturna" el mejor precio durante las noches o cualquier hora del fin de semana.',
     imgThumbnail: "https://specials.mediamarkt.es/assets-react/total-energies/091021_TOTAL ENERGIES Trade Marketing - Landing_imágenes_604x360_5.png",
     slug: "",
     button: "",
