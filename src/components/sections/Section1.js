@@ -10,10 +10,7 @@ export const Section1 = () => {
           <h3>
             ¡Ahorra desde el primer día!
           </h3>
-            Apostamos por la energía barata, limpia y cercana.
-            Por eso confiamos en TotalEnergies para que contrates la energía de tu hogar.
-            Ahora podrás llevarte hasta un 35% de descuento en tu consumo de luz.
-            ¡Aprovecha esta oferta límitada!
+          Apostamos por la energía barata, limpia y cercana. Por eso confiamos en TotalEnergies para que contrates la energía de tu hogar. Elige entre sus tarifas la que mejor se adapte a tu consumo. ¡Aprovecha ahora y llévate al instante una tarjeta regalo por contratar!
         </div>
         <div className="grid-form__form">
           <Form />
