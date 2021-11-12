@@ -16,21 +16,6 @@ export const Breadcrumb = () => {
       <a href="https://www.mediamarkt.es/empresas" target="_self">
         <h5>MediaMarkt Business</h5>
       </a>
-      <FontAwesomeIcon
-        icon={faChevronRight}
-        className="icon__arrow"
-        size="xs"
-      />
-       <a href="https://www.mediamarkt.es/empresas" target="_self">
-        <h5>Soluciones hoteles-comercios-hostelería</h5>
-      </a>
-      <FontAwesomeIcon
-        icon={faChevronRight}
-        className="icon__arrow"
-        size="xs"
-      />
-      <h5>Soluciones de climatización
-      </h5>
     </div>
   );
 };

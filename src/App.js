@@ -31,7 +31,7 @@ function App() {
   return (
     <>
       <Header />
-      <Nav data={cardsSection}/>
+      {/* <Nav data={cardsSection}/> */}
       <SectionIntro />
       <Section1 data={cardsSection} width={width}/>
       <Section4 />
