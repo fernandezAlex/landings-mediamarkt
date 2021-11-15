@@ -56,11 +56,11 @@ export const cardsSection2 = [
     //     eventLabel: "Home_B2B_destacado3"
     // },
     {
-        title: "El máximo confort para tus clientes",
-        subtitle: "Consigue un ambiente óptimo para tu negocio con nuestras soluciones de climatización y calidad del aire. Sensación de confort y seguridad asegurado",
-        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/TeaserClima.png",
+        title: "Transforma tu empresa con la ayuda de Google",
+        subtitle: "Descubre cómo los dispositivos Google Nest pueden hacer más fácil la gestión de tu negocio.",
+        imgThumbnail: "https://specials.mediamarkt.es/assets-react/google-reason-why/062007_Campaña Google Reason why_teaser_700x598.png",
         button: "Ver más",
-        slug: "https://specials.mediamarkt.es/hospitality-comercio-hostelería/climatización",
+        slug: "https://specials.mediamarkt.es/google-reason-why",
         eventGa: "gaEvent",
         eventCategory: "Home_B2B",
         eventAction: "Click",
@@ -146,17 +146,28 @@ export const cardsSection2Apple = [
     //     eventAction: "Click",
     //     eventLabel: "Home_B2B_destacado3"
     // },
-    {
-        title: "El máximo confort para tus clientes",
-        subtitle: "Consigue un ambiente óptimo para tu negocio con nuestras soluciones de climatización y calidad del aire. Sensación de confort y seguridad asegurado",
-        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/TeaserClima.png",
+    // {
+    //     title: "El máximo confort para tus clientes",
+    //     subtitle: "Consigue un ambiente óptimo para tu negocio con nuestras soluciones de climatización y calidad del aire. Sensación de confort y seguridad asegurado",
+    //     imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/TeaserClima.png",
+    //     button: "Ver más",
+    //     slug: "https://specials.mediamarkt.es/hospitality-comercio-hostelería/climatización",
+    //     eventGa: "gaEvent",
+    //     eventCategory: "Home_B2B",
+    //     eventAction: "Click",
+    //     eventLabel: "Home_B2B_destacado4"
+    // },
+      {
+        title: "Transforma tu empresa con la ayuda de Google",
+        subtitle: "Descubre cómo los dispositivos Google Nest pueden hacer más fácil la gestión de tu negocio.",
+        imgThumbnail: "https://specials.mediamarkt.es/assets-react/google-reason-why/062007_Campaña Google Reason why_teaser_700x598.png",
         button: "Ver más",
-        slug: "https://specials.mediamarkt.es/hospitality-comercio-hostelería/climatización",
+        slug: "https://specials.mediamarkt.es/google-reason-why",
         eventGa: "gaEvent",
         eventCategory: "Home_B2B",
         eventAction: "Click",
         eventLabel: "Home_B2B_destacado4"
-    },
+      },
     // {
     //     title: "Soluciones energéticas para empresas",
     //     subtitle: "Como combinar la rentabilidad, competitividad y sostenibilidad",
