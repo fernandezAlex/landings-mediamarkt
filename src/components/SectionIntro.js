@@ -5,8 +5,11 @@ import { ReactComponent as Arrow } from "../img/button-arrow.svg";
 
 export const SectionIntro = () => { 
   return (
-    <div className="section__intro">
+    <div className="section__">
       Google Nest ofrece un amplio catálogo de soluciones para cubrir las necesidades de tu empresa.
+      <a href="#campaign-form" className="button__more-intro">
+        Contacta con nosotros
+      </a>
     </div>
   );
 };

@@ -133,6 +133,19 @@ h3{
   font-size: 38px !important;
 }
 
+.button__more-intro{
+  display: block;
+  margin: 30px 20px;
+  font-size: 16px;
+  border-bottom:2px solid #df0000;
+  padding-bottom: 6px;
+  // width:80px;
+  cursor: pointer;
+  text-decoration: none;
+  width: 150px;
+}
+
+
 .section__{
   max-width: 1477px;
   padding: 60px 80px 80px 80px;

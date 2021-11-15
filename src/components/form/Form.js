@@ -264,6 +264,48 @@ const Form = () => {
             />
           </div>
         </form>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <div className="">
+          1 El tamaño, los materiales y la distribución de la casa pueden afectar a la transmisión de la señal Wi‑Fi. Es posible que las casas más grandes, con paredes más gruesas o
+          con una disposición estrecha y alargada necesiten más puntos Wifi para disponer de una cobertura completa. La intensidad y la velocidad de la señal dependen de tu
+          proveedor de Internet.
+          <br/>
+          <br/>
+          2 En comparación con versiones anteriores del mismo producto.
+          <br/>
+          <br/>
+          3 El tamaño, los materiales y la distribución de la casa pueden afectar a la transmisión de la señal Wi-Fi. Es posible que las casas más grandes, con paredes más gruesas
+          o con una disposición estrecha y alargada necesiten más puntos de acceso Wifi para disponer de una cobertura completa. La intensidad y la velocidad de la señal
+          dependen de tu proveedor de Internet. Para funcionar, los puntos de acceso Google Wifi necesitan un módem, una conexión a Internet de banda ancha activa, un puerto
+          Ethernet disponible, una toma de corriente cercana (por cada dispositivo), una cuenta de Google y un dispositivo móvil compatible. Consulta los requisitos mínimos del
+          sistema operativo en la página g.co/nestwifi/req.
+          <br/>
+          <br/>
+
+          4 Consulta los requisitos mínimos del sistema operativo en la página g.co/googlewifi/req. Para utilizar la aplicación Google Home se necesita una cuenta de Google.
+          <br/>
+          <br/>
+
+          5 Para utilizar algunas funciones, como las notificaciones en dispositivos móviles, el control remoto y la transmisión y grabación de vídeo, es necesario tener conexión a
+          Internet y red Wi-Fi.
+
+
+          6 Para usar Google Nest Hub, se necesita una red Wi-Fi, una toma de corriente cercana y un dispositivo móvil compatible (Android o iOS). Consulta los requisitos
+          mínimos del sistema operativo en g.co/home/req. iOS es una marca de Apple y se utiliza con licencia.
+          <br/>
+          <br/>
+
+          7 Se necesitan dispositivos inteligentes compatibles.
+          <br/>
+          <br/>
+
+          8 Las cámaras y los timbres con vídeo Nest se venden por separado.
+          <br/>
+          <br/>
+        </div>
       </div>
     </>
   );
