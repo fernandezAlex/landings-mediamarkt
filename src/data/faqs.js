@@ -9,15 +9,6 @@ const faqs = [
     eventLabel: "TotalEnergies_enviar_FAQ1"
   },
   {
-    question: "<h2>¿Todas las energías TotalEnergies son renovables?</h2>",
-    reply:
-      "<p>Todos nuestros nuevos clientes disfrutan de energía 100%. Estamos comprometidos con tu bienestar y con el de nuestro planeta.</p>",
-      eventGa: "gaEvent",
-      eventCategory: "FAQS TotalEnergies_2",
-      eventAction: "Click",
-      eventLabel: "TotalEnergies_enviar_FAQ2"
-  },
-  {
     question: "<h2>¿Tiene coste cambiar de compañía de luz y/o gas?</h2>",
     reply: `<p>Pasarte a TotalEnergies es un trámite rápido y gratuito. Solamente tienes que rellenar nuestro formulario web que te llevará un par de minutos</p>`,
     eventGa: "gaEvent",

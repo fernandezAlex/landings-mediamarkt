@@ -1,16 +1,33 @@
 // VARIABLES
+:root{
+    --big-desktop-background: url(https://specials.mediamarkt.es/assets-react/total-energies/Landing_2944x816_can_1_AAFF.png);
+    --desktop-background: url(https://specials.mediamarkt.es/assets-react/total-energies/Landing_1472x408_can.png);
+    --tablet-background: url(https://specials.mediamarkt.es/assets-react/total-energies/Landing_1024x544_can.png);
+    --mobile-background: url(https://specials.mediamarkt.es/assets-react/total-energies/Landing_512x272.png);
+}
 
 // Develop environtment
 $DEV : true;
 
-
 $main_color : #df0000;
 $placeholder-background: "https://specials.mediamarkt.es/assets-react/welcome-bonus/image_placeholder.png";
-$big-desktop-background: "https://specials.mediamarkt.es/assets-react/total-energies/091021_TOTAL ENERGIES Trade Marketing - Landing_2944x816_150-1.png";
-$desktop-background: "https://specials.mediamarkt.es/assets-react/total-energies/091021_TOTAL ENERGIES Trade Marketing - Landing_1472x408_150.png";
-$tablet-background: "https://specials.mediamarkt.es/assets-react/total-energies/091021_TOTAL ENERGIES Trade Marketing - Landing_1024x544_150.png";
-$mobile-background: "https://specials.mediamarkt.es/assets-react/total-energies/091021_TOTAL ENERGIES Trade Marketing - Landing_512x272_150.png";
 
+// PROMO 150€
+// $big-desktop-background: "https://specials.mediamarkt.es/assets-react/total-energies/091021_TOTAL ENERGIES Trade Marketing - Landing_2944x816_150-1.png";
+// $desktop-background: "https://specials.mediamarkt.es/assets-react/total-energies/091021_TOTAL ENERGIES Trade Marketing - Landing_1472x408_150.png";
+// $tablet-background: "https://specials.mediamarkt.es/assets-react/total-energies/091021_TOTAL ENERGIES Trade Marketing - Landing_1024x544_150.png";
+// $mobile-background: "https://specials.mediamarkt.es/assets-react/total-energies/091021_TOTAL ENERGIES Trade Marketing - Landing_512x272_150.png";
 
+// PROMO 100€
+// $big-desktop-background: "https://specials.mediamarkt.es/assets-react/total-energies/091021_TOTAL ENERGIES Trade Marketing - Landing_2944x816_can_1_AAFF.png";
+// $desktop-background: "https://specials.mediamarkt.es/assets-react/total-energies/091021_TOTAL ENERGIES Trade Marketing - Landing_1472x408_can 1_AAFF (1).png";
+// $tablet-background: "https://specials.mediamarkt.es/assets-react/total-energies/091021_TOTAL ENERGIES Trade Marketing - Landing_1024x544_can 1_AAFF (1).png";
+// $mobile-background: "https://specials.mediamarkt.es/assets-react/total-energies/091021_TOTAL ENERGIES Trade Marketing - Landing_512x272_can 1_AAFF (1).png";
+
+// PROMO 100€ BLACK FRIDAY
+// $big-desktop-background: "https://specials.mediamarkt.es/assets-react/total-energies/091021_TOTAL ENERGIES Trade Marketing - Landing_2944x816_pen_100.png";
+// $desktop-background: "https://specials.mediamarkt.es/assets-react/total-energies/091021_TOTAL ENERGIES Trade Marketing - Landing_1472x408_pen 100.png";
+// $tablet-background: "https://specials.mediamarkt.es/assets-react/total-energies/091021_TOTAL ENERGIES Trade Marketing - Landing_1024x544_pen 100.png";
+// $mobile-background: "https://specials.mediamarkt.es/assets-react/total-energies/091021_TOTAL ENERGIES Trade Marketing - Landing_512x272_pen 100.png";
 
 $assetPath : "/assets/images"; 

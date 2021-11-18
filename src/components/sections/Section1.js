@@ -10,9 +10,7 @@ export const Section1 = () => {
           <h3>
             ¡Ahorra desde el primer día!
           </h3>
-          ¡Ahorra desde el primer día!
-          En MediaMarkt apostamos por la energía renovable y la eficiencia energética. Por eso confiamos en TotalEnergies para traer la energía limpia, barata y cercana a tu hogar. 
-          Te calculamos en el acto cuanto te ahorrarás contratando TotalEnergies
+          Apostamos por la energía barata, limpia y cercana. Por eso confiamos en TotalEnergies para que contrates la energía de tu hogar. Elige entre sus tarifas la que mejor se adapte a tu consumo. ¡Aprovecha ahora y llévate al instante una tarjeta regalo por contratar!
         </div>
         <div className="grid-form__form">
           <Form />

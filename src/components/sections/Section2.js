@@ -6,7 +6,7 @@ const Section2 = ({data}) => {
 
       <div className="section__">
         <h2>
-          Elige la opción que mejor se adapta a ti
+          Elige la tarifa que más se adapta a tu consumo
         </h2> 
         {data.map((data, i) => {
           return <SectionImg key={i} data={data} />;

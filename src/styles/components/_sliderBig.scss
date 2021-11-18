@@ -2,7 +2,7 @@
   margin: 0px 0px 60px 0px;
   .sliderbig__card {
     .slick-slider {
-      // height: 300px;
+      height: auto;
       margin: auto;
       max-width: 1320px;
       .slick-prev {
@@ -55,7 +55,7 @@
       margin-right: auto;
       height: 330px;
       .slick-slide {
-        height: 300px;
+        height: auto;
         padding: 0 0.8vw;
       }
     }
