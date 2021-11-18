@@ -43,9 +43,9 @@ const Form = () => {
     firstname: name,
     lastname: surname,
     email: email,
-    telpref: PrefixPhone,
+    //telpref: PrefixPhone,
     mobile: phone,
-    hora: hour,
+    //hora: hour,
     newsletterAgree: newsletter,
     subscription: terms,
     origin_tercero: dataForm.originTercero,
@@ -120,8 +120,6 @@ const Form = () => {
     validateName(surname) &&
     validateEmail(email) &&
     validatePhone(phone) &&
-    validateName(name) &&
-    isHourError &&
     terms;
 
   const isAllValidated =
@@ -225,7 +223,8 @@ const Form = () => {
                 errorText="Introduce un/os apellido/s válido/s"
                 className="input"
               />
-               <Input
+               { /*
+              <Input
                 type="text"
                 placeholder="+34"
                 value={PrefixPhone}
@@ -236,6 +235,7 @@ const Form = () => {
                 className="input"
                 id="telpref"
               />
+               */ }
               <Input
                 type="text"
                 placeholder="Teléfono"
@@ -260,6 +260,7 @@ const Form = () => {
                 className="input"
                 id="email"
               />
+              {/*
               <Select
                 type="select"
                 name="hora"
@@ -272,7 +273,8 @@ const Form = () => {
                 className="input"
                 data={optionsTime}
                 labelDefault="Hora solicitada"
-              />
+              /> 
+              */}
             </div>
             <div className="footer__form">
               <Checkbox

@@ -2,7 +2,7 @@ const faqs = [
   {
     question: "<h2>¿Cómo puedo contratar?</h2>",
     reply:
-      "<p>Contratar luz o gas online es muy sencillo y rápido, solo te llevará un par de minutos. Te pediremos los datos de tu suministro para aconsejarte sobre la tarifa que mejor se adapta a tus necesidades y tus datos personales. Te aconsejamos que tengas una factura a mano para que nuestro asesor pueda ayudarte. Si tuvieras dudas, llámanos al teléfono gratuito 900907888 disponible las 24 horas. </p>",
+      "<p>Contratar luz o gas online es muy sencillo y rápido, solo te llevará un par de minutos. Te pediremos los datos de tu suministro para aconsejarte sobre la tarifa que mejor se adapta a tus necesidades y tus datos personales. Te aconsejamos que tengas una factura a mano para que nuestro asesor pueda ayudarte.</p>",
     eventGa: "gaEvent",
     eventCategory: "FAQS TotalEnergies_1",
     eventAction: "Click",
