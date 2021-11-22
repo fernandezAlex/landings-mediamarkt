@@ -1,3 +1,11 @@
+export const cardsSection1 = 
+{
+  title: "Del 22/11 al 28/11 sorteamos para un único ganador: 1 iPhone 13 + 1 Airpods Gen 2",
+  subtitle: "Consulta las bases legales del sorteo",
+  linkUrl: "https://bit.ly/SorteoNewsletter22_28Nov",
+  linkText: "aquí"
+};
+
 export const cardsSection2 = [
   {
     title: "Te regalamos un código de descuento de 10€",

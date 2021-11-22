@@ -4,6 +4,9 @@ import { faHome, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 
 export const Breadcrumb = ({data}) => {
+
+  const { firstLabel } = data;
+
   return (
     <div className="breadcrumb__container">
       <a href="https://www.mediamarkt.es" target="_self">
@@ -15,7 +18,7 @@ export const Breadcrumb = ({data}) => {
         size="xs"
       />
       <div>
-        <h5>{data.firstLabel}</h5>
+        <h5 dangerouslySetInnerHTML={{__html: firstLabel}} />
       </div>
       {/* <FontAwesomeIcon
         icon={faChevronRight}

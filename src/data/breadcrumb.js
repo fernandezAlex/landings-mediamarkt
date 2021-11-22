@@ -1,4 +1,4 @@
 export const breadcrumbData = 
     {
-      firstLabel: "10€ de bienvenida"
+      firstLabel: "Consulta las bases legales del sorteo <a href='https://bit.ly/SorteoNewsletter22_28Nov' target='_blank'>aquí</a>"
     }

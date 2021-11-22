@@ -3,8 +3,10 @@
   width: 100%;
   background-color: $main_color;
   background-image: url($desktop-background);
-  background-size: cover;
+  //background-size: cover;
   background-position: center;
+  background-size: auto 366px;
+  background-position-y: top;
   // @media only screen and (min-width: 792px) and (max-width: 983px) {
   //   margin-top: 127px;
   // }
@@ -70,6 +72,7 @@
   .header__container {
     height: 272px;
     background-image: url($mobile-background);
+    background-size: auto 217px;
   }
   .title__container {
     margin: -60px 0% 60px 0%;
@@ -85,6 +88,7 @@
   .header__container {
     height: 304px;
     background-image: url($mobile-background);
+    background-size: auto 225px;
   }
 }
 @media only screen and (max-width: 510px) {
@@ -119,7 +123,7 @@
 }
 @media only screen and (max-width: 768px) {
   .--breadcrumb {
-    display: none;
+    //display: none;
   }
 }
 

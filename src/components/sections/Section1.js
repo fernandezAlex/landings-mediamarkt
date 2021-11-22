@@ -1,82 +1,25 @@
 import React from "react";
-import analytics from "../../helpers/analytics";
 import useModal from "../../hooks/useModal";
-import Modal from "../modal/Modal";
 import { ReactComponent as Arrow } from "../../img/button-arrow.svg";
 
-export const Section1 = () => {
-  const { isShowing, toggle } = useModal();
-
+export const Section1 = ({data}) => {
+  
+  const { title, subtitle, linkUrl, linkText } = data;
+  
   return (
-    <div className="section__intro">
-
-      <div className="container__logo__header">
-        <div className="--img"></div>
+      <div className="form__wrapper">
+        <div className="__header__subtitle featuredSection">
+          <h2 className="--subtitle">{title}</h2>
+          <div>
+            <span className="arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#df0000">
+                <path d="M15.78 11.28a.75.75 0 01.22.53v.38a.77.77 0 01-.22.53l-5.14 5.13a.5.5 0 01-.71 0l-.71-.71a.49.49 0 010-.7L13.67 12 9.22 7.56a.5.5 0 010-.71l.71-.7a.5.5 0 01.71 0z"></path>
+              </svg>
+            </span>
+            {subtitle} <strong><a href={linkUrl}>{linkText}</a></strong>
+          </div>  
+        </div>   
       </div>
-      <div className="container__intro__text">
-        <p className="text__intro">
-          La división de Educación de MediaMarkt trabaja con el objetivo de
-          acompañarte y asesorarte en el viaje digital. Todo centro educativo
-          necesita un modelo de transformación tecnológico a medio y largo
-          plazo, teniendo en cuenta y en total consonancia con el proyecto
-          educativo establecido por cada uno.
-          <br />
-          <br />
-          Te ofrecemos soluciones tecnológicas 360 que se adaptan a las
-          necesidades actuales del aprendizaje y de la enseñanza. Una desarrollo
-          personalizado a partir de la evaluación previa del centro en
-          competencias digitales. Integrando modelos donde se tiene en cuenta la
-          pedagogía, la tecnología y los espacios tanto virtuales como
-          presenciales.
-        </p>
-      </div>
-      <div className="container__links__header">
-              <div className="container__link__contact">
-                <a
-                  style={{ textDecoration: "none" }}
-                  onClick={() =>
-                    analytics("gaEvent", "Home_B2B_ED", "Click", "Home_B2B_EDUCACION_contactanos")
-                  }
-                  className="link__contact"
-                  href="#contacto"
-                >
-                  <span className="arrow">
-                    <Arrow />
-                  </span>
-                  <font className="link__text"> Contacta con nosotros</font>
-                </a>
-              </div>
-              <div className="container__link__video">
-                <div className="link__video" onClick={toggle}>
-                  <div className="_link_video">
-                    <span className="arrow">
-                      <Arrow />
-                    </span>
-                    <font className="link__text"> Ver vídeo de MediaMarkt Business Educación</font>
-                  </div>
-                </div>
-              </div>
-              <div className="container__link__contact">
-                <a
-                  style={{ textDecoration: "none" }}
-                  onClick={() =>
-                    analytics("gaEvent", "Home_B2B_ED", "Click", "Home_B2B_EDUCACION_ver_folleto")
-                  }
-                  className="link__contact"
-                  href="https://specials.mediamarkt.es/folleto-empresas/educacion"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span className="arrow">
-                    <Arrow />
-                  </span>
-                  <font className="link__text"> Ver folleto de Educación</font>
-                </a>
-              </div>
-      </div>
-      
-      <Modal isShowing={isShowing} hide={toggle} />
-    </div>
   );
 };
 

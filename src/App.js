@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import debounce from "./helpers/debounce";
 import Header from "./components/header/Header";
-import Section3 from "./components/sections/Section3";
+//import Section1 from "./components/sections/Section1";
+//import Section3 from "./components/sections/Section3";
 import Form from "./components/form/Form";
-import {cardsSection2, cardsBlack} from './data/cards'
-import {headerData} from './data/header'
+//import {cardsSection1} from './data/cards';
+//import {cardsSection2, cardsBlack} from './data/cards'
+import {headerData} from './data/header';
 import {breadcrumbData} from './data/breadcrumb';
 import faqs from './data/faqs';
 import Accordion from "./components/faqs/Accordion";
@@ -32,8 +34,9 @@ function App() {
   return (
     <ThemeProvider>
       <Header data={headerData} dataBreadcrumb={breadcrumbData} />
+      {/*<Section1 data={cardsSection1} />*/}
       <Form />
-      <Section3 data={(today>limitDate) ?  cardsSection2 : cardsBlack} width={width}/>
+      {/*<Section3 data={(today>limitDate) ?  cardsSection2 : cardsBlack} width={width}/>*/}
       <Accordion data={faqs} width={width}/>
     </ThemeProvider>
   );

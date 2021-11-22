@@ -1,7 +1,8 @@
 
 @mixin styles_template {
     .header__container {
-        background-size: cover;
+        //background-size: cover;
+        //background-size: auto 366px;
         background-repeat: no-repeat;
         // background-image: url($placeholder-background);
     }

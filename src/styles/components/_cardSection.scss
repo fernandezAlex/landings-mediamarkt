@@ -94,3 +94,30 @@ a:focus,
 a:hover {
   color: black;
 }
+
+
+
+.featuredSection {
+  border: 1px solid #cfcbca;;
+  border-radius: 8px;
+  padding: 0px 20px 30px 20px;
+}
+.featuredSection:hover {
+  box-shadow: 1px 4px 10px grey;
+  transition: box-shadow 0.4s ease-in;
+}
+
+.featuredSection .--subtitle {
+  font-family: 'MMHeadlineWebTT-Regular','MMHeadline-regular',Helvetica,Arial,sans-serif!important;
+    color: #df0000;
+    font-size: 24px!important;
+    font-weight: 700!important;
+}
+
+.featuredSection .--text {
+  font-family: SourceSansPro, Arial, sans-serif;
+}
+
+.featuredSection .--text a {
+  text-decoration: underline;
+}

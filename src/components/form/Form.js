@@ -29,7 +29,7 @@ var urlBaseName = String(window.location.search);
 const param = "?sr=N5TWML9";
 const setParam = urlBaseName == param ? true : false;
 
-const urlActionForm = "https://specials.mediamarkt.es/10-euros-de-bienvenida/confirmacion";
+const urlActionForm = "https://specials.mediamarkt.es/registro-newsletter/confirmacion";
 
 const Form = () => {
 
