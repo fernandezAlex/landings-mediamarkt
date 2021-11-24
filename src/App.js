@@ -7,7 +7,7 @@ import Form from "./components/form/Form";
 //import {cardsSection1} from './data/cards';
 //import {cardsSection2, cardsBlack} from './data/cards'
 import {headerData} from './data/header';
-import {breadcrumbData} from './data/breadcrumb';
+//import {breadcrumbData} from './data/breadcrumb';
 import faqs from './data/faqs';
 import Accordion from "./components/faqs/Accordion";
 import {ThemeProvider} from "./context/ThemeProvider" 
@@ -15,8 +15,8 @@ import {ThemeProvider} from "./context/ThemeProvider"
 
 function App() {
 
-  const today = new Date();
-  const limitDate = new Date('2021,11,29');
+  //const today = new Date();
+  //const limitDate = new Date('2021,11,29');
 
   const [width, setWidth] = useState(document.body.clientWidth);
 
@@ -33,7 +33,7 @@ function App() {
   
   return (
     <ThemeProvider>
-      <Header data={headerData} dataBreadcrumb={breadcrumbData} />
+      <Header data={headerData} />
       {/*<Section1 data={cardsSection1} />*/}
       <Form />
       {/*<Section3 data={(today>limitDate) ?  cardsSection2 : cardsBlack} width={width}/>*/}

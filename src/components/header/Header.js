@@ -1,11 +1,22 @@
 import React from "react";
 import { Breadcrumb } from "../breadcrumb/Breadcrumb";
-import {ThemeContext} from '../../context/ThemeProvider';
+//import { ThemeContext } from '../../context/ThemeProvider';
 
 
-const Header = ({data, dataBreadcrumb}) => {
+const Header = ({data}) => {
 
-  const {theme} = React.useContext(ThemeContext)
+  //const {theme} = React.useContext(ThemeContext);
+  const today = new Date();
+  let title, breadcrumb;
+
+  data.forEach(element => {
+    let dateStart = new Date(element.dateStart);
+    let dateEnd = new Date(element.dateEnd);
+    if (today > dateStart && today < dateEnd){
+      title = element.title;
+      breadcrumb = element.breadcrumb;
+    }
+  });
 
   return (
     <>
@@ -15,9 +26,9 @@ const Header = ({data, dataBreadcrumb}) => {
       </div>
       <div className="title__container">
         <div className="content">
-          <h1 className="--title">{data.title}</h1>
+          <h1 className="--title">{title}</h1>
           <div className="--breadcrumb">
-              <Breadcrumb data={dataBreadcrumb}/>  
+              <Breadcrumb data={breadcrumb}/>  
           </div>
         </div>
       </div>
