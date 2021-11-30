@@ -21,7 +21,7 @@ export const Breadcrumb = () => {
         className="icon__arrow"
         size="xs"
       />
-      <h5>Soluciones hoteles-comercios-hostelería
+      <h5>Apple means business
       </h5>
     </div>
   );
