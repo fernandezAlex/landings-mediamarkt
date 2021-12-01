@@ -103,11 +103,11 @@ export const cardsSection2 = [
 
 export const cardsSection2Apple = [
     {
-        title: "Todo el poder de Apple<br> en tu empresa",
+        title: "El Mac sabe de negocios. Aquí tienes 11 razones.",
         subtitle: "Los productos Apple cuentan con potentes prestaciones y apps integradas de productividad, creatividad y colaboración.",
-        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Teaser5.jpg",
+        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Teaser1-mac.png",
         button: "Saber más",
-        slug: "https://specials.mediamarkt.es/apple-reason-why",
+        slug: "https://specials.mediamarkt.es/apple-means-business",
         eventGa: "gaEvent",
         eventCategory: "Home_B2B",
         eventAction: "Click",
@@ -135,6 +135,17 @@ export const cardsSection2Apple = [
         eventAction: "Click",
         eventLabel: "Home_B2B_destacado3"
     },
+    // {
+    //     title: "Todo el poder de Apple<br> en tu empresa",
+    //     subtitle: "Los productos Apple cuentan con potentes prestaciones y apps integradas de productividad, creatividad y colaboración.",
+    //     imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Teaser5.jpg",
+    //     button: "Saber más",
+    //     slug: "https://specials.mediamarkt.es/apple-reason-why",
+    //     eventGa: "gaEvent",
+    //     eventCategory: "Home_B2B",
+    //     eventAction: "Click",
+    //     eventLabel: "Home_B2B_destacado1"
+    // },
     // {
     //     title: "Somos el aliado de confianza para tu centro educativo",
     //     subtitle: "Descubre todas las soluciones que podemos ofrecerte",
