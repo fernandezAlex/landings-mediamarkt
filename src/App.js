@@ -24,7 +24,6 @@ const App = () => {
       window.removeEventListener("resize", debouncedHandleResize);
     };
   });
-
   
   return (
     <>

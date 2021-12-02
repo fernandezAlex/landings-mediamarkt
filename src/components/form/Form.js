@@ -166,21 +166,7 @@ const Form = () => {
   };
 
   const isValidated = isStoreError && validateName(nameEnterprise) && isTypeEnterpriseError && validateNif(nif) && (web === "" || validateName(web))&& validateInteger(employees) &&
-<<<<<<< HEAD
-  isTypeTreatmentError && validateName(name) && validateName(surname) && validateEmail(email) && validatePhone(phone) &&
-  isTypeRequestError && validateMessage(message) && terms;
-  console.log(validateMessage(message))
-=======
-  isTypeTreatmentError && validateName(name) && validateName(surname) && validatePosition(position) && validateEmail(email) && validatePhone(phone) &&
-  isTypeRequestError && validateMessage(message) && terms;
-
-
-
-  const isAllValidated = isValidated
-    && recaptcha === true ? true : false;
->>>>>>> 61c29eba83b3136d2e39f21677f600a875e6e3be
-
-  console.log(isAllValidated);
+  isTypeTreatmentError && validateName(name) && validateName(surname) && validateEmail(email) && validatePhone(phone) && isTypeRequestError && validateMessage(message) && terms;
 
   const dispatchForm = (e) => {
     e.preventDefault();
