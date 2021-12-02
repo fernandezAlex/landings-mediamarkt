@@ -19,32 +19,27 @@ const Checkbox = ({
   return (
     <>
       <div className="container__checkbox">
-        <input
-          type={type}
-          name={name}
-          id={id}
-          value={value}
-          required={required}
-          className={className}
-          onChange={onChange}
-        />
         <label for={id} className="label__checkbox">
-          {/* <a href={href} target={target} dataTag={dataTag} rel={rel}> */}
-            <span  
-            // style="vertical-align: inherit;"
-            dangerouslySetInnerHTML={{ __html: text }}
-            />
-            {/* {text}</font> */}
-          {/* </a> */}
-        </label>
-      <div className="input__error">
-        <span
-          className="text_error"
-          dangerouslySetInnerHTML={{ __html: error ? errorText : null }}
-          // className={`error__terms ${!terms ? '' : 'disabled'}`}
+          <input
+            type={type}
+            name={name}
+            id={id}
+            value={value}
+            required={required}
+            className={className}
+            onChange={onChange}
           />
+          <span  
+            dangerouslySetInnerHTML={{ __html: text }}
+          />
+        </label>
+        <div className="input__error">
+          <span
+            className="text_error"
+            dangerouslySetInnerHTML={{ __html: error ? errorText : null }}
+          />
+        </div>
       </div>
-          </div>
     </>
   );
 };
