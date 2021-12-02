@@ -1,47 +1,91 @@
 export const imgSection = [
     {
-      img: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_1_1188x550.png",
       alt: "Apple Mac para negocios",
+       img: {
+        desktop: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_1_1188x550.png",
+        tablet: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_1_480x270.png",
+        mobile: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_1_320x180.png"
+        }
     },
     {
-      img: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_2_1188x550.png",
       alt: "Apple Mac para negocios",
+      img: {
+        desktop: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_2_1188x550.png",
+        tablet: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_2_480x270.png",
+        mobile: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_2_320x180.png"
+        }
     },
     {
-      img: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_3_1188x550.png",
-      alt: "Apple Mac para negocios",
+     alt: "Apple Mac para negocios",
+     img: {
+        desktop: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_3_1188x550.png",
+        tablet: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_3_480x270.png",
+        mobile: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_3_320x180.png"
+        }
     },
     {
-      img: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_4_1188x550.png",
       alt: "Apple Mac para negocios",
+       img: {
+        desktop: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_4_1188x550.png",
+        tablet: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_4_480x270.png",
+        mobile: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_4_320x180.png"
+        }
     },
     {
-      img: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_5_1188x550.png",
       alt: "Apple Mac para negocios",
+       img: {
+        desktop: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_5_1188x550.png",
+        tablet: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_5_480x270.png",
+        mobile: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_5_320x180.png"
+        }
     },
     {
-      img: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_6_1188x550.png",
       alt: "Apple Mac para negocios",
+       img: {
+        desktop: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_6_1188x550.png",
+        tablet: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_6_480x270.png",
+        mobile: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_6_320x180.png"
+        }
     },
     {
-      img: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_7_1188x550.png",
       alt: "Apple Mac para negocios",
+       img: {
+        desktop: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_7_1188x550.png",
+        tablet: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_7_480x270.png",
+        mobile: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_7_320x180.png"
+        }
     },
     {
-      img: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_8_1188x550.png",
       alt: "Apple Mac para negocios",
+       img: {
+        desktop: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_8_1188x550.png",
+        tablet: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_8_480x270.png",
+        mobile: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_8_320x180.png"
+        }
     },
     {
-      img: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_9_1188x550.png",
       alt: "Apple Mac para negocios",
+       img: {
+        desktop: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_9_1188x550.png",
+        tablet: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_9_480x270.png",
+        mobile: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_9_320x180.png"
+        }
     },
     {
-      img: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_10_1188x550.png",
       alt: "Apple Mac para negocios",
+       img: {
+        desktop: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_10_1188x550.png",
+        tablet: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_10_480x270.png",
+        mobile: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_10_320x180.png"
+        }
     },
     {
-      img: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_11_1188x550.png",
       alt: "Apple Mac para negocios",
+       img: {
+        desktop: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_11_1188x550.png",
+        tablet: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_11_480x270.png",
+        mobile: "https://specials.mediamarkt.es/assets-react/b2b-mac/062007_APPLE_Campa┬ºa_B2B_Mac_Business_11_320x180.png"
+        }
     },
   ];
 
