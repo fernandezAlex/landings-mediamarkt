@@ -10,6 +10,8 @@ const TextArea = ({
     value,
     onChange,
     id,
+    maxLength,
+    required
 }) => {
     return (
         <div className="container__textarea">
@@ -22,7 +24,19 @@ const TextArea = ({
                 value={value}
                 onChange={onChange}
                 id={id}
+                maxLength={maxLength}
             />
+            {
+				required && <span className="span__required">*</span>
+			}
+            {
+                (value.length>=maxLength)&&
+                    <div className="input__error">
+                        <span className="text_error">
+                            Solo se permiten escribir {maxLength} caracteres.
+                        </span>
+                    </div>
+            }
         </div>
     )
 }

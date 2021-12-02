@@ -33,6 +33,6 @@ export function validatePhone (phone) {
     return PHONE_REGEX.test(phone)
 }
 export function validateMessage (message) {
-    const MESSAGE_REGEX = /^[a-zA-Z0-9]{20,2000}$/;
+    const MESSAGE_REGEX = /^[^$%&|<>#]{3,2000}$/;
     return MESSAGE_REGEX.test(message)
 }

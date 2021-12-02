@@ -150,9 +150,8 @@ const Form = () => {
   };
 
   const handleMessageChange = (value) => {
-    setMessage(value);
+        setMessage(value)  
   };
-
   const handleTermsChange = (checked) => {
     setTerms(checked);
   };
@@ -168,12 +167,9 @@ const Form = () => {
   // };
 
   const isValidated = isStoreError && validateName(nameEnterprise) && isTypeEnterpriseError && validateNif(nif) && (web === "" || validateName(web))&& validateInteger(employees) &&
-  isTypeTreatmentError && validateName(name) && validateName(surname) && validatePosition(position) && validateEmail(email) && validatePhone(phone) &&
-  isTypeRequestError && (message === "" || validateMessage(message)) && terms;
-
-  // const isAllValidated =
-    // isValidated === true 
-    // && recaptcha === true ? true : false;
+  isTypeTreatmentError && validateName(name) && validateName(surname) && validateEmail(email) && validatePhone(phone) &&
+  isTypeRequestError && validateMessage(message) && terms;
+  console.log(validateMessage(message))
 
   const isAllValidated = isValidated ;
 
@@ -321,12 +317,12 @@ const Form = () => {
             />
             <Input
               type="text"
-              placeholder="NIF Empresa"
+              placeholder="CIF Empresa"
               value={nif}
               onChange={(e) => handleNifChange(e.target.value.toUpperCase())}
               name="taxid"
               error={isNifError}
-              errorText="Introduzca un NIF válido"
+              errorText="Introduzca un CIF válido"
               className="input"
               id="taxid"
               required={true}
@@ -367,6 +363,7 @@ const Form = () => {
               errorText="Introduzca un nombre válido"
               className="input"
               id="website"
+              required={true}              
             />
             <SelectShops
               id="preferred_store"
@@ -483,6 +480,8 @@ const Form = () => {
             value={message}
             onChange={(e) => handleMessageChange(e.target.value)}
             id="request"
+            maxLength={2000}
+            required={true}
           />
           <div className="footer__form">
             <Checkbox
