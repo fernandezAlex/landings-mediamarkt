@@ -96,7 +96,7 @@ const Form = () => {
 
   const handleWebChange = (value) => {
     setWeb(value);
-    const isOk = validateName(value);
+    const isOk = validateName(value) || value === "";
     setIsWebError(!isOk);
   };
   
@@ -126,7 +126,7 @@ const Form = () => {
 
   const handlePositionChange = (value) => {
     setPosition(value);
-    const isOk = validatePosition(value);
+    const isOk = validatePosition(value) || value === "";
     setIsPositionError(!isOk);
   };
 
@@ -165,9 +165,9 @@ const Form = () => {
     }
   };
 
-  const isValidated = isStoreError && validateName(nameEnterprise) && isTypeEnterpriseError && validateNif(nif) && (web === "" || validateName(web))&& validateInteger(employees) &&
+  const isValidated = isStoreError && validateName(nameEnterprise) && isTypeEnterpriseError && validateNif(nif) && (web === "" || validateName(web))&& (position === "" || validateName(position)) && validateInteger(employees) &&
   isTypeTreatmentError && validateName(name) && validateName(surname) && validateEmail(email) && validatePhone(phone) && isTypeRequestError && validateMessage(message) && terms;
-
+  const isAllValidated = isValidated && recaptcha;
   const dispatchForm = (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -357,7 +357,7 @@ const Form = () => {
               errorText="Introduzca un nombre válido"
               className="input"
               id="website"
-              required={true}              
+              required={false}              
             />
             <SelectShops
               id="preferred_store"
@@ -475,7 +475,7 @@ const Form = () => {
             onChange={(e) => handleMessageChange(e.target.value)}
             id="request"
             maxLength={2000}
-            required={true}
+            required={false}
           />
           <div className="footer__form">
             <Checkbox

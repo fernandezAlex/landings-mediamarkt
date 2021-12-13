@@ -18,7 +18,7 @@ const faqs = [
       eventLabel: "Home_B2B_faq2"
   },
   {
-    question: "<h2>¿Qué soluciones ofrece Mediamarkt empresas?</h2>",
+    question: "<h2>¿Qué soluciones ofrece MediaMarkt empresas?</h2>",
     reply: `<p>MediaMarkt empresas ofrece diferentes soluciones tecnológicas adaptadas a cada sector: <a href="https://specials.mediamarkt.es/empresas/empresa-y-oficina"> empresa y oficina </a>, <a href="https://specials.mediamarkt.es/empresas/hospitality"> hospitality </a>, <a href="https://specials.mediamarkt.es/empresas/hosteleria"> hostelería </a>, <a href="https://specials.mediamarkt.es/empresas/construccion"> construcción </a>, <a href="https://specials.mediamarkt.es/empresas/educacion"> educación </a>, <a href="https://specials.mediamarkt.es/empresas/comercio"> comercio </a>, <a href="https://specials.mediamarkt.es/empresas/salud"> salud </a> y mucho más.</p>`,
     eventGa: "gaEvent",
     eventCategory: "Home_B2B",
