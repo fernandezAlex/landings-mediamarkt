@@ -5,8 +5,8 @@
   background-image: url($desktop-background);
   //background-size: cover;
   background-position: center;
-  background-size: auto 366px;
-  background-position-y: top;
+  background-size: auto 460px;
+  background-position-y: -65px;
   // @media only screen and (min-width: 792px) and (max-width: 983px) {
   //   margin-top: 127px;
   // }
@@ -73,6 +73,7 @@
     height: 272px;
     background-image: url($mobile-background);
     background-size: auto 217px;
+    background-position-y: 0px;
   }
   .title__container {
     margin: -60px 0% 60px 0%;
@@ -88,9 +89,20 @@
   .header__container {
     height: 304px;
     background-image: url($mobile-background);
-    background-size: auto 225px;
+    background-size: auto 304px;
+    background-position-y: -54px;
   }
 }
+
+@media only screen and (min-width: 460px) and (max-width: 620px) {
+  .header__container {
+    height: 304px;
+    background-image: url($mobile-background);
+    background-size: auto 243px;
+    background-position-y: -42px;
+  }
+}
+
 @media only screen and (max-width: 510px) {
   .title__container .content::after {
     display: none;
@@ -107,7 +119,7 @@
 
 @media only screen and (min-width: 769px) and (max-width: 793px) {
   .header__container {
-    background-image: url($mobile-background);
+    background-image: url($tablet-background);
   }
   .title__container {
     margin: -70px 8% 4% 0%;
