@@ -277,6 +277,8 @@ const Form = () => {
               */}
             </div>
             <div className="footer__form">
+            <p class="legal-xsmall">*Al cumplimentar el presente formulario, quedas informado y aceptas que tus
+                    datos sean tratados por Total Energies en calidad de responsable del tratamiento</p>
               <Checkbox
                 onChange={(e) => handleTermsChange(e.target.checked)}
                 error={!terms}
@@ -288,7 +290,7 @@ const Form = () => {
                 className="test_class"
                 dataTag="termsAndConditionsAccept"
                 target="_blank"
-                text='He leído y acepto la <a class="link__terms" href="https://www.mediamarkt.es/es/legal/politica-de-privacidad" rel="noreferrer" target="_blank">Política de Privacidad</a> y las <a class="link__terms" href="https://www.mediamarkt.es/es/legal/condiciones-de-uso-de-la-web" rel="noreferrer" target="_blank">condiciones de uso</a>.'
+                text='He leído y acepto <a class="link__terms" href="https://assets.ctfassets.net/osyynfyvlyjc/65oGihmv6Sef45XxHJIaFV/ec08a3d0c7e9df90dbe62baaa4e7daa0/Politica_Privacidad.pdf" rel="noreferrer" target="_blank">la Política de Protección de datos de TotalEnergies</a>.'
                 errorText="Debes aceptar los términos y condiciones"
               />
               <Checkbox
@@ -299,7 +301,10 @@ const Form = () => {
                 value="yes"
                 required=""
                 className="test_class"
-                text="Quiero suscribirme a la newsletter de MediaMarkt"
+                text='Consiento recibir comunicaciones comerciales de productos y servicios ofrecidos por Media Markt y/o por
+                conjuntamente por Media Markt y terceros con los que colaboramos. Todo ello, de conformidad con los términos y
+                condiciones de la <a class="link__terms" href="https://www.mediamarkt.es/es/legal/politica-de-privacidad" rel="noreferrer" target="_blank">Política de
+                    Privacidad de MediaMarkt</a>.'
               />
               <InfoForm />
               <ReCaptcha
