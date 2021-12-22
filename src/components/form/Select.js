@@ -90,7 +90,7 @@ const Select = ({
           <>
             <option selected value="">{labelDefault}</option>
             {
-              storesArraySorted.map(({storeId, displayName}, i) => <option key={i} value={storeId}>{displayName}</option>)
+              storesArraySorted.map(({displayName, sapCode}, i) => <option key={i} value={sapCode}>{displayName}</option>)
             }
           </>
         }
