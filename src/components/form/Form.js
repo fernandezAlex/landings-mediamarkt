@@ -288,7 +288,7 @@ const Form = () => {
                 className="test_class"
                 dataTag="termsAndConditionsAccept"
                 target="_blank"
-                text='He leído y acepto la <a class="link__terms" href="https://www.mediamarkt.es/es/legal/politica-de-privacidad" rel="noreferrer" target="_blank">Política de Privacidad</a> y las <a class="link__terms" href="https://www.mediamarkt.es/es/legal/condiciones-de-uso-de-la-web" rel="noreferrer" target="_blank">condiciones de uso</a>.'
+                text='He leído y acepto la <a class="link__terms" href="https://www.mediamarkt.es/es/legal/politica-de-privacidad" rel="noreferrer" target="_blank">Política de Privacidad</a> de MediaMarkt, la <a class="link__terms" href="https://assets.ctfassets.net/osyynfyvlyjc/65oGihmv6Sef45XxHJIaFV/ec08a3d0c7e9df90dbe62baaa4e7daa0/Politica_Privacidad.pdf" rel="noreferrer" target="_blank">Política de Privacidad</a> de TotalEnergies y las <a class="link__terms" href="https://www.mediamarkt.es/es/legal/condiciones-de-uso-de-la-web" rel="noreferrer" target="_blank">condiciones de uso</a>.'
                 errorText="Debes aceptar los términos y condiciones"
               />
               <Checkbox

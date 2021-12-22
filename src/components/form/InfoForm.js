@@ -14,7 +14,7 @@ const InfoForm = () => {
       grupo MediaMarkt para remitirte comunicaciones comerciales que te puedan
       interesar. Puedes ejercer tus derechos de acceso, rectificación,
       supresión, oposición, limitación y portabilidad de tus datos en cualquier
-      momento. Consulta <a target="_blank" href="https://assets.ctfassets.net/osyynfyvlyjc/65oGihmv6Sef45XxHJIaFV/ec08a3d0c7e9df90dbe62baaa4e7daa0/Politica_Privacidad.pdf"> aquí </a> la política de privacidad de TotalEnergies.
+      momento.
         </p>
     </div>
   );

@@ -297,8 +297,16 @@ span.span__required {
 }
 
 .container__checkbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   .input__error {
     border-top: none;
+    flex: 1 0 100%;
+    padding-left: 28px;
+  }
+  .label__checkbox{
+    flex: 1 0 50%;
   }
   .label__checkbox > span > a {
     text-decoration: none;
