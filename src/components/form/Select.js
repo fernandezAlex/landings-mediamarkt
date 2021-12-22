@@ -49,8 +49,8 @@ const Select = ({
 		if(filters.some(el => displayName.includes(el))) delete stores[i]
 	})*/
 
-	var storesDisabled = [1119,99999];
-	storesArraySorted = storesArraySorted.filter(function(store){ return !storesDisabled.includes(store['storeId']); /*console.log(store['storeId'])*/ })
+	var storesDisabled = ["E601","99999"];
+	storesArraySorted = storesArraySorted.filter(function(store){ return !storesDisabled.includes(store['sapCode']); /*console.log(store['storeId'])*/ })
 
 	// With Dynamic Filter to Order (Filter with Select, see down)
 

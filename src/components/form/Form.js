@@ -291,7 +291,7 @@ const Form = () => {
                 id="zipCode"
               />
               <Select
-                 name="preferedStoreId"
+                 name="preferedStoreSap"
                  type="select"
                  className="shop__select"
                  error={!isStoreError ? true : false}

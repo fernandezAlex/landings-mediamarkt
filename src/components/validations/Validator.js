@@ -274,7 +274,6 @@ ValidateSpanishID = (function () {
         var letter = match[1],
             number = match[2],
             control = match[3];
-            console.log('control=  '+control);
  
         var even_sum = 0;
         var odd_sum = 0;
