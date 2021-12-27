@@ -241,7 +241,7 @@ const Form = () => {
       text: respon.status == 200 ? `Hemos recibido tus datos, pronto nos pondremos en contacto contigo. ${responEmarsys}`: `No hemos podido guardar tus datos, vuelve a intentarlo más tarde.` ,
       timer: 100000,
     })
-    reset(newsletter);
+    respon.status == 200 && reset(newsletter);
   },[respon]);
 
   const reset = () => {
