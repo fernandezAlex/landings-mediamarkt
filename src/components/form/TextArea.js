@@ -11,7 +11,8 @@ const TextArea = ({
     onChange,
     id,
     maxLength,
-    required
+    required,
+    countCaract
 }) => {
     return (
         <div className="container__textarea">
@@ -30,7 +31,7 @@ const TextArea = ({
 				required && <span className="span__required">*</span>
 			}
             {
-                (value.length>=maxLength)&&
+                (countCaract>maxLength)&&
                     <div className="input__error">
                         <span className="text_error">
                             Solo se permiten escribir {maxLength} caracteres.

@@ -148,9 +148,15 @@ const Form = () => {
     setIsTypeRequestError(isOk);
   };
 
-  const handleMessageChange = (value) => {
-        setMessage(value)  
+  const handleMessageChange = (e) => {
+    // if(lineBreaksDouble >= 2000) return;
+    setMessage(e.target.value)
   };
+    
+  const numberOfLineBreaks = (message.match(/\n/g)||[]).length;
+  const lineBreaksDouble = message.length + numberOfLineBreaks;
+  console.log(lineBreaksDouble);
+
   const handleTermsChange = (checked) => {
     setTerms(checked);
   };
@@ -166,14 +172,17 @@ const Form = () => {
   };
 
   const isValidated = isStoreError && validateName(nameEnterprise) && isTypeEnterpriseError && validateNif(nif) && (web === "" || validateName(web))&& (position === "" || validateName(position)) && validateInteger(employees) &&
-  isTypeTreatmentError && validateName(name) && validateName(surname) && validateEmail(email) && validatePhone(phone) && isTypeRequestError && validateMessage(message) && terms;
+  isTypeTreatmentError && validateName(name) && validateName(surname) && validateEmail(email) && validatePhone(phone) && isTypeRequestError && (validateMessage(message) && lineBreaksDouble <= 2000) && terms;
   const isAllValidated = isValidated && recaptcha;
+
   const dispatchForm = (e) => {
     e.preventDefault();
     setIsLoading(true);
     if (isAllValidated) {
       sendDataPartner(e);
       if(newsletter)sendDataEmarsys(e);
+      setIsLoading(false);
+
       // setTimeout(() => {
       //   setIsLoading(false);
       // }, 1000);
@@ -241,7 +250,7 @@ const Form = () => {
       text: respon.status == 200 ? `Hemos recibido tus datos, pronto nos pondremos en contacto contigo. ${responEmarsys}`: `No hemos podido guardar tus datos, vuelve a intentarlo más tarde.` ,
       timer: 100000,
     })
-    respon.status == 200 && reset(newsletter);
+    // respon.status == 200 && reset(newsletter);
   },[respon]);
 
   const reset = () => {
@@ -468,11 +477,12 @@ const Form = () => {
         <TextArea
             type="mytext"
             placeholder="Consulta"
-            rows={5}
+            rows={1}
             name="request"
             className="message"
             value={message}
-            onChange={(e) => handleMessageChange(e.target.value)}
+            countCaract={lineBreaksDouble}
+            onChange={(e) => handleMessageChange(e)}
             id="request"
             maxLength={2000}
             required={false}
