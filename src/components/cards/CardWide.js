@@ -15,7 +15,6 @@ const CardWide = ({
     eventAction,
     eventLabel,
 }) => {
-
     return (
             <div key={title} className="cardwide__container">
                 <div className="__left">

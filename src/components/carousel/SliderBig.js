@@ -29,7 +29,7 @@ const SliderBig = ({ data }) => {
                                 subtitle,
                                 slug,
                                 button,
-                                event,
+                                eventGa,
                                 eventCategory,
                                 eventAction,
                                 eventLabel,
@@ -44,7 +44,7 @@ const SliderBig = ({ data }) => {
                                     subtitle={subtitle}
                                     slug={slug}
                                     button={button}
-                                    event={event}
+                                    eventGa={eventGa}
                                     eventCategory={eventCategory}
                                     eventAction={eventAction}
                                     eventLabel={eventLabel}

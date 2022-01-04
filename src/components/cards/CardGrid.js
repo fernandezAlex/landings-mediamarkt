@@ -14,7 +14,7 @@ const CardGrid = ({ data }) => {
                                 subtitle,
                                 slug,
                                 button,
-                                event,
+                                eventGa,
                                 eventCategory,
                                 eventAction,
                                 eventLabel,
@@ -30,7 +30,7 @@ const CardGrid = ({ data }) => {
                                     subtitle={subtitle}
                                     slug={slug}
                                     button={button}
-                                    event={event}
+                                    eventGa={eventGa}
                                     eventCategory={eventCategory}
                                     eventAction={eventAction}
                                     eventLabel={eventLabel}
