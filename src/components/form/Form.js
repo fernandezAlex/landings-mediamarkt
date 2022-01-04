@@ -155,7 +155,6 @@ const Form = () => {
     
   const numberOfLineBreaks = (message.match(/\n/g)||[]).length;
   const lineBreaksDouble = message.length + numberOfLineBreaks;
-  console.log(lineBreaksDouble);
 
   const handleTermsChange = (checked) => {
     setTerms(checked);
