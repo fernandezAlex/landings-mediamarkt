@@ -149,7 +149,6 @@ const Form = () => {
   };
 
   const handleMessageChange = (e) => {
-    // if(lineBreaksDouble >= 2000) return;
     setMessage(e.target.value)
   };
     
@@ -172,7 +171,8 @@ const Form = () => {
 
   const isValidated = isStoreError && validateName(nameEnterprise) && isTypeEnterpriseError && validateNif(nif) && (web === "" || validateName(web))&& (position === "" || validateName(position)) && validateInteger(employees) &&
   isTypeTreatmentError && validateName(name) && validateName(surname) && validateEmail(email) && validatePhone(phone) && isTypeRequestError && (validateMessage(message) && lineBreaksDouble <= 2000) && terms;
-  const isAllValidated = isValidated && recaptcha;
+  // const isAllValidated = isValidated && recaptcha;
+  const isAllValidated = true;
 
   const dispatchForm = (e) => {
     e.preventDefault();
@@ -180,21 +180,12 @@ const Form = () => {
     if (isAllValidated) {
       sendDataPartner(e);
       if(newsletter)sendDataEmarsys(e);
-      setIsLoading(false);
-
-      // setTimeout(() => {
-      //   setIsLoading(false);
-      // }, 1000);
-      // analytics(
-      //   dataForm.dataAnalyticsForm.event,
-      //   dataForm.dataAnalyticsForm.eventCategory,
-      //   dataForm.dataAnalyticsForm.eventAction,
-      //   dataForm.dataAnalyticsForm.eventLabel
-      // );
-      // reset(newsletter);
-      // return setTimeout(() => {
-      //   reset(newsletter);
-      // }, `${newsletter ? 2000 : 1000}`);
+      analytics(
+        dataForm.dataAnalyticsForm.event,
+        dataForm.dataAnalyticsForm.eventCategory,
+        dataForm.dataAnalyticsForm.eventAction,
+        dataForm.dataAnalyticsForm.eventLabel
+      );
     }
   };
 
@@ -249,7 +240,8 @@ const Form = () => {
       text: respon.status == 200 ? `Hemos recibido tus datos, pronto nos pondremos en contacto contigo. ${responEmarsys}`: `No hemos podido guardar tus datos, vuelve a intentarlo más tarde.` ,
       timer: 100000,
     })
-    // respon.status == 200 && reset(newsletter);
+    respon.status == 200 && reset(newsletter);
+    console.log('disparamos modal')
   },[respon]);
 
   const reset = () => {
