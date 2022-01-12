@@ -12,7 +12,7 @@ const Header = () => {
       </div>
       <div className="title__container">
         <div className="content">
-          <h1 className="--title">MediaMarkt Business</h1>
+          <h1 className="--title">Servicios para empresas</h1>
           <div className="--breadcrumb">
               <Breadcrumb/>  
           </div>

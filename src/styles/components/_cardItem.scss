@@ -6,9 +6,10 @@
     border: 1px solid rgb(207, 203, 202);
     border-radius: 8px;
     height: 500px;
-    width: 350px;
+    min-width: 300px;
     flex-direction: column;
-    margin: 15px 0px;
+    margin: 15px 16px;
+    background: white;
 
     .__header {
         width: 100%;
@@ -22,6 +23,7 @@
             background-size: cover;
             background-repeat: no-repeat;
             border-radius: inherit;
+            background-position: center;
         }
     }
     .__footer {

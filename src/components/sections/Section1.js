@@ -1,13 +1,9 @@
 import React from "react";
 import analytics from "../../helpers/analytics";
-import useModal from "../../hooks/useModal";
-import Modal from '../modal/Modal';
 import { ReactComponent as Arrow } from "../../img/button-arrow.svg";
 
 
-export const Section1 = () => {
-  const { isShowing, toggle } = useModal();
-
+export const Section1 = () => { 
   return (
     <div className="section__intro">
 
@@ -16,12 +12,10 @@ export const Section1 = () => {
       </div>
       <div className="container__intro__text">
         <p className="text__intro">
-          En MediaMarkt Business disponemos de soluciones integrales enfocadas
-          al sector profesional que nos permiten ofrecerte la solución que mejor
-          se adapta a tu necesidad. Compartimos tu ilusión y te ayudamos a
-          materializar tus proyectos acompañándote en la transformación digital
-          de tu negocio.
-      </p>
+          <h2>Nos aseguramos que tu negocio funcione siempre</h2>
+
+          Disponemos de una amplia gama de servicios destinados al sector profesional, orientados a conseguir que las empresas saquen el máximo rendimiento de su negocio
+        </p>
       </div>
       <div className="container__links__header">
         <div className="container__link__contact">
@@ -39,22 +33,10 @@ export const Section1 = () => {
             <font className="link__text"> Contacta con nosotros</font>
           </a>
         </div>
-        <div className="container__link__video">
-          <div className="link__video" onClick={toggle}>
-            <div className="_link_video">
-              <span className="arrow">
-                <Arrow />
-              </span>
-              <font className="link__text"> Ver vídeo sobre nosotros</font>
-            </div>
-          </div>
-        </div>
       </div>
-
-      <Modal isShowing={isShowing} hide={toggle} />
     </div>
   );
 };
 
 
-export default Section1
+export default Section1;

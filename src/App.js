@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import debounce from "./helpers/debounce";
 import Header from "./components/header/Header";
 import Section1 from "./components/sections/Section1";
-import Section2 from "./components/sections/Section2";
 import Section3 from "./components/sections/Section3";
 import Section4 from "./components/sections/Section4";
 import Form from "./components/form/Form";
@@ -34,19 +33,9 @@ const App = () => {
     <>
       <Header />
       <Section1 width={width}/>
-      <Section2 data={ today < limitDate ? cardsSection2Apple : cardsSection2} width={width}/>
       <Section3 data={cardsSection3} width={width}/>
       <Section4 data={cardsSection4} width={width}/>
       <Form/>
-      <Slideshow
-        controls={true}
-        autoplay={false}
-        speed="500"
-        interval="5000"
-        textColor="white"
-        bgTextColor=""
-        data={dataSlider}
-      />
       <Accordion />
     </>
   );

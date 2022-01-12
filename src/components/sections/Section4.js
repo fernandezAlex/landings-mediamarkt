@@ -1,15 +1,18 @@
 import React from 'react'
-import SliderBig from '../carousel/SliderBig'
+import CardGrid from '../cards/CardGrid'
 import SliderSmall from '../carousel/SliderSmall'
 
 const Section4 = ({ width, data }) => {
     return (
-        <div className="section">
-            <h1 className="title">Servicios B2B</h1>
+        <div className="section section-colorized">
             {width < 824 ? (
-                <SliderSmall data={data} />
+                <div>
+                    <SliderSmall data={data} />
+                </div>
             ) : (
-                <SliderBig data={data} />
+                <div>
+                    <CardGrid data={data} />
+                </div>
             )}
         </div>
     )
