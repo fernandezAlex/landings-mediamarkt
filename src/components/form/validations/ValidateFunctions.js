@@ -1,15 +1,15 @@
 
 
 export function validateName (name) {
-    const NAME_REGEX = /^[a-z-A-Z\D]+$/;
+    const NAME_REGEX = /^[a-z-A-Z\D][^$%&|<>#]{0,2000}$/;
     return NAME_REGEX.test(name)
 }
 export function validateNif (nif) {
-    const NIF_REGEX = /^([ABCDEFGHJKLMNPQRSUVW])(\d{7})([0-9A-J])$/;
+    const NIF_REGEX = /([a-z]|[A-Z]|[0-9])[0-9]{7}([a-z]|[A-Z]|[0-9])/;
     return NIF_REGEX.test(nif)
 }
 export function validatePosition (position) {
-    const POSITION_REGEX = /^[a-z-A-Z\D]+$/;
+    const POSITION_REGEX = /^[a-z-A-Z\D][^$%&|<>#]{0,2000}$/;
     return POSITION_REGEX.test(position)
 }
 export function validateEmail (email) {
@@ -20,6 +20,10 @@ export function validateDni (dni) {
     const DNI_REGEX = /^(\d{8})([A-Z])$/;
     return DNI_REGEX.test(dni)
 }
+export function validateInteger (number) {
+    const INTEGER_REGEX = /^[1-9][0-9]*$/;
+    return INTEGER_REGEX.test(number)
+}
 export function validateNie (nie) {
     const NIE_REGEX = /^[XYZ]\d{7,8}[A-Z]$/;
     return NIE_REGEX.test(nie)
@@ -29,6 +33,6 @@ export function validatePhone (phone) {
     return PHONE_REGEX.test(phone)
 }
 export function validateMessage (message) {
-    const MESSAGE_REGEX = /^[a-zA-Z0-9]{20,2000}$/;
+    const MESSAGE_REGEX = /^[^$%&|<>#]{0,2000}$/;
     return MESSAGE_REGEX.test(message)
 }
