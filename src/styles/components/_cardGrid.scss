@@ -20,7 +20,8 @@
 
 .grid__container > * {
     margin: 24px auto;
-    flex: 1 1 auto;
+    // flex: 1 1 auto;
+    flex: 1;
     @media screen and (max-width: 1260px) {
         // width: calc(50% - 48px);
     }
