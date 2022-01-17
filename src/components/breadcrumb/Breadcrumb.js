@@ -21,7 +21,15 @@ export const Breadcrumb = () => {
       className="icon__arrow"
       size="xs"
     />
-    <h5>Servicios B2B</h5>
+    <a href="https://www.mediamarkt.es/empresas/servicios" target="_self">
+      <h5>Servicios B2B</h5>
+    </a>
+    <FontAwesomeIcon
+      icon={faChevronRight}
+      className="icon__arrow"
+      size="xs"
+    />
+    <h5>Alquiler de equipos informáticos</h5>
   </div>
 );
 };

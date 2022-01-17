@@ -29,12 +29,12 @@ const Card = ({
 
                         </div>
                         <div className="--subtitle">
-                            <p className={`--subtitle__card ${subtitle.length < 1 ? "empty" : ""}`} dangerouslySetInnerHTML={{ __html: subtitle}} />
+                        { subtitle !== "" && <p className={`--subtitle__card ${subtitle == "" ? "empty" : ""}`} dangerouslySetInnerHTML={{ __html: subtitle}} /> }
                         </div>
                     </div>
                     <div className="--button">
                         <a className="link__card" href={slug} onClick={() => analytics(eventGa, eventCategory, eventAction, eventLabel)}>
-                            <span className="arrow"><Arrow /></span>
+                            { button !== "" && <span className="arrow"><Arrow /></span>}
                             <font className="link__text"> {button}</font>
                         </a>
                     </div>

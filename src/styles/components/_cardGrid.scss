@@ -1,23 +1,9 @@
-.grid__wrapper {
-    margin: auto;
-    max-width: 1477px;
-    padding: 0 80px;
-    @media screen and (max-width: 1477px) {
-        padding: 0 40px;
-    }
-    @media only screen and (max-width: 768px) {
-        padding: 0 30px;
-    }
-}
-
-
 .grid__container {
     display: flex;
-    flex-direction: row;
-    display: -webkit-flex;
+    flex-flow: row wrap;
     justify-content: space-between;
-    // flex-wrap: wrap;
-    // margin-right: -10%;
+    flex-wrap: wrap;
+    gap: 24px;
     @media screen and (max-width: 1380px) {
         margin-right: -6%;
     }
@@ -25,7 +11,7 @@
         margin-right: -4%;
     }
     @media screen and (max-width: 1260px) {
-        margin-right: 0;
+        flex-wrap: wrap;
     }
     @media screen and (max-width: 1000px) {
         margin-right: -50px;
@@ -33,11 +19,10 @@
 }
 
 .grid__container > * {
-    padding: 20px 0px 0px 0px;
-    flex: 100%;
+    margin: 24px auto;
+    flex: 1 1 auto;
     @media screen and (max-width: 1260px) {
-        padding: 20px 60px 0 0;
-        margin-right: 0;
+        width: calc(50% - 48px);
     }
     @media screen and (max-width: 1000px) {
         padding: 20px 40px 0 0;

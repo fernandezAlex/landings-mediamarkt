@@ -1,19 +1,13 @@
 import React from 'react'
-import SliderBig from '../carousel/SliderBig'
-import SliderSmall from '../carousel/SliderSmall'
+import { SectionImg } from "../sectionimg/SectionImg";
 
-const Section2 = ({ width, data }) => {
+const Section2 = ({data}) => {
     return (
-        <div className="section">
-            <div>
-                <h1 className="title">Destacados</h1>
-            </div>
-            {width < 824 ? (
-                <SliderSmall data={data} />
-            ) : (
-                <SliderBig data={data} />
-            )}
-        </div>
+      <div className="section__">
+        {data.map((data, i) => {
+          return <SectionImg key={i} data={data} />;
+        })} 
+      </div>
     )
 }
 

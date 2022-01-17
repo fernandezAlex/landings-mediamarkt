@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import debounce from "./helpers/debounce";
 import Header from "./components/header/Header";
 import Section1 from "./components/sections/Section1";
+import Section2 from "./components/sections/Section2";
 import Section3 from "./components/sections/Section3";
 import Section4 from "./components/sections/Section4";
 import Form from "./components/form/Form";
 import Accordion from "./components/faqs/Accordion";
 import Slideshow from './components/carousel/Slideshow';
-import {cardsSection2, cardsSection2Apple, cardsSection3, cardsSection4} from "./data/cards"
+import {cardsSection, cardsSection2Apple, cardsSection3, cardsSection4} from "./data/cards"
 import {dataSlider} from "./data/dataSlider"
 
 const App = () => {
@@ -32,11 +33,9 @@ const App = () => {
   return (
     <>
       <Header />
-      <Section1 width={width}/>
-      <Section3 data={cardsSection3} width={width}/>
+      <Section2 data={cardsSection} width={width}/>
       <Section4 data={cardsSection4} width={width}/>
       <Form/>
-      <Accordion />
     </>
   );
 }
