@@ -19,13 +19,24 @@
     width: inherit !important;
   }
 
+  .slick-slide > div{
+    height: 100%;
+  }
+
   .slick-list {
     padding: 0px 0px !important;
     margin-left: -3%;
   }
 
+  .slick-track {
+    display: flex;
+  }
+
   .slick-dots li.slick-active button:before {
     color: $mediamarkt !important;
+  }
+  .card__wrapper{
+    height: 100%;
   }
 
   @media only screen and (max-width: 480px) {
