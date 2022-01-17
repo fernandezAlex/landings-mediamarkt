@@ -15,7 +15,7 @@ const SliderSmall = ({ data }) => {
         slidesToShow: 1,
         slidesToScroll: 1,
     }
-
+    console.log(cards)
     return (
         <div className="container__slidersmall">
             <div className="slidersmall__card">

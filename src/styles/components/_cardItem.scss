@@ -1,17 +1,13 @@
 .card__container {
-    // max-width: 100%;
     display: flex;
-    min-height: 0;
-    color: rgb(0, 0, 0);
-    border: 1px solid rgb(207, 203, 202);
+    color: black;
+    border: 1px solid #cfcbca;
     border-radius: 8px;
-    height: 500px;
-    width: 350px;
+    // min-width: 300px;
+    width: 100%;
     flex-direction: column;
-    margin: 15px 89px 15px 0;
-    @media screen and (max-width: 1238px) {
-        margin: 15px 0px;
-    }
+    margin: auto;
+    background: white;
 
     .__header {
         width: 100%;
@@ -25,6 +21,7 @@
             background-size: cover;
             background-repeat: no-repeat;
             border-radius: inherit;
+            background-position: center;
         }
     }
     .__footer {

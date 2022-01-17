@@ -14,7 +14,7 @@
 }
 .container__logo__header {
   .--img {
-    background-image: url("https://specials.mediamarkt.es/assets-react/b2b-educacion/Business-EDUCACION2.png");
+    background-image: url("https://specials.mediamarkt.es/assets-react/b2b-comercio/Business-COMERCIO.png");
     background-size: contain;
     background-repeat: no-repeat;
     height: 120px;
@@ -29,15 +29,14 @@
   }
 }
 .container__intro__text {
-  width: 55%;
-  @media screen and (max-width: 893px) {
-    width: 100vw;
-  }
+  width: 100%;
+  // @media screen and (max-width: 893px) {
+  //   width: 100vw;
+  // }
 }
 
 .container__intro__text,
-.container__links__header,
-.container__logo__header {
+.container__links__header {
   padding: 0 80px;
   max-width: 1477px;
   margin: auto;
@@ -82,5 +81,55 @@
     &:focus {
       background-size: 100% 1px;
     }
+  }
+}
+
+
+.section__img {
+  margin: auto;
+    max-width: 1477px;
+    flex-flow: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    // padding: 0 80px;
+    @media screen and (max-width: 1447px) {
+      padding: 0 40px;
+    }
+    @media only screen and (max-width: 768px) {
+      padding: 0 30px;
+    }
+    // .text__intro {
+    //   padding: 100px 0 10px 0;
+    //   @media screen and (max-width: 893px) {
+    //     padding: 40px 0px;
+    //   }
+    // }
+    .img__teaser__section > img {
+      padding: 20px 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .container__links__header {
+      margin: 0;
+      padding: 0 0px;
+      @media screen and (max-width: 1447px) {
+        padding: 0 0px;
+      }
+      @media only screen and (max-width: 768px) {
+        padding: 0 0px;
+      }
+    }
+  .img__teaser__mobile > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .img__teaser__desktop > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 }

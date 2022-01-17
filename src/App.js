@@ -4,8 +4,9 @@ import Header from "./components/header/Header";
 import Section1 from "./components/sections/Section1";
 import Section2 from "./components/sections/Section2";
 import Section3 from "./components/sections/Section3";
+import CardsGrid from "./components/cards/CardsGrid"
 import Form from "./components/form/Form";
-import {cardsSection1, cardsSection2} from './data/cards'
+import {cardsGrid, cardsSection1, cardsSection2} from './data/cards'
 
 
 function App() {
@@ -26,9 +27,10 @@ function App() {
   return (
     <>
       <Header />
-      <Section1/>
-      <Section2 data={cardsSection1} width={width}/>
-      <Section3 data={cardsSection2} width={width}/>
+      {/* <Section1/> */}
+      <CardsGrid data={cardsGrid} width={width}/>
+      {/* <Section2 data={cardsSection1} width={width}/> */}
+      {/* <Section3 data={cardsSection2} width={width}/> */}
       <Form />
     </>
   );

@@ -11,9 +11,9 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif !important;
+  font-family: SourceSansPro, Arial, sans-serif !important;
   p {
-    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif !important;
+    font-family: SourceSansPro, Arial, sans-serif !important;
     font-size: 16px !important;
     margin: 0px !important;
     @media only screen and (max-width: 600px) {
@@ -28,7 +28,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif !important;
+  font-family: SourceSansPro, Arial, sans-serif !important;
 }
 
 .--title__card {
@@ -78,10 +78,6 @@ h1.title {
   }
 }
 
-.container__text {
-  height: 140px;
-}
-
 .container__slidersmall .slick-dots li.slick-active button:before {
   font-size: 70px !important;
 }
@@ -93,4 +89,51 @@ h1.title {
 }
 .container__sliderbig .slick-dots li button:before {
   font-size: 38px !important;
+}
+
+
+.button__CTA {
+  padding: 2% 0; 
+  .link__contact .link__text {
+  display: flex;
+  width: 200px;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  padding: 0px 24px;
+  position: relative;
+  text-decoration: none;
+  font-family: SourceSansPro, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  height: 48px;
+  border: 2px solid $mediamarkt;
+  background: transparent;
+  transition: none!important;
+  // transition: font 0.4s ease;
+    color: rgb(39, 36, 34);
+    &:hover,
+    &:focus {
+      color: white!important;
+      background-color: rgb(39, 36, 34);
+      background-size: none!important;
+      // font-size: 20px;
+    }
+  }
+}
+.section__{
+  max-width: 1477px;
+  padding: 60px 80px 80px 80px;
+  padding-bottom: 10px;
+  margin: 60px auto;
+  justify-content: center;
+}
+.section--colorized{
+  background-color:$ligth-color;
 }
