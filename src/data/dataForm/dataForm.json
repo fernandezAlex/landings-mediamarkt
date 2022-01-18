@@ -1,0 +1,14 @@
+{
+    "idCampaign" : 	"",
+    "numberNode" : "",
+    "originTercero" : "Alquiler_Dispositivos_Servicios_B2B",
+    "dataAnalyticsForm" : {
+        "event": "gaEvent",
+        "eventCategory": "Alquiler_Dispositivos_B2B",
+        "eventAction": "Click",
+        "eventLabel": "Alquiler_Dispositivos_B2B_envio_formulario"
+    },
+    "urlActionForm" : "https://specials.mediamarkt.es/forms/getDatos/getDatos.php",
+    "urlSendPartner": "https://prod-31.westeurope.logic.azure.com/workflows/715b4ffe96434ca5af24522f95b9ed3f/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=fcS0CR5YF1wTFl7epyrtpjATjeIMGUZPbghjwrBbjZw"
+}
+ 

@@ -5,7 +5,6 @@ const AsyncButton = ({
     type,
     disabled,
     isAllValidated,
-    isSubmited,
     isLoading,
 }) => {
     return (
@@ -14,7 +13,7 @@ const AsyncButton = ({
             className={`${
                 isAllValidated
                     ? `enabled ${
-                          isSubmited ? 'submited' : `${isLoading && 'animated'}`
+                           `${isLoading && 'animated'}`
                       }`
                     : 'disabled'
             }`}
@@ -22,9 +21,7 @@ const AsyncButton = ({
         >
             <span>
                 {`${
-                    isSubmited
-                        ? 'Enviado'
-                        : `${isLoading ? 'Enviando...' : 'Enviar'}`
+                    `${isLoading ? 'Enviando...' : 'Enviar'}`
                 }`}
             </span>
         </button>

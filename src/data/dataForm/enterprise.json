@@ -1,0 +1,15 @@
+{
+    "enterprise": [{
+            "name": "Empresa privada",
+            "value": "100000021"
+        },
+        {
+            "name": "Empresa pública",
+            "value": "100000000"
+        },
+        {
+            "name": "Autónomo",
+            "value": "100000017"
+        }
+    ]
+}
