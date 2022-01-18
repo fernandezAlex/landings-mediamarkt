@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 import debounce from "./helpers/debounce";
 import Header from "./components/header/Header";
-import Section1 from "./components/sections/Section1";
-import Section2 from "./components/sections/Section2";
-import Section3 from "./components/sections/Section3";
 import CardsGrid from "./components/cards/CardsGrid"
+import TextSection from "./components/TextSection"
 import Form from "./components/form/Form";
 import {cardsGrid, cardsSection1, cardsSection2} from './data/cards'
 
@@ -29,8 +27,7 @@ function App() {
       <Header />
       {/* <Section1/> */}
       <CardsGrid data={cardsGrid} width={width}/>
-      {/* <Section2 data={cardsSection1} width={width}/> */}
-      {/* <Section3 data={cardsSection2} width={width}/> */}
+      <TextSection />
       <Form />
     </>
   );
