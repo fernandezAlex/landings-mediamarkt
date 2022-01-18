@@ -129,10 +129,13 @@ h1.title {
 }
 .section__{
   max-width: 1477px;
-  padding: 60px 80px 80px 80px;
-  padding-bottom: 10px;
+  padding: 20px 80px;
   margin: 60px auto;
   justify-content: center;
+  @media only screen and (max-width: 1200px) {
+    padding: 20px 40px;
+    margin: 20px auto;
+  }
 }
 .section--colorized{
   background-color:$ligth-color;

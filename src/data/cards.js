@@ -1,10 +1,10 @@
-export const cardsSection = [
+export const cardsSection =[ 
     {
         title: "",
         content: "Desarrollamos la solución que mejor se adapte a tus necesidades, haciendo realidad tu proyecto, combinando productos y servicios profesionales. <br><br><b>MediaMarkt Business</b> es el mejor aliado para tu negocio.",
         imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b-llave-mano/i+t proyectos2.png",
         imgPosition: false
-    },
+    }
 ];
 
 export const cardsGrid = {
