@@ -1,12 +1,12 @@
 {
     "idCampaign" : 	"",
     "numberNode" : "",
-    "originTercero" : "Proyectos_llave_en_mano_B2B",
+    "originTercero" : "bolsa_de_horas_B2B",
     "dataAnalyticsForm" : {
         "event": "gaEvent",
-        "eventCategory": "Proyectos_llave_en_mano_B2B",
+        "eventCategory": "bolsa_de_horas_B2B",
         "eventAction": "Click",
-        "eventLabel": "Proyectos_llave_en_mano_B2B_envio_formulario"
+        "eventLabel": "bolsa_de_horas_B2B_envio_formulario"
     },
     "urlActionForm" : "https://specials.mediamarkt.es/forms/getDatos/getDatos.php",
     "urlSendPartner": "https://prod-31.westeurope.logic.azure.com/workflows/715b4ffe96434ca5af24522f95b9ed3f/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=fcS0CR5YF1wTFl7epyrtpjATjeIMGUZPbghjwrBbjZw"
