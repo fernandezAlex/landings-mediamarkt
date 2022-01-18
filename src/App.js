@@ -35,7 +35,8 @@ const App = () => {
       <Header data={dataHeader} />
       <SectionImg data={cardsSection} width={width}/>
       <CardsGrid data={cardsGrid} width={width}/>
-      <TextSection />
+      <CardsGrid data={cardsGrid} width={width}/>
+      <SectionImg data={cardsSection} width={width}/>
       <Form/>
     </>
   );
