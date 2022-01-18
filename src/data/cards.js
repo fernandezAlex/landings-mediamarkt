@@ -1,20 +1,20 @@
 export const cardsSection =[ 
     {
         title: "",
-        content: "Desde <b>MediaMarkt Business</b> ofrecemos soluciones de alquiler de ordenadores portátiles. <ul> <li> Paga solo por el tiempo de uso</li><li> Flexibiliza tus inversiones</li><li>Amplia gama de dispositivos adaptados a tus necesidades (oficina, diseño, movilidad)</li><li>Cobertura nacional con recogida y entrega</li></ul>",
-        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b-alquiler/i+t alquiler2.png",
+        content: "Desarrollamos la solución que mejor se adapte a tus necesidades, haciendo realidad tu proyecto, combinando productos y servicios profesionales. <br><br><b>MediaMarkt Business</b> es el mejor aliado para tu negocio.",
+        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b-llave-mano/i+t proyectos2.png",
         imgPosition: false
     }
 ];
 
 export const cardsGrid = {
-    sectionTitle: "MODALIDADES DE ALQUILER",
+    sectionTitle: "Nuestra solución integral se compone de:",
     cardsData: [
         {
-            title: "25,79€*",
-            subtitle: "",
+            title: "INICIO",
+            subtitle: "Definición preliminar de las necesidades",
             slug: "",
-            imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b-alquiler/i+t 1dia 2.png",
+            imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b-llave-mano/i+t inicio2.png",
             button: "",
             eventGa: "",
             eventCategory: "",
@@ -22,10 +22,10 @@ export const cardsGrid = {
             eventLabel: ""
         },
         {
-            title: "44,97*",
-            subtitle: "",
+            title: "PLANIFICACIÓN",
+            subtitle: "Desarrollo de la propuesta detallada",
             slug: "",
-            imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b-alquiler/i+t 1semana 3.png",
+            imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b-llave-mano/i+t planificacion2.png",
             button: "",
             eventGa: "",
             eventCategory: "",
@@ -33,10 +33,10 @@ export const cardsGrid = {
             eventLabel: ""
         },
         {
-            title: "58,33€*",
-            subtitle: "",
+            title: "EJECUCIÓN",
+            subtitle: "Despliegue y puesta en marcha del proyecto",
             slug: "",
-            imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b-alquiler/i+t 1mes 2.png",
+            imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b-llave-mano/i+t ejecucion2.png",
             button: "",
             eventGa: "",
             eventCategory: "",
@@ -44,10 +44,10 @@ export const cardsGrid = {
             eventLabel: ""
         },
         {
-            title: "110,26€*",
-            subtitle: "",
+            title: "SEGUIMIENTO Y MANTENIMIENTO",
+            subtitle: "Supervisión del proyecto y de todas las fases. <br> <br> Nos encargamos de dar el soporte necesario para que tu proyecto siga como el primer dia.",
             slug: "",
-            imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b-alquiler/i+t 2meses 2.png",
+            imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b-llave-mano/i+t seguimiento2.png",
             button: "",
             eventGa: "",
             eventCategory: "",
