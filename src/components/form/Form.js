@@ -266,7 +266,7 @@ const Form = () => {
   }
 
   return (
-    <>
+    <div className="section__">
       <div className="form__wrapper" id="contacto">
         <div className="__header__title">
           <h2 className="--title">¿En qué podemos ayudarte?</h2>
@@ -518,7 +518,7 @@ const Form = () => {
           </div>
         </form>
       </div>
-    </>
+    </div>
   );
 };
 

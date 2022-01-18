@@ -23,8 +23,8 @@ img{
   flex-basis: calc(50% - 32px);
   max-width: 45%;
   order: 1;
-  @media only screen and (max-width: 1200px) {
-    max-width: 65%;
+  @media only screen and (max-width: 1250px) {
+    max-width: 80%;
   }
 }
 
@@ -87,7 +87,8 @@ img{
   }
 }
 @media only screen and (max-width: 1250px) {
-  display: block;
+  display: flex;
+  margin: auto;
   img {
     margin: auto;
     margin-top: 22px;
@@ -100,7 +101,6 @@ img{
   
 }
 @media only screen and (max-width: 1200px) {
-  display: block;
   text-align: center;
 }
 }
