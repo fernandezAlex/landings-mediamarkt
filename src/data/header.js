@@ -1,5 +1,5 @@
 export const dataHeader ={
-        title: "Alquiler de equipos informáticos",
+        title: "Proyectos llave en mano",
         breadcrumb: [
             {
                 text: "MediaMarkt Business",
@@ -7,10 +7,10 @@ export const dataHeader ={
             },
             {
                 text: "Servicios B2B",
-                link: "https://www.mediamarkt.es/empresas/servicios"
+                link: "https://specials.mediamarkt.es/empresas/servicios-y-mantenimentos"
             },
             {
-                text: "Alquiler de equipos informáticos",
+                text: "Proyectos llave en mano",
                 link: ""
             }
         ],

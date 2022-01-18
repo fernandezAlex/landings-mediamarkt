@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
 import debounce from "./helpers/debounce";
 import Header from "./components/header/Header";
-import CardsGrid from "./components/cards/CardsGrid";
-import {TextSection} from "./components/TextSection";
 import SectionImg from "./components/SectionImg"
+import CardsGrid from "./components/cards/CardsGrid"
 import Form from "./components/form/Form";
 import Accordion from "./components/faqs/Accordion";
 
-import {cardsGrid,cardsSection} from "./data/cards"
 import {dataHeader} from "./data/header"
+import {cardsGrid,cardsSection} from "./data/cards"
 import {dataSlider} from "./data/dataSlider"
 
 const App = () => {
@@ -29,7 +28,7 @@ const App = () => {
       window.removeEventListener("resize", debouncedHandleResize);
     };
   });
-  
+
   return (
     <>
       <Header data={dataHeader} />

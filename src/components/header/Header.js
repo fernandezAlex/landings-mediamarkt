@@ -12,7 +12,7 @@ const Header = ({data}) => {
       </div>
       <div className="title__container">
         <div className="content">
-          <h1 className="--title">Proyectos llave en mano</h1>
+          <h1 className="--title">{title}</h1>
           <div className="--breadcrumb">
               <Breadcrumb data={breadcrumb}/>  
           </div>
