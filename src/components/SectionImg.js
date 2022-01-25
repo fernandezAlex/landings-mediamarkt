@@ -4,17 +4,17 @@ import useModal from '../hooks/useModal';
 import analytics from '../helpers/analytics'
 
 const SectionImg = ({ data, width }) => {
-    // const {title, imgThumbnail, content, imgPosition, button} = data;
     const { isShowing, toggle } = useModal();
     return (
         <div className="section__">
+            {data.sectionTitle && <h2>{data.sectionTitle}</h2>}
             {
-                data.map(({ title, imgThumbnail, content, imgPosition, button }, i) => {
+                data.sectionData.map(({ title, imgThumbnail, content, imgPosition, button, richText }, i) => {
                     return <>
-                        <div id={title} className={`section__img ${imgPosition ? "" : "imgRight"}`}>
+                        <div key={i} className={`section__img ${imgPosition ? "" : "imgRight"}`}>
                             <img src={imgThumbnail} alt={title} />
                             <div className="section__text">
-                                <h2 dangerouslySetInnerHTML={{ __html: title }} />
+                                {title && <h2 dangerouslySetInnerHTML={{ __html: title }} />}
                                 <p dangerouslySetInnerHTML={{ __html: content }} />
                                 {button !== "" && undefined ?
                                     <>
@@ -26,8 +26,8 @@ const SectionImg = ({ data, width }) => {
                                 }
                             </div>
                         </div>
+                        {richText && <small>{richText}</small>}
                     </>
-
                 })
             }
         </div>

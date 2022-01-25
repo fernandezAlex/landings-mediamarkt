@@ -6,11 +6,13 @@ const CardsGrid = ({ width, data }) => {
     const cardsData = data.cardsData;
     return (
         <>
-            <div className="section--colorized">
+            <div className="">
                 <div className="section__">
-                    <h2>
-                        {data.sectionTitle}
-                    </h2>
+                    {data.sectionTitle &&
+                        <h2>
+                            {data.sectionTitle}
+                        </h2>
+                    }
                     {width < 1200 ? (
                         <div>
                             <SliderSmall data={cardsData} />

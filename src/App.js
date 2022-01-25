@@ -4,11 +4,11 @@ import Header from "./components/header/Header";
 import SectionImg from "./components/SectionImg"
 import CardsGrid from "./components/cards/CardsGrid"
 import Form from "./components/form/Form";
-import Accordion from "./components/faqs/Accordion";
-
+import {Quotes} from "./components/Quotes"
 import {dataHeader} from "./data/header"
-import {cardsGrid,cardsSection} from "./data/cards"
-import {dataSlider} from "./data/dataSlider"
+import {cardsGrid,cardsGrid2,imgTextSection,imgTextSection2} from "./data/cards"
+import {quotesSection,quotesSection2} from "./data/quotes"
+
 
 const App = () => {
   const [width, setWidth] = useState(document.body.clientWidth);
@@ -32,11 +32,13 @@ const App = () => {
   return (
     <>
       <Header data={dataHeader} />
-      <SectionImg data={cardsSection} width={width}/>
+      <SectionImg data={imgTextSection} width={width}/>
       <CardsGrid data={cardsGrid} width={width}/>
-      <CardsGrid data={cardsGrid} width={width}/>
-      <SectionImg data={cardsSection} width={width}/>
-      <Form/>
+      <CardsGrid data={cardsGrid2} width={width}/>
+      <SectionImg data={imgTextSection2} width={width}/>
+      <Quotes data={quotesSection}/>
+      <Quotes data={quotesSection2}/>
+      <Form />
     </>
   );
 }
