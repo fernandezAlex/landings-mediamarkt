@@ -6,6 +6,7 @@
     -webkit-box-align: stretch;
     align-items: stretch;
     margin: 0px;
+    padding:12px 0px;
     @media screen and (min-width: 512px) {
         gap: 16px;
         grid-template-columns: repeat(6, minmax(0px, 1fr));
@@ -98,7 +99,7 @@
         .quotes__text--up:after{
             top: -23px;
             transform: rotate(180deg);
-            
+
             @media screen and (min-width: 952px) {
                 bottom: -20px;
                 top: auto;
@@ -129,4 +130,8 @@
         }
     }
 
+}
+.section__quotes--double{
+    @extend .section__quotes;
+    grid-template-columns: repeat(4, minmax(0px, 1fr));
 }

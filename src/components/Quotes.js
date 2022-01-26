@@ -1,10 +1,17 @@
 import React from 'react'
 
 export const Quotes = ({ data }) => {
+  const {sectionTitle,quotesDouble,sectionData} = data
   return (
     <div className="section__">
-      <div className="section__quotes">
-        {data.map(({ title, text, textLink, link, img, imgPosition }) => {
+      {sectionTitle && 
+        <h2>
+          {sectionTitle}
+        </h2>
+      }
+      <div className={quotesDouble ? `section__quotes--double`: `section__quotes` }>
+        {sectionData.map(({ title, text, textLink, link, img, imgPosition },i,item) => {
+          console.log(item.length)
           return <div className={`quotes ${imgPosition && "quotes--invert"}`}>
             <div className={`quotes__text ${imgPosition && "quotes__text--up"}`}>
               <svg width="32" height="32" viewBox="0 0 24 24">

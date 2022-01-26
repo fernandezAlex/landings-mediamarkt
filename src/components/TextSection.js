@@ -1,13 +1,11 @@
 import React from 'react'
 
-export const TextSection = () => {
+export const TextSection = ({data}) => {
+    const {content} = data;
     return (
         <div className="section__">
             <div className="text__section">
-                 <small>*Precios sin impuestos incluidos</small>
-                <h3>
-                    También puedes solicitar tu <strong>presupuesto personalizado hecho a medida.</strong> Consúltanos en nuestro formulario:
-                </h3>
+                <div dangerouslySetInnerHTML={{ __html: content }} />
             </div>
         </div>
     )
