@@ -1,5 +1,5 @@
 export const dataHeader ={
-        title: "Recompra",
+        title: "Instalaciones",
         breadcrumb: [
             {
                 text: "MediaMarkt Business",
@@ -10,7 +10,7 @@ export const dataHeader ={
                 link: "https://specials.mediamarkt.es/empresas/servicios-y-mantenimentos"
             },
             {
-                text: "Recompra",
+                text: "Instalaciones",
                 link: ""
             }
         ],

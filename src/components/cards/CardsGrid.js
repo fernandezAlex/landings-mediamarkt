@@ -2,12 +2,12 @@ import React from 'react'
 import Card from './Card'
 import SliderSmall from '../carousel/SliderSmall'
 
-const CardsGrid = ({ width, data }) => {
+const CardsGrid = ({ width, data , marginBottom, marginTop }) => {
     const {bgColorSection,sectionTitle,cardsData} = data;
     return (
         <>
             <div className={bgColorSection && `section__colorized--${bgColorSection}`}>
-                <div className="section__">
+                <div style={{marginBottom: marginBottom,marginTop: marginTop}} className="section__">
                     {data.sectionTitle &&
                         <h2>
                             {sectionTitle}
