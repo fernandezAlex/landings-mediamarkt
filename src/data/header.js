@@ -1,5 +1,5 @@
 export const dataHeader ={
-        title: "Mantenimiento",
+        title: "Recompra",
         breadcrumb: [
             {
                 text: "MediaMarkt Business",
@@ -10,11 +10,11 @@ export const dataHeader ={
                 link: "https://specials.mediamarkt.es/empresas/servicios-y-mantenimentos"
             },
             {
-                text: "Mantenimiento",
+                text: "Recompra",
                 link: ""
             }
         ],
-        imgMobile: "",
+        imgMobile: "", 
         imgTablet: "",
         imgDesktop: "",
         imgDesktopXL: ""

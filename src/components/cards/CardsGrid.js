@@ -3,14 +3,14 @@ import Card from './Card'
 import SliderSmall from '../carousel/SliderSmall'
 
 const CardsGrid = ({ width, data }) => {
-    const cardsData = data.cardsData;
+    const {bgColorSection,sectionTitle,cardsData} = data;
     return (
         <>
-            <div className="">
+            <div className={bgColorSection && `section__colorized--${bgColorSection}`}>
                 <div className="section__">
                     {data.sectionTitle &&
                         <h2>
-                            {data.sectionTitle}
+                            {sectionTitle}
                         </h2>
                     }
                     {width < 1200 ? (

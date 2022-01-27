@@ -72,7 +72,7 @@ h1.title {
 }
 
 .--subtitle {
-  padding: 5px 0 20px 0px;
+  padding: 5px 0px ;
   p.--subtitle__card.empty {
     height: 32px !important;
   }
@@ -137,6 +137,16 @@ h1.title {
     margin: 20px auto;
   }
 }
-.section--colorized{
-  background-color:$ligth-color;
+.section__colorized--MM{
+  background-color: $mediamarkt;
+  color: white;
+  padding: 14px 0px;
+
+  .container__slidersmall .slick-dots li.slick-active button:before {
+    color: #ffffff !important;
+  }
+}
+.section__colorized--light{
+  background-color: $ligth-color;
+  padding: 14px 0px;
 }

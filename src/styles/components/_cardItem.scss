@@ -73,6 +73,27 @@
                 }
             }
         }
+        ul li {
+            padding-left: 0rem
+          }
+          
+          ul {
+            padding-left: 12px;
+            list-style: none;
+            li{
+                padding-left: 10px;
+                position: relative;
+                padding-bottom: 10px;
+            }
+            li::marker {
+                content: "\2713";
+                color: $mediamarkt;
+                font-weight: 700;
+            }
+            li:first-child{
+              text-indent: initial;
+            }
+        }
     }
     &:hover {
         box-shadow: 1px 4px 10px grey;

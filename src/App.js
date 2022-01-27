@@ -35,12 +35,8 @@ const App = () => {
   return (
     <>
       <Header data={dataHeader} />
-      <TextSection data={textSection} />
       <SectionImg data={imgTextSection} width={width}/>
       <CardsGrid data={cardsGrid} width={width}/>
-      <TextSection data={textSection2} />
-      <Quotes data={quotesSection}/>
-      <Quotes data={quotesSection2}/>
       <Form />
     </>
   );
