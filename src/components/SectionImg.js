@@ -12,7 +12,7 @@ const SectionImg = ({ data, width }) => {
                 data.sectionData.map(({ title, imgThumbnail, content, imgPosition, button, richText }, i) => {
                     return <>
                         <div key={i} className={`section__img ${imgPosition ? "" : "imgRight"}`}>
-                            <img src={imgThumbnail} alt={title} />
+                            <img className={!content && "fullImage" } src={imgThumbnail} alt={title} />
                             <div className="section__text">
                                 {title && <h2 dangerouslySetInnerHTML={{ __html: title }} />}
                                 <p dangerouslySetInnerHTML={{ __html: content }} />

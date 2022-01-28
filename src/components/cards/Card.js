@@ -14,29 +14,30 @@ const Card = ({  imgThumbnail,
     eventAction,
     eventLabel, }, i) => {
     return (
+        
         <div className="card__wrapper">
-            <div key={i} className="card__container">
-                <div className="__header">
-                    <div className="--img" style={{ backgroundImage: `url('${imgThumbnail}')` }}></div>
-                </div>
-                <div className="__footer">
-                    <div className="container__text">
-                        <div className="--title">
-                            <p className="--title__card"
-                                dangerouslySetInnerHTML={{ __html: title }} />
-                        </div>
-                        <div className="--subtitle">
-                            {subtitle !== "" && <p className={`--subtitle__card ${subtitle == "" ? "empty" : ""}`} dangerouslySetInnerHTML={{ __html: subtitle }} />}
-                        </div>
+            <a href={slug} onClick={() => analytics(eventGa, eventCategory, eventAction, eventLabel)}>
+                <div key={i} className="card__container">
+                    <div className="__header">
+                        <div className="--img" style={{ backgroundImage: `url('${imgThumbnail}')` }}></div>
                     </div>
-                    <div className="--button">
-                        <a className="link__card" href={slug} onClick={() => analytics(eventGa, eventCategory, eventAction, eventLabel)}>
+                    <div className="__footer">
+                        <div className="container__text">
+                            <div className="--title">
+                                <p className="--title__card"
+                                    dangerouslySetInnerHTML={{ __html: title }} />
+                            </div>
+                            <div className="--subtitle">
+                                {subtitle !== "" && <p className={`--subtitle__card ${subtitle == "" ? "empty" : ""}`} dangerouslySetInnerHTML={{ __html: subtitle }} />}
+                            </div>
+                        </div>
+                        <div className="--button">
                             {button !== "" && <span className="arrow"><Arrow /></span>}
-                            <font className="link__text"> {button}</font>
-                        </a>
+                            <font className="link__card link__text"> {button}</font>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
         </div>
     )
 }

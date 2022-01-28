@@ -7,8 +7,8 @@ import Form from "./components/form/Form";
 import {TextSection} from "./components/TextSection";
 import {Quotes} from "./components/Quotes"
 import {dataHeader} from "./data/header"
-import {cardsGrid,cardsGrid2,cardsGrid3} from "./data/cards"
-import {imgTextSection} from "./data/imgTextSection"
+import {cardsGrid} from "./data/cards"
+import {imgTextSection,imgTextSection2} from "./data/imgTextSection"
 import {quotesSection,quotesSection2} from "./data/quotes"
 import {textSection,textSection2} from "./data/textSection"
 
@@ -36,9 +36,8 @@ const App = () => {
     <>
       <Header data={dataHeader} />
       <SectionImg data={imgTextSection} width={width}/>
-      <CardsGrid  data={cardsGrid} width={width}/>
-      <CardsGrid marginBottom={0} data={cardsGrid2} width={width}/>
-      <CardsGrid marginTop={0} data={cardsGrid3} width={width}/>
+      <SectionImg data={imgTextSection2} width={width}/>
+      <CardsGrid data={cardsGrid} width={width}/>
       <Form />
     </>
   );

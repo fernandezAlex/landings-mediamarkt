@@ -27,6 +27,10 @@ img{
     max-width: 80%;
   }
 }
+.fullImage {
+  flex-basis: calc(100% - 0px);
+  max-width: 100%;
+}
 
 .section__text{
   // flex:1;

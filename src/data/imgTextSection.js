@@ -3,13 +3,22 @@ export const imgTextSection = {
     sectionData: [
         {
             title: "",
-            content: "Disponemos de un sinfín de soluciones de instalación adaptadas según la tipología de servicio y las necesidades. Nuestros técnicos están certificados en las principales marcas del mercado.<br/><br/> Garantizando la buena operatividad del producto desde el primer minuto.",
-            imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b-instalaciones/image.png",
+            content: "Desde <strong>MediaMarkt Business</strong> ofrecemos soluciones de reparación de ordenadores, smartphones y todo tipo de dispositivos electrónicos a través de nuestros servicios técnicos oficiales.",
+            imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b-reparaciones/i+t reparaciones2.png",
             imgPosition: false
         }
     ]
 };
-
-
+export const imgTextSection2 = {
+    sectionTitle: "",
+    sectionData: [
+        {
+            title: "",
+            content: "",
+            imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b-reparaciones/carousel 1.png",
+            imgPosition: false
+        }
+    ]
+};
 
 
