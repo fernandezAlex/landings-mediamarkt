@@ -4,13 +4,11 @@ import Header from "./components/header/Header";
 import SectionImg from "./components/SectionImg";
 import CardsGrid from "./components/cards/CardsGrid";
 import Form from "./components/form/Form";
-import {TextSection} from "./components/TextSection";
-import {Quotes} from "./components/Quotes"
-import {dataHeader} from "./data/header"
-import {cardsGrid} from "./data/cards"
-import {imgTextSection,imgTextSection2} from "./data/imgTextSection"
-import {quotesSection,quotesSection2} from "./data/quotes"
-import {textSection,textSection2} from "./data/textSection"
+import {Video} from "./components/Video";
+import Accordion from "./components/faqs/Accordion";
+import {dataHeader} from "./data/header";
+import {cardsGrid,cardsGrid2} from "./data/cards";
+import {imgTextSection} from "./data/imgTextSection";
 
 
 const App = () => {
@@ -36,9 +34,11 @@ const App = () => {
     <>
       <Header data={dataHeader} />
       <SectionImg data={imgTextSection} width={width}/>
-      <SectionImg data={imgTextSection2} width={width}/>
-      <CardsGrid data={cardsGrid} width={width}/>
+      <CardsGrid marginBottom={0} data={cardsGrid} width={width}/>
+      <CardsGrid marginTop={0}  data={cardsGrid2} width={width}/>
+      <Video/>
       <Form />
+      <Accordion />
     </>
   );
 }

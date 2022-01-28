@@ -2,20 +2,9 @@ export const imgTextSection = {
     sectionTitle: "",
     sectionData: [
         {
-            title: "",
-            content: "Desde <strong>MediaMarkt Business</strong> ofrecemos soluciones de reparación de ordenadores, smartphones y todo tipo de dispositivos electrónicos a través de nuestros servicios técnicos oficiales.",
-            imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b-reparaciones/i+t reparaciones2.png",
-            imgPosition: false
-        }
-    ]
-};
-export const imgTextSection2 = {
-    sectionTitle: "",
-    sectionData: [
-        {
-            title: "",
-            content: "",
-            imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b-reparaciones/carousel 1.png",
+            title: "Nos aseguramos que tu negocio funcione siempre",
+            content: " Disponemos de una amplia gama de servicios destinados al sector profesional, orientados a conseguir que las empresas saquen el máximo rendimiento de su negocio",
+            imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b-servicios/image.png",
             imgPosition: false
         }
     ]
