@@ -179,12 +179,12 @@ const Form = () => {
     if (isAllValidated) {
       sendDataPartner(e);
       if(newsletter)sendDataEmarsys(e);
-      // analytics(
-      //   dataForm.dataAnalyticsForm.event,
-      //   dataForm.dataAnalyticsForm.eventCategory,
-      //   dataForm.dataAnalyticsForm.eventAction,
-      //   dataForm.dataAnalyticsForm.eventLabel
-      // );
+      analytics(
+        dataForm.dataAnalyticsForm.event,
+        dataForm.dataAnalyticsForm.eventCategory,
+        dataForm.dataAnalyticsForm.eventAction,
+        dataForm.dataAnalyticsForm.eventLabel
+      );
     }
   };
 
