@@ -70,3 +70,28 @@ input[type=text], input[type=email], input[type=number], input[type=select], inp
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif !important;
   font-weight: normal!important;
 }
+
+
+input[type=text]:not(.ms-textfield):not(.disabled):not(.readonly){
+  box-shadow: none!important;
+}
+input[type=text]:not(.ms-textfield){
+  border: none!important;
+}
+
+#page-footer.footer .line-2>ul>li.newsletter form.newsletter-form input, .cms-products-grid .ct-products-grid>li .cart-checkbox input+label:before, .facet-search-container input:not(.disabled):not(.readonly), .filters-content .facet-search-container input, input[type=email], input[type=password]:not(.ms-textfield):not(.disabled):not(.readonly), input[type=search]:not(.ms-textfield):not(.disabled):not(.readonly), input[type=text]:not(.ms-textfield):not(.disabled):not(.readonly), select:not(.ms-select):not(.disabled):not(.readonly), textarea:not(.ms-textarea):not(.disabled):not(.readonly){
+  box-shadow: none!important;
+}
+
+input[type=email]{
+  box-shadow: none!important;
+}
+
+.input {
+  border: none!important;
+  box-shadow: none!important;
+}
+
+.facet-search-container input, input[type=email], input[type=password]:not(.ms-textfield), input[type=search]:not(.ms-textfield), input[type=text]:not(.ms-textfield), select:not(.ms-select), textarea:not(.ms-textarea) {
+  border: none !important;
+}
