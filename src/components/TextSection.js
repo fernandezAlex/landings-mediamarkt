@@ -5,9 +5,11 @@ export const TextSection = () => {
         <div className="section__">
             <div className="text__section">
                  <small>*Precios sin impuestos incluidos</small>
-                <h3>
+                 <br/>
+                 <br/>
+                <p>
                     También puedes solicitar tu <strong>presupuesto personalizado hecho a medida.</strong> Consúltanos en nuestro formulario:
-                </h3>
+                </p>
             </div>
         </div>
     )

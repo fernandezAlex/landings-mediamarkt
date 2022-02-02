@@ -8,7 +8,7 @@ export const cardsSection =[
 ];
 
 export const cardsGrid = {
-    sectionTitle: "MODALIDADES DE ALQUILER",
+    sectionTitle: "MODALIDADES DE ARRENDAMIENTO",
     cardsData: [
         {
             title: "25,79€*",

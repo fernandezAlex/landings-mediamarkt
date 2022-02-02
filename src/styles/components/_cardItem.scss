@@ -31,7 +31,8 @@
             display: flex;
             padding-bottom: 20px;
             .--title__card {
-                color: $mediamarkt;
+                color: black;
+                font-family: SourceSansPro, Arial, sans-serif !important;
                 white-space: normal;
                 overflow: hidden;
                 -webkit-line-clamp: 2;
