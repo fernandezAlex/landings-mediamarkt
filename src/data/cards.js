@@ -38,7 +38,7 @@ export const cardsGrid = {
         },
         {
             title: "Bolsa de 8 horas",
-            subtitle: "Desde 492€*",
+            subtitle: "Desde 340€*",
             slug: "",
             imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b-bolsa-de-horas/i+t 8horasB.png",
             button: "",
@@ -49,7 +49,7 @@ export const cardsGrid = {
         },
         {
             title: "Bolsa de 12 horas",
-            subtitle: "Desde 340€*",
+            subtitle: "Desde 492*",
             slug: "",
             imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b-bolsa-de-horas/i+t 12horasB.png",
             button: "",
