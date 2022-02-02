@@ -17,7 +17,7 @@ const Card = ({  imgThumbnail,
         <div className="card__wrapper">
             <div key={i} className="card__container">
                 <div className="__header">
-                    <div className="--img" style={{ backgroundImage: `url('${imgThumbnail}')` }}></div>
+                    <div className="--img" style={{ backgroundImage: `url('${imgThumbnail}')`, height:"176px" }}></div>
                 </div>
                 <div className="__footer">
                     <div className="container__text">
