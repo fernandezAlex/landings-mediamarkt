@@ -132,7 +132,6 @@ const Form = () => {
   };
 
   return (
-    <>
     <div className="section__">
       <div className="form__wrapper" id="contacto">
         <div className="__header__title">
@@ -268,7 +267,6 @@ const Form = () => {
         </form>
       </div>
     </div>
-    </>
   );
 };
 
