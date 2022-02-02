@@ -19,7 +19,7 @@ const Card = ({  imgThumbnail,
             <a href={slug} onClick={() => analytics(eventGa, eventCategory, eventAction, eventLabel)}>
                 <div key={i} className="card__container">
                     <div className="__header">
-                        <div className="--img" style={{ backgroundImage: `url('${imgThumbnail}')` }}></div>
+                        <div className="--img" style={{ backgroundImage: `url('${imgThumbnail}')`, height:"200px" }}></div>
                     </div>
                     <div className="__footer">
                         <div className="container__text">
