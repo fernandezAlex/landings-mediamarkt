@@ -14,7 +14,7 @@ export const cardsGrid = {
             eventLabel: ""
         },
         {
-            title: "Te ayudamos durante el proceson",
+            title: "Te ayudamos durante el proceso",
             subtitle: "Te ayudamos a elegir el servicio que mejor se adapte a tu negocio y necesidades",
             slug: "",
             imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b-instalaciones/i+t seguimientoA.png",
@@ -26,7 +26,7 @@ export const cardsGrid = {
         },
         {
             title: "Nos desplazamos dónde necesites",
-            subtitle: "Nuestros técnicos se desplazarán donde necesites*<br/><br/>>*Consulta condiciones con tu equipo de empresa",
+            subtitle: "Nuestros técnicos se desplazarán donde necesites*<br/><br/>*Consulta condiciones con tu equipo de empresa",
             slug: "",
             imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b-instalaciones/i+t desplazamientoB.png",
             button: "",
