@@ -4,7 +4,7 @@ export const imgTextSection = {
         {
             title: "Nos aseguramos que tu negocio funcione siempre",
             content: " Disponemos de una amplia gama de servicios destinados al sector profesional, orientados a conseguir que las empresas saquen el máximo rendimiento de su negocio",
-            imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b-servicios/image.png",
+            imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/Logo_MMBusiness.png",
             imgPosition: false
         }
     ]

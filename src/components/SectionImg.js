@@ -11,8 +11,8 @@ const SectionImg = ({ data, width }) => {
             {
                 data.sectionData.map(({ title, imgThumbnail, content, imgPosition, button, richText }, i) => {
                     return <>
-                        <div key={i} className={`section__img ${imgPosition ? "" : "imgRight"}`}>
-                            <img className={!content && "fullImage" } src={imgThumbnail} alt={title} />
+                        <div key={i} style={{justifyContent: "space-around"}} className={`section__img ${imgPosition ? "" : "imgRight"}`}>
+                            <img style={{maxWidth:"30%"}} className={!content && "fullImage" } src={imgThumbnail} alt={title} />
                             <div className="section__text">
                                 {title && <h2 dangerouslySetInnerHTML={{ __html: title }} />}
                                 <p dangerouslySetInnerHTML={{ __html: content }} />
