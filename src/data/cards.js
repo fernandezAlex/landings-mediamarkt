@@ -45,7 +45,7 @@ export const cardsGrid2 = {
         {
             title: "Reparaciones",
             subtitle: "Nos ocupamos que tu actividad no cese",
-            slug: "https://specials.mediamarkt.es/empresas/servicios-y-mantenimentos/reparación-de-equipos-electrónicose",
+            slug: "https://specials.mediamarkt.es/empresas/servicios-y-mantenimentos/reparación-de-equipos-electrónicos",
             imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b-servicios/i+t reparaciones2.png",
             button: "Más info",
             eventGa: "",
