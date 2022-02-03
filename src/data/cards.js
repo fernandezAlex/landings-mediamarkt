@@ -15,7 +15,7 @@ export const cardsGrid = {
         },
         {
             title: "Recogida y valoración",
-            subtitle: "<ul><li>Una vez aceptado el presupuesto, recogemos los productos a domicil</li><li>Nuestros técnicos certifican el estado del dispositiv</li><li>Recibes un informe del estado de los equipos</li></ul>",
+            subtitle: "<ul><li>Una vez aceptado el presupuesto, recogemos los productos a domicilio</li><li>Nuestros técnicos certifican el estado del dispositivo</li><li>Recibes un informe del estado de los equipos</li></ul>",
             slug: "",
             imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b-recompra/i+t recogidaB.png",
             button: "",
