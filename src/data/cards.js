@@ -302,6 +302,17 @@ export const cardsSection3 = [
         eventCategory: "Home_B2B",
         eventAction: "Click",
         eventLabel: "Home_B2B_salud"
+    },
+    {
+        title: "Servicios B2B",
+        subtitle: "Nos aseguramos que tu negocio funcione simpre",
+        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b/062007_Landing servicios_500x500px.png",
+        slug: "https://specials.mediamarkt.es/empresas/servicios-y-mantenimentos",
+        button: "Ver más",
+        event: "gaEvent",
+        eventCategory: "Home_B2B",
+        eventAction: "Click",
+        eventLabel: "Home_B2B_servicios"
     }
 
 ]
