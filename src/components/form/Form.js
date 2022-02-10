@@ -301,7 +301,7 @@ const Form = () => {
                 value="yes"
                 required=""
                 className="test_class"
-                text='Consiento recibir comunicaciones comerciales de productos y servicios ofrecidos por Media Markt y/o por
+                text='Quiero recibir comunicaciones comerciales de productos y servicios ofrecidos por Media Markt y/o por
                 conjuntamente por Media Markt y terceros con los que colaboramos. Todo ello, de conformidad con los términos y
                 condiciones de la <a class="link__terms" href="https://www.mediamarkt.es/es/legal/politica-de-privacidad" rel="noreferrer" target="_blank">Política de
                     Privacidad de MediaMarkt</a>.'
