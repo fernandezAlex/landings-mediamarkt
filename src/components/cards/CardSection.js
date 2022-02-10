@@ -12,33 +12,36 @@ const CardSection = ({ data, width }) => {
   let desktop = width > 893 ? true : false;
 
   return (
-    <>
+    <div className="section__">
       <div className="card__section__wrapper">
         {data.map(
           ({ title, content, slug, button, buttonExtra, imgThumbnail }, i) => {
             return (
 
               <section className={`section-${i+1}`} id={`option-${i+1}`}>
-                <div className={`cardsection__container ${pairs(i) ? "left" : "right"}`}>
+                <a href={slug}>
+                  <div className={`cardsection__container ${pairs(i) ? "left" : "right"}`}>
                   
                   
                   <div className={`first__column ${desktop ? "desktop" : "mobile"}`}>
                         <div className="container__text">
                             <div className="--title">
-                              <p className="text">{title}</p>
+                              <h2 className="--title__card ">{title}</h2>
                             </div>
+                            <br/><br/>
                             <div className="--content">
                               <p className="text" dangerouslySetInnerHTML={{ __html: content }} />
                             </div>
                         </div>
-                        <div className="container__links">
-                          <div className="--modal">
+     
+                          {/* <div className="--modal">
                             <p>{button}</p>
-                          </div>
+                          </div> */}
+                          <br/><br/>
                           <div className="--cta">
                             <p>{button}</p>
                           </div>
-                        </div>
+
                   </div>
                   
                   <div className={`second__column ${desktop ? "desktop" : "mobile"}`}>
@@ -46,6 +49,7 @@ const CardSection = ({ data, width }) => {
                   </div>
                 
                 </div>
+                </a>
               </section>
 
             
@@ -53,7 +57,7 @@ const CardSection = ({ data, width }) => {
           },
         )}
       </div>
-    </>
+    </div>
   );
 };
 

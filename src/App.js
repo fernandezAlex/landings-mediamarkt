@@ -10,7 +10,9 @@ import {cardsSection, cardsSection2, cardsSection3} from './data/cards';
 import dataHeader from './data/dataHeader';
 import Accordion from './components/faqs/Accordion';
 import {FloatButton} from './components/buttons/FloatButton'
-import {Banner} from './components/Banner/Banner'
+import {CardSectionFull} from "./data/cards";
+import CardSection from './components/cards/CardSection'
+
 
 function App() {
   const [width, setWidth] = useState(document.body.clientWidth);
@@ -30,7 +32,7 @@ function App() {
   return (
     <>
       <Header data={dataHeader}/>
-      <Banner data={dataHeader}/>
+      <CardSection data={CardSectionFull}/>
       <Section1 data={cardsSection} width={width}/>
       <Section3 data={cardsSection3} width={width}/>
       <Section5 data={cardsSection2} width={width}/>

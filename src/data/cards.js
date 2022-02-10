@@ -99,5 +99,18 @@ export const cardsSection3 = [
     eventLabel: ""
   },
 ]
+
+export const CardSectionFull = [
+{
+    title: "¡CONSIGUE 1 AÑO DE LUZ GRATIS!",
+    content: `Cambia tu luz a TotalEnergies y consigue un año de luz gratis. Oferta válida hasta el 15/2/2022`,
+    imgThumbnail: "https://specials.mediamarkt.es/assets-react/total-energies/110122_TotalEnergies 150 + Sorteo Trade CABECERAS LANDING_900x356.jpg",
+    button: "Más información",
+    slug: "https://assets.ctfassets.net/osyynfyvlyjc/3f84W9Sey27kQ56wAwWJ3g/481bb5507803d3a79cda511399f0e9ae/bbll_sorteo_2_premios_1a__oLuz_MM-TE_04022022__002_.pdf",
+    eventGa: "gaEvent",
+    eventCategory: "B2B_soluciones_energeticas",
+    eventAction: "Click",
+    eventLabel: "B2B_soluciones_energeticas_teaser1"
+}]
     
   
