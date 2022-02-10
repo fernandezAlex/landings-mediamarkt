@@ -16,6 +16,9 @@ import CardSection from './components/cards/CardSection'
 
 function App() {
   const [width, setWidth] = useState(document.body.clientWidth);
+  const today = new Date();
+  const startDate = new Date("2022/02/11");
+  const endDate = new Date("2022/02/16");
 
   useEffect(() => {
     const debouncedHandleResize = debounce(function handleResize() {
@@ -28,11 +31,13 @@ function App() {
     };
   });
 
-  
   return (
     <>
       <Header data={dataHeader}/>
-      <CardSection data={CardSectionFull}/>
+      {
+        (today >= startDate && today < endDate) &&
+        <CardSection data={CardSectionFull}/>
+      }
       <Section1 data={cardsSection} width={width}/>
       <Section3 data={cardsSection3} width={width}/>
       <Section5 data={cardsSection2} width={width}/>
