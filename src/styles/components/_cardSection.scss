@@ -1,4 +1,8 @@
 .card__section__wrapper {
+    p.text{
+        font-size:18px !important;
+    }
+    
     a{
         text-decoration: none;
     }
@@ -29,7 +33,8 @@
         max-width: 1477px;
       
         @media only screen and (max-width: 1000px) {
-            display: block;
+            display: flex;
+            flex-wrap: wrap-reverse;
         }
 
         
@@ -130,5 +135,11 @@ a:hover {
         text-overflow: ellipsis;
         white-space: nowrap;
         max-width: 100%;
+    }
+}
+
+.first__column.mobile{
+    @media only screen and (max-width: 1000px) {
+        width: 100% !important;
     }
 }

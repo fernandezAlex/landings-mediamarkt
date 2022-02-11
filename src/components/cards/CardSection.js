@@ -23,14 +23,14 @@ const CardSection = ({ data, width }) => {
                   <div className={`cardsection__container ${pairs(i) ? "left" : "right"}`}>
                   
                   
-                  <div className={`first__column ${desktop ? "desktop" : "mobile"}`}>
+                  <div style={{width: "50%"}} className={`first__column ${desktop ? "desktop" : "mobile"}`}>
                         <div className="container__text">
                             <div className="--title">
                               <h2 className="--title__card ">{title}</h2>
                             </div>
                             <br/><br/>
                             <div className="--content">
-                              <p className="text" dangerouslySetInnerHTML={{ __html: content }} />
+                              <p style={{fontSize: "22px !important"}} className="text" dangerouslySetInnerHTML={{ __html: content }} />
                             </div>
                         </div>
      
