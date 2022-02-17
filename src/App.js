@@ -34,11 +34,7 @@ const App = () => {
     <>
       <Header data={dataHeader} />
       <SectionImg data={imgTextSection} width={width}/>
-      <CardsGrid marginBottom={0} data={cardsGrid} width={width}/>
-      <CardsGrid marginTop={0}  data={cardsGrid2} width={width}/>
-      <Video/>
       <Form />
-      <Accordion />
     </>
   );
 }

@@ -1,12 +1,12 @@
 export const dataHeader ={
-        title: "Servicios para empresas",
+        title: "Energía para tu empresa",
         breadcrumb: [
             {
                 text: "MediaMarkt Business",
                 link: "https://www.mediamarkt.es/empresas"
             },
             {
-                text: "Servicios B2B",
+                text: "Energía",
                 link: ""
             },
         ],
