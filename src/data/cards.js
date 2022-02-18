@@ -313,6 +313,17 @@ export const cardsSection3 = [
         eventCategory: "Home_B2B",
         eventAction: "Click",
         eventLabel: "Home_B2B_servicios"
+    },
+    {
+        title: "Energía",
+        subtitle: "Soluciones energéticas adaptadas a tu negocio",
+        imgThumbnail: "https://specials.mediamarkt.es/assets-react/b2b-energia/box-2.png",
+        slug: "https://specials.mediamarkt.es/empresas/servicios-energeticos",
+        button: "Ver más",
+        event: "gaEvent",
+        eventCategory: "Home_B2B",
+        eventAction: "Click",
+        eventLabel: "Home_B2B_Energia"
     }
 
 ]
